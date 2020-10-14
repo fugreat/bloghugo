@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Icarus</title>
-    <link>https://example.org/</link>
-    <description>Recent content on Icarus</description>
+    <title>Posts on Icarus</title>
+    <link>https://example.org/post/</link>
+    <description>Recent content in Posts on Icarus</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 20 May 2017 12:10:51 +0200</lastBuildDate><atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 May 2017 12:10:51 +0200</lastBuildDate><atom:link href="https://example.org/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markdown Cheat Sheet</title>
       <link>https://example.org/2017/05/20/markdown-cheat-sheet/</link>

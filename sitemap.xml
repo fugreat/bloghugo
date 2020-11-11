@@ -3,22 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://fuyi.fun/tags/dn25/</loc>
+    <lastmod>2020-11-11T12:55:31+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://fuyi.fun/post/</loc>
-    <lastmod>2020-11-11T12:54:10+08:00</lastmod>
+    <lastmod>2020-11-11T12:55:31+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://fuyi.fun/tags/</loc>
-    <lastmod>2020-11-11T12:54:10+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://fuyi.fun/tags/%E5%9B%BD%E6%A0%87/</loc>
-    <lastmod>2020-11-11T12:54:10+08:00</lastmod>
+    <lastmod>2020-11-11T12:55:31+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://fuyi.fun/</loc>
+    <lastmod>2020-11-11T12:55:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/tags/%E7%AE%A1%E5%BE%84/</loc>
+    <lastmod>2020-11-11T12:55:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/2020/11/11/%E7%AE%A1%E5%BE%84%E5%AF%B9%E7%85%A7%E8%A1%A8/</loc>
+    <lastmod>2020-11-11T12:55:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/tags/%E5%9B%BD%E6%A0%87/</loc>
     <lastmod>2020-11-11T12:54:10+08:00</lastmod>
   </url>
   
@@ -140,6 +155,11 @@
   <url>
     <loc>http://fuyi.fun/2020/11/11/%E8%BD%AC%E8%BD%BD%E5%9C%A8%E7%BA%BF%E9%97%A8%E7%A6%81%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/</loc>
     <lastmod>2020-11-11T10:23:32+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/2020/11/11/install_wiki/</loc>
+    <lastmod>2020-11-11T10:21:16+08:00</lastmod>
   </url>
   
   <url>

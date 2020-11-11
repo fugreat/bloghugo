@@ -13,10 +13,11 @@
       <pubDate>Wed, 11 Nov 2020 12:45:43 +0800</pubDate>
       
       <guid>http://fuyi.fun/2020/11/11/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-      <description>scp 限速 scp 限速
+      <description> scp 限速 scp 限速
 -l 是限速配置
 -l limit 其中 -l 5000 大约是 5000/8 600多点KB/S
-多核编译 make -jN </description>
+ 多核编译 make -jN N表示使能的核数
+ </description>
     </item>
     
   </channel>

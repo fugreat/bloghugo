@@ -3,77 +3,77 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://fugreat.github.io/</loc>
+    <loc>http://fugreat.github.io/</loc>
+    <lastmod>2020-11-11T08:54:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fugreat.github.io/post/</loc>
+    <lastmod>2020-11-11T08:54:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fugreat.github.io/2020/11/11/tech/</loc>
+    <lastmod>2020-11-11T08:54:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fugreat.github.io/tags/markdown/</loc>
     <lastmod>2017-05-20T12:10:51+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fugreat.github.io/tags/markdown/</loc>
+    <loc>http://fugreat.github.io/2017/05/20/markdown-cheat-sheet/</loc>
     <lastmod>2017-05-20T12:10:51+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fugreat.github.io/2017/05/20/markdown-cheat-sheet/</loc>
+    <loc>http://fugreat.github.io/tags/</loc>
     <lastmod>2017-05-20T12:10:51+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fugreat.github.io/post/</loc>
-    <lastmod>2017-05-20T12:10:51+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://fugreat.github.io/tags/</loc>
-    <lastmod>2017-05-20T12:10:51+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://fugreat.github.io/2017/05/20/using-the-gallery-shortcode/</loc>
+    <loc>http://fugreat.github.io/2017/05/20/%E4%BD%BF%E7%94%A8%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87%E7%9A%84shortcode/</loc>
     <lastmod>2017-05-20T12:00:23+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fugreat.github.io/2017/05/20/formulas-with-mathjax/</loc>
-    <lastmod>2017-05-20T11:58:06+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://fugreat.github.io/about/</loc>
+    <loc>http://fugreat.github.io/about/</loc>
     <lastmod>2017-05-19T21:49:20+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fugreat.github.io/categories/</loc>
+    <loc>http://fugreat.github.io/categories/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fugreat.github.io/tags/golang/</loc>
+    <loc>http://fugreat.github.io/tags/golang/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fugreat.github.io/2015/10/02/how-to-add-pages-to-the-menu/</loc>
+    <loc>http://fugreat.github.io/2015/10/02/how-to-add-pages-to-the-menu/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fugreat.github.io/tags/hugo/</loc>
+    <loc>http://fugreat.github.io/tags/hugo/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fugreat.github.io/tags/programming/</loc>
+    <loc>http://fugreat.github.io/tags/programming/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fugreat.github.io/categories/programming/</loc>
+    <loc>http://fugreat.github.io/categories/programming/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fugreat.github.io/tags/theme/</loc>
+    <loc>http://fugreat.github.io/tags/theme/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
   </url>
   

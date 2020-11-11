@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sensor on Icarus</title>
+    <link>https://fugreat.github.io/tags/sensor/</link>
+    <description>Recent content in Sensor on Icarus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 11 Nov 2020 10:48:40 +0800</lastBuildDate><atom:link href="https://fugreat.github.io/tags/sensor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>论文解读：基于双窄带LED光源的红外甲烷传感器的研制  </title>
+      <link>https://fugreat.github.io/2020/11/11/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB%E5%9F%BA%E4%BA%8E%E5%8F%8C%E7%AA%84%E5%B8%A6led%E5%85%89%E6%BA%90%E7%9A%84%E7%BA%A2%E5%A4%96%E7%94%B2%E7%83%B7%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E7%A0%94%E5%88%B6/</link>
+      <pubDate>Wed, 11 Nov 2020 10:48:40 +0800</pubDate>
+      
+      <guid>https://fugreat.github.io/2020/11/11/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB%E5%9F%BA%E4%BA%8E%E5%8F%8C%E7%AA%84%E5%B8%A6led%E5%85%89%E6%BA%90%E7%9A%84%E7%BA%A2%E5%A4%96%E7%94%B2%E7%83%B7%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E7%A0%94%E5%88%B6/</guid>
+      <description>论文解读：基于双窄带LED光源的红外甲烷传感器的研制
+赵庆川
+特点： 有温度补偿；
+双路光源做差得到甲烷浓度； 低功耗16mW；
+系统框图：
+甲烷和水蒸气的吸收峰:
+LED电流和光强: 设备结构: 论文全文: 基于双窄带LED光源的红外甲烷传感器的研制 赵庆川</description>
+    </item>
+    
+  </channel>
+</rss>

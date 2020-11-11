@@ -2,48 +2,116 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Icarus</title>
-    <link>http://fugreat.github.io/</link>
+    <link>https://fugreat.github.io/</link>
     <description>Recent content on Icarus</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 11 Nov 2020 08:54:50 +0800</lastBuildDate><atom:link href="http://fugreat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Nov 2020 10:48:40 +0800</lastBuildDate><atom:link href="https://fugreat.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Tech</title>
-      <link>http://fugreat.github.io/2020/11/11/tech/</link>
-      <pubDate>Wed, 11 Nov 2020 08:54:50 +0800</pubDate>
+      <title>论文解读：基于双窄带LED光源的红外甲烷传感器的研制  </title>
+      <link>https://fugreat.github.io/2020/11/11/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB%E5%9F%BA%E4%BA%8E%E5%8F%8C%E7%AA%84%E5%B8%A6led%E5%85%89%E6%BA%90%E7%9A%84%E7%BA%A2%E5%A4%96%E7%94%B2%E7%83%B7%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E7%A0%94%E5%88%B6/</link>
+      <pubDate>Wed, 11 Nov 2020 10:48:40 +0800</pubDate>
       
-      <guid>http://fugreat.github.io/2020/11/11/tech/</guid>
-      <description>技术文章汇总 </description>
+      <guid>https://fugreat.github.io/2020/11/11/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB%E5%9F%BA%E4%BA%8E%E5%8F%8C%E7%AA%84%E5%B8%A6led%E5%85%89%E6%BA%90%E7%9A%84%E7%BA%A2%E5%A4%96%E7%94%B2%E7%83%B7%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E7%A0%94%E5%88%B6/</guid>
+      <description>论文解读：基于双窄带LED光源的红外甲烷传感器的研制
+赵庆川
+特点： 有温度补偿；
+双路光源做差得到甲烷浓度； 低功耗16mW；
+系统框图：
+甲烷和水蒸气的吸收峰:
+LED电流和光强: 设备结构: 论文全文: 基于双窄带LED光源的红外甲烷传感器的研制 赵庆川</description>
+    </item>
+    
+    <item>
+      <title>Float_to_hex</title>
+      <link>https://fugreat.github.io/2020/11/11/float_to_hex/</link>
+      <pubDate>Wed, 11 Nov 2020 10:46:35 +0800</pubDate>
+      
+      <guid>https://fugreat.github.io/2020/11/11/float_to_hex/</guid>
+      <description>浮点转hex 在线: https://www.h-schmidt.net/FloatConverter/IEEE754.html</description>
+    </item>
+    
+    <item>
+      <title>esp32 mesh WI-FI MESH</title>
+      <link>https://fugreat.github.io/2020/11/11/esp32-mesh-wi-fi-mesh/</link>
+      <pubDate>Wed, 11 Nov 2020 10:44:51 +0800</pubDate>
+      
+      <guid>https://fugreat.github.io/2020/11/11/esp32-mesh-wi-fi-mesh/</guid>
+      <description>官方文档： https://docs.espressif.com/projects/esp-idf/zh_CN/stable/get-started/index.html
+MacOS下搭建开发环境 https://docs.espressif.com/projects/esp-idf/zh_CN/stable/get-started/macos-setup.html
+网络拓扑说明： https://docs.espressif.com/projects/esp-idf/en/stable/api-guides/mesh.html</description>
+    </item>
+    
+    <item>
+      <title>Homebrew 命令迁移到新电脑 </title>
+      <link>https://fugreat.github.io/2020/11/11/homebrew-%E5%91%BD%E4%BB%A4%E8%BF%81%E7%A7%BB%E5%88%B0%E6%96%B0%E7%94%B5%E8%84%91/</link>
+      <pubDate>Wed, 11 Nov 2020 10:41:08 +0800</pubDate>
+      
+      <guid>https://fugreat.github.io/2020/11/11/homebrew-%E5%91%BD%E4%BB%A4%E8%BF%81%E7%A7%BB%E5%88%B0%E6%96%B0%E7%94%B5%E8%84%91/</guid>
+      <description>这里的备份不是简单把这些安装包备份到硬盘，而是备份安装安装了哪些命令行，安装的时候用了什么选项。
+homebrew为我们提供了非常方便的子命令：bundle
+ brew bundle dump
+首次执行上面这条命令，将会自动tap homebrew/bundle， 然后将以往安装的命令以及安装的命令行选项保存在当前的路径下的Brewfile。 用编辑器打开来看其实就是一个脚本包含了所有已经安装的命令行以及相应的选项。 你要备份的文件就是这个Brewfile
+在全新的macOS上想要恢复的话，就使用该Brewfile. brew bundle
+该命令会在当前文件夹下寻找Brewfile文件然后开始执行。</description>
+    </item>
+    
+    <item>
+      <title>Nodejs遍历数组</title>
+      <link>https://fugreat.github.io/2020/11/11/nodejs%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Wed, 11 Nov 2020 10:38:21 +0800</pubDate>
+      
+      <guid>https://fugreat.github.io/2020/11/11/nodejs%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84/</guid>
+      <description>nodejs 遍历数组： 参考： https://blog.csdn.net/he_min/article/details/82912729
+var array = [1,2,3]; // 方式一： array.forEach(function(v,index,a){ console.log(v); console.log(index); console.log(a); }); // 方式二： array.forEach(v =&amp;gt; console.log(v)); </description>
+    </item>
+    
+    <item>
+      <title>清除mac中的敏感信息</title>
+      <link>https://fugreat.github.io/2020/11/11/%E6%B8%85%E9%99%A4mac%E4%B8%AD%E7%9A%84%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF/</link>
+      <pubDate>Wed, 11 Nov 2020 10:32:53 +0800</pubDate>
+      
+      <guid>https://fugreat.github.io/2020/11/11/%E6%B8%85%E9%99%A4mac%E4%B8%AD%E7%9A%84%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF/</guid>
+      <description>&lt;p&gt;离职交接归还电脑时，需要清除电脑中的敏感数据，总结如下：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>【转载】在线门禁通信协议</title>
+      <link>https://fugreat.github.io/2020/11/11/%E8%BD%AC%E8%BD%BD%E5%9C%A8%E7%BA%BF%E9%97%A8%E7%A6%81%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/</link>
+      <pubDate>Wed, 11 Nov 2020 10:23:32 +0800</pubDate>
+      
+      <guid>https://fugreat.github.io/2020/11/11/%E8%BD%AC%E8%BD%BD%E5%9C%A8%E7%BA%BF%E9%97%A8%E7%A6%81%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/</guid>
+      <description>&lt;h2 id=&#34;查询设备&#34;&gt;查询设备&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>Docker下安装thingsboard</title>
+      <link>https://fugreat.github.io/2020/11/11/docker%E4%B8%8B%E5%AE%89%E8%A3%85thingsboard/</link>
+      <pubDate>Wed, 11 Nov 2020 10:01:51 +0800</pubDate>
+      
+      <guid>https://fugreat.github.io/2020/11/11/docker%E4%B8%8B%E5%AE%89%E8%A3%85thingsboard/</guid>
+      <description>&lt;h2 id=&#34;docker-下安装-thingsboard&#34;&gt;Docker 下安装 thingsboard&lt;/h2&gt;
+&lt;p&gt;镜像地址：https://hub.docker.com/r/thingsboard/tb-cassandra/&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Markdown Cheat Sheet</title>
-      <link>http://fugreat.github.io/2017/05/20/markdown-cheat-sheet/</link>
+      <link>https://fugreat.github.io/2017/05/20/markdown-cheat-sheet/</link>
       <pubDate>Sat, 20 May 2017 12:10:51 +0200</pubDate>
       
-      <guid>http://fugreat.github.io/2017/05/20/markdown-cheat-sheet/</guid>
+      <guid>https://fugreat.github.io/2017/05/20/markdown-cheat-sheet/</guid>
       <description>&lt;p&gt;This note demonstrates some of what &lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;Markdown&lt;/a&gt; is capable of doing.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note: Feel free to play with this page. Unlike regular notes, this doesn&amp;rsquo;t automatically save itself.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>使用封面图片的shortcode</title>
-      <link>http://fugreat.github.io/2017/05/20/%E4%BD%BF%E7%94%A8%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87%E7%9A%84shortcode/</link>
+      <link>https://fugreat.github.io/2017/05/20/%E4%BD%BF%E7%94%A8%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87%E7%9A%84shortcode/</link>
       <pubDate>Sat, 20 May 2017 12:00:23 +0200</pubDate>
       
-      <guid>http://fugreat.github.io/2017/05/20/%E4%BD%BF%E7%94%A8%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87%E7%9A%84shortcode/</guid>
+      <guid>https://fugreat.github.io/2017/05/20/%E4%BD%BF%E7%94%A8%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87%E7%9A%84shortcode/</guid>
       <description>&lt;p&gt;在页面中添加封面的shortcode。
 复制下面的代码进你的page，修改相关的路径。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to add pages to the menu</title>
-      <link>http://fugreat.github.io/2015/10/02/how-to-add-pages-to-the-menu/</link>
-      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
-      
-      <guid>http://fugreat.github.io/2015/10/02/how-to-add-pages-to-the-menu/</guid>
-      <description>I&amp;rsquo;m a linked post in the menu. You can add other posts by adding the following line to the frontmatter:
-menu = &amp;quot;main&amp;quot; </description>
     </item>
     
   </channel>

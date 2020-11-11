@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>homebrew on Icarus</title>
+    <link>https://fugreat.github.io/tags/homebrew/</link>
+    <description>Recent content in homebrew on Icarus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 11 Nov 2020 10:41:08 +0800</lastBuildDate><atom:link href="https://fugreat.github.io/tags/homebrew/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homebrew 命令迁移到新电脑 </title>
+      <link>https://fugreat.github.io/2020/11/11/homebrew-%E5%91%BD%E4%BB%A4%E8%BF%81%E7%A7%BB%E5%88%B0%E6%96%B0%E7%94%B5%E8%84%91/</link>
+      <pubDate>Wed, 11 Nov 2020 10:41:08 +0800</pubDate>
+      
+      <guid>https://fugreat.github.io/2020/11/11/homebrew-%E5%91%BD%E4%BB%A4%E8%BF%81%E7%A7%BB%E5%88%B0%E6%96%B0%E7%94%B5%E8%84%91/</guid>
+      <description>这里的备份不是简单把这些安装包备份到硬盘，而是备份安装安装了哪些命令行，安装的时候用了什么选项。
+homebrew为我们提供了非常方便的子命令：bundle
+ brew bundle dump
+首次执行上面这条命令，将会自动tap homebrew/bundle， 然后将以往安装的命令以及安装的命令行选项保存在当前的路径下的Brewfile。 用编辑器打开来看其实就是一个脚本包含了所有已经安装的命令行以及相应的选项。 你要备份的文件就是这个Brewfile
+在全新的macOS上想要恢复的话，就使用该Brewfile. brew bundle
+该命令会在当前文件夹下寻找Brewfile文件然后开始执行。</description>
+    </item>
+    
+  </channel>
+</rss>

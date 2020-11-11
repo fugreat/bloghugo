@@ -2,125 +2,125 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Icarus</title>
-    <link>https://fugreat.github.io/tags/</link>
+    <link>http://fuyi.fun/tags/</link>
     <description>Recent content in Tags on Icarus</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 11 Nov 2020 10:48:40 +0800</lastBuildDate><atom:link href="https://fugreat.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Nov 2020 10:48:40 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CH4</title>
-      <link>https://fugreat.github.io/tags/ch4/</link>
+      <link>http://fuyi.fun/tags/ch4/</link>
       <pubDate>Wed, 11 Nov 2020 10:48:40 +0800</pubDate>
       
-      <guid>https://fugreat.github.io/tags/ch4/</guid>
+      <guid>http://fuyi.fun/tags/ch4/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sensor</title>
-      <link>https://fugreat.github.io/tags/sensor/</link>
+      <link>http://fuyi.fun/tags/sensor/</link>
       <pubDate>Wed, 11 Nov 2020 10:48:40 +0800</pubDate>
       
-      <guid>https://fugreat.github.io/tags/sensor/</guid>
+      <guid>http://fuyi.fun/tags/sensor/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tool</title>
-      <link>https://fugreat.github.io/tags/tool/</link>
+      <link>http://fuyi.fun/tags/tool/</link>
       <pubDate>Wed, 11 Nov 2020 10:46:35 +0800</pubDate>
       
-      <guid>https://fugreat.github.io/tags/tool/</guid>
+      <guid>http://fuyi.fun/tags/tool/</guid>
       <description></description>
     </item>
     
     <item>
       <title>esp32</title>
-      <link>https://fugreat.github.io/tags/esp32/</link>
+      <link>http://fuyi.fun/tags/esp32/</link>
       <pubDate>Wed, 11 Nov 2020 10:44:51 +0800</pubDate>
       
-      <guid>https://fugreat.github.io/tags/esp32/</guid>
+      <guid>http://fuyi.fun/tags/esp32/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mesh</title>
-      <link>https://fugreat.github.io/tags/mesh/</link>
+      <link>http://fuyi.fun/tags/mesh/</link>
       <pubDate>Wed, 11 Nov 2020 10:44:51 +0800</pubDate>
       
-      <guid>https://fugreat.github.io/tags/mesh/</guid>
+      <guid>http://fuyi.fun/tags/mesh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>homebrew</title>
-      <link>https://fugreat.github.io/tags/homebrew/</link>
+      <link>http://fuyi.fun/tags/homebrew/</link>
       <pubDate>Wed, 11 Nov 2020 10:41:08 +0800</pubDate>
       
-      <guid>https://fugreat.github.io/tags/homebrew/</guid>
+      <guid>http://fuyi.fun/tags/homebrew/</guid>
       <description></description>
     </item>
     
     <item>
       <title>macOS</title>
-      <link>https://fugreat.github.io/tags/macos/</link>
+      <link>http://fuyi.fun/tags/macos/</link>
       <pubDate>Wed, 11 Nov 2020 10:41:08 +0800</pubDate>
       
-      <guid>https://fugreat.github.io/tags/macos/</guid>
+      <guid>http://fuyi.fun/tags/macos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>nodejs</title>
-      <link>https://fugreat.github.io/tags/nodejs/</link>
+      <link>http://fuyi.fun/tags/nodejs/</link>
       <pubDate>Wed, 11 Nov 2020 10:38:21 +0800</pubDate>
       
-      <guid>https://fugreat.github.io/tags/nodejs/</guid>
+      <guid>http://fuyi.fun/tags/nodejs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>https://fugreat.github.io/tags/docker/</link>
+      <link>http://fuyi.fun/tags/docker/</link>
       <pubDate>Wed, 11 Nov 2020 10:01:51 +0800</pubDate>
       
-      <guid>https://fugreat.github.io/tags/docker/</guid>
+      <guid>http://fuyi.fun/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>install</title>
-      <link>https://fugreat.github.io/tags/install/</link>
+      <link>http://fuyi.fun/tags/install/</link>
       <pubDate>Wed, 11 Nov 2020 10:01:51 +0800</pubDate>
       
-      <guid>https://fugreat.github.io/tags/install/</guid>
+      <guid>http://fuyi.fun/tags/install/</guid>
       <description></description>
     </item>
     
     <item>
       <title>thingsboard</title>
-      <link>https://fugreat.github.io/tags/thingsboard/</link>
+      <link>http://fuyi.fun/tags/thingsboard/</link>
       <pubDate>Wed, 11 Nov 2020 10:01:51 +0800</pubDate>
       
-      <guid>https://fugreat.github.io/tags/thingsboard/</guid>
+      <guid>http://fuyi.fun/tags/thingsboard/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>https://fugreat.github.io/tags/hugo/</link>
+      <link>http://fuyi.fun/tags/hugo/</link>
       <pubDate>Sat, 20 May 2017 12:10:51 +0200</pubDate>
       
-      <guid>https://fugreat.github.io/tags/hugo/</guid>
+      <guid>http://fuyi.fun/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>https://fugreat.github.io/tags/markdown/</link>
+      <link>http://fuyi.fun/tags/markdown/</link>
       <pubDate>Sat, 20 May 2017 12:10:51 +0200</pubDate>
       
-      <guid>https://fugreat.github.io/tags/markdown/</guid>
+      <guid>http://fuyi.fun/tags/markdown/</guid>
       <description></description>
     </item>
     

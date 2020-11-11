@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tool on Icarus</title>
-    <link>https://fugreat.github.io/tags/tool/</link>
+    <link>http://fuyi.fun/tags/tool/</link>
     <description>Recent content in tool on Icarus</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 11 Nov 2020 10:46:35 +0800</lastBuildDate><atom:link href="https://fugreat.github.io/tags/tool/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Nov 2020 10:46:35 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/tool/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Float_to_hex</title>
-      <link>https://fugreat.github.io/2020/11/11/float_to_hex/</link>
+      <link>http://fuyi.fun/2020/11/11/float_to_hex/</link>
       <pubDate>Wed, 11 Nov 2020 10:46:35 +0800</pubDate>
       
-      <guid>https://fugreat.github.io/2020/11/11/float_to_hex/</guid>
+      <guid>http://fuyi.fun/2020/11/11/float_to_hex/</guid>
       <description>浮点转hex 在线: https://www.h-schmidt.net/FloatConverter/IEEE754.html</description>
     </item>
     

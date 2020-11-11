@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>rk3288 &middot; 小夫子的随笔</title>
+    <title>LED滚动屏 &middot; 小夫子的随笔</title>
     <meta name="generator" content="Hugo 0.77.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,10 +10,7 @@
       <meta name="description" content="">
     
     
-      <link href="/tags/rk3288/index.xml" rel="alternate" type="application/rss+xml" title="小夫子的随笔" />
-      <link href="/tags/rk3288/index.xml" rel="feed" type="application/rss+xml" title="小夫子的随笔" />
-    
-    <link rel="canonical" href="http://fuyi.fun/tags/rk3288/"/>
+    <link rel="canonical" href="http://fuyi.fun/2020/11/11/led%E6%BB%9A%E5%8A%A8%E5%B1%8F/"/>
     <link rel="icon" href="http://fuyi.fun/favicon.ico">
     <link rel="apple-touch-icon" href="http://fuyi.fun/apple-touch-icon.png"/>
     <link rel="stylesheet" href="http://fuyi.fun/css/style.css">
@@ -23,19 +20,84 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="rk3288" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://fuyi.fun/tags/rk3288/" />
-<meta property="og:updated_time" content="2020-11-11T12:48:55+08:00" />
+    <meta property="og:title" content="LED滚动屏" />
+<meta property="og:description" content="LED 滚动屏模组
+模组（单元板）上的显示接口：显示接口是用于控制卡和模组（单元板）、模组（单元板）和模组（单元板）之间的连接，以将控制信号进行传递。
+由于存在不同的扫描方式及信号线的不同排列顺序，也就有不同的接口定义。使用最多的是08接口、12接口、75接口、40接口。
+室内单双色点阵单元板多用08接口，
+户外单双色模组多用12接口，
+扫描驱动的全彩模组多用75接口，
+静态驱动的全彩模组多用40接口。
+接口定义 不同的接口定义主要是信号线的排列顺序不一样，首先我们来了解下控制信号有哪些：
+  CLK（时钟信号）：提供给移位寄存器的移位脉冲，每一个脉冲的上升沿将引起数据移入或移出一位。
+数据口上的数据必须与时钟信号协调才能正常传送数据，数据信号的频率必须是时钟信号的频率的1/2倍。
+在任何情况下，当时钟信号有异常时，会使整板显示杂乱无章。
+  STB（锁存信号）：将移位寄存器内的数据送到锁存器，并将其数据内容通过驱动电路点亮LED显示出来。
+但由于驱动电路受OE（输出使能信号）控制，其点亮的前提必须是OE为开启状态。
+锁存信号也必须要与时钟信号协调才能显示出完整的图像。
+在任何情况下，当锁存信号有异常时，会使整板显示杂乱无章。
+  OE（输出使能信号）：整屏亮度控制信号，也用于显示屏消隐。
+只要调整它的占空比就可以控制亮度的变化。当使能信号出现异常时，整屏将会出现不亮、暗亮或拖尾等现象。
+  R/G/B（数据信号）：提供显示图像所需要的数据。必须与时钟信号协调才能将数据传送到任何一个显示点。 一般在显示屏中红绿蓝的数据信号分离开来，若某数据信号短路到正极或负极时，则对应的该颜色将会出现全亮或不亮， 当数据信号被悬空时对应的颜色显示情况不定。
+  ABCD（行控制信号）：只有在动态扫描显示时才存在，一般电路会搭配74HC138D的IC进行控制， 1/4扫描中只要AB信号就可以了。 当行控制信号出现异常时，将会出现显示错位、高亮或图像重叠等现象。
+  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://fuyi.fun/2020/11/11/led%E6%BB%9A%E5%8A%A8%E5%B1%8F/" />
+<meta property="article:published_time" content="2020-11-11T13:11:58+08:00" />
+<meta property="article:modified_time" content="2020-11-11T13:11:58+08:00" />
 
     
-    <meta itemprop="name" content="rk3288">
-<meta itemprop="description" content="">
+    <meta itemprop="name" content="LED滚动屏">
+<meta itemprop="description" content="LED 滚动屏模组
+模组（单元板）上的显示接口：显示接口是用于控制卡和模组（单元板）、模组（单元板）和模组（单元板）之间的连接，以将控制信号进行传递。
+由于存在不同的扫描方式及信号线的不同排列顺序，也就有不同的接口定义。使用最多的是08接口、12接口、75接口、40接口。
+室内单双色点阵单元板多用08接口，
+户外单双色模组多用12接口，
+扫描驱动的全彩模组多用75接口，
+静态驱动的全彩模组多用40接口。
+接口定义 不同的接口定义主要是信号线的排列顺序不一样，首先我们来了解下控制信号有哪些：
+  CLK（时钟信号）：提供给移位寄存器的移位脉冲，每一个脉冲的上升沿将引起数据移入或移出一位。
+数据口上的数据必须与时钟信号协调才能正常传送数据，数据信号的频率必须是时钟信号的频率的1/2倍。
+在任何情况下，当时钟信号有异常时，会使整板显示杂乱无章。
+  STB（锁存信号）：将移位寄存器内的数据送到锁存器，并将其数据内容通过驱动电路点亮LED显示出来。
+但由于驱动电路受OE（输出使能信号）控制，其点亮的前提必须是OE为开启状态。
+锁存信号也必须要与时钟信号协调才能显示出完整的图像。
+在任何情况下，当锁存信号有异常时，会使整板显示杂乱无章。
+  OE（输出使能信号）：整屏亮度控制信号，也用于显示屏消隐。
+只要调整它的占空比就可以控制亮度的变化。当使能信号出现异常时，整屏将会出现不亮、暗亮或拖尾等现象。
+  R/G/B（数据信号）：提供显示图像所需要的数据。必须与时钟信号协调才能将数据传送到任何一个显示点。 一般在显示屏中红绿蓝的数据信号分离开来，若某数据信号短路到正极或负极时，则对应的该颜色将会出现全亮或不亮， 当数据信号被悬空时对应的颜色显示情况不定。
+  ABCD（行控制信号）：只有在动态扫描显示时才存在，一般电路会搭配74HC138D的IC进行控制， 1/4扫描中只要AB信号就可以了。 当行控制信号出现异常时，将会出现显示错位、高亮或图像重叠等现象。
+  ">
+<meta itemprop="datePublished" content="2020-11-11T13:11:58+08:00" />
+<meta itemprop="dateModified" content="2020-11-11T13:11:58+08:00" />
+<meta itemprop="wordCount" content="25">
+
+
+
+<meta itemprop="keywords" content="" />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="rk3288"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="LED滚动屏"/>
+<meta name="twitter:description" content="LED 滚动屏模组
+模组（单元板）上的显示接口：显示接口是用于控制卡和模组（单元板）、模组（单元板）和模组（单元板）之间的连接，以将控制信号进行传递。
+由于存在不同的扫描方式及信号线的不同排列顺序，也就有不同的接口定义。使用最多的是08接口、12接口、75接口、40接口。
+室内单双色点阵单元板多用08接口，
+户外单双色模组多用12接口，
+扫描驱动的全彩模组多用75接口，
+静态驱动的全彩模组多用40接口。
+接口定义 不同的接口定义主要是信号线的排列顺序不一样，首先我们来了解下控制信号有哪些：
+  CLK（时钟信号）：提供给移位寄存器的移位脉冲，每一个脉冲的上升沿将引起数据移入或移出一位。
+数据口上的数据必须与时钟信号协调才能正常传送数据，数据信号的频率必须是时钟信号的频率的1/2倍。
+在任何情况下，当时钟信号有异常时，会使整板显示杂乱无章。
+  STB（锁存信号）：将移位寄存器内的数据送到锁存器，并将其数据内容通过驱动电路点亮LED显示出来。
+但由于驱动电路受OE（输出使能信号）控制，其点亮的前提必须是OE为开启状态。
+锁存信号也必须要与时钟信号协调才能显示出完整的图像。
+在任何情况下，当锁存信号有异常时，会使整板显示杂乱无章。
+  OE（输出使能信号）：整屏亮度控制信号，也用于显示屏消隐。
+只要调整它的占空比就可以控制亮度的变化。当使能信号出现异常时，整屏将会出现不亮、暗亮或拖尾等现象。
+  R/G/B（数据信号）：提供显示图像所需要的数据。必须与时钟信号协调才能将数据传送到任何一个显示点。 一般在显示屏中红绿蓝的数据信号分离开来，若某数据信号短路到正极或负极时，则对应的该颜色将会出现全亮或不亮， 当数据信号被悬空时对应的颜色显示情况不定。
+  ABCD（行控制信号）：只有在动态扫描显示时才存在，一般电路会搭配74HC138D的IC进行控制， 1/4扫描中只要AB信号就可以了。 当行控制信号出现异常时，将会出现显示错位、高亮或图像重叠等现象。
+  "/>
 <meta name="twitter:site" content="@gohugoio"/>
 
     
@@ -244,45 +306,174 @@
 
     <section id="main">
     
-    
-    
-    
-    <section class="archives-wrap">
-        <div class="archive-category-wrap">
-            <span class="archive-category">rk3288</span>
-        </div>
-        <div class="archives">
-            
-            
-                <article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <div class="archive-article-thumbnail">
-            
-            <a href="http://fuyi.fun/2020/11/11/rk3288-%E7%BC%96%E8%AF%91%E4%B8%89%E9%83%A8%E6%9B%B2/" class="thumbnail">
-                <span style="background-image:url(http://fuyi.fun/)" alt="RK3288 编译三部曲" class="thumbnail-image"></span>
-            </a>
-            
-        </div>
-        <header class="archive-article-header">
-            <h1 itemprop="name">
-            <a class="archive-article-title" href="http://fuyi.fun/2020/11/11/rk3288-%E7%BC%96%E8%AF%91%E4%B8%89%E9%83%A8%E6%9B%B2/">RK3288 编译三部曲</a>
-            </h1>
-            <div class="archive-article-date">
-                <i class="fa fa-calendar"></i>
-                <time datetime="2020-11-11 12:48:55 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
-            </div>
-        </header>
-    </div>
-</article>
- 
-            
-        </div>
-    </section>
-    <nav id="page-nav">
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
 
+        <header class="article-header">
+    <a href="http://fuyi.fun/2020/11/11/led%E6%BB%9A%E5%8A%A8%E5%B1%8F/">
+    <h1 class="article-title" itemprop="name">
+        LED滚动屏
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-11-11 13:11:58 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
+            &middot;
+            25
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>LED 滚动屏模组</p>
+<p>模组（单元板）上的显示接口：显示接口是用于控制卡和模组（单元板）、模组（单元板）和模组（单元板）之间的连接，以将控制信号进行传递。</p>
+<p>由于存在不同的扫描方式及信号线的不同排列顺序，也就有不同的接口定义。使用最多的是08接口、12接口、75接口、40接口。</p>
+<p>室内单双色点阵单元板多用08接口，<br>
+户外单双色模组多用12接口，<br>
+扫描驱动的全彩模组多用75接口，<br>
+静态驱动的全彩模组多用40接口。</p>
+<h2 id="接口定义">接口定义</h2>
+<p>不同的接口定义主要是信号线的排列顺序不一样，首先我们来了解下控制信号有哪些：</p>
+<ol>
+<li>
+<p>CLK（时钟信号）：提供给移位寄存器的移位脉冲，每一个脉冲的上升沿将引起数据移入或移出一位。<br>
+数据口上的数据必须与时钟信号协调才能正常传送数据，数据信号的频率必须是时钟信号的频率的1/2倍。<br>
+在任何情况下，当时钟信号有异常时，会使整板显示杂乱无章。</p>
+</li>
+<li>
+<p>STB（锁存信号）：将移位寄存器内的数据送到锁存器，并将其数据内容通过驱动电路点亮LED显示出来。<br>
+但由于驱动电路受OE（输出使能信号）控制，其点亮的前提必须是OE为开启状态。<br>
+锁存信号也必须要与时钟信号协调才能显示出完整的图像。<br>
+在任何情况下，当锁存信号有异常时，会使整板显示杂乱无章。</p>
+</li>
+<li>
+<p>OE（输出使能信号）：整屏亮度控制信号，也用于显示屏消隐。<br>
+只要调整它的占空比就可以控制亮度的变化。当使能信号出现异常时，整屏将会出现不亮、暗亮或拖尾等现象。</p>
+</li>
+<li>
+<p>R/G/B（数据信号）：提供显示图像所需要的数据。必须与时钟信号协调才能将数据传送到任何一个显示点。
+一般在显示屏中红绿蓝的数据信号分离开来，若某数据信号短路到正极或负极时，则对应的该颜色将会出现全亮或不亮，
+当数据信号被悬空时对应的颜色显示情况不定。</p>
+</li>
+<li>
+<p>ABCD（行控制信号）：只有在动态扫描显示时才存在，一般电路会搭配74HC138D的IC进行控制，
+1/4扫描中只要AB信号就可以了。
+当行控制信号出现异常时，将会出现显示错位、高亮或图像重叠等现象。</p>
+</li>
+</ol>
+
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2020/11/11/led%E6%BB%9A%E5%8A%A8%E5%B1%8F/" data-id="f1b293ca645ebd6dec9481349ffca867" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+
+    
+<nav id="article-nav">
+    
+    <a href="http://fuyi.fun/2020/11/11/%E7%AE%A1%E5%BE%84%E5%AF%B9%E7%85%A7%E8%A1%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          上一个
+      </strong>
+      <div class="article-nav-title">管径对照表</div>
+    </a>
+    
+
+    
 </nav>
 
-    
+
+</article>
+
+
 
     </section>
 

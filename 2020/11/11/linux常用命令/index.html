@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>Linux常用命令 &middot; 小夫子的随笔</title>
+    <meta name="generator" content="Hugo 0.77.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Jxing Fu">
+    
+      <meta name="description" content="记录工作用到的常见linux命令行">
+    
+    
+    <link rel="canonical" href="http://fuyi.fun/2020/11/11/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <link rel="icon" href="http://fuyi.fun/favicon.ico">
+    <link rel="apple-touch-icon" href="http://fuyi.fun/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="http://fuyi.fun/css/style.css">
+    <link rel="stylesheet" href="http://fuyi.fun/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fuyi.fun/css/monokai.css">
+    <link rel="stylesheet" href="http://fuyi.fun/fancybox/jquery.fancybox.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Linux常用命令" />
+<meta property="og:description" content="记录工作用到的常见linux命令行" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://fuyi.fun/2020/11/11/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" />
+<meta property="article:published_time" content="2020-11-11T12:45:43+08:00" />
+<meta property="article:modified_time" content="2020-11-11T12:45:43+08:00" />
+
+    
+    <meta itemprop="name" content="Linux常用命令">
+<meta itemprop="description" content="记录工作用到的常见linux命令行">
+<meta itemprop="datePublished" content="2020-11-11T12:45:43+08:00" />
+<meta itemprop="dateModified" content="2020-11-11T12:45:43+08:00" />
+<meta itemprop="wordCount" content="17">
+
+
+
+<meta itemprop="keywords" content="linux," />
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux常用命令"/>
+<meta name="twitter:description" content="记录工作用到的常见linux命令行"/>
+<meta name="twitter:site" content="@gohugoio"/>
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://fuyi.fun/" id="logo">
+          
+          <i class="logo" style="background-image: url('http://fuyi.fun/css/images/logo.png')"></i>
+          
+          <span class="site-title">小夫子的随笔</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://fuyi.fun/">首页</a>
+          
+          
+          
+          
+          
+          
+
+          
+          <a class="main-nav-link" href="/about/">About</a>
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://fuyi.fun/tags/">标签</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://fuyi.fun/categories/">分类</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://fuyi.fun/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="搜一哈">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="http://fuyi.fun/" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://fuyi.fun/">首页</a></td>
+          
+          
+          
+          
+          
+          
+
+          
+          <td><a class="main-nav-link" href="/about/">About</a></td>
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://fuyi.fun/tags/">标签</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://fuyi.fun/categories/">分类</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="http://fuyi.fun/" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   	
+    	<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      
+      <img id="avatar" src="https://www.gravatar.com/avatar/a0d899634aba465edd2c6ab0cc128e75?s=100&d=identicon"/>
+      
+      <h2 id="name">Jxing Fu</h2>
+      <h3 id="title">Programmer</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>China</span>
+      
+          <a id="follow" href="https://github.com/fugreat">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        13
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          18
+        
+        <span>
+            标签
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/fugreat" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//twitter.com/gohugoio" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="http://fuyi.fun/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+    
+
+    <section id="main">
+    
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2020/11/11/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+    <h1 class="article-title" itemprop="name">
+        Linux常用命令
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-11-11 12:45:43 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
+            &middot;
+            17
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/linux">linux</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <h3 id="scp-限速">scp 限速</h3>
+<p>scp 限速<br>
+-l  是限速配置<br>
+-l limit
+其中 -l 5000  大约是 5000/8 600多点KB/S</p>
+<h3 id="多核编译-make--jn">多核编译 make -jN</h3>
+
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2020/11/11/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-id="3e571e1da8a6bdeae3e5cab575b2f549" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+
+    
+<nav id="article-nav">
+    
+    <a href="http://fuyi.fun/2020/11/11/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB%E5%9F%BA%E4%BA%8E%E5%8F%8C%E7%AA%84%E5%B8%A6led%E5%85%89%E6%BA%90%E7%9A%84%E7%BA%A2%E5%A4%96%E7%94%B2%E7%83%B7%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E7%A0%94%E5%88%B6/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          上一个
+      </strong>
+      <div class="article-nav-title">论文解读：基于双窄带LED光源的红外甲烷传感器的研制  </div>
+    </a>
+    
+
+    
+    <a href="http://fuyi.fun/2020/11/11/rk3288-%E7%BC%96%E8%AF%91%E4%B8%89%E9%83%A8%E6%9B%B2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          下一个
+      </strong>
+      <div class="article-nav-title">RK3288 编译三部曲</div>
+    </a>
+    
+</nav>
+
+
+</article>
+
+
+
+    </section>
+
+   	
+    	<aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        最近
+    </h3>
+    <div class="widget">
+      <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2020/11/11/%E6%B0%94%E4%BD%93%E7%9B%91%E6%B5%8B%E4%BB%AA%E9%93%AD%E7%89%8C%E8%AE%BE%E8%AE%A1/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2020/11/11/%E6%B0%94%E4%BD%93%E7%9B%91%E6%B5%8B%E4%BB%AA%E9%93%AD%E7%89%8C%E8%AE%BE%E8%AE%A1/" class="title">气体监测仪铭牌设计</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-11-11 12:54:10 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2020/11/11/rk3288-%E7%BC%96%E8%AF%91%E4%B8%89%E9%83%A8%E6%9B%B2/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2020/11/11/rk3288-%E7%BC%96%E8%AF%91%E4%B8%89%E9%83%A8%E6%9B%B2/" class="title">RK3288 编译三部曲</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-11-11 12:48:55 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2020/11/11/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2020/11/11/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="title">Linux常用命令</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-11-11 12:45:43 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2020/11/11/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB%E5%9F%BA%E4%BA%8E%E5%8F%8C%E7%AA%84%E5%B8%A6led%E5%85%89%E6%BA%90%E7%9A%84%E7%BA%A2%E5%A4%96%E7%94%B2%E7%83%B7%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E7%A0%94%E5%88%B6/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2020/11/11/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB%E5%9F%BA%E4%BA%8E%E5%8F%8C%E7%AA%84%E5%B8%A6led%E5%85%89%E6%BA%90%E7%9A%84%E7%BA%A2%E5%A4%96%E7%94%B2%E7%83%B7%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E7%A0%94%E5%88%B6/" class="title">论文解读：基于双窄带LED光源的红外甲烷传感器的研制  </a></p>
+                    <p class="item-date">
+                        <time datetime="2020-11-11 10:48:40 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2020/11/11/float_to_hex/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2020/11/11/float_to_hex/" class="title">Float_to_hex</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-11-11 10:46:35 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/categories/tech">
+                    tech
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        标签
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/android">
+                    android
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/ch4">
+                    ch4
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/docker">
+                    docker
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/esp32">
+                    esp32
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/homebrew">
+                    homebrew
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/hugo">
+                    hugo
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/install">
+                    install
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/linux">
+                    linux
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/macos">
+                    macos
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/markdown">
+                    markdown
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/mesh">
+                    mesh
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/nodejs">
+                    nodejs
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/rk3288">
+                    rk3288
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/sensor">
+                    sensor
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/thingsboard">
+                    thingsboard
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/tool">
+                    tool
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/%E5%9B%BD%E6%A0%87">
+                    国标
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/%E9%93%AD%E7%89%8C">
+                    铭牌
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        
+        <a href="http://fuyi.fun/tags/android" style="font-size: 12px;">android</a>
+        
+        
+        <a href="http://fuyi.fun/tags/ch4" style="font-size: 12px;">ch4</a>
+        
+        
+        <a href="http://fuyi.fun/tags/docker" style="font-size: 12px;">docker</a>
+        
+        
+        <a href="http://fuyi.fun/tags/esp32" style="font-size: 12px;">esp32</a>
+        
+        
+        <a href="http://fuyi.fun/tags/homebrew" style="font-size: 12px;">homebrew</a>
+        
+        
+        <a href="http://fuyi.fun/tags/hugo" style="font-size: 12px;">hugo</a>
+        
+        
+        <a href="http://fuyi.fun/tags/install" style="font-size: 12px;">install</a>
+        
+        
+        <a href="http://fuyi.fun/tags/linux" style="font-size: 12px;">linux</a>
+        
+        
+        <a href="http://fuyi.fun/tags/macos" style="font-size: 12px;">macos</a>
+        
+        
+        <a href="http://fuyi.fun/tags/markdown" style="font-size: 12px;">markdown</a>
+        
+        
+        <a href="http://fuyi.fun/tags/mesh" style="font-size: 12px;">mesh</a>
+        
+        
+        <a href="http://fuyi.fun/tags/nodejs" style="font-size: 12px;">nodejs</a>
+        
+        
+        <a href="http://fuyi.fun/tags/rk3288" style="font-size: 12px;">rk3288</a>
+        
+        
+        <a href="http://fuyi.fun/tags/sensor" style="font-size: 12px;">sensor</a>
+        
+        
+        <a href="http://fuyi.fun/tags/thingsboard" style="font-size: 12px;">thingsboard</a>
+        
+        
+        <a href="http://fuyi.fun/tags/tool" style="font-size: 12px;">tool</a>
+        
+        
+        <a href="http://fuyi.fun/tags/%E5%9B%BD%E6%A0%87" style="font-size: 12px;">国标</a>
+        
+        
+        <a href="http://fuyi.fun/tags/%E9%93%AD%E7%89%8C" style="font-size: 12px;">铭牌</a>
+        
+    </div>
+</div>
+
+
+
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="https://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="http://fuyi.fun/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://fuyi.fun/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+</body>
+</html>

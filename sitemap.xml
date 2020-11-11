@@ -3,27 +3,67 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://fuyi.fun/post/</loc>
+    <lastmod>2020-11-11T12:54:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/tags/</loc>
+    <lastmod>2020-11-11T12:54:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/tags/%E5%9B%BD%E6%A0%87/</loc>
+    <lastmod>2020-11-11T12:54:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/</loc>
+    <lastmod>2020-11-11T12:54:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/2020/11/11/%E6%B0%94%E4%BD%93%E7%9B%91%E6%B5%8B%E4%BB%AA%E9%93%AD%E7%89%8C%E8%AE%BE%E8%AE%A1/</loc>
+    <lastmod>2020-11-11T12:54:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/tags/%E9%93%AD%E7%89%8C/</loc>
+    <lastmod>2020-11-11T12:54:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/tags/android/</loc>
+    <lastmod>2020-11-11T12:48:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/tags/rk3288/</loc>
+    <lastmod>2020-11-11T12:48:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/2020/11/11/rk3288-%E7%BC%96%E8%AF%91%E4%B8%89%E9%83%A8%E6%9B%B2/</loc>
+    <lastmod>2020-11-11T12:48:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/tags/linux/</loc>
+    <lastmod>2020-11-11T12:45:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/2020/11/11/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2020-11-11T12:45:43+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://fuyi.fun/tags/ch4/</loc>
     <lastmod>2020-11-11T10:48:40+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://fuyi.fun/</loc>
-    <lastmod>2020-11-11T10:48:40+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://fuyi.fun/post/</loc>
-    <lastmod>2020-11-11T10:48:40+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://fuyi.fun/tags/sensor/</loc>
-    <lastmod>2020-11-11T10:48:40+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://fuyi.fun/tags/</loc>
     <lastmod>2020-11-11T10:48:40+08:00</lastmod>
   </url>
   

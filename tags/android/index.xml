@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>android on 小夫子的随笔</title>
+    <link>http://fuyi.fun/tags/android/</link>
+    <description>Recent content in android on 小夫子的随笔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 11 Nov 2020 12:48:55 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RK3288 编译三部曲</title>
+      <link>http://fuyi.fun/2020/11/11/rk3288-%E7%BC%96%E8%AF%91%E4%B8%89%E9%83%A8%E6%9B%B2/</link>
+      <pubDate>Wed, 11 Nov 2020 12:48:55 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2020/11/11/rk3288-%E7%BC%96%E8%AF%91%E4%B8%89%E9%83%A8%E6%9B%B2/</guid>
+      <description> 安装相应依赖库文件，以及交叉编译工具和配置环境变量； 编译u-boot； 编译kernel； 编译android；     下载文件
+https://blog.csdn.net/Chhjnavy/article/details/96739573
+  RK3288 android7.1.2 内核极其源码编译详细步骤
+https://blog.csdn.net/Chhjnavy/article/details/95043440?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&amp;amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight
+  自动编译
+https://blog.csdn.net/shao15232/article/details/102487625
+https://blog.csdn.net/chhjnavy/article/details/95043440?utm_medium=distribute.pc_relevant.none-task-blog-title-1&amp;amp;spm=1001.2101.3001.4242
+  </description>
+    </item>
+    
+  </channel>
+</rss>

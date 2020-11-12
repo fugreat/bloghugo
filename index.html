@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://fuyi.fun/" />
-<meta property="og:updated_time" content="2020-11-12T09:25:45+08:00" />
+<meta property="og:updated_time" content="2020-11-12T09:32:42+08:00" />
 
     
     <meta itemprop="name" content="小夫子的随笔">
@@ -162,7 +162,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        18
+        19
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -252,9 +252,136 @@
         </a>
 
         <header class="article-header">
-    <a href="http://fuyi.fun/2020/11/12/rt-thrad_%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97/">
+    <a href="http://fuyi.fun/2020/11/12/rt-thread_%E7%BA%BF%E7%A8%8B/">
     <h1 class="article-title" itemprop="name">
-        Rt Thrad_编程指南
+        Rt Thread_线程
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-11-12 09:32:42 &#43;0800 CST" itemprop="datePublished">2020-11-12</time>
+            &middot;
+            179
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                动态线程和静态线程范例 thread1 是一个静态线程对象，而 thread2 是一个动态线程对象。
+thread1 对象的内存空间，包括线程控制块 thread1 与栈空间 thread1_stack 都是编译时决定的，因为代码中都不存在初始值，都统一放在未初始化数据段中。
+thread2 运行中用到的空间都是动态分配的，包括线程控制块（thread2_ptr 指向的内容）和栈空间。
+静态对象会占用 RAM 空间，不依赖于内存堆管理器，内存分配时间确定。 动态对象则依赖于内存堆管理器，运行时申请 RAM 空间，当对象被删除后，占用的 RAM 空间被释放。 这两种方式各有利弊，可以根据实际环境需求选择具体使用方式。
+/* 线程 1 的对象和运行时用到的栈 */ static struct rt_thread thread1; static rt_uint8_t thread1_stack[512]; /* 线程 1 入口 */ void thread1_entry(void* parameter) { int i; while (1) { for (i = 0; i &lt; 10; i ++) { rt_kprintf(&#34;%d\n&#34;, i); /* 延时 100ms */ rt_thread_mdelay(100); } } } /* 线程 2 入口 */ void thread2_entry(void* parameter) { int count = 0; while (1) { rt_kprintf(&#34;Thread2 count:%d\n&#34;, ++count); /* 延时 50ms */ rt_thread_mdelay(50); } } /* 线程例程初始化 */ int thread_sample_init() { rt_thread_t thread2_ptr; rt_err_t result; /* 初始化线程 1 */ /* 线程的入口是 thread1_entry，参数是 RT_NULL * 线程栈是 thread1_stack * 优先级是 200，时间片是 10 个 OS Tick */ result = rt_thread_init(&amp;thread1, &#34;thread1&#34;, thread1_entry, RT_NULL, &amp;thread1_stack[0], sizeof(thread1_stack), 200, 10); /* 启动线程 */ if (result == RT_EOK) rt_thread_startup(&amp;thread1); /* 创建线程 2 */ /* 线程的入口是 thread2_entry, 参数是 RT_NULL * 栈空间是 512，优先级是 250，时间片是 25 个 OS Tick */ thread2_ptr = rt_thread_create(&#34;thread2&#34;, thread2_entry, RT_NULL, 512, 250, 25); /* 启动线程 */ if (thread2_ptr !
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2020/11/12/rt-thread_%E7%BA%BF%E7%A8%8B/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2020/11/12/rt-thread_%E7%BA%BF%E7%A8%8B/" data-id="1ba5c87ac7454dd5696354ecb770aec1" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2020/11/12/rt-thread_%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97/">
+    <h1 class="article-title" itemprop="name">
+        RT-Thread_编程指南
     </h1>
     </a>
     <div class="article-meta">
@@ -293,13 +420,13 @@
 int rtthread_startup(void) { rt_hw_interrupt_disable(); /* 板级初始化：需在该函数内部进行系统堆的初始化 */ rt_hw_board_init(); /* 打印 RT-Thread 版本信息 */ rt_show_version(); /* 定时器初始化 */ rt_system_timer_init(); /* 调度器初始化 */ rt_system_scheduler_init(); #ifdef RT_USING_SIGNALS  /* 信号初始化 */ rt_system_signal_init(); #endif  /* 由此创建一个用户 main 线程 */ rt_application_init(); /* 定时器线程初始化 */ rt_system_timer_thread_init(); /* 空闲线程初始化 */ rt_thread_idle_init(); /* 启动调度器 */ rt_system_scheduler_start(); /* 不会执行至此 */ return 0; } 大致可以分为四个部分：
             </p>
             <p class="article-more-link">
-                <a href="http://fuyi.fun/2020/11/12/rt-thrad_%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97/">
+                <a href="http://fuyi.fun/2020/11/12/rt-thread_%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97/">
                     阅读更多
                 </a>
             </p>
         </div>
         <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/11/12/rt-thrad_%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97/" data-id="f9be591e03e3c72e791f561e4f8a117c" class="article-share-link">
+    <a data-url="http://fuyi.fun/2020/11/12/rt-thread_%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97/" data-id="c299948645c31d2b8d544d6b76e0e2c6" class="article-share-link">
         <i class="fa fa-share"></i>
         分享
     </a>
@@ -1504,144 +1631,6 @@ LED电流和光强: 设备结构: 论文全文: 基于双窄带LED光源的红�
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2020/11/11/esp32-mesh-wi-fi-mesh/">
-    <h1 class="article-title" itemprop="name">
-        esp32 mesh WI-FI MESH
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2020-11-11 10:44:51 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
-            &middot;
-            6
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/mesh">mesh</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/esp32">esp32</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                官方文档： https://docs.espressif.com/projects/esp-idf/zh_CN/stable/get-started/index.html
-MacOS下搭建开发环境 https://docs.espressif.com/projects/esp-idf/zh_CN/stable/get-started/macos-setup.html
-网络拓扑说明： https://docs.espressif.com/projects/esp-idf/en/stable/api-guides/mesh.html
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2020/11/11/esp32-mesh-wi-fi-mesh/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/11/11/esp32-mesh-wi-fi-mesh/" data-id="82f133ac82572eff8f78a1405dce12c8" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1670,7 +1659,7 @@ MacOS下搭建开发环境 https://docs.espressif.com/projects/esp-idf/zh_CN/sta
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2020/11/12/rt-thrad_%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97/" class="thumbnail">
+                    <a href="http://fuyi.fun/2020/11/12/rt-thread_%E7%BA%BF%E7%A8%8B/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -1680,7 +1669,26 @@ MacOS下搭建开发环境 https://docs.espressif.com/projects/esp-idf/zh_CN/sta
                     
                     
                     
-                    <p class="item-title"><a href="http://fuyi.fun/2020/11/12/rt-thrad_%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97/" class="title">Rt Thrad_编程指南</a></p>
+                    <p class="item-title"><a href="http://fuyi.fun/2020/11/12/rt-thread_%E7%BA%BF%E7%A8%8B/" class="title">Rt Thread_线程</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-11-12 09:32:42 &#43;0800 CST" itemprop="datePublished">2020-11-12</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2020/11/12/rt-thread_%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2020/11/12/rt-thread_%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97/" class="title">RT-Thread_编程指南</a></p>
                     <p class="item-date">
                         <time datetime="2020-11-12 09:25:45 &#43;0800 CST" itemprop="datePublished">2020-11-12</time>
                     </p>
@@ -1747,25 +1755,6 @@ MacOS下搭建开发环境 https://docs.espressif.com/projects/esp-idf/zh_CN/sta
                     <p class="item-title"><a href="http://fuyi.fun/2020/11/11/%E7%AE%A1%E5%BE%84%E5%AF%B9%E7%85%A7%E8%A1%A8/" class="title">管径对照表</a></p>
                     <p class="item-date">
                         <time datetime="2020-11-11 12:55:31 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2020/11/11/%E6%B0%94%E4%BD%93%E7%9B%91%E6%B5%8B%E4%BB%AA%E9%93%AD%E7%89%8C%E8%AE%BE%E8%AE%A1/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2020/11/11/%E6%B0%94%E4%BD%93%E7%9B%91%E6%B5%8B%E4%BB%AA%E9%93%AD%E7%89%8C%E8%AE%BE%E8%AE%A1/" class="title">气体监测仪铭牌设计</a></p>
-                    <p class="item-date">
-                        <time datetime="2020-11-11 12:54:10 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
                     </p>
                 </div>
             </li>

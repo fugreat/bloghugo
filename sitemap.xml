@@ -3,17 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://fuyi.fun/post/</loc>
+    <lastmod>2020-11-12T09:25:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/2020/11/12/rt-thrad_%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2020-11-12T09:25:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/</loc>
+    <lastmod>2020-11-12T09:25:45+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://fuyi.fun/tags/adc/</loc>
     <lastmod>2020-11-12T09:02:37+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://fuyi.fun/categories/</loc>
-    <lastmod>2020-11-12T09:02:37+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://fuyi.fun/post/</loc>
     <lastmod>2020-11-12T09:02:37+08:00</lastmod>
   </url>
   
@@ -34,11 +44,6 @@
   
   <url>
     <loc>http://fuyi.fun/categories/tech/</loc>
-    <lastmod>2020-11-12T09:02:37+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://fuyi.fun/</loc>
     <lastmod>2020-11-12T09:02:37+08:00</lastmod>
   </url>
   

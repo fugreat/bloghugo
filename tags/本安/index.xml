@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>本安 on 小夫子的随笔</title>
+    <link>http://fuyi.fun/tags/%E6%9C%AC%E5%AE%89/</link>
+    <description>Recent content in 本安 on 小夫子的随笔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 13 Nov 2020 09:12:35 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/%E6%9C%AC%E5%AE%89/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>本安电源分析</title>
+      <link>http://fuyi.fun/2020/11/13/%E6%9C%AC%E5%AE%89%E7%94%B5%E6%BA%90%E5%88%86%E6%9E%90/</link>
+      <pubDate>Fri, 13 Nov 2020 09:12:35 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2020/11/13/%E6%9C%AC%E5%AE%89%E7%94%B5%E6%BA%90%E5%88%86%E6%9E%90/</guid>
+      <description>本安电路电源分析
+1、电芯输出端保险丝F3、限流电阻R16是短路保护和限制短路电流的器件，是必须要用的。
+2、R7、Q7、Q3、R9、D3是过电流保护，电流通过取样电阻R7两端的压降来调节Q7的导通角，从而使Q3的基极电压高低变化，使得通过Q3的负载电流得到控制；同理R8、Q8、Q4、R10、D4功能完全一样，只不过是与前面的一组过电流保护串联在电路中。
+3、U2与电阻R12、R14组成输出稳压电路，即使电芯电压波动也能保证负载上的电压恒定。
+4、因为是本安电源，必须做二次保护验证的，上面回复的第二点中就是为了满足这个要求。认证过程是当短接Q3时还有Q4正常做过电流保护，当短接Q4时则有Q3正常做过电流保护，且无论短接Q3还是Q4必须保证电流保护的动作值是完全一样的。
+5、因为是本安电源，R16是必须有的，当做短路验证时，就由这个保证短路电流符合认证要求的。</description>
+    </item>
+    
+  </channel>
+</rss>

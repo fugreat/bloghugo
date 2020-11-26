@@ -6,7 +6,59 @@
     <description>Recent content in Posts on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 16 Nov 2020 12:06:11 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Nov 2020 11:11:27 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用doker搭建nrf52开发环境</title>
+      <link>http://fuyi.fun/2020/11/26/%E4%BD%BF%E7%94%A8doker%E6%90%AD%E5%BB%BAnrf52%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Thu, 26 Nov 2020 11:11:27 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2020/11/26/%E4%BD%BF%E7%94%A8doker%E6%90%AD%E5%BB%BAnrf52%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</guid>
+      <description>目标 搭建NRF52的开发环境；
+简化环境搭建复杂度，跨平台适配开发环境；
+方法   安装docker
+  下载nrf52开发环境 docker pull fugreat/nrf52
+  创建容器
+  docker run --name nrf52-1 -v /Users/user_name/data:/data -itd fugreat/nrf52 bash  此步把 /Users/user_name/data目录映射到编译环境的/data中
+ 编译  docker exec -it nrf52 bash -c &amp;quot;cd /data/project_name &amp;amp;&amp;amp; make&amp;quot; 启/停容器  docker start nrf52 docker stop nrf52 </description>
+    </item>
+    
+    <item>
+      <title>MacOS安装nrfutil</title>
+      <link>http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/</link>
+      <pubDate>Thu, 26 Nov 2020 11:09:19 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/</guid>
+      <description>参考：https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_nrfutil%2FUG%2Fnrfutil%2Fnrfutil_intro.html
+pip install nrfutil macOS: pip install --ignore-installed six nrfutil ～～～～～～～～～～～～～
+Installing from PyPI nRF Util is available as a package in the Python Package Index (PyPI) and can be downloaded and installed directly using the Python installer program pip. Enter the following command to install the latest published version from PyPI: pip install nrfutil This command installs nRF Util and all required packages. When installing on macOS, you might get an error about the Python module six.</description>
+    </item>
+    
+    <item>
+      <title>Docker覆盖entrypoint</title>
+      <link>http://fuyi.fun/2020/11/25/docker%E8%A6%86%E7%9B%96entrypoint/</link>
+      <pubDate>Wed, 25 Nov 2020 10:17:53 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2020/11/25/docker%E8%A6%86%E7%9B%96entrypoint/</guid>
+      <description>在使用docker简化编译环境搭建过程中碰到一个问题是 pull下来的镜像默认提供entrypoint，自动对指定的目录进行编译(运行make)。
+但是在实际使用过程中，可能需要带参数或者make不同的目标。
+因为需要屏蔽掉默认的entrypoint。
+屏蔽方法是：
+# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &amp;quot;cd /code &amp;amp;&amp;amp; make -j8 &amp;amp;&amp;amp; make flash&amp;quot; [docker_imag】 </description>
+    </item>
+    
+    <item>
+      <title>文件共享seafile</title>
+      <link>http://fuyi.fun/2020/11/23/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%ABseafile/</link>
+      <pubDate>Mon, 23 Nov 2020 15:13:35 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2020/11/23/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%ABseafile/</guid>
+      <description>文件共享服务 目标 组内文件共享；
+安装 点此查看官方文档的详细安装步骤。
+摘抄如下，docker下安装： 1.下载docker-compose.yml
+wget https://docs.seafile.com/d/cb1d3f97106847abbf31/files/?p=/docker/docker-compose.yml 2.按照实际情况修改配置：
+version: &#39;2.0&#39; services: db: image: mariadb:10.1 container_name: seafile-mysql environment: - MYSQL_ROOT_PASSWORD=db_dev # Requested, set the root&#39;s password of MySQL service. - MYSQL_LOG_CONSOLE=true volumes: - /opt/seafile-mysql/db:/var/lib/mysql # Requested, specifies the path to MySQL data persistent store. networks: - seafile-net memcached: image: memcached:1.5.6 container_name: seafile-memcached entrypoint: memcached -m 256 networks: - seafile-net seafile: image: seafileltd/seafile-mc:latest container_name: seafile ports: - &amp;quot;80:80&amp;quot; # - &amp;quot;443:443&amp;quot; # If https is enabled, cancel the comment.</description>
+    </item>
+    
     <item>
       <title>在线绘制cad</title>
       <link>http://fuyi.fun/2020/11/16/%E5%9C%A8%E7%BA%BF%E7%BB%98%E5%88%B6cad/</link>
@@ -278,6 +330,15 @@ docker pull amyhre/docuwiki
       <guid>http://fuyi.fun/2017/05/20/%E4%BD%BF%E7%94%A8%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87%E7%9A%84shortcode/</guid>
       <description>&lt;p&gt;在页面中添加封面的shortcode。
 复制下面的代码进你的page，修改相关的路径。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://fuyi.fun/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fuyi.fun/1/01/01/</guid>
+      <description></description>
     </item>
     
   </channel>

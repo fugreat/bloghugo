@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>MacOS安装nrfutil &middot; 小夫子的随笔</title>
+    <meta name="generator" content="Hugo 0.77.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Jxing Fu">
+    
+      <meta name="description" content="">
+    
+    
+    <link rel="canonical" href="http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/"/>
+    <link rel="icon" href="http://fuyi.fun/favicon.ico">
+    <link rel="apple-touch-icon" href="http://fuyi.fun/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="http://fuyi.fun/css/style.css">
+    <link rel="stylesheet" href="http://fuyi.fun/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fuyi.fun/css/monokai.css">
+    <link rel="stylesheet" href="http://fuyi.fun/fancybox/jquery.fancybox.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="MacOS安装nrfutil" />
+<meta property="og:description" content="参考：https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_nrfutil%2FUG%2Fnrfutil%2Fnrfutil_intro.html
+pip install nrfutil macOS: pip install --ignore-installed six nrfutil ～～～～～～～～～～～～～
+Installing from PyPI nRF Util is available as a package in the Python Package Index (PyPI) and can be downloaded and installed directly using the Python installer program pip. Enter the following command to install the latest published version from PyPI: pip install nrfutil This command installs nRF Util and all required packages. When installing on macOS, you might get an error about the Python module six." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/" />
+<meta property="article:published_time" content="2020-11-26T11:09:19+08:00" />
+<meta property="article:modified_time" content="2020-11-26T11:09:19+08:00" />
+
+    
+    <meta itemprop="name" content="MacOS安装nrfutil">
+<meta itemprop="description" content="参考：https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_nrfutil%2FUG%2Fnrfutil%2Fnrfutil_intro.html
+pip install nrfutil macOS: pip install --ignore-installed six nrfutil ～～～～～～～～～～～～～
+Installing from PyPI nRF Util is available as a package in the Python Package Index (PyPI) and can be downloaded and installed directly using the Python installer program pip. Enter the following command to install the latest published version from PyPI: pip install nrfutil This command installs nRF Util and all required packages. When installing on macOS, you might get an error about the Python module six.">
+<meta itemprop="datePublished" content="2020-11-26T11:09:19+08:00" />
+<meta itemprop="dateModified" content="2020-11-26T11:09:19+08:00" />
+<meta itemprop="wordCount" content="181">
+
+
+
+<meta itemprop="keywords" content="nordic," />
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MacOS安装nrfutil"/>
+<meta name="twitter:description" content="参考：https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_nrfutil%2FUG%2Fnrfutil%2Fnrfutil_intro.html
+pip install nrfutil macOS: pip install --ignore-installed six nrfutil ～～～～～～～～～～～～～
+Installing from PyPI nRF Util is available as a package in the Python Package Index (PyPI) and can be downloaded and installed directly using the Python installer program pip. Enter the following command to install the latest published version from PyPI: pip install nrfutil This command installs nRF Util and all required packages. When installing on macOS, you might get an error about the Python module six."/>
+<meta name="twitter:site" content="@gohugoio"/>
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://fuyi.fun/" id="logo">
+          
+          <i class="logo" style="background-image: url('http://fuyi.fun/css/images/logo.png')"></i>
+          
+          <span class="site-title">小夫子的随笔</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://fuyi.fun/">首页</a>
+          
+          
+          
+          
+          
+          
+
+          
+          <a class="main-nav-link" href="/about/">About</a>
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://fuyi.fun/tags/">标签</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://fuyi.fun/categories/">分类</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://fuyi.fun/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="搜一哈">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="http://fuyi.fun/" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://fuyi.fun/">首页</a></td>
+          
+          
+          
+          
+          
+          
+
+          
+          <td><a class="main-nav-link" href="/about/">About</a></td>
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://fuyi.fun/tags/">标签</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://fuyi.fun/categories/">分类</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="http://fuyi.fun/" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   	
+    	<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      
+      <img id="avatar" src="https://www.gravatar.com/avatar/a0d899634aba465edd2c6ab0cc128e75?s=100&d=identicon"/>
+      
+      <h2 id="name">Jxing Fu</h2>
+      <h3 id="title">Programmer</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>China</span>
+      
+          <a id="follow" href="https://github.com/fugreat">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        26
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          33
+        
+        <span>
+            标签
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/fugreat" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//twitter.com/gohugoio" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="http://fuyi.fun/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+    
+
+    <section id="main">
+    
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/">
+    <h1 class="article-title" itemprop="name">
+        MacOS安装nrfutil
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-11-26 11:09:19 &#43;0800 CST" itemprop="datePublished">2020-11-26</time>
+            &middot;
+            181
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/nordic">nordic</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>参考：https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_nrfutil%2FUG%2Fnrfutil%2Fnrfutil_intro.html</p>
+<pre><code>pip install nrfutil
+
+macOS: pip install --ignore-installed six nrfutil
+</code></pre><p>～～～～～～～～～～～～～</p>
+<pre><code>Installing from PyPI
+nRF Util is available as a package in the Python Package Index (PyPI) and can be downloaded and installed directly using the Python installer program pip.
+
+Enter the following command to install the latest published version from PyPI:
+pip install nrfutil
+This command installs nRF Util and all required packages.
+When installing on macOS, you might get an error about the Python module six. In this case, enter the following command instead:
+pip install --ignore-installed six nrfutil
+If you are running nRF Util on Windows, the runtime libraries targeted during the library build must be present when running code using the library. The following errors indicate that the runtime libraries are not available:
+Missing MSVC*120.DLL or MSVC*140.DLL
+RuntimeError: Could not load shared library &lt;path&gt;/pc_ble_driver_shared.dll : '[Error 193] %1 is not a valid Win32 application
+In this case, install the Visual C++ redistributable packages for Visual Studio 2013 or Visual Studio 2015. Select the version that corresponds to the architecture of your Python installation (x86 or x64).
+
+
+````s</code></pre>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/" data-id="c51f77ab24348d9c9aa33fc99d9bd786" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+
+    
+<nav id="article-nav">
+    
+    <a href="http://fuyi.fun/2020/11/25/docker%E8%A6%86%E7%9B%96entrypoint/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          上一个
+      </strong>
+      <div class="article-nav-title">Docker覆盖entrypoint</div>
+    </a>
+    
+
+    
+    <a href="http://fuyi.fun/2020/11/26/%E4%BD%BF%E7%94%A8doker%E6%90%AD%E5%BB%BAnrf52%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          下一个
+      </strong>
+      <div class="article-nav-title">使用doker搭建nrf52开发环境</div>
+    </a>
+    
+</nav>
+
+
+</article>
+
+
+
+    </section>
+
+   	
+    	<aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        最近
+    </h3>
+    <div class="widget">
+      <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2020/11/26/%E4%BD%BF%E7%94%A8doker%E6%90%AD%E5%BB%BAnrf52%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2020/11/26/%E4%BD%BF%E7%94%A8doker%E6%90%AD%E5%BB%BAnrf52%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" class="title">使用doker搭建nrf52开发环境</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-11-26 11:11:27 &#43;0800 CST" itemprop="datePublished">2020-11-26</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/" class="title">MacOS安装nrfutil</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-11-26 11:09:19 &#43;0800 CST" itemprop="datePublished">2020-11-26</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2020/11/25/docker%E8%A6%86%E7%9B%96entrypoint/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2020/11/25/docker%E8%A6%86%E7%9B%96entrypoint/" class="title">Docker覆盖entrypoint</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-11-25 10:17:53 &#43;0800 CST" itemprop="datePublished">2020-11-25</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2020/11/23/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%ABseafile/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2020/11/23/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%ABseafile/" class="title">文件共享seafile</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-11-23 15:13:35 &#43;0800 CST" itemprop="datePublished">2020-11-23</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2020/11/16/%E5%9C%A8%E7%BA%BF%E7%BB%98%E5%88%B6cad/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2020/11/16/%E5%9C%A8%E7%BA%BF%E7%BB%98%E5%88%B6cad/" class="title">在线绘制cad</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-11-16 12:06:11 &#43;0800 CST" itemprop="datePublished">2020-11-16</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/categories/tech">
+                    tech
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        标签
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/adc">
+                    adc
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/android">
+                    android
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/cad">
+                    cad
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/ch4">
+                    ch4
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/dn25">
+                    dn25
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/docker">
+                    docker
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/dropbox">
+                    dropbox
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/entrypoint">
+                    entrypoint
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/esp32">
+                    esp32
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/homebrew">
+                    homebrew
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/hugo">
+                    hugo
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/install">
+                    install
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/linux">
+                    linux
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/macos">
+                    macos
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/markdown">
+                    markdown
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/mesh">
+                    mesh
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/nodejs">
+                    nodejs
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/nordic">
+                    nordic
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/nrf52">
+                    nrf52
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/rk3288">
+                    rk3288
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/sensor">
+                    sensor
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/sharefiles">
+                    sharefiles
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/stm32">
+                    stm32
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/thingsboard">
+                    thingsboard
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/tool">
+                    tool
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/web">
+                    web
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/%E5%88%86%E6%9E%90">
+                    分析
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/%E5%9B%BD%E6%A0%87">
+                    国标
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F">
+                    嵌入式
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/%E6%9C%AC%E5%AE%89">
+                    本安
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/%E7%94%B5%E8%B7%AF">
+                    电路
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/%E7%AE%A1%E5%BE%84">
+                    管径
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/%E9%93%AD%E7%89%8C">
+                    铭牌
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        
+        <a href="http://fuyi.fun/tags/adc" style="font-size: 12px;">adc</a>
+        
+        
+        <a href="http://fuyi.fun/tags/android" style="font-size: 12px;">android</a>
+        
+        
+        <a href="http://fuyi.fun/tags/cad" style="font-size: 12px;">cad</a>
+        
+        
+        <a href="http://fuyi.fun/tags/ch4" style="font-size: 12px;">ch4</a>
+        
+        
+        <a href="http://fuyi.fun/tags/dn25" style="font-size: 12px;">dn25</a>
+        
+        
+        <a href="http://fuyi.fun/tags/docker" style="font-size: 12px;">docker</a>
+        
+        
+        <a href="http://fuyi.fun/tags/dropbox" style="font-size: 12px;">dropbox</a>
+        
+        
+        <a href="http://fuyi.fun/tags/entrypoint" style="font-size: 12px;">entrypoint</a>
+        
+        
+        <a href="http://fuyi.fun/tags/esp32" style="font-size: 12px;">esp32</a>
+        
+        
+        <a href="http://fuyi.fun/tags/homebrew" style="font-size: 12px;">homebrew</a>
+        
+        
+        <a href="http://fuyi.fun/tags/hugo" style="font-size: 12px;">hugo</a>
+        
+        
+        <a href="http://fuyi.fun/tags/install" style="font-size: 12px;">install</a>
+        
+        
+        <a href="http://fuyi.fun/tags/linux" style="font-size: 12px;">linux</a>
+        
+        
+        <a href="http://fuyi.fun/tags/macos" style="font-size: 12px;">macos</a>
+        
+        
+        <a href="http://fuyi.fun/tags/markdown" style="font-size: 12px;">markdown</a>
+        
+        
+        <a href="http://fuyi.fun/tags/mesh" style="font-size: 12px;">mesh</a>
+        
+        
+        <a href="http://fuyi.fun/tags/nodejs" style="font-size: 12px;">nodejs</a>
+        
+        
+        <a href="http://fuyi.fun/tags/nordic" style="font-size: 12px;">nordic</a>
+        
+        
+        <a href="http://fuyi.fun/tags/nrf52" style="font-size: 12px;">nrf52</a>
+        
+        
+        <a href="http://fuyi.fun/tags/rk3288" style="font-size: 12px;">rk3288</a>
+        
+        
+        <a href="http://fuyi.fun/tags/sensor" style="font-size: 12px;">sensor</a>
+        
+        
+        <a href="http://fuyi.fun/tags/sharefiles" style="font-size: 12px;">sharefiles</a>
+        
+        
+        <a href="http://fuyi.fun/tags/stm32" style="font-size: 12px;">stm32</a>
+        
+        
+        <a href="http://fuyi.fun/tags/thingsboard" style="font-size: 12px;">thingsboard</a>
+        
+        
+        <a href="http://fuyi.fun/tags/tool" style="font-size: 12px;">tool</a>
+        
+        
+        <a href="http://fuyi.fun/tags/web" style="font-size: 12px;">web</a>
+        
+        
+        <a href="http://fuyi.fun/tags/%E5%88%86%E6%9E%90" style="font-size: 12px;">分析</a>
+        
+        
+        <a href="http://fuyi.fun/tags/%E5%9B%BD%E6%A0%87" style="font-size: 12px;">国标</a>
+        
+        
+        <a href="http://fuyi.fun/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F" style="font-size: 12px;">嵌入式</a>
+        
+        
+        <a href="http://fuyi.fun/tags/%E6%9C%AC%E5%AE%89" style="font-size: 12px;">本安</a>
+        
+        
+        <a href="http://fuyi.fun/tags/%E7%94%B5%E8%B7%AF" style="font-size: 12px;">电路</a>
+        
+        
+        <a href="http://fuyi.fun/tags/%E7%AE%A1%E5%BE%84" style="font-size: 12px;">管径</a>
+        
+        
+        <a href="http://fuyi.fun/tags/%E9%93%AD%E7%89%8C" style="font-size: 12px;">铭牌</a>
+        
+    </div>
+</div>
+
+
+
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="https://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="http://fuyi.fun/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://fuyi.fun/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+</body>
+</html>

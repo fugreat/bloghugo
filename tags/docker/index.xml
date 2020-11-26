@@ -6,7 +6,35 @@
     <description>Recent content in docker on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 11 Nov 2020 10:01:51 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Nov 2020 11:11:27 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用doker搭建nrf52开发环境</title>
+      <link>http://fuyi.fun/2020/11/26/%E4%BD%BF%E7%94%A8doker%E6%90%AD%E5%BB%BAnrf52%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Thu, 26 Nov 2020 11:11:27 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2020/11/26/%E4%BD%BF%E7%94%A8doker%E6%90%AD%E5%BB%BAnrf52%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</guid>
+      <description>目标 搭建NRF52的开发环境；
+简化环境搭建复杂度，跨平台适配开发环境；
+方法   安装docker
+  下载nrf52开发环境 docker pull fugreat/nrf52
+  创建容器
+  docker run --name nrf52-1 -v /Users/user_name/data:/data -itd fugreat/nrf52 bash  此步把 /Users/user_name/data目录映射到编译环境的/data中
+ 编译  docker exec -it nrf52 bash -c &amp;quot;cd /data/project_name &amp;amp;&amp;amp; make&amp;quot; 启/停容器  docker start nrf52 docker stop nrf52 </description>
+    </item>
+    
+    <item>
+      <title>Docker覆盖entrypoint</title>
+      <link>http://fuyi.fun/2020/11/25/docker%E8%A6%86%E7%9B%96entrypoint/</link>
+      <pubDate>Wed, 25 Nov 2020 10:17:53 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2020/11/25/docker%E8%A6%86%E7%9B%96entrypoint/</guid>
+      <description>在使用docker简化编译环境搭建过程中碰到一个问题是 pull下来的镜像默认提供entrypoint，自动对指定的目录进行编译(运行make)。
+但是在实际使用过程中，可能需要带参数或者make不同的目标。
+因为需要屏蔽掉默认的entrypoint。
+屏蔽方法是：
+# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &amp;quot;cd /code &amp;amp;&amp;amp; make -j8 &amp;amp;&amp;amp; make flash&amp;quot; [docker_imag】 </description>
+    </item>
+    
     <item>
       <title>Docker下安装thingsboard</title>
       <link>http://fuyi.fun/2020/11/11/docker%E4%B8%8B%E5%AE%89%E8%A3%85thingsboard/</link>

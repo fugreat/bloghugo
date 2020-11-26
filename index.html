@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://fuyi.fun/" />
-<meta property="og:updated_time" content="2020-11-16T12:06:11+08:00" />
+<meta property="og:updated_time" content="2020-11-26T11:11:27+08:00" />
 
     
     <meta itemprop="name" content="小夫子的随笔">
@@ -162,12 +162,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        21
+        26
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          28
+          33
         
         <span>
             标签
@@ -245,6 +245,562 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2020/11/26/%E4%BD%BF%E7%94%A8doker%E6%90%AD%E5%BB%BAnrf52%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">
+    <h1 class="article-title" itemprop="name">
+        使用doker搭建nrf52开发环境
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-11-26 11:11:27 &#43;0800 CST" itemprop="datePublished">2020-11-26</time>
+            &middot;
+            39
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/docker">docker</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/nrf52">nrf52</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                目标 搭建NRF52的开发环境；
+简化环境搭建复杂度，跨平台适配开发环境；
+方法   安装docker
+  下载nrf52开发环境 docker pull fugreat/nrf52
+  创建容器
+  docker run --name nrf52-1 -v /Users/user_name/data:/data -itd fugreat/nrf52 bash  此步把 /Users/user_name/data目录映射到编译环境的/data中
+ 编译  docker exec -it nrf52 bash -c &quot;cd /data/project_name &amp;&amp; make&quot; 启/停容器  docker start nrf52 docker stop nrf52 
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2020/11/26/%E4%BD%BF%E7%94%A8doker%E6%90%AD%E5%BB%BAnrf52%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2020/11/26/%E4%BD%BF%E7%94%A8doker%E6%90%AD%E5%BB%BAnrf52%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" data-id="4f88ab55b5a11b7b637ccf5679e6afa8" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/">
+    <h1 class="article-title" itemprop="name">
+        MacOS安装nrfutil
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-11-26 11:09:19 &#43;0800 CST" itemprop="datePublished">2020-11-26</time>
+            &middot;
+            181
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/nordic">nordic</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                参考：https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_nrfutil%2FUG%2Fnrfutil%2Fnrfutil_intro.html
+pip install nrfutil macOS: pip install --ignore-installed six nrfutil ～～～～～～～～～～～～～
+Installing from PyPI nRF Util is available as a package in the Python Package Index (PyPI) and can be downloaded and installed directly using the Python installer program pip. Enter the following command to install the latest published version from PyPI: pip install nrfutil This command installs nRF Util and all required packages. When installing on macOS, you might get an error about the Python module six.
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/" data-id="c51f77ab24348d9c9aa33fc99d9bd786" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2020/11/25/docker%E8%A6%86%E7%9B%96entrypoint/">
+    <h1 class="article-title" itemprop="name">
+        Docker覆盖entrypoint
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-11-25 10:17:53 &#43;0800 CST" itemprop="datePublished">2020-11-25</time>
+            &middot;
+            31
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/docker">docker</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/entrypoint">entrypoint</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                在使用docker简化编译环境搭建过程中碰到一个问题是 pull下来的镜像默认提供entrypoint，自动对指定的目录进行编译(运行make)。
+但是在实际使用过程中，可能需要带参数或者make不同的目标。
+因为需要屏蔽掉默认的entrypoint。
+屏蔽方法是：
+# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &quot;cd /code &amp;&amp; make -j8 &amp;&amp; make flash&quot; [docker_imag】 
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2020/11/25/docker%E8%A6%86%E7%9B%96entrypoint/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2020/11/25/docker%E8%A6%86%E7%9B%96entrypoint/" data-id="ec6804390eb893e1f9681f9a5f0df55a" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2020/11/23/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%ABseafile/">
+    <h1 class="article-title" itemprop="name">
+        文件共享seafile
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-11-23 15:13:35 &#43;0800 CST" itemprop="datePublished">2020-11-23</time>
+            &middot;
+            183
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/dropbox">dropbox</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/sharefiles">sharefiles</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                文件共享服务 目标 组内文件共享；
+安装 点此查看官方文档的详细安装步骤。
+摘抄如下，docker下安装： 1.下载docker-compose.yml
+wget https://docs.seafile.com/d/cb1d3f97106847abbf31/files/?p=/docker/docker-compose.yml 2.按照实际情况修改配置：
+version: '2.0' services: db: image: mariadb:10.1 container_name: seafile-mysql environment: - MYSQL_ROOT_PASSWORD=db_dev # Requested, set the root's password of MySQL service. - MYSQL_LOG_CONSOLE=true volumes: - /opt/seafile-mysql/db:/var/lib/mysql # Requested, specifies the path to MySQL data persistent store. networks: - seafile-net memcached: image: memcached:1.5.6 container_name: seafile-memcached entrypoint: memcached -m 256 networks: - seafile-net seafile: image: seafileltd/seafile-mc:latest container_name: seafile ports: - &quot;80:80&quot; # - &quot;443:443&quot; # If https is enabled, cancel the comment.
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2020/11/23/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%ABseafile/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2020/11/23/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%ABseafile/" data-id="e71fe78310b7e7a5e902d34683064de1" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1087,560 +1643,6 @@ Vchx = Vrefint * (ADchx/ADrefint)
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2020/11/11/%E7%AE%A1%E5%BE%84%E5%AF%B9%E7%85%A7%E8%A1%A8/">
-    <h1 class="article-title" itemprop="name">
-        管径对照表
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2020-11-11 12:55:31 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
-            &middot;
-            31
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E7%AE%A1%E5%BE%84">管径</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/dn25">DN25</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                管子口径对照表：
-型号尺寸说明 1分=DN6=1/8 2分=DN8=1/4 3分=DN10=3/8 4分=DN15=1/2 6分=DN20=3/4 1寸=DN25 1.2寸=DN32=1-1/4 1.5寸=DN40=1-1/2 2寸=DN50 3寸=DN65=2-1/2 4寸=DN100 DN15 12.7mm， DN20 19.05mm， DN25 25.4mm， DN32 31.75mm， DN40 38.1mm， DN50 50.8mm。 1、DN15....4分管子，内径15mm，外径23mm,壁厚4m 2、DN20....6分管子，内径20mm，外径27mm,壁厚3，5mm 3、DN25....1寸管子，内径25mm，外径32mm,壁厚3，5mm 4、DN32....(1由四分之3寸）内径32mm，外径38mm,壁厚3mm 5、DN40....(1由二分之1寸）.内径40mm，外径48mm,壁厚4mm 6、DN50是2寸管子，内径50mm，外径56mm,壁厚3mm 
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2020/11/11/%E7%AE%A1%E5%BE%84%E5%AF%B9%E7%85%A7%E8%A1%A8/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/11/11/%E7%AE%A1%E5%BE%84%E5%AF%B9%E7%85%A7%E8%A1%A8/" data-id="6c666e04dbb8485feb7b3598308ed1d4" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2020/11/11/%E6%B0%94%E4%BD%93%E7%9B%91%E6%B5%8B%E4%BB%AA%E9%93%AD%E7%89%8C%E8%AE%BE%E8%AE%A1/">
-    <h1 class="article-title" itemprop="name">
-        气体监测仪铭牌设计
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2020-11-11 12:54:10 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
-            &middot;
-            21
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E5%9B%BD%E6%A0%87">国标</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E9%93%AD%E7%89%8C">铭牌</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                铭牌相关法规：
-防爆：
-《GB3836.1-2010 爆炸性环境 第1部分：设备 通用要求.pdf》 29标志
-《GB3836.4-2010 爆炸性环境 第4部分：由本质安全型“i”保护的设备.pdf》 12 标志
-计量：
-《JJF 1364-2012 二氧化硫气体检测仪型式评价大纲》 5.3 计量法制标志和计量器具标识的要求
-《可燃气体检测报警器型式评价大纲JJF1368-2012.pdf》 5.3 计量法制标志和计量器具标识的要求
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2020/11/11/%E6%B0%94%E4%BD%93%E7%9B%91%E6%B5%8B%E4%BB%AA%E9%93%AD%E7%89%8C%E8%AE%BE%E8%AE%A1/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/11/11/%E6%B0%94%E4%BD%93%E7%9B%91%E6%B5%8B%E4%BB%AA%E9%93%AD%E7%89%8C%E8%AE%BE%E8%AE%A1/" data-id="e0b3c9d363ae329535cd7e92e265909c" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2020/11/11/rk3288-%E7%BC%96%E8%AF%91%E4%B8%89%E9%83%A8%E6%9B%B2/">
-    <h1 class="article-title" itemprop="name">
-        RK3288 编译三部曲
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2020-11-11 12:48:55 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
-            &middot;
-            13
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/rk3288">rk3288</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/android">android</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                 安装相应依赖库文件，以及交叉编译工具和配置环境变量； 编译u-boot； 编译kernel； 编译android；     下载文件
-https://blog.csdn.net/Chhjnavy/article/details/96739573
-  RK3288 android7.1.2 内核极其源码编译详细步骤
-https://blog.csdn.net/Chhjnavy/article/details/95043440?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight
-  自动编译
-https://blog.csdn.net/shao15232/article/details/102487625
-https://blog.csdn.net/chhjnavy/article/details/95043440?utm_medium=distribute.pc_relevant.none-task-blog-title-1&amp;spm=1001.2101.3001.4242
-  
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2020/11/11/rk3288-%E7%BC%96%E8%AF%91%E4%B8%89%E9%83%A8%E6%9B%B2/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/11/11/rk3288-%E7%BC%96%E8%AF%91%E4%B8%89%E9%83%A8%E6%9B%B2/" data-id="d1712822544d55bd233f7b8da60ecb31" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2020/11/11/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-    <h1 class="article-title" itemprop="name">
-        Linux常用命令
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2020-11-11 12:45:43 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
-            &middot;
-            18
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/linux">linux</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                记录工作用到的常见linux命令行
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2020/11/11/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/11/11/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-id="3e571e1da8a6bdeae3e5cab575b2f549" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1669,6 +1671,82 @@ https://blog.csdn.net/chhjnavy/article/details/95043440?utm_medium=distribute.pc
             
             <li>
                 <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2020/11/26/%E4%BD%BF%E7%94%A8doker%E6%90%AD%E5%BB%BAnrf52%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2020/11/26/%E4%BD%BF%E7%94%A8doker%E6%90%AD%E5%BB%BAnrf52%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" class="title">使用doker搭建nrf52开发环境</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-11-26 11:11:27 &#43;0800 CST" itemprop="datePublished">2020-11-26</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/" class="title">MacOS安装nrfutil</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-11-26 11:09:19 &#43;0800 CST" itemprop="datePublished">2020-11-26</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2020/11/25/docker%E8%A6%86%E7%9B%96entrypoint/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2020/11/25/docker%E8%A6%86%E7%9B%96entrypoint/" class="title">Docker覆盖entrypoint</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-11-25 10:17:53 &#43;0800 CST" itemprop="datePublished">2020-11-25</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2020/11/23/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%ABseafile/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2020/11/23/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%ABseafile/" class="title">文件共享seafile</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-11-23 15:13:35 &#43;0800 CST" itemprop="datePublished">2020-11-23</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
                     <a href="http://fuyi.fun/2020/11/16/%E5%9C%A8%E7%BA%BF%E7%BB%98%E5%88%B6cad/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
@@ -1682,89 +1760,6 @@ https://blog.csdn.net/chhjnavy/article/details/95043440?utm_medium=distribute.pc
                     <p class="item-title"><a href="http://fuyi.fun/2020/11/16/%E5%9C%A8%E7%BA%BF%E7%BB%98%E5%88%B6cad/" class="title">在线绘制cad</a></p>
                     <p class="item-date">
                         <time datetime="2020-11-16 12:06:11 &#43;0800 CST" itemprop="datePublished">2020-11-16</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2020/11/13/%E6%9C%AC%E5%AE%89%E7%94%B5%E6%BA%90%E5%88%86%E6%9E%90/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2020/11/13/%E6%9C%AC%E5%AE%89%E7%94%B5%E6%BA%90%E5%88%86%E6%9E%90/" class="title">本安电源分析</a></p>
-                    <p class="item-date">
-                        <time datetime="2020-11-13 09:12:35 &#43;0800 CST" itemprop="datePublished">2020-11-13</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2020/11/12/rt-thread_%E7%BA%BF%E7%A8%8B/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2020/11/12/rt-thread_%E7%BA%BF%E7%A8%8B/" class="title">Rt Thread_线程</a></p>
-                    <p class="item-date">
-                        <time datetime="2020-11-12 09:32:42 &#43;0800 CST" itemprop="datePublished">2020-11-12</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2020/11/12/rt-thread_%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2020/11/12/rt-thread_%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97/" class="title">RT-Thread_编程指南</a></p>
-                    <p class="item-date">
-                        <time datetime="2020-11-12 09:25:45 &#43;0800 CST" itemprop="datePublished">2020-11-12</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2020/11/12/stm32_adc%E7%9A%84%E5%8F%82%E8%80%83%E6%BA%90%E8%AE%BE%E7%BD%AE/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="http://fuyi.fun/categories/tech">
-                        tech
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2020/11/12/stm32_adc%E7%9A%84%E5%8F%82%E8%80%83%E6%BA%90%E8%AE%BE%E7%BD%AE/" class="title">Stm32_adc的参考源设置</a></p>
-                    <p class="item-date">
-                        <time datetime="2020-11-12 09:02:37 &#43;0800 CST" itemprop="datePublished">2020-11-12</time>
                     </p>
                 </div>
             </li>
@@ -1852,6 +1847,22 @@ https://blog.csdn.net/chhjnavy/article/details/95043440?utm_medium=distribute.pc
                 <a class="category-list-link" href="http://fuyi.fun/tags/docker">
                     docker
                 </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/dropbox">
+                    dropbox
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/entrypoint">
+                    entrypoint
+                </a>
                 <span class="category-list-count">1</span>
             </li>
             
@@ -1929,6 +1940,22 @@ https://blog.csdn.net/chhjnavy/article/details/95043440?utm_medium=distribute.pc
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="http://fuyi.fun/tags/nordic">
+                    nordic
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/nrf52">
+                    nrf52
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="http://fuyi.fun/tags/rk3288">
                     rk3288
                 </a>
@@ -1939,6 +1966,14 @@ https://blog.csdn.net/chhjnavy/article/details/95043440?utm_medium=distribute.pc
                 
                 <a class="category-list-link" href="http://fuyi.fun/tags/sensor">
                     sensor
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/sharefiles">
+                    sharefiles
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -2066,6 +2101,12 @@ https://blog.csdn.net/chhjnavy/article/details/95043440?utm_medium=distribute.pc
         <a href="http://fuyi.fun/tags/docker" style="font-size: 12px;">docker</a>
         
         
+        <a href="http://fuyi.fun/tags/dropbox" style="font-size: 12px;">dropbox</a>
+        
+        
+        <a href="http://fuyi.fun/tags/entrypoint" style="font-size: 12px;">entrypoint</a>
+        
+        
         <a href="http://fuyi.fun/tags/esp32" style="font-size: 12px;">esp32</a>
         
         
@@ -2093,10 +2134,19 @@ https://blog.csdn.net/chhjnavy/article/details/95043440?utm_medium=distribute.pc
         <a href="http://fuyi.fun/tags/nodejs" style="font-size: 12px;">nodejs</a>
         
         
+        <a href="http://fuyi.fun/tags/nordic" style="font-size: 12px;">nordic</a>
+        
+        
+        <a href="http://fuyi.fun/tags/nrf52" style="font-size: 12px;">nrf52</a>
+        
+        
         <a href="http://fuyi.fun/tags/rk3288" style="font-size: 12px;">rk3288</a>
         
         
         <a href="http://fuyi.fun/tags/sensor" style="font-size: 12px;">sensor</a>
+        
+        
+        <a href="http://fuyi.fun/tags/sharefiles" style="font-size: 12px;">sharefiles</a>
         
         
         <a href="http://fuyi.fun/tags/stm32" style="font-size: 12px;">stm32</a>

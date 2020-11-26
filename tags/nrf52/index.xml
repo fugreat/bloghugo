@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nrf52 on 小夫子的随笔</title>
+    <link>http://fuyi.fun/tags/nrf52/</link>
+    <description>Recent content in nrf52 on 小夫子的随笔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 26 Nov 2020 11:11:27 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/nrf52/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用doker搭建nrf52开发环境</title>
+      <link>http://fuyi.fun/2020/11/26/%E4%BD%BF%E7%94%A8doker%E6%90%AD%E5%BB%BAnrf52%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Thu, 26 Nov 2020 11:11:27 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2020/11/26/%E4%BD%BF%E7%94%A8doker%E6%90%AD%E5%BB%BAnrf52%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</guid>
+      <description>目标 搭建NRF52的开发环境；
+简化环境搭建复杂度，跨平台适配开发环境；
+方法   安装docker
+  下载nrf52开发环境 docker pull fugreat/nrf52
+  创建容器
+  docker run --name nrf52-1 -v /Users/user_name/data:/data -itd fugreat/nrf52 bash  此步把 /Users/user_name/data目录映射到编译环境的/data中
+ 编译  docker exec -it nrf52 bash -c &amp;quot;cd /data/project_name &amp;amp;&amp;amp; make&amp;quot; 启/停容器  docker start nrf52 docker stop nrf52 </description>
+    </item>
+    
+  </channel>
+</rss>

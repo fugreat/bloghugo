@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nordic on 小夫子的随笔</title>
+    <link>http://fuyi.fun/tags/nordic/</link>
+    <description>Recent content in nordic on 小夫子的随笔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 26 Nov 2020 11:09:19 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/nordic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MacOS安装nrfutil</title>
+      <link>http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/</link>
+      <pubDate>Thu, 26 Nov 2020 11:09:19 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/</guid>
+      <description>参考：https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_nrfutil%2FUG%2Fnrfutil%2Fnrfutil_intro.html
+pip install nrfutil macOS: pip install --ignore-installed six nrfutil ～～～～～～～～～～～～～
+Installing from PyPI nRF Util is available as a package in the Python Package Index (PyPI) and can be downloaded and installed directly using the Python installer program pip. Enter the following command to install the latest published version from PyPI: pip install nrfutil This command installs nRF Util and all required packages. When installing on macOS, you might get an error about the Python module six.</description>
+    </item>
+    
+  </channel>
+</rss>

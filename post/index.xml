@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 26 Nov 2020 11:11:27 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Nov 2020 11:21:54 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker镜像构建和发布</title>
+      <link>http://fuyi.fun/2020/11/26/docker%E9%95%9C%E5%83%8F%E6%9E%84%E5%BB%BA%E5%92%8C%E5%8F%91%E5%B8%83/</link>
+      <pubDate>Thu, 26 Nov 2020 11:21:54 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2020/11/26/docker%E9%95%9C%E5%83%8F%E6%9E%84%E5%BB%BA%E5%92%8C%E5%8F%91%E5%B8%83/</guid>
+      <description>构建： docker build - &amp;lt; Dockerfile 发布：  打tag  docker tag fa1dad7f37e4 fugreat/nrf52 push  docker push fugreat/nrf52 </description>
+    </item>
+    
     <item>
       <title>使用doker搭建nrf52开发环境</title>
       <link>http://fuyi.fun/2020/11/26/%E4%BD%BF%E7%94%A8doker%E6%90%AD%E5%BB%BAnrf52%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>

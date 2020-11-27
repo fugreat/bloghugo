@@ -3,27 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://fuyi.fun/tags/pip/</loc>
+    <lastmod>2020-11-27T12:56:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/2020/11/27/pip%E5%AE%89%E8%A3%85%E5%A4%AA%E6%85%A2%E6%9B%B4%E6%8D%A2%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</loc>
+    <lastmod>2020-11-27T12:56:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/post/</loc>
+    <lastmod>2020-11-27T12:56:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/tags/</loc>
+    <lastmod>2020-11-27T12:56:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/</loc>
+    <lastmod>2020-11-27T12:56:33+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://fuyi.fun/tags/docker/</loc>
     <lastmod>2020-11-26T11:21:54+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://fuyi.fun/2020/11/26/docker%E9%95%9C%E5%83%8F%E6%9E%84%E5%BB%BA%E5%92%8C%E5%8F%91%E5%B8%83/</loc>
-    <lastmod>2020-11-26T11:21:54+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://fuyi.fun/post/</loc>
-    <lastmod>2020-11-26T11:21:54+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://fuyi.fun/tags/</loc>
-    <lastmod>2020-11-26T11:21:54+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://fuyi.fun/</loc>
     <lastmod>2020-11-26T11:21:54+08:00</lastmod>
   </url>
   

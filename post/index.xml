@@ -6,7 +6,21 @@
     <description>Recent content in Posts on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 26 Nov 2020 11:21:54 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Nov 2020 12:56:33 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pip安装太慢更换为国内源</title>
+      <link>http://fuyi.fun/2020/11/27/pip%E5%AE%89%E8%A3%85%E5%A4%AA%E6%85%A2%E6%9B%B4%E6%8D%A2%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
+      <pubDate>Fri, 27 Nov 2020 12:56:33 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2020/11/27/pip%E5%AE%89%E8%A3%85%E5%A4%AA%E6%85%A2%E6%9B%B4%E6%8D%A2%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
+      <description>如题：
+pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清华：https://pypi.tuna.tsinghua.edu.cn/simple
+中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
+华中理工大学：http://pypi.hustunique.com/
+山东理工大学：http://pypi.sdutlinux.org/
+豆瓣：http://pypi.douban.com/simple/</description>
+    </item>
+    
     <item>
       <title>Docker镜像构建和发布</title>
       <link>http://fuyi.fun/2020/11/26/docker%E9%95%9C%E5%83%8F%E6%9E%84%E5%BB%BA%E5%92%8C%E5%8F%91%E5%B8%83/</link>

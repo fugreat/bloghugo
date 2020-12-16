@@ -6,7 +6,30 @@
     <description>Recent content on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 27 Nov 2020 12:56:33 +0800</lastBuildDate><atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Dec 2020 09:00:08 +0800</lastBuildDate><atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>标准解读：GBT9969 2008工业产品使用说明书</title>
+      <link>http://fuyi.fun/2020/12/16/%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BBgbt9969-2008%E5%B7%A5%E4%B8%9A%E4%BA%A7%E5%93%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6/</link>
+      <pubDate>Wed, 16 Dec 2020 09:00:08 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2020/12/16/%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BBgbt9969-2008%E5%B7%A5%E4%B8%9A%E4%BA%A7%E5%93%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6/</guid>
+      <description>标准解读：GBT9969-2008工业产品使用说明书、总则
+文档链接：GBT9969-2008
+基本要求  说明书内容 产品用途和使用范围 根据产品特点给出： 主要结构、性能、型号、规格 吊运、安装、使用、操作、维修、保养、贮存；   应提供：必要的环保和节约能源方面的内容； 易燃易爆有毒有腐蚀有放射性的产品，说明书应包含注意事项、防护措施和发生意外时的紧急处理方法； 对于安全限制有要求或存在有效年限的产品应提供产品上的生产日期和有效期； 实行生产许可证管理的产品，应在包装上标注有效的生产许可证编号；  模版 概述
+安全使用注意事项
+结构特征与工作原理
+技术特性
+尺寸重量
+安装、调整
+使用操作
+故障分析与排除
+安全保护装置与事故处理
+保养维护
+运输贮存
+开箱及检查 环保及其他
+图、表、照片</description>
+    </item>
+    
     <item>
       <title>Pip安装太慢更换为国内源</title>
       <link>http://fuyi.fun/2020/11/27/pip%E5%AE%89%E8%A3%85%E5%A4%AA%E6%85%A2%E6%9B%B4%E6%8D%A2%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JLINK-RTT on 小夫子的随笔</title>
+    <link>http://fuyi.fun/tags/jlink-rtt/</link>
+    <description>Recent content in JLINK-RTT on 小夫子的随笔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 25 Dec 2020 14:24:50 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/jlink-rtt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在stm32中引入jlink调试_JLINK RTT</title>
+      <link>http://fuyi.fun/2020/12/25/%E5%9C%A8stm32%E4%B8%AD%E5%BC%95%E5%85%A5jlink%E8%B0%83%E8%AF%95_jlink-rtt/</link>
+      <pubDate>Fri, 25 Dec 2020 14:24:50 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2020/12/25/%E5%9C%A8stm32%E4%B8%AD%E5%BC%95%E5%85%A5jlink%E8%B0%83%E8%AF%95_jlink-rtt/</guid>
+      <description>目标 在STM32工程中使用JLINK-RTT输出日志
+方法   连接JLINK 与开发版，使用SWD接口;
+  增加RTT功能
+   在程序中引入RTT库  git submodule add https://github.com/ankitmcgill/ARM_SEGGER_RTT   工程中增加SEGGER_RTT代码
+  此时在工程中可以使用 SEGGER_RTT_printf(unsigned BufferIndex, const char * sFormat, ...);打印日志；
+  通过宏定义把日志输出函数定义为想要的形式，如：
+  #define myprintf(...) SEGGER_RTT_printf(0, __VA_ARGS__) 参考文档 【JLink RTT Client代替printf(IAR测试OK)】
+【segger RTT viewer串口打印调试日志】</description>
+    </item>
+    
+  </channel>
+</rss>

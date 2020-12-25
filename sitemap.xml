@@ -3,22 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://fuyi.fun/tags/jlink/</loc>
+    <lastmod>2020-12-25T14:24:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/tags/jlink-rtt/</loc>
+    <lastmod>2020-12-25T14:24:50+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://fuyi.fun/post/</loc>
-    <lastmod>2020-12-16T09:00:08+08:00</lastmod>
+    <lastmod>2020-12-25T14:24:50+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://fuyi.fun/tags/</loc>
-    <lastmod>2020-12-16T09:00:08+08:00</lastmod>
+    <lastmod>2020-12-25T14:24:50+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://fuyi.fun/tags/%E5%9B%BD%E6%A0%87/</loc>
-    <lastmod>2020-12-16T09:00:08+08:00</lastmod>
+    <loc>http://fuyi.fun/2020/12/25/%E5%9C%A8stm32%E4%B8%AD%E5%BC%95%E5%85%A5jlink%E8%B0%83%E8%AF%95_jlink-rtt/</loc>
+    <lastmod>2020-12-25T14:24:50+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://fuyi.fun/</loc>
+    <lastmod>2020-12-25T14:24:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/tags/%E5%9B%BD%E6%A0%87/</loc>
     <lastmod>2020-12-16T09:00:08+08:00</lastmod>
   </url>
   

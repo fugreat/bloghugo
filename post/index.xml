@@ -6,7 +6,23 @@
     <description>Recent content in Posts on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 16 Dec 2020 09:00:08 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Dec 2020 14:24:50 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在stm32中引入jlink调试_JLINK RTT</title>
+      <link>http://fuyi.fun/2020/12/25/%E5%9C%A8stm32%E4%B8%AD%E5%BC%95%E5%85%A5jlink%E8%B0%83%E8%AF%95_jlink-rtt/</link>
+      <pubDate>Fri, 25 Dec 2020 14:24:50 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2020/12/25/%E5%9C%A8stm32%E4%B8%AD%E5%BC%95%E5%85%A5jlink%E8%B0%83%E8%AF%95_jlink-rtt/</guid>
+      <description>目标 在STM32工程中使用JLINK-RTT输出日志
+方法   连接JLINK 与开发版，使用SWD接口;
+  增加RTT功能
+   在程序中引入RTT库  git submodule add https://github.com/ankitmcgill/ARM_SEGGER_RTT   工程中增加SEGGER_RTT代码
+  此时在工程中可以使用 SEGGER_RTT_printf(unsigned BufferIndex, const char * sFormat, ...);打印日志；
+  通过宏定义把日志输出函数定义为想要的形式，如：
+  #define myprintf(...) SEGGER_RTT_printf(0, __VA_ARGS__) 参考文档 【JLink RTT Client代替printf(IAR测试OK)】
+【segger RTT viewer串口打印调试日志】</description>
+    </item>
+    
     <item>
       <title>标准解读：GBT9969 2008工业产品使用说明书</title>
       <link>http://fuyi.fun/2020/12/16/%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BBgbt9969-2008%E5%B7%A5%E4%B8%9A%E4%BA%A7%E5%93%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6/</link>

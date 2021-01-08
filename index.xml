@@ -6,7 +6,17 @@
     <description>Recent content on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 25 Dec 2020 14:24:50 +0800</lastBuildDate><atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Jan 2021 09:49:01 +0800</lastBuildDate><atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Modbus 相关的基本概念</title>
+      <link>http://fuyi.fun/2021/01/08/modbus-%E7%9B%B8%E5%85%B3%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Fri, 08 Jan 2021 09:49:01 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/01/08/modbus-%E7%9B%B8%E5%85%B3%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <description>变量 Coil是bit变量； Register是整形16bit变量；
+四种数据类型：    名称 变量类型 读写     Discretes Input　 位变量　 　只读   Coils　 　位变量 　读写   Input Registers　 16-bit整型 　只读   Holding Registers 16-bit整型 　读写    【参考文档】：Modbus总结</description>
+    </item>
+    
     <item>
       <title>在stm32中引入jlink调试_JLINK RTT</title>
       <link>http://fuyi.fun/2020/12/25/%E5%9C%A8stm32%E4%B8%AD%E5%BC%95%E5%85%A5jlink%E8%B0%83%E8%AF%95_jlink-rtt/</link>

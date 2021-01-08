@@ -6,7 +6,16 @@
     <description>Recent content in Tags on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 25 Dec 2020 14:24:50 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Jan 2021 09:49:01 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>modbus</title>
+      <link>http://fuyi.fun/tags/modbus/</link>
+      <pubDate>Fri, 08 Jan 2021 09:49:01 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/tags/modbus/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>JLINK</title>
       <link>http://fuyi.fun/tags/jlink/</link>

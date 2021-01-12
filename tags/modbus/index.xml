@@ -14,7 +14,13 @@
       
       <guid>http://fuyi.fun/2021/01/08/modbus-%E7%9B%B8%E5%85%B3%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
       <description>变量 Coil是bit变量； Register是整形16bit变量；
-四种数据类型：    名称 变量类型 读写     Discretes Input　 位变量　 　只读   Coils　 　位变量 　读写   Input Registers　 16-bit整型 　只读   Holding Registers 16-bit整型 　读写    【参考文档】：Modbus总结</description>
+四种数据类型：    名称 变量类型 读写     Discretes Input 位变量 只读   Coils 位变量 读写   Input Registers 16-bit整型 只读   Holding Registers 16-bit整型 读写     线圈状态(coil)， 离散输入状态(discrete) 保持寄存器(holding) 输入寄存器(input)。
+这四种寄存器的分类有其历史原因。
+因为Modbus起源于PLC通信，而PLC是基于非易失性存储介质的，所以使用了coil和holding来表示PLC内部的非易失性变量， 使用了discrete和input来表示PLC外界的信号。 但现在的系统，其寄存器基本都是掉电丢失的，无论使用哪个来称呼这些寄存器，都会感到有些困惑。
+保守的做法，是利用自定义命令来读写这些易失性寄存器，但是这样做会丧失通用性，而且很多现成的移植也失效了。 更方便的方法还是按读写能力来分类， 单纯地将coil和holding理解为可读写寄存器，
+而把discrete和input理解为协议里的只读寄存器。
+Modbus协议的coil和discrete，针对的是位寄存器；holding和input，针对的是16位寄存器。但这两者也是模糊的。光靠coil和discrete，或者光靠holding和input，其实都已足够。两套方法都可以用，让我这种选择困难患者感觉很难取舍。我最后的方案是，不管什么寄存器，全用holding和input。
+【参考文档】：Modbus总结 【参考文档】:移植Modbus到STM32F103</description>
     </item>
     
   </channel>

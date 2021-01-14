@@ -425,6 +425,19 @@ docker pull amyhre/docuwiki
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://fuyi.fun/1/01/01/</guid>
+      <description>i&amp;mdash; title: &amp;ldquo;Docker加sudo&amp;rdquo; date: 2021-01-14T21:00:23+08:00 draft: false banner : &amp;quot;&amp;quot; categories : [] description : &amp;quot;&amp;quot; menu : &amp;quot;&amp;quot; tags : [&amp;ldquo;docker&amp;rdquo;, &amp;ldquo;sudo&amp;rdquo;] docker加sudo
+1.创建docker组：sudo groupadd docker
+2.将当前用户加入docker组：sudo gpasswd -a ${USER} docker
+3.重启服务：sudo service docker restart
+4.刷新docker成员：newgrp - docker</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://fuyi.fun/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fuyi.fun/1/01/01/</guid>
       <description></description>
     </item>
     

@@ -162,7 +162,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        32
+        33
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -305,6 +305,127 @@
         </div>
         <footer class="article-footer">
     <a data-url="http://fuyi.fun/2017/05/20/%E4%BD%BF%E7%94%A8%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87%E7%9A%84shortcode/" data-id="b5878041fdfd74bbf2f0b2b55108eb61" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/1/01/01/">
+    <h1 class="article-title" itemprop="name">
+        
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="0001-01-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">0001-01-01</time>
+            &middot;
+            39
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                i&mdash; title: &ldquo;Docker加sudo&rdquo; date: 2021-01-14T21:00:23+08:00 draft: false banner : &quot;&quot; categories : [] description : &quot;&quot; menu : &quot;&quot; tags : [&ldquo;docker&rdquo;, &ldquo;sudo&rdquo;] docker加sudo
+1.创建docker组：sudo groupadd docker
+2.将当前用户加入docker组：sudo gpasswd -a ${USER} docker
+3.重启服务：sudo service docker restart
+4.刷新docker成员：newgrp - docker
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/1/01/01/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/1/01/01/" data-id="b0ba51f78898d2abbc6bab00b1051fe9" class="article-share-link">
         <i class="fa fa-share"></i>
         分享
     </a>

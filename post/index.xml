@@ -6,7 +6,18 @@
     <description>Recent content in Posts on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 12 Jan 2021 09:19:49 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Jan 2021 11:38:39 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用docker安装vpn</title>
+      <link>http://fuyi.fun/2021/01/20/%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85vpn/</link>
+      <pubDate>Wed, 20 Jan 2021 11:38:39 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/01/20/%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85vpn/</guid>
+      <description>使用 docker 快速搭建一个 VPN 服务器
+你还在一条条命令复制粘贴搭建 SVN 服务器？快别麻烦了，一个 docker 镜像就都帮你搞定了。如果你的服务器安装了 docker，直接使用以下命令 （要修改你自己的账户和密码信息哦）拉取一个已经配置好的 VPN 镜像就可以直接使用了，不用那么那麻烦的自己又改配置文件又要安装软件。
+docker run \ --name ipsec-vpn-server \ --restart=always \ -e VPN_IPSEC_PSK=你的PSK密码 \ -e VPN_USER=你的VPN用户名 \ -e VPN_PASSWORD=你的VPN密码 \ -p 500:500/udp \ -p 4500:4500/udp \ -v /lib/modules:/lib/modules:ro \ -d --privileged \ hwdsl2/ipsec-vpn-server 参考连接：使用 docker 快速搭建一个 VPN 服务器</description>
+    </item>
+    
     <item>
       <title>安标外壳要求</title>
       <link>http://fuyi.fun/2021/01/12/%E5%AE%89%E6%A0%87%E5%A4%96%E5%A3%B3%E8%A6%81%E6%B1%82/</link>

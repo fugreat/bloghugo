@@ -53,7 +53,6 @@ thread1 对象的内存空间，包括线程控制块 thread1 与栈空间 threa
 thread2 运行中用到的空间都是动态分配的，包括线程控制块（thread2_ptr 指向的内容）和栈空间。
 静态对象会占用 RAM 空间，不依赖于内存堆管理器，内存分配时间确定。 动态对象则依赖于内存堆管理器，运行时申请 RAM 空间，当对象被删除后，占用的 RAM 空间被释放。 这两种方式各有利弊，可以根据实际环境需求选择具体使用方式。
 /* 线程 1 的对象和运行时用到的栈 */ static struct rt_thread thread1; static rt_uint8_t thread1_stack[512]; /* 线程 1 入口 */ void thread1_entry(void* parameter) { int i; while (1) { for (i = 0; i &lt; 10; i &#43;&#43;) { rt_kprintf(&#34;%d\n&#34;, i); /* 延时 100ms */ rt_thread_mdelay(100); } } } /* 线程 2 入口 */ void thread2_entry(void* parameter) { int count = 0; while (1) { rt_kprintf(&#34;Thread2 count:%d\n&#34;, &#43;&#43;count); /* 延时 50ms */ rt_thread_mdelay(50); } } /* 线程例程初始化 */ int thread_sample_init() { rt_thread_t thread2_ptr; rt_err_t result; /* 初始化线程 1 */ /* 线程的入口是 thread1_entry，参数是 RT_NULL * 线程栈是 thread1_stack * 优先级是 200，时间片是 10 个 OS Tick */ result = rt_thread_init(&amp;thread1, &#34;thread1&#34;, thread1_entry, RT_NULL, &amp;thread1_stack[0], sizeof(thread1_stack), 200, 10); /* 启动线程 */ if (result == RT_EOK) rt_thread_startup(&amp;thread1); /* 创建线程 2 */ /* 线程的入口是 thread2_entry, 参数是 RT_NULL * 栈空间是 512，优先级是 250，时间片是 25 个 OS Tick */ thread2_ptr = rt_thread_create(&#34;thread2&#34;, thread2_entry, RT_NULL, 512, 250, 25); /* 启动线程 */ if (thread2_ptr !"/>
-<meta name="twitter:site" content="@gohugoio"/>
 
     
 
@@ -246,8 +245,6 @@ thread2 运行中用到的空间都是动态分配的，包括线程控制块（
 
 
 
-
-<td><a href="//twitter.com/gohugoio" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
 
 
           <td><a href="http://fuyi.fun/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>

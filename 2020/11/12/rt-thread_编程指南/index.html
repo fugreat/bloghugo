@@ -56,7 +56,6 @@ int rtthread_startup(void) { rt_hw_interrupt_disable(); /* 板级初始化：需
 系统先从启动文件开始运行， 然后进入 RT-Thread 的启动 rtthread_startup() ，
 最后进入用户入口 main()，如下图所示：  启动代码
 int rtthread_startup(void) { rt_hw_interrupt_disable(); /* 板级初始化：需在该函数内部进行系统堆的初始化 */ rt_hw_board_init(); /* 打印 RT-Thread 版本信息 */ rt_show_version(); /* 定时器初始化 */ rt_system_timer_init(); /* 调度器初始化 */ rt_system_scheduler_init(); #ifdef RT_USING_SIGNALS  /* 信号初始化 */ rt_system_signal_init(); #endif  /* 由此创建一个用户 main 线程 */ rt_application_init(); /* 定时器线程初始化 */ rt_system_timer_thread_init(); /* 空闲线程初始化 */ rt_thread_idle_init(); /* 启动调度器 */ rt_system_scheduler_start(); /* 不会执行至此 */ return 0; } 大致可以分为四个部分："/>
-<meta name="twitter:site" content="@gohugoio"/>
 
     
 
@@ -249,8 +248,6 @@ int rtthread_startup(void) { rt_hw_interrupt_disable(); /* 板级初始化：需
 
 
 
-
-<td><a href="//twitter.com/gohugoio" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
 
 
           <td><a href="http://fuyi.fun/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>

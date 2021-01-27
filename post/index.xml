@@ -6,7 +6,22 @@
     <description>Recent content in Posts on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 27 Jan 2021 08:13:36 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Jan 2021 08:54:18 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>蓝牙官网生成蓝牙服务的uuid</title>
+      <link>http://fuyi.fun/2021/01/27/%E8%93%9D%E7%89%99%E5%AE%98%E7%BD%91%E7%94%9F%E6%88%90%E8%93%9D%E7%89%99%E6%9C%8D%E5%8A%A1%E7%9A%84uuid/</link>
+      <pubDate>Wed, 27 Jan 2021 08:54:18 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/01/27/%E8%93%9D%E7%89%99%E5%AE%98%E7%BD%91%E7%94%9F%E6%88%90%E8%93%9D%E7%89%99%E6%9C%8D%E5%8A%A1%E7%9A%84uuid/</guid>
+      <description>蓝牙如何申请厂商UUID
+参考论坛： https://devzone.nordicsemi.com/f/nordic-q-a/7260/how-to-acquire-a-vendor-base-uuid/25668#25668
+建议用此处工具生成UUID
+不需要注册和付费
+Bluetooth SIG recommends you to just use the tool found here to generate your UUID. It is extremely unlikely that you will generate a UUID that collides with some other company, so you are not required to register or pay for it. I am not not even sure the SIG even gives you the option to register it at the moment.
+生成UUID的国际组织： https://www.itu.int/en/ITU-T/asn1/Pages/UUID/uuids.aspx
+生成UUID的界面： https://www.itu.int/en/ITU-T/asn1/Pages/UUID/generate_uuid.aspx</description>
+    </item>
+    
     <item>
       <title>Nano Pb</title>
       <link>http://fuyi.fun/2021/01/27/nano-pb/</link>

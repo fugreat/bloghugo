@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>协议 on 小夫子的随笔</title>
+    <link>http://fuyi.fun/tags/%E5%8D%8F%E8%AE%AE/</link>
+    <description>Recent content in 协议 on 小夫子的随笔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 27 Jan 2021 08:13:36 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/%E5%8D%8F%E8%AE%AE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nano Pb</title>
+      <link>http://fuyi.fun/2021/01/27/nano-pb/</link>
+      <pubDate>Wed, 27 Jan 2021 08:13:36 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/01/27/nano-pb/</guid>
+      <description>一、起因 在新的检测设备中需要做主从机通信。
+二、筛选 目前使用最广泛到modbus通信了。当时移植了modbus到nrf52 和 stm32，但是移植后寄存器协议很麻烦，字节长度都是16bit也不太适合当前32位单片机。 并且在与APP通信中，前端又没有很好的库适配modbus。
+三、发现 犹疑间偶然发现nrf52的sdk里面提供了一个外部通信协议库 nano-pb，程序小巧，又可兼容和APP通信，深得我心。所以移植到系统中测试下可靠性。
+四、使用 4.1 下载移植 移植过程参考了几篇文章，写的比较全面的就是这个了nanopb的安装和使用. 下载最新的库可以从这里Nanopb - downloads
+最新的版本是0.4.4 目录如下
+ tree -L 1 . ├── AUTHORS.txt ├── BUILD.bazel ├── CHANGELOG.txt ├── CMakeLists.txt ├── CONTRIBUTING.md ├── LICENSE.txt ├── Package.swift ├── README.md ├── WORKSPACE ├── build.py ├── conan-wrapper ├── conanfile.py ├── docs ├── examples ├── extra ├── generator ├── generator-bin ├── library.json ├── pb.h ├── pb_common.c ├── pb_common.h ├── pb_decode.c ├── pb_decode.h ├── pb_encode.</description>
+    </item>
+    
+  </channel>
+</rss>

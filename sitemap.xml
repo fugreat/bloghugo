@@ -3,8 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://fuyi.fun/tags/deploy-java/</loc>
+    <lastmod>2021-02-23T11:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://fuyi.fun/post/</loc>
-    <lastmod>2021-01-27T13:30:09+08:00</lastmod>
+    <lastmod>2021-02-23T11:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/tags/</loc>
+    <lastmod>2021-02-23T11:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/tags/ubuntu/</loc>
+    <lastmod>2021-02-23T11:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/2021/02/23/ubuntu%E4%B8%8B%E9%83%A8%E7%BD%B2jar/</loc>
+    <lastmod>2021-02-23T11:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/</loc>
+    <lastmod>2021-02-23T11:36:00+08:00</lastmod>
   </url>
   
   <url>
@@ -13,17 +38,7 @@
   </url>
   
   <url>
-    <loc>http://fuyi.fun/</loc>
-    <lastmod>2021-01-27T13:30:09+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://fuyi.fun/tags/ble/</loc>
-    <lastmod>2021-01-27T08:54:18+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://fuyi.fun/tags/</loc>
     <lastmod>2021-01-27T08:54:18+08:00</lastmod>
   </url>
   

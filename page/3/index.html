@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://fuyi.fun/" />
-<meta property="og:updated_time" content="2021-01-27T13:30:09+08:00" />
+<meta property="og:updated_time" content="2021-02-23T11:36:00+08:00" />
 
     
     <meta itemprop="name" content="小夫子的随笔">
@@ -161,12 +161,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        37
+        38
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          45
+          47
         
         <span>
             标签
@@ -242,6 +242,148 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2020/11/11/led%E6%BB%9A%E5%8A%A8%E5%B1%8F/">
+    <h1 class="article-title" itemprop="name">
+        LED滚动屏
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-11-11 13:11:58 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
+            &middot;
+            25
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                LED 滚动屏模组
+模组（单元板）上的显示接口：显示接口是用于控制卡和模组（单元板）、模组（单元板）和模组（单元板）之间的连接，以将控制信号进行传递。
+由于存在不同的扫描方式及信号线的不同排列顺序，也就有不同的接口定义。使用最多的是08接口、12接口、75接口、40接口。
+室内单双色点阵单元板多用08接口，
+户外单双色模组多用12接口，
+扫描驱动的全彩模组多用75接口，
+静态驱动的全彩模组多用40接口。
+接口定义 不同的接口定义主要是信号线的排列顺序不一样，首先我们来了解下控制信号有哪些：
+  CLK（时钟信号）：提供给移位寄存器的移位脉冲，每一个脉冲的上升沿将引起数据移入或移出一位。
+数据口上的数据必须与时钟信号协调才能正常传送数据，数据信号的频率必须是时钟信号的频率的1/2倍。
+在任何情况下，当时钟信号有异常时，会使整板显示杂乱无章。
+  STB（锁存信号）：将移位寄存器内的数据送到锁存器，并将其数据内容通过驱动电路点亮LED显示出来。
+但由于驱动电路受OE（输出使能信号）控制，其点亮的前提必须是OE为开启状态。
+锁存信号也必须要与时钟信号协调才能显示出完整的图像。
+在任何情况下，当锁存信号有异常时，会使整板显示杂乱无章。
+  OE（输出使能信号）：整屏亮度控制信号，也用于显示屏消隐。
+只要调整它的占空比就可以控制亮度的变化。当使能信号出现异常时，整屏将会出现不亮、暗亮或拖尾等现象。
+  R/G/B（数据信号）：提供显示图像所需要的数据。必须与时钟信号协调才能将数据传送到任何一个显示点。 一般在显示屏中红绿蓝的数据信号分离开来，若某数据信号短路到正极或负极时，则对应的该颜色将会出现全亮或不亮， 当数据信号被悬空时对应的颜色显示情况不定。
+  ABCD（行控制信号）：只有在动态扫描显示时才存在，一般电路会搭配74HC138D的IC进行控制， 1/4扫描中只要AB信号就可以了。 当行控制信号出现异常时，将会出现显示错位、高亮或图像重叠等现象。
+  
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2020/11/11/led%E6%BB%9A%E5%8A%A8%E5%B1%8F/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2020/11/11/led%E6%BB%9A%E5%8A%A8%E5%B1%8F/" data-id="f1b293ca645ebd6dec9481349ffca867" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1483,138 +1625,6 @@ var array = [1,2,3]; // 方式一： array.forEach(function(v,index,a){ console.
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2020/11/11/%E6%B8%85%E9%99%A4mac%E4%B8%AD%E7%9A%84%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF/">
-    <h1 class="article-title" itemprop="name">
-        清除mac中的敏感信息
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2020-11-11 10:32:53 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
-            &middot;
-            15
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/macos">macOS</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                <p>离职交接归还电脑时，需要清除电脑中的敏感数据，总结如下：</p>
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2020/11/11/%E6%B8%85%E9%99%A4mac%E4%B8%AD%E7%9A%84%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/11/11/%E6%B8%85%E9%99%A4mac%E4%B8%AD%E7%9A%84%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF/" data-id="84100e9f4746935db254f26dcd91e72a" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1644,6 +1654,25 @@ var array = [1,2,3]; // 方式一： array.forEach(function(v,index,a){ console.
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2021/02/23/ubuntu%E4%B8%8B%E9%83%A8%E7%BD%B2jar/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2021/02/23/ubuntu%E4%B8%8B%E9%83%A8%E7%BD%B2jar/" class="title">Ubuntu下部署jar</a></p>
+                    <p class="item-date">
+                        <time datetime="2021-02-23 11:36:00 &#43;0800 CST" itemprop="datePublished">2021-02-23</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1717,25 +1746,6 @@ var array = [1,2,3]; // 方式一： array.forEach(function(v,index,a){ console.
                     <p class="item-title"><a href="http://fuyi.fun/2021/01/20/%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85vpn/" class="title">使用docker安装vpn</a></p>
                     <p class="item-date">
                         <time datetime="2021-01-20 11:38:39 &#43;0800 CST" itemprop="datePublished">2021-01-20</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2021/01/12/%E5%AE%89%E6%A0%87%E5%A4%96%E5%A3%B3%E8%A6%81%E6%B1%82/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2021/01/12/%E5%AE%89%E6%A0%87%E5%A4%96%E5%A3%B3%E8%A6%81%E6%B1%82/" class="title">安标外壳要求</a></p>
-                    <p class="item-date">
-                        <time datetime="2021-01-12 09:19:49 &#43;0800 CST" itemprop="datePublished">2021-01-12</time>
                     </p>
                 </div>
             </li>
@@ -1814,6 +1824,14 @@ var array = [1,2,3]; // 方式一： array.forEach(function(v,index,a){ console.
                 
                 <a class="category-list-link" href="http://fuyi.fun/tags/ch4">
                     ch4
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/deploy-java">
+                    deploy-java
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -2028,6 +2046,14 @@ var array = [1,2,3]; // 方式一： array.forEach(function(v,index,a){ console.
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="http://fuyi.fun/tags/ubuntu">
+                    ubuntu
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="http://fuyi.fun/tags/uuid">
                     uuid
                 </a>
@@ -2170,6 +2196,9 @@ var array = [1,2,3]; // 方式一： array.forEach(function(v,index,a){ console.
         <a href="http://fuyi.fun/tags/ch4" style="font-size: 12px;">ch4</a>
         
         
+        <a href="http://fuyi.fun/tags/deploy-java" style="font-size: 12px;">deploy-java</a>
+        
+        
         <a href="http://fuyi.fun/tags/dn25" style="font-size: 12px;">dn25</a>
         
         
@@ -2246,6 +2275,9 @@ var array = [1,2,3]; // 方式一： array.forEach(function(v,index,a){ console.
         
         
         <a href="http://fuyi.fun/tags/tool" style="font-size: 12px;">tool</a>
+        
+        
+        <a href="http://fuyi.fun/tags/ubuntu" style="font-size: 12px;">ubuntu</a>
         
         
         <a href="http://fuyi.fun/tags/uuid" style="font-size: 12px;">uuid</a>

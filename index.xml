@@ -6,7 +6,22 @@
     <description>Recent content on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 25 Feb 2021 12:57:50 +0800</lastBuildDate><atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Feb 2021 15:56:18 +0800</lastBuildDate><atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Openvpn配置</title>
+      <link>http://fuyi.fun/2021/02/25/openvpn%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 25 Feb 2021 15:56:18 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/02/25/openvpn%E9%85%8D%E7%BD%AE/</guid>
+      <description>服务器端配置服务 Ubuntu下：
+# 下载VPN安装文件： curl -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh # 安装/删除vpn/增加用户 sudo bash openvpn-install.sh 增加用户后得到xxxx.ovpn
+给到vpn用户即可。
+客户端启动VPN 运行指令：
+openvpn /home/kakj/vpn/key_from_vpn_admin.ovpn 1&amp;gt;&amp;gt;/dev/null 2&amp;gt;&amp;gt;/dev/null &amp;amp; 解决所有流量都走vpn的问题 默认配置下，所有流量都从VPN走，这样网比较卡；
+在*.ovpn文件中增加配置：
+route-nopull route 10.8.0.0 255.255.0.0 vpn_gateway route 172.16.1.0 255.255.255.0 vpn_gateway </description>
+    </item>
+    
     <item>
       <title>Win10安装VPN</title>
       <link>http://fuyi.fun/2021/02/25/win10%E5%AE%89%E8%A3%85vpn/</link>

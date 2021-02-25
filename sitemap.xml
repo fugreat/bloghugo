@@ -3,17 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://fuyi.fun/tags/deploy-java/</loc>
-    <lastmod>2021-02-23T11:36:00+08:00</lastmod>
+    <loc>http://fuyi.fun/tags/install-vpn/</loc>
+    <lastmod>2021-02-25T12:57:50+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://fuyi.fun/post/</loc>
-    <lastmod>2021-02-23T11:36:00+08:00</lastmod>
+    <lastmod>2021-02-25T12:57:50+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://fuyi.fun/tags/</loc>
+    <lastmod>2021-02-25T12:57:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/tags/win10/</loc>
+    <lastmod>2021-02-25T12:57:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/2021/02/25/win10%E5%AE%89%E8%A3%85vpn/</loc>
+    <lastmod>2021-02-25T12:57:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/</loc>
+    <lastmod>2021-02-25T12:57:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/tags/deploy-java/</loc>
     <lastmod>2021-02-23T11:36:00+08:00</lastmod>
   </url>
   
@@ -24,11 +44,6 @@
   
   <url>
     <loc>http://fuyi.fun/2021/02/23/ubuntu%E4%B8%8B%E9%83%A8%E7%BD%B2jar/</loc>
-    <lastmod>2021-02-23T11:36:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://fuyi.fun/</loc>
     <lastmod>2021-02-23T11:36:00+08:00</lastmod>
   </url>
   

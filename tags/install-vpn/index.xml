@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>install VPN on 小夫子的随笔</title>
+    <link>http://fuyi.fun/tags/install-vpn/</link>
+    <description>Recent content in install VPN on 小夫子的随笔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 25 Feb 2021 12:57:50 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/install-vpn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Win10安装VPN</title>
+      <link>http://fuyi.fun/2021/02/25/win10%E5%AE%89%E8%A3%85vpn/</link>
+      <pubDate>Thu, 25 Feb 2021 12:57:50 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/02/25/win10%E5%AE%89%E8%A3%85vpn/</guid>
+      <description>Win10安装VPN 1.下载安装文件 点此下载VPN安装程序Win10
+得到安装包压缩文件：
+解压得到安装包：
+2.安装 双击安装
+一直下一步安装完成 双击图标打开程序: 3.导入配置 联系运维（FJX）获取登陆配置文件，每个人的配置文件都不同。
+把配置文件拖拽到此处： 点击ADD完成添加： 4.开始使用 出现下面界面完成VPN连接： </description>
+    </item>
+    
+  </channel>
+</rss>

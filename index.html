@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://fuyi.fun/" />
-<meta property="og:updated_time" content="2021-02-25T15:56:18+08:00" />
+<meta property="og:updated_time" content="2021-03-01T12:16:03+08:00" />
 
     
     <meta itemprop="name" content="小夫子的随笔">
@@ -161,7 +161,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        40
+        41
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -242,6 +242,129 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2021/03/01/ubuntu%E5%85%B3%E9%97%AD%E7%86%84%E5%B1%8F/">
+    <h1 class="article-title" itemprop="name">
+        Ubuntu关闭熄屏
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2021-03-01 12:16:03 &#43;0800 CST" itemprop="datePublished">2021-03-01</time>
+            &middot;
+            14
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                # 关闭息屏，最后0是代表关闭锁屏，将0替换为60代表60s后自动息屏，以此类推。 gsettings set org.gnome.desktop.session idle-delay 0 # 关闭锁屏 gsettings set org.gnome.desktop.screensaver lock-enabled false 
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2021/03/01/ubuntu%E5%85%B3%E9%97%AD%E7%86%84%E5%B1%8F/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2021/03/01/ubuntu%E5%85%B3%E9%97%AD%E7%86%84%E5%B1%8F/" data-id="8271e1fbaa4f27b32cc391fd7a25c384" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1471,149 +1594,6 @@ Modbus协议的coil和discrete，针对的是位寄存器；holding和input，�
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2020/12/25/%E5%9C%A8stm32%E4%B8%AD%E5%BC%95%E5%85%A5jlink%E8%B0%83%E8%AF%95_jlink-rtt/">
-    <h1 class="article-title" itemprop="name">
-        在stm32中引入jlink调试_JLINK RTT
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2020-12-25 14:24:50 &#43;0800 CST" itemprop="datePublished">2020-12-25</time>
-            &middot;
-            32
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/jlink">JLINK</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/jlink-rtt">JLINK-RTT</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                目标 在STM32工程中使用JLINK-RTT输出日志
-方法   连接JLINK 与开发版，使用SWD接口;
-  增加RTT功能
-   在程序中引入RTT库  git submodule add https://github.com/ankitmcgill/ARM_SEGGER_RTT   工程中增加SEGGER_RTT代码
-  此时在工程中可以使用 SEGGER_RTT_printf(unsigned BufferIndex, const char * sFormat, ...);打印日志；
-  通过宏定义把日志输出函数定义为想要的形式，如：
-  #define myprintf(...) SEGGER_RTT_printf(0, __VA_ARGS__) 参考文档 【JLink RTT Client代替printf(IAR测试OK)】
-【segger RTT viewer串口打印调试日志】
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2020/12/25/%E5%9C%A8stm32%E4%B8%AD%E5%BC%95%E5%85%A5jlink%E8%B0%83%E8%AF%95_jlink-rtt/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/12/25/%E5%9C%A8stm32%E4%B8%AD%E5%BC%95%E5%85%A5jlink%E8%B0%83%E8%AF%95_jlink-rtt/" data-id="63efc71f2c1035a3a34ba3551769ce15" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1639,6 +1619,25 @@ Modbus协议的coil和discrete，针对的是位寄存器；holding和input，�
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2021/03/01/ubuntu%E5%85%B3%E9%97%AD%E7%86%84%E5%B1%8F/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2021/03/01/ubuntu%E5%85%B3%E9%97%AD%E7%86%84%E5%B1%8F/" class="title">Ubuntu关闭熄屏</a></p>
+                    <p class="item-date">
+                        <time datetime="2021-03-01 12:16:03 &#43;0800 CST" itemprop="datePublished">2021-03-01</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1712,25 +1711,6 @@ Modbus协议的coil和discrete，针对的是位寄存器；holding和input，�
                     <p class="item-title"><a href="http://fuyi.fun/2021/01/27/%E5%9C%A8nrf52%E4%B8%AD%E5%A2%9E%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/" class="title">在nrf52中增加自定义服务</a></p>
                     <p class="item-date">
                         <time datetime="2021-01-27 13:30:09 &#43;0800 CST" itemprop="datePublished">2021-01-27</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2021/01/27/%E8%93%9D%E7%89%99%E5%AE%98%E7%BD%91%E7%94%9F%E6%88%90%E8%93%9D%E7%89%99%E6%9C%8D%E5%8A%A1%E7%9A%84uuid/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2021/01/27/%E8%93%9D%E7%89%99%E5%AE%98%E7%BD%91%E7%94%9F%E6%88%90%E8%93%9D%E7%89%99%E6%9C%8D%E5%8A%A1%E7%9A%84uuid/" class="title">蓝牙官网生成蓝牙服务的uuid</a></p>
-                    <p class="item-date">
-                        <time datetime="2021-01-27 08:54:18 &#43;0800 CST" itemprop="datePublished">2021-01-27</time>
                     </p>
                 </div>
             </li>

@@ -6,7 +6,21 @@
     <description>Recent content in Posts on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 24 Mar 2021 11:31:34 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Mar 2021 11:50:00 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git使用培训</title>
+      <link>http://fuyi.fun/2021/03/24/git%E4%BD%BF%E7%94%A8%E5%9F%B9%E8%AE%AD/</link>
+      <pubDate>Wed, 24 Mar 2021 11:50:00 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/03/24/git%E4%BD%BF%E7%94%A8%E5%9F%B9%E8%AE%AD/</guid>
+      <description>一、代码仓库的登陆方法： 内网访问：192.168.130.13 外网访问：登陆vpn后，访问10.8.0.11  二、 Git使用说明： 服用说明： 2.1和2.2是文字说明；
+2.3和2.4是视频； 单纯学会操作可以看2.1 或 2.3 学习原理的话看：2.2 学习设计思路的话可以膜拜2.4
+2.1【入门】Git使用说明： http://rogerdudler.github.io/git-guide/index.zh.html
+2.2【精通】Git 图解： http://marklodato.github.io/visual-git-guide/index-zh-cn.html
+2.3【bilibili视频教程】 【git：2小时从入门到精通】https://www.bilibili.com/video/BV1Mf4y117f3?from=search&amp;amp;seid=10359461753628766284
+2.4 【进阶】 【git之父Linus在Ted上访谈】https://www.bilibili.com/video/BV1db411j73A?from=search&amp;amp;seid=10359461753628766284</description>
+    </item>
+    
     <item>
       <title>Node的Arraybuffer做大小端转换</title>
       <link>http://fuyi.fun/2021/03/24/node%E7%9A%84arraybuffer%E5%81%9A%E5%A4%A7%E5%B0%8F%E7%AB%AF%E8%BD%AC%E6%8D%A2/</link>

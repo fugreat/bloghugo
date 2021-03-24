@@ -6,7 +6,22 @@
     <description>Recent content on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 24 Mar 2021 12:08:50 +0800</lastBuildDate><atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Mar 2021 12:10:32 +0800</lastBuildDate><atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu命令行种子下载</title>
+      <link>http://fuyi.fun/2021/03/24/ubuntu%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A7%8D%E5%AD%90%E4%B8%8B%E8%BD%BD/</link>
+      <pubDate>Wed, 24 Mar 2021 12:10:32 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/03/24/ubuntu%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A7%8D%E5%AD%90%E4%B8%8B%E8%BD%BD/</guid>
+      <description>Ubuntu 命令行种子下载
+sudo apt-get install rtorrent rtorrent 启动
+按Enter 选择种子文件
+按下箭头选择文件
+Ctrl + s 开始
+Ctrl + d 暂停
+Ctrl + q 退出</description>
+    </item>
+    
     <item>
       <title>Ubuntu增加sudo权限</title>
       <link>http://fuyi.fun/2021/03/24/ubuntu%E5%A2%9E%E5%8A%A0sudo%E6%9D%83%E9%99%90/</link>

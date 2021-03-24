@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://fuyi.fun/" />
-<meta property="og:updated_time" content="2021-03-09T16:02:28+08:00" />
+<meta property="og:updated_time" content="2021-03-24T11:31:34+08:00" />
 
     
     <meta itemprop="name" content="小夫子的随笔">
@@ -161,12 +161,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        42
+        43
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          49
+          51
         
         <span>
             标签
@@ -242,6 +242,148 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2021/03/24/node%E7%9A%84arraybuffer%E5%81%9A%E5%A4%A7%E5%B0%8F%E7%AB%AF%E8%BD%AC%E6%8D%A2/">
+    <h1 class="article-title" itemprop="name">
+        Node的Arraybuffer做大小端转换
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2021-03-24 11:31:34 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
+            &middot;
+            47
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/nodejs">nodejs</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/%E5%A4%A7%E7%AB%AF%E5%BA%8F">大端序</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/%E5%B0%8F%E7%AB%AF%E5%BA%8F">小端序</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                Nodejs 的 ArrayBuffeer大小端序转换：
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getUint32
+// 创建 ArrayBuffer const buffer = new ArrayBuffer(4); // 赋初始值 var bytes = new Uint32Array(buffer) bytes[0] = 0x05; bytes[1] = 0x00; bytes[2] = 0x00; bytes[3] = 0x00; // buffer和Dataview const view = new DataView(buffer); // 按小端序取出数据 console.log(&quot;小端序：&quot;+view.getUint32(0, 1)); // 按大端序取出数据 console.log(&quot;大端序：&quot;+ view.getUint32(0, 0)); 
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2021/03/24/node%E7%9A%84arraybuffer%E5%81%9A%E5%A4%A7%E5%B0%8F%E7%AB%AF%E8%BD%AC%E6%8D%A2/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2021/03/24/node%E7%9A%84arraybuffer%E5%81%9A%E5%A4%A7%E5%B0%8F%E7%AB%AF%E8%BD%AC%E6%8D%A2/" data-id="32f849a2be0cd645e913329f2e0c2eed" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1449,138 +1591,6 @@ docker run \ --name ipsec-vpn-server \ --restart=always \ -e VPN_IPSEC_PSK=你�
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2021/01/12/%E5%AE%89%E6%A0%87%E5%A4%96%E5%A3%B3%E8%A6%81%E6%B1%82/">
-    <h1 class="article-title" itemprop="name">
-        安标外壳要求
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2021-01-12 09:19:49 &#43;0800 CST" itemprop="datePublished">2021-01-12</time>
-            &middot;
-            5
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E5%A4%96%E5%A3%B3">外壳</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                安标
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2021/01/12/%E5%AE%89%E6%A0%87%E5%A4%96%E5%A3%B3%E8%A6%81%E6%B1%82/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2021/01/12/%E5%AE%89%E6%A0%87%E5%A4%96%E5%A3%B3%E8%A6%81%E6%B1%82/" data-id="e5d14b5e0fbe13a1b821b3d1f6381348" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1606,6 +1616,25 @@ docker run \ --name ipsec-vpn-server \ --restart=always \ -e VPN_IPSEC_PSK=你�
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2021/03/24/node%E7%9A%84arraybuffer%E5%81%9A%E5%A4%A7%E5%B0%8F%E7%AB%AF%E8%BD%AC%E6%8D%A2/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2021/03/24/node%E7%9A%84arraybuffer%E5%81%9A%E5%A4%A7%E5%B0%8F%E7%AB%AF%E8%BD%AC%E6%8D%A2/" class="title">Node的Arraybuffer做大小端转换</a></p>
+                    <p class="item-date">
+                        <time datetime="2021-03-24 11:31:34 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1679,25 +1708,6 @@ docker run \ --name ipsec-vpn-server \ --restart=always \ -e VPN_IPSEC_PSK=你�
                     <p class="item-title"><a href="http://fuyi.fun/2021/02/25/win10%E5%AE%89%E8%A3%85vpn/" class="title">Win10安装VPN</a></p>
                     <p class="item-date">
                         <time datetime="2021-02-25 12:57:50 &#43;0800 CST" itemprop="datePublished">2021-02-25</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2021/02/23/ubuntu%E4%B8%8B%E9%83%A8%E7%BD%B2jar/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2021/02/23/ubuntu%E4%B8%8B%E9%83%A8%E7%BD%B2jar/" class="title">Ubuntu下部署jar</a></p>
-                    <p class="item-date">
-                        <time datetime="2021-02-23 11:36:00 &#43;0800 CST" itemprop="datePublished">2021-02-23</time>
                     </p>
                 </div>
             </li>
@@ -1929,7 +1939,7 @@ docker run \ --name ipsec-vpn-server \ --restart=always \ -e VPN_IPSEC_PSK=你�
                 <a class="category-list-link" href="http://fuyi.fun/tags/nodejs">
                     nodejs
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
@@ -2072,6 +2082,22 @@ docker run \ --name ipsec-vpn-server \ --restart=always \ -e VPN_IPSEC_PSK=你�
                 
                 <a class="category-list-link" href="http://fuyi.fun/tags/%E5%A4%96%E5%A3%B3">
                     外壳
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/%E5%A4%A7%E7%AB%AF%E5%BA%8F">
+                    大端序
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/%E5%B0%8F%E7%AB%AF%E5%BA%8F">
+                    小端序
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -2273,6 +2299,12 @@ docker run \ --name ipsec-vpn-server \ --restart=always \ -e VPN_IPSEC_PSK=你�
         
         
         <a href="http://fuyi.fun/tags/%E5%A4%96%E5%A3%B3" style="font-size: 12px;">外壳</a>
+        
+        
+        <a href="http://fuyi.fun/tags/%E5%A4%A7%E7%AB%AF%E5%BA%8F" style="font-size: 12px;">大端序</a>
+        
+        
+        <a href="http://fuyi.fun/tags/%E5%B0%8F%E7%AB%AF%E5%BA%8F" style="font-size: 12px;">小端序</a>
         
         
         <a href="http://fuyi.fun/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F" style="font-size: 12px;">嵌入式</a>

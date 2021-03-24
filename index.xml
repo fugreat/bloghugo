@@ -6,7 +6,26 @@
     <description>Recent content on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 24 Mar 2021 12:05:03 +0800</lastBuildDate><atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Mar 2021 12:08:50 +0800</lastBuildDate><atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu增加sudo权限</title>
+      <link>http://fuyi.fun/2021/03/24/ubuntu%E5%A2%9E%E5%8A%A0sudo%E6%9D%83%E9%99%90/</link>
+      <pubDate>Wed, 24 Mar 2021 12:08:50 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/03/24/ubuntu%E5%A2%9E%E5%8A%A0sudo%E6%9D%83%E9%99%90/</guid>
+      <description>ubuntu 增加sudoer
+https://www.cnblogs.com/jiangz/p/4183461.html
+方法一、使用usermod命令
+新增user
+sudo adduser username
+增加sudo权限
+sudo usermod -aG sudo username
+sudo usermod -aG sudo 方法二、修改/etc/sudoers文件
+修改文件前先开通root
+具体方法是：Ubuntu技巧之 is not in the sudoers file解决方法_Linux教程_Linux公社-Linux系统门户网站
+修改文件前先开通root，如果没看通，问题很严重。就是修改了/etc/sudoer权限之后再改不回去了，导致当前用户的sudo权限也没有了，需要进入 recovery模式修复。见ubuntu手贱改了sudoers权限之后的恢复 - piaomiao1314 - 博客园</description>
+    </item>
+    
     <item>
       <title>Ubuntu增加swap分区</title>
       <link>http://fuyi.fun/2021/03/24/ubuntu%E5%A2%9E%E5%8A%A0swap%E5%88%86%E5%8C%BA/</link>

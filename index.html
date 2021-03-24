@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://fuyi.fun/" />
-<meta property="og:updated_time" content="2021-03-24T11:52:16+08:00" />
+<meta property="og:updated_time" content="2021-03-24T11:55:32+08:00" />
 
     
     <meta itemprop="name" content="小夫子的随笔">
@@ -161,12 +161,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        45
+        46
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          51
+          54
         
         <span>
             标签
@@ -242,6 +242,149 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2021/03/24/%E5%B0%8F%E5%9B%A2%E9%98%9F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/">
+    <h1 class="article-title" itemprop="name">
+        小团队代码管理
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2021-03-24 11:55:32 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
+            &middot;
+            20
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/%E7%AE%A1%E7%90%86">管理</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86">代码管理</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/git">git</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                如何在小团队内实践代码管理？ 1.使用gitee 或 gitlab 托管代码 gitee: 优点：wiki和项目管理比较好用，速度快，不用维护； 缺点：免费的只能5个人一下的小团队
+gitlab: 优点：免费；docker下部署很简单； 缺点：需要一台服务器或vps 并且需要维护；
+github bitbucket 太慢不考虑 2. 使用mailcow建立公司邮箱系统，用于创建公司人员账号； 必要条件：域名、服务器
+3.使用培训：培训基本git操作，设置各开发组负责人，确保日常代码提交； 4.通过访谈评估代码管理效果 
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2021/03/24/%E5%B0%8F%E5%9B%A2%E9%98%9F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2021/03/24/%E5%B0%8F%E5%9B%A2%E9%98%9F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/" data-id="d9921722cd413e89d7dee30d66d567a5" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1419,148 +1562,6 @@ https://github.com/NordicPlayground/nRF5x-custom-ble-service-tutorial
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2021/01/27/%E8%93%9D%E7%89%99%E5%AE%98%E7%BD%91%E7%94%9F%E6%88%90%E8%93%9D%E7%89%99%E6%9C%8D%E5%8A%A1%E7%9A%84uuid/">
-    <h1 class="article-title" itemprop="name">
-        蓝牙官网生成蓝牙服务的uuid
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2021-01-27 08:54:18 &#43;0800 CST" itemprop="datePublished">2021-01-27</time>
-            &middot;
-            113
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/ble">ble</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/uuid">uuid</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                蓝牙如何申请厂商UUID
-参考论坛： https://devzone.nordicsemi.com/f/nordic-q-a/7260/how-to-acquire-a-vendor-base-uuid/25668#25668
-建议用此处工具生成UUID
-不需要注册和付费
-Bluetooth SIG recommends you to just use the tool found here to generate your UUID. It is extremely unlikely that you will generate a UUID that collides with some other company, so you are not required to register or pay for it. I am not not even sure the SIG even gives you the option to register it at the moment.
-生成UUID的国际组织： https://www.itu.int/en/ITU-T/asn1/Pages/UUID/uuids.aspx
-生成UUID的界面： https://www.itu.int/en/ITU-T/asn1/Pages/UUID/generate_uuid.aspx
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2021/01/27/%E8%93%9D%E7%89%99%E5%AE%98%E7%BD%91%E7%94%9F%E6%88%90%E8%93%9D%E7%89%99%E6%9C%8D%E5%8A%A1%E7%9A%84uuid/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2021/01/27/%E8%93%9D%E7%89%99%E5%AE%98%E7%BD%91%E7%94%9F%E6%88%90%E8%93%9D%E7%89%99%E6%9C%8D%E5%8A%A1%E7%9A%84uuid/" data-id="d0843963edd9bfbe76c0a96b98172690" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1586,6 +1587,25 @@ Bluetooth SIG recommends you to just use the tool found here to generate your UU
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2021/03/24/%E5%B0%8F%E5%9B%A2%E9%98%9F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2021/03/24/%E5%B0%8F%E5%9B%A2%E9%98%9F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/" class="title">小团队代码管理</a></p>
+                    <p class="item-date">
+                        <time datetime="2021-03-24 11:55:32 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1659,25 +1679,6 @@ Bluetooth SIG recommends you to just use the tool found here to generate your UU
                     <p class="item-title"><a href="http://fuyi.fun/2021/03/09/ubuntu%E4%BF%AE%E6%94%B9sh/" class="title">Ubuntu修改sh</a></p>
                     <p class="item-date">
                         <time datetime="2021-03-09 16:02:28 &#43;0800 CST" itemprop="datePublished">2021-03-09</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2021/03/01/ubuntu%E5%85%B3%E9%97%AD%E7%86%84%E5%B1%8F/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2021/03/01/ubuntu%E5%85%B3%E9%97%AD%E7%86%84%E5%B1%8F/" class="title">Ubuntu关闭熄屏</a></p>
-                    <p class="item-date">
-                        <time datetime="2021-03-01 12:16:03 &#43;0800 CST" itemprop="datePublished">2021-03-01</time>
                     </p>
                 </div>
             </li>
@@ -1804,6 +1805,14 @@ Bluetooth SIG recommends you to just use the tool found here to generate your UU
                 
                 <a class="category-list-link" href="http://fuyi.fun/tags/esp32">
                     esp32
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/git">
+                    git
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -2026,6 +2035,14 @@ Bluetooth SIG recommends you to just use the tool found here to generate your UU
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="http://fuyi.fun/tags/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86">
+                    代码管理
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="http://fuyi.fun/tags/%E5%88%86%E6%9E%90">
                     分析
                 </a>
@@ -2114,6 +2131,14 @@ Bluetooth SIG recommends you to just use the tool found here to generate your UU
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="http://fuyi.fun/tags/%E7%AE%A1%E7%90%86">
+                    管理
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="http://fuyi.fun/tags/%E8%AF%B4%E6%98%8E%E4%B9%A6">
                     说明书
                 </a>
@@ -2176,6 +2201,9 @@ Bluetooth SIG recommends you to just use the tool found here to generate your UU
         
         
         <a href="http://fuyi.fun/tags/esp32" style="font-size: 12px;">esp32</a>
+        
+        
+        <a href="http://fuyi.fun/tags/git" style="font-size: 12px;">git</a>
         
         
         <a href="http://fuyi.fun/tags/homebrew" style="font-size: 12px;">homebrew</a>
@@ -2259,6 +2287,9 @@ Bluetooth SIG recommends you to just use the tool found here to generate your UU
         <a href="http://fuyi.fun/tags/win10" style="font-size: 12px;">win10</a>
         
         
+        <a href="http://fuyi.fun/tags/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86" style="font-size: 12px;">代码管理</a>
+        
+        
         <a href="http://fuyi.fun/tags/%E5%88%86%E6%9E%90" style="font-size: 12px;">分析</a>
         
         
@@ -2290,6 +2321,9 @@ Bluetooth SIG recommends you to just use the tool found here to generate your UU
         
         
         <a href="http://fuyi.fun/tags/%E7%AE%A1%E5%BE%84" style="font-size: 12px;">管径</a>
+        
+        
+        <a href="http://fuyi.fun/tags/%E7%AE%A1%E7%90%86" style="font-size: 12px;">管理</a>
         
         
         <a href="http://fuyi.fun/tags/%E8%AF%B4%E6%98%8E%E4%B9%A6" style="font-size: 12px;">说明书</a>

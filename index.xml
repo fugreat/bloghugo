@@ -6,7 +6,19 @@
     <description>Recent content on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 24 Mar 2021 11:52:16 +0800</lastBuildDate><atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Mar 2021 11:55:32 +0800</lastBuildDate><atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>小团队代码管理</title>
+      <link>http://fuyi.fun/2021/03/24/%E5%B0%8F%E5%9B%A2%E9%98%9F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Wed, 24 Mar 2021 11:55:32 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/03/24/%E5%B0%8F%E5%9B%A2%E9%98%9F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/</guid>
+      <description>如何在小团队内实践代码管理？ 1.使用gitee 或 gitlab 托管代码 gitee: 优点：wiki和项目管理比较好用，速度快，不用维护； 缺点：免费的只能5个人一下的小团队
+gitlab: 优点：免费；docker下部署很简单； 缺点：需要一台服务器或vps 并且需要维护；
+github bitbucket 太慢不考虑 2. 使用mailcow建立公司邮箱系统，用于创建公司人员账号； 必要条件：域名、服务器
+3.使用培训：培训基本git操作，设置各开发组负责人，确保日常代码提交； 4.通过访谈评估代码管理效果 </description>
+    </item>
+    
     <item>
       <title>Nrf52打印浮点数据</title>
       <link>http://fuyi.fun/2021/03/24/nrf52%E6%89%93%E5%8D%B0%E6%B5%AE%E7%82%B9%E6%95%B0%E6%8D%AE/</link>

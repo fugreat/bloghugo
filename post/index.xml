@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 24 Mar 2021 12:03:35 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Mar 2021 12:05:03 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu增加swap分区</title>
+      <link>http://fuyi.fun/2021/03/24/ubuntu%E5%A2%9E%E5%8A%A0swap%E5%88%86%E5%8C%BA/</link>
+      <pubDate>Wed, 24 Mar 2021 12:05:03 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/03/24/ubuntu%E5%A2%9E%E5%8A%A0swap%E5%88%86%E5%8C%BA/</guid>
+      <description># 创建文件： sudo fallocate -l 1G /swapfile # 设置为swapfile sudo chmod 600 /swapfile sudo mkswap /swapfile # 激活： sudo swapon /swapfile # 在/etc/fstab中写入配置，开机自动激活 /swapfile swap swap defaults 0 0 # 查看是否激活： sudo swapon --show 参考：https://www.sysgeek.cn/ubuntu-18-04-swap/</description>
+    </item>
+    
     <item>
       <title>Gitlab部署</title>
       <link>http://fuyi.fun/2021/03/24/gitlab%E9%83%A8%E7%BD%B2/</link>
@@ -70,6 +79,16 @@ NRF_LOG_INFO(&amp;quot;My float number&amp;quot; NRF_LOG_FLOAT_MARKER &amp;quot;
 2.2【精通】Git 图解： http://marklodato.github.io/visual-git-guide/index-zh-cn.html
 2.3【bilibili视频教程】 【git：2小时从入门到精通】https://www.bilibili.com/video/BV1Mf4y117f3?from=search&amp;amp;seid=10359461753628766284
 2.4 【进阶】 【git之父Linus在Ted上访谈】https://www.bilibili.com/video/BV1db411j73A?from=search&amp;amp;seid=10359461753628766284</description>
+    </item>
+    
+    <item>
+      <title>Mysql开启外网访问</title>
+      <link>http://fuyi.fun/2021/03/24/mysql%E5%BC%80%E5%90%AF%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/</link>
+      <pubDate>Wed, 24 Mar 2021 11:42:15 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/03/24/mysql%E5%BC%80%E5%90%AF%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/</guid>
+      <description>Mysql 开放外网访问： 用mysql -uroot -p 登陆mysql，然后采用以下方法开启远程访问权限：
+ mysql&amp;gt;use mysql; mysql&amp;gt;update user set host = &#39;%&#39; where user = &#39;root&#39;; mysql&amp;gt;FLUSH PRIVILEGES； </description>
     </item>
     
     <item>

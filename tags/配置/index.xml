@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>配置 on 小夫子的随笔</title>
+    <link>http://fuyi.fun/tags/%E9%85%8D%E7%BD%AE/</link>
+    <description>Recent content in 配置 on 小夫子的随笔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 24 Mar 2021 11:42:15 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/%E9%85%8D%E7%BD%AE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mysql开启外网访问</title>
+      <link>http://fuyi.fun/2021/03/24/mysql%E5%BC%80%E5%90%AF%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/</link>
+      <pubDate>Wed, 24 Mar 2021 11:42:15 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/03/24/mysql%E5%BC%80%E5%90%AF%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/</guid>
+      <description>Mysql 开放外网访问： 用mysql -uroot -p 登陆mysql，然后采用以下方法开启远程访问权限：
+ mysql&amp;gt;use mysql; mysql&amp;gt;update user set host = &#39;%&#39; where user = &#39;root&#39;; mysql&amp;gt;FLUSH PRIVILEGES； </description>
+    </item>
+    
+  </channel>
+</rss>

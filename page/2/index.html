@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://fuyi.fun/" />
-<meta property="og:updated_time" content="2021-03-24T12:03:35+08:00" />
+<meta property="og:updated_time" content="2021-03-24T12:05:03+08:00" />
 
     
     <meta itemprop="name" content="小夫子的随笔">
@@ -161,12 +161,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        48
+        50
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          56
+          59
         
         <span>
             标签
@@ -242,6 +242,276 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2021/02/25/openvpn%E9%85%8D%E7%BD%AE/">
+    <h1 class="article-title" itemprop="name">
+        Openvpn配置
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2021-02-25 15:56:18 &#43;0800 CST" itemprop="datePublished">2021-02-25</time>
+            &middot;
+            33
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                服务器端配置服务 Ubuntu下：
+# 下载VPN安装文件： curl -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh # 安装/删除vpn/增加用户 sudo bash openvpn-install.sh 增加用户后得到xxxx.ovpn
+给到vpn用户即可。
+客户端启动VPN 运行指令：
+openvpn /home/kakj/vpn/key_from_vpn_admin.ovpn 1&gt;&gt;/dev/null 2&gt;&gt;/dev/null &amp; 解决所有流量都走vpn的问题 默认配置下，所有流量都从VPN走，这样网比较卡；
+在*.ovpn文件中增加配置：
+route-nopull route 10.8.0.0 255.255.0.0 vpn_gateway route 172.16.1.0 255.255.255.0 vpn_gateway 
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2021/02/25/openvpn%E9%85%8D%E7%BD%AE/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2021/02/25/openvpn%E9%85%8D%E7%BD%AE/" data-id="1080bc1a6355d55f3b16b5e56474aab6" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2021/02/25/win10%E5%AE%89%E8%A3%85vpn/">
+    <h1 class="article-title" itemprop="name">
+        Win10安装VPN
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2021-02-25 12:57:50 &#43;0800 CST" itemprop="datePublished">2021-02-25</time>
+            &middot;
+            15
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/win10">win10</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/install-vpn">install VPN</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                Win10安装VPN 1.下载安装文件 点此下载VPN安装程序Win10
+得到安装包压缩文件：
+解压得到安装包：
+2.安装 双击安装
+一直下一步安装完成 双击图标打开程序: 3.导入配置 联系运维（FJX）获取登陆配置文件，每个人的配置文件都不同。
+把配置文件拖拽到此处： 点击ADD完成添加： 4.开始使用 出现下面界面完成VPN连接： 
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2021/02/25/win10%E5%AE%89%E8%A3%85vpn/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2021/02/25/win10%E5%AE%89%E8%A3%85vpn/" data-id="e726f8edf46075f04a6947a9c5de20bc" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1344,297 +1614,6 @@ Modbus协议的coil和discrete，针对的是位寄存器；holding和input，�
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2020/12/16/%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BBgbt9969-2008%E5%B7%A5%E4%B8%9A%E4%BA%A7%E5%93%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6/">
-    <h1 class="article-title" itemprop="name">
-        标准解读：GBT9969 2008工业产品使用说明书
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2020-12-16 09:00:08 &#43;0800 CST" itemprop="datePublished">2020-12-16</time>
-            &middot;
-            27
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E6%A0%87%E5%87%86">标准</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E5%9B%BD%E6%A0%87">国标</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E8%AF%B4%E6%98%8E%E4%B9%A6">说明书</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                标准解读：GBT9969-2008工业产品使用说明书、总则
-文档链接：GBT9969-2008
-基本要求  说明书内容 产品用途和使用范围 根据产品特点给出： 主要结构、性能、型号、规格 吊运、安装、使用、操作、维修、保养、贮存；   应提供：必要的环保和节约能源方面的内容； 易燃易爆有毒有腐蚀有放射性的产品，说明书应包含注意事项、防护措施和发生意外时的紧急处理方法； 对于安全限制有要求或存在有效年限的产品应提供产品上的生产日期和有效期； 实行生产许可证管理的产品，应在包装上标注有效的生产许可证编号；  模版 概述
-安全使用注意事项
-结构特征与工作原理
-技术特性
-尺寸重量
-安装、调整
-使用操作
-故障分析与排除
-安全保护装置与事故处理
-保养维护
-运输贮存
-开箱及检查 环保及其他
-图、表、照片
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2020/12/16/%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BBgbt9969-2008%E5%B7%A5%E4%B8%9A%E4%BA%A7%E5%93%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/12/16/%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BBgbt9969-2008%E5%B7%A5%E4%B8%9A%E4%BA%A7%E5%93%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6/" data-id="de0460312365379ea9234723815c51ec" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2020/11/27/pip%E5%AE%89%E8%A3%85%E5%A4%AA%E6%85%A2%E6%9B%B4%E6%8D%A2%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/">
-    <h1 class="article-title" itemprop="name">
-        Pip安装太慢更换为国内源
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2020-11-27 12:56:33 &#43;0800 CST" itemprop="datePublished">2020-11-27</time>
-            &middot;
-            13
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/pip">pip</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                如题：
-pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清华：https://pypi.tuna.tsinghua.edu.cn/simple
-中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
-华中理工大学：http://pypi.hustunique.com/
-山东理工大学：http://pypi.sdutlinux.org/
-豆瓣：http://pypi.douban.com/simple/
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2020/11/27/pip%E5%AE%89%E8%A3%85%E5%A4%AA%E6%85%A2%E6%9B%B4%E6%8D%A2%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/11/27/pip%E5%AE%89%E8%A3%85%E5%A4%AA%E6%85%A2%E6%9B%B4%E6%8D%A2%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/" data-id="18fedec42a391d2187b1173b7becf6a6" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1664,6 +1643,25 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清�
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2021/03/24/ubuntu%E5%A2%9E%E5%8A%A0swap%E5%88%86%E5%8C%BA/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2021/03/24/ubuntu%E5%A2%9E%E5%8A%A0swap%E5%88%86%E5%8C%BA/" class="title">Ubuntu增加swap分区</a></p>
+                    <p class="item-date">
+                        <time datetime="2021-03-24 12:05:03 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1737,25 +1735,6 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清�
                     <p class="item-title"><a href="http://fuyi.fun/2021/03/24/nrf52%E6%89%93%E5%8D%B0%E6%B5%AE%E7%82%B9%E6%95%B0%E6%8D%AE/" class="title">Nrf52打印浮点数据</a></p>
                     <p class="item-date">
                         <time datetime="2021-03-24 11:52:16 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2021/03/24/git%E4%BD%BF%E7%94%A8%E5%9F%B9%E8%AE%AD/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2021/03/24/git%E4%BD%BF%E7%94%A8%E5%9F%B9%E8%AE%AD/" class="title">Git使用培训</a></p>
-                    <p class="item-date">
-                        <time datetime="2021-03-24 11:50:00 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
                     </p>
                 </div>
             </li>
@@ -1992,6 +1971,14 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清�
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="http://fuyi.fun/tags/mysql">
+                    mysql
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="http://fuyi.fun/tags/nano-pb">
                     nano-pb
                 </a>
@@ -2064,6 +2051,14 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清�
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="http://fuyi.fun/tags/swap">
+                    swap
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="http://fuyi.fun/tags/thingsboard">
                     thingsboard
                 </a>
@@ -2083,7 +2078,7 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清�
                 <a class="category-list-link" href="http://fuyi.fun/tags/ubuntu">
                     ubuntu
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
@@ -2240,6 +2235,14 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清�
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="http://fuyi.fun/tags/%E9%85%8D%E7%BD%AE">
+                    配置
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="http://fuyi.fun/tags/%E9%93%AD%E7%89%8C">
                     铭牌
                 </a>
@@ -2335,6 +2338,9 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清�
         <a href="http://fuyi.fun/tags/modbus" style="font-size: 12px;">modbus</a>
         
         
+        <a href="http://fuyi.fun/tags/mysql" style="font-size: 12px;">mysql</a>
+        
+        
         <a href="http://fuyi.fun/tags/nano-pb" style="font-size: 12px;">nano-pb</a>
         
         
@@ -2360,6 +2366,9 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清�
         
         
         <a href="http://fuyi.fun/tags/stm32" style="font-size: 12px;">stm32</a>
+        
+        
+        <a href="http://fuyi.fun/tags/swap" style="font-size: 12px;">swap</a>
         
         
         <a href="http://fuyi.fun/tags/thingsboard" style="font-size: 12px;">thingsboard</a>
@@ -2426,6 +2435,9 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清�
         
         
         <a href="http://fuyi.fun/tags/%E9%82%AE%E7%AE%B1" style="font-size: 12px;">邮箱</a>
+        
+        
+        <a href="http://fuyi.fun/tags/%E9%85%8D%E7%BD%AE" style="font-size: 12px;">配置</a>
         
         
         <a href="http://fuyi.fun/tags/%E9%93%AD%E7%89%8C" style="font-size: 12px;">铭牌</a>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>论文解读：基于双窄带LED光源的红外甲烷传感器的研制   &middot; 小夫子的随笔</title>
+    <title>Nrf52打印浮点数据 &middot; 小夫子的随笔</title>
     <meta name="generator" content="Hugo 0.77.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="http://fuyi.fun/2020/11/11/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB%E5%9F%BA%E4%BA%8E%E5%8F%8C%E7%AA%84%E5%B8%A6led%E5%85%89%E6%BA%90%E7%9A%84%E7%BA%A2%E5%A4%96%E7%94%B2%E7%83%B7%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E7%A0%94%E5%88%B6/"/>
+    <link rel="canonical" href="http://fuyi.fun/2021/03/24/nrf52%E6%89%93%E5%8D%B0%E6%B5%AE%E7%82%B9%E6%95%B0%E6%8D%AE/"/>
     <link rel="icon" href="http://fuyi.fun/favicon.ico">
     <link rel="apple-touch-icon" href="http://fuyi.fun/apple-touch-icon.png"/>
     <link rel="stylesheet" href="http://fuyi.fun/css/style.css">
@@ -20,45 +20,33 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="论文解读：基于双窄带LED光源的红外甲烷传感器的研制  " />
-<meta property="og:description" content="论文解读：基于双窄带LED光源的红外甲烷传感器的研制
-赵庆川
-特点： 有温度补偿；
-双路光源做差得到甲烷浓度； 低功耗16mW；
-系统框图：
-甲烷和水蒸气的吸收峰:
-LED电流和光强: 设备结构: 论文全文: 基于双窄带LED光源的红外甲烷传感器的研制 赵庆川" />
+    <meta property="og:title" content="Nrf52打印浮点数据" />
+<meta property="og:description" content="Nrf52 打印浮点数据：
+https://devzone.nordicsemi.com/f/nordic-q-a/18625/nrf_log_info-does-not-show-float-number
+NRF_LOG_INFO(&quot;My float number&quot; NRF_LOG_FLOAT_MARKER &quot;\r\n&quot;, NRF_LOG_FLOAT(f))) " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://fuyi.fun/2020/11/11/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB%E5%9F%BA%E4%BA%8E%E5%8F%8C%E7%AA%84%E5%B8%A6led%E5%85%89%E6%BA%90%E7%9A%84%E7%BA%A2%E5%A4%96%E7%94%B2%E7%83%B7%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E7%A0%94%E5%88%B6/" />
-<meta property="article:published_time" content="2020-11-11T10:48:40+08:00" />
-<meta property="article:modified_time" content="2020-11-11T10:48:40+08:00" />
+<meta property="og:url" content="http://fuyi.fun/2021/03/24/nrf52%E6%89%93%E5%8D%B0%E6%B5%AE%E7%82%B9%E6%95%B0%E6%8D%AE/" />
+<meta property="article:published_time" content="2021-03-24T11:52:16+08:00" />
+<meta property="article:modified_time" content="2021-03-24T11:52:16+08:00" />
 
     
-    <meta itemprop="name" content="论文解读：基于双窄带LED光源的红外甲烷传感器的研制  ">
-<meta itemprop="description" content="论文解读：基于双窄带LED光源的红外甲烷传感器的研制
-赵庆川
-特点： 有温度补偿；
-双路光源做差得到甲烷浓度； 低功耗16mW；
-系统框图：
-甲烷和水蒸气的吸收峰:
-LED电流和光强: 设备结构: 论文全文: 基于双窄带LED光源的红外甲烷传感器的研制 赵庆川">
-<meta itemprop="datePublished" content="2020-11-11T10:48:40+08:00" />
-<meta itemprop="dateModified" content="2020-11-11T10:48:40+08:00" />
-<meta itemprop="wordCount" content="13">
+    <meta itemprop="name" content="Nrf52打印浮点数据">
+<meta itemprop="description" content="Nrf52 打印浮点数据：
+https://devzone.nordicsemi.com/f/nordic-q-a/18625/nrf_log_info-does-not-show-float-number
+NRF_LOG_INFO(&quot;My float number&quot; NRF_LOG_FLOAT_MARKER &quot;\r\n&quot;, NRF_LOG_FLOAT(f))) ">
+<meta itemprop="datePublished" content="2021-03-24T11:52:16+08:00" />
+<meta itemprop="dateModified" content="2021-03-24T11:52:16+08:00" />
+<meta itemprop="wordCount" content="9">
 
 
 
-<meta itemprop="keywords" content="Sensor,CH4," />
+<meta itemprop="keywords" content="" />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="论文解读：基于双窄带LED光源的红外甲烷传感器的研制  "/>
-<meta name="twitter:description" content="论文解读：基于双窄带LED光源的红外甲烷传感器的研制
-赵庆川
-特点： 有温度补偿；
-双路光源做差得到甲烷浓度； 低功耗16mW；
-系统框图：
-甲烷和水蒸气的吸收峰:
-LED电流和光强: 设备结构: 论文全文: 基于双窄带LED光源的红外甲烷传感器的研制 赵庆川"/>
+<meta name="twitter:title" content="Nrf52打印浮点数据"/>
+<meta name="twitter:description" content="Nrf52 打印浮点数据：
+https://devzone.nordicsemi.com/f/nordic-q-a/18625/nrf_log_info-does-not-show-float-number
+NRF_LOG_INFO(&quot;My float number&quot; NRF_LOG_FLOAT_MARKER &quot;\r\n&quot;, NRF_LOG_FLOAT(f))) "/>
 
     
 
@@ -269,9 +257,9 @@ LED电流和光强: 设备结构: 论文全文: 基于双窄带LED光源的红�
         
 
         <header class="article-header">
-    <a href="http://fuyi.fun/2020/11/11/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB%E5%9F%BA%E4%BA%8E%E5%8F%8C%E7%AA%84%E5%B8%A6led%E5%85%89%E6%BA%90%E7%9A%84%E7%BA%A2%E5%A4%96%E7%94%B2%E7%83%B7%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E7%A0%94%E5%88%B6/">
+    <a href="http://fuyi.fun/2021/03/24/nrf52%E6%89%93%E5%8D%B0%E6%B5%AE%E7%82%B9%E6%95%B0%E6%8D%AE/">
     <h1 class="article-title" itemprop="name">
-        论文解读：基于双窄带LED光源的红外甲烷传感器的研制  
+        Nrf52打印浮点数据
     </h1>
     </a>
     <div class="article-meta">
@@ -279,9 +267,9 @@ LED电流和光强: 设备结构: 论文全文: 基于双窄带LED光源的红�
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2020-11-11 10:48:40 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
+            <time datetime="2021-03-24 11:52:16 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
             &middot;
-            13
+            9
             words
             &middot;
             1
@@ -296,45 +284,18 @@ LED电流和光强: 设备结构: 论文全文: 基于双窄带LED光源的红�
         
             
             
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/sensor">Sensor</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/ch4">CH4</a>
-                
-                
-            </div>
-            
         
     </div>
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <p>论文解读：基于双窄带LED光源的红外甲烷传感器的研制<br>
-赵庆川</p>
-<p>特点：
-有温度补偿；<br>
-双路光源做差得到甲烷浓度；
-低功耗16mW；</p>
-<p>系统框图：<br>
-<img src="/attach/hwjw/MeasuringLED.jpg" alt=""></p>
-<p>甲烷和水蒸气的吸收峰:<br>
-<img src="/attach/hwjw/Absorption.jpg" alt=""><br>
-<img src="/attach/hwjw/Wavelengthnm.jpg" alt=""></p>
-<p>LED电流和光强:
-<img src="/attach/hwjw/LED3.jpg" alt=""></p>
-<p>设备结构:
-<img src="/attach/hwjw/Spherical.jpg" alt=""></p>
-<p>论文全文:
-<a href="/attach/hwjw/led_ch4.pdf">基于双窄带LED光源的红外甲烷传感器的研制 赵庆川</a></p>
-
+            <p>Nrf52 打印浮点数据：<br>
+<a href="https://devzone.nordicsemi.com/f/nordic-q-a/18625/nrf_log_info-does-not-show-float-number">https://devzone.nordicsemi.com/f/nordic-q-a/18625/nrf_log_info-does-not-show-float-number</a></p>
+<pre><code>NRF_LOG_INFO(&quot;My float number&quot; NRF_LOG_FLOAT_MARKER &quot;\r\n&quot;, NRF_LOG_FLOAT(f)))
+</code></pre>
         </div>
         <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/11/11/%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB%E5%9F%BA%E4%BA%8E%E5%8F%8C%E7%AA%84%E5%B8%A6led%E5%85%89%E6%BA%90%E7%9A%84%E7%BA%A2%E5%A4%96%E7%94%B2%E7%83%B7%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E7%A0%94%E5%88%B6/" data-id="07e165737124e299dd3c7058a1fe7e61" class="article-share-link">
+    <a data-url="http://fuyi.fun/2021/03/24/nrf52%E6%89%93%E5%8D%B0%E6%B5%AE%E7%82%B9%E6%95%B0%E6%8D%AE/" data-id="91da25f9fff72e67188433d20cad5d40" class="article-share-link">
         <i class="fa fa-share"></i>
         分享
     </a>
@@ -411,21 +372,14 @@ LED电流和光强: 设备结构: 论文全文: 基于双窄带LED光源的红�
     
 <nav id="article-nav">
     
-    <a href="http://fuyi.fun/2020/11/11/float_to_hex/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="http://fuyi.fun/2021/03/24/git%E4%BD%BF%E7%94%A8%E5%9F%B9%E8%AE%AD/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           上一个
       </strong>
-      <div class="article-nav-title">Float_to_hex</div>
+      <div class="article-nav-title">Git使用培训</div>
     </a>
     
 
-    
-    <a href="http://fuyi.fun/2020/11/11/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">
-          下一个
-      </strong>
-      <div class="article-nav-title">Linux常用命令</div>
-    </a>
     
 </nav>
 

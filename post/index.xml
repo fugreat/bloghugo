@@ -6,7 +6,18 @@
     <description>Recent content in Posts on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 24 Mar 2021 11:50:00 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Mar 2021 11:52:16 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nrf52打印浮点数据</title>
+      <link>http://fuyi.fun/2021/03/24/nrf52%E6%89%93%E5%8D%B0%E6%B5%AE%E7%82%B9%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Wed, 24 Mar 2021 11:52:16 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/03/24/nrf52%E6%89%93%E5%8D%B0%E6%B5%AE%E7%82%B9%E6%95%B0%E6%8D%AE/</guid>
+      <description>Nrf52 打印浮点数据：
+https://devzone.nordicsemi.com/f/nordic-q-a/18625/nrf_log_info-does-not-show-float-number
+NRF_LOG_INFO(&amp;quot;My float number&amp;quot; NRF_LOG_FLOAT_MARKER &amp;quot;\r\n&amp;quot;, NRF_LOG_FLOAT(f))) </description>
+    </item>
+    
     <item>
       <title>Git使用培训</title>
       <link>http://fuyi.fun/2021/03/24/git%E4%BD%BF%E7%94%A8%E5%9F%B9%E8%AE%AD/</link>

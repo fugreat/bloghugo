@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://fuyi.fun/" />
-<meta property="og:updated_time" content="2021-03-24T11:55:32+08:00" />
+<meta property="og:updated_time" content="2021-03-24T11:57:27+08:00" />
 
     
     <meta itemprop="name" content="小夫子的随笔">
@@ -161,12 +161,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        46
+        47
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          54
+          56
         
         <span>
             标签
@@ -242,6 +242,143 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2020/11/11/%E7%AE%A1%E5%BE%84%E5%AF%B9%E7%85%A7%E8%A1%A8/">
+    <h1 class="article-title" itemprop="name">
+        管径对照表
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-11-11 12:55:31 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
+            &middot;
+            31
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/%E7%AE%A1%E5%BE%84">管径</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/dn25">DN25</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                管子口径对照表：
+型号尺寸说明 1分=DN6=1/8 2分=DN8=1/4 3分=DN10=3/8 4分=DN15=1/2 6分=DN20=3/4 1寸=DN25 1.2寸=DN32=1-1/4 1.5寸=DN40=1-1/2 2寸=DN50 3寸=DN65=2-1/2 4寸=DN100 DN15 12.7mm， DN20 19.05mm， DN25 25.4mm， DN32 31.75mm， DN40 38.1mm， DN50 50.8mm。 1、DN15....4分管子，内径15mm，外径23mm,壁厚4m 2、DN20....6分管子，内径20mm，外径27mm,壁厚3，5mm 3、DN25....1寸管子，内径25mm，外径32mm,壁厚3，5mm 4、DN32....(1由四分之3寸）内径32mm，外径38mm,壁厚3mm 5、DN40....(1由二分之1寸）.内径40mm，外径48mm,壁厚4mm 6、DN50是2寸管子，内径50mm，外径56mm,壁厚3mm 
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2020/11/11/%E7%AE%A1%E5%BE%84%E5%AF%B9%E7%85%A7%E8%A1%A8/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2020/11/11/%E7%AE%A1%E5%BE%84%E5%AF%B9%E7%85%A7%E8%A1%A8/" data-id="6c666e04dbb8485feb7b3598308ed1d4" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1478,138 +1615,6 @@ var array = [1,2,3]; // 方式一： array.forEach(function(v,index,a){ console.
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2020/11/11/%E8%BD%AC%E8%BD%BD%E5%9C%A8%E7%BA%BF%E9%97%A8%E7%A6%81%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/">
-    <h1 class="article-title" itemprop="name">
-        【转载】在线门禁通信协议
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2020-11-11 10:23:32 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
-            &middot;
-            218
-            words
-            &middot;
-            2
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/categories/tech">tech</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                <h2 id="查询设备">查询设备</h2>
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2020/11/11/%E8%BD%AC%E8%BD%BD%E5%9C%A8%E7%BA%BF%E9%97%A8%E7%A6%81%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/11/11/%E8%BD%AC%E8%BD%BD%E5%9C%A8%E7%BA%BF%E9%97%A8%E7%A6%81%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/" data-id="3b35c9b32fcefa54b0c47667b0e85294" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1639,6 +1644,25 @@ var array = [1,2,3]; // 方式一： array.forEach(function(v,index,a){ console.
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2021/03/24/%E9%83%A8%E7%BD%B2%E7%A7%81%E6%9C%89%E5%8C%96%E9%82%AE%E7%AE%B1/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2021/03/24/%E9%83%A8%E7%BD%B2%E7%A7%81%E6%9C%89%E5%8C%96%E9%82%AE%E7%AE%B1/" class="title">部署私有化邮箱</a></p>
+                    <p class="item-date">
+                        <time datetime="2021-03-24 11:57:27 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1712,25 +1736,6 @@ var array = [1,2,3]; // 方式一： array.forEach(function(v,index,a){ console.
                     <p class="item-title"><a href="http://fuyi.fun/2021/03/24/node%E7%9A%84arraybuffer%E5%81%9A%E5%A4%A7%E5%B0%8F%E7%AB%AF%E8%BD%AC%E6%8D%A2/" class="title">Node的Arraybuffer做大小端转换</a></p>
                     <p class="item-date">
                         <time datetime="2021-03-24 11:31:34 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2021/03/09/ubuntu%E4%BF%AE%E6%94%B9sh/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2021/03/09/ubuntu%E4%BF%AE%E6%94%B9sh/" class="title">Ubuntu修改sh</a></p>
-                    <p class="item-date">
-                        <time datetime="2021-03-09 16:02:28 &#43;0800 CST" itemprop="datePublished">2021-03-09</time>
                     </p>
                 </div>
             </li>
@@ -1931,6 +1936,14 @@ var array = [1,2,3]; // 方式一： array.forEach(function(v,index,a){ console.
                     macos
                 </a>
                 <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/mailcow">
+                    mailcow
+                </a>
+                <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">
@@ -2199,6 +2212,14 @@ var array = [1,2,3]; // 方式一： array.forEach(function(v,index,a){ console.
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="http://fuyi.fun/tags/%E9%82%AE%E7%AE%B1">
+                    邮箱
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="http://fuyi.fun/tags/%E9%93%AD%E7%89%8C">
                     铭牌
                 </a>
@@ -2280,6 +2301,9 @@ var array = [1,2,3]; // 方式一： array.forEach(function(v,index,a){ console.
         
         
         <a href="http://fuyi.fun/tags/macos" style="font-size: 12px;">macos</a>
+        
+        
+        <a href="http://fuyi.fun/tags/mailcow" style="font-size: 12px;">mailcow</a>
         
         
         <a href="http://fuyi.fun/tags/markdown" style="font-size: 12px;">markdown</a>
@@ -2379,6 +2403,9 @@ var array = [1,2,3]; // 方式一： array.forEach(function(v,index,a){ console.
         
         
         <a href="http://fuyi.fun/tags/%E8%AF%B4%E6%98%8E%E4%B9%A6" style="font-size: 12px;">说明书</a>
+        
+        
+        <a href="http://fuyi.fun/tags/%E9%82%AE%E7%AE%B1" style="font-size: 12px;">邮箱</a>
         
         
         <a href="http://fuyi.fun/tags/%E9%93%AD%E7%89%8C" style="font-size: 12px;">铭牌</a>

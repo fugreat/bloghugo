@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://fuyi.fun/" />
-<meta property="og:updated_time" content="2021-03-24T11:55:32+08:00" />
+<meta property="og:updated_time" content="2021-03-24T11:57:27+08:00" />
 
     
     <meta itemprop="name" content="小夫子的随笔">
@@ -161,12 +161,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        46
+        47
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          54
+          56
         
         <span>
             标签
@@ -242,6 +242,147 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2021/03/24/%E9%83%A8%E7%BD%B2%E7%A7%81%E6%9C%89%E5%8C%96%E9%82%AE%E7%AE%B1/">
+    <h1 class="article-title" itemprop="name">
+        部署私有化邮箱
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2021-03-24 11:57:27 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
+            &middot;
+            53
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/mailcow">mailcow</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/%E9%82%AE%E7%AE%B1">邮箱</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                安装mailcow 邮箱 1.官网查看安装教程 2.LAST： 爬的坑： 报错：ERROR: Invalid interpolation format for “environment” option in service “postfix-mailcow”: “REDIS_SLAVEOF_IP=${REDIS_SLAVEOF_IP:-}”
+解决方案： 参考：https://community.mailcow.email/d/39-docker-composeyml-errors-redis-slaveof-ip-oom-kill-disable docker-compose版本太低，更新到1.28就好了；
+更新方法：  sudo pip3 install --upgrade docker-comopse 
+其实安装文档里面着重的说明了需要最新版本的docker-compose，又跳步了。。。 ￼
+配置dns： https://low.bi/p/r7VbxEKo3zA#h3-4
+# Name Type Value mail IN A 1.2.3.4（服务器ip） autodiscover IN CNAME mail autoconfig IN CNAME mail @ IN MX 10 mail 3.论坛 可搜索异常问题 https://community.mailcow.email/
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2021/03/24/%E9%83%A8%E7%BD%B2%E7%A7%81%E6%9C%89%E5%8C%96%E9%82%AE%E7%AE%B1/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2021/03/24/%E9%83%A8%E7%BD%B2%E7%A7%81%E6%9C%89%E5%8C%96%E9%82%AE%E7%AE%B1/" data-id="d35edcd80086b3273cf2e3d19634d0cd" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1438,130 +1579,6 @@ sudo apt install openjdk-8-jdk openjdk-8-jre java -version cat &gt;&gt; /etc/env
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2021/01/27/%E5%9C%A8nrf52%E4%B8%AD%E5%A2%9E%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/">
-    <h1 class="article-title" itemprop="name">
-        在nrf52中增加自定义服务
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2021-01-27 13:30:09 &#43;0800 CST" itemprop="datePublished">2021-01-27</time>
-            &middot;
-            3
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-        
-
-        
-            
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                在nrf52中增加自定义服务 官方教程写的很详细：
-https://github.com/NordicPlayground/nRF5x-custom-ble-service-tutorial
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2021/01/27/%E5%9C%A8nrf52%E4%B8%AD%E5%A2%9E%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2021/01/27/%E5%9C%A8nrf52%E4%B8%AD%E5%A2%9E%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/" data-id="8cc6540212c08be37f36aeb7f8acda28" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1587,6 +1604,25 @@ https://github.com/NordicPlayground/nRF5x-custom-ble-service-tutorial
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2021/03/24/%E9%83%A8%E7%BD%B2%E7%A7%81%E6%9C%89%E5%8C%96%E9%82%AE%E7%AE%B1/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2021/03/24/%E9%83%A8%E7%BD%B2%E7%A7%81%E6%9C%89%E5%8C%96%E9%82%AE%E7%AE%B1/" class="title">部署私有化邮箱</a></p>
+                    <p class="item-date">
+                        <time datetime="2021-03-24 11:57:27 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1660,25 +1696,6 @@ https://github.com/NordicPlayground/nRF5x-custom-ble-service-tutorial
                     <p class="item-title"><a href="http://fuyi.fun/2021/03/24/node%E7%9A%84arraybuffer%E5%81%9A%E5%A4%A7%E5%B0%8F%E7%AB%AF%E8%BD%AC%E6%8D%A2/" class="title">Node的Arraybuffer做大小端转换</a></p>
                     <p class="item-date">
                         <time datetime="2021-03-24 11:31:34 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2021/03/09/ubuntu%E4%BF%AE%E6%94%B9sh/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2021/03/09/ubuntu%E4%BF%AE%E6%94%B9sh/" class="title">Ubuntu修改sh</a></p>
-                    <p class="item-date">
-                        <time datetime="2021-03-09 16:02:28 &#43;0800 CST" itemprop="datePublished">2021-03-09</time>
                     </p>
                 </div>
             </li>
@@ -1879,6 +1896,14 @@ https://github.com/NordicPlayground/nRF5x-custom-ble-service-tutorial
                     macos
                 </a>
                 <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/mailcow">
+                    mailcow
+                </a>
+                <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">
@@ -2147,6 +2172,14 @@ https://github.com/NordicPlayground/nRF5x-custom-ble-service-tutorial
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="http://fuyi.fun/tags/%E9%82%AE%E7%AE%B1">
+                    邮箱
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="http://fuyi.fun/tags/%E9%93%AD%E7%89%8C">
                     铭牌
                 </a>
@@ -2228,6 +2261,9 @@ https://github.com/NordicPlayground/nRF5x-custom-ble-service-tutorial
         
         
         <a href="http://fuyi.fun/tags/macos" style="font-size: 12px;">macos</a>
+        
+        
+        <a href="http://fuyi.fun/tags/mailcow" style="font-size: 12px;">mailcow</a>
         
         
         <a href="http://fuyi.fun/tags/markdown" style="font-size: 12px;">markdown</a>
@@ -2327,6 +2363,9 @@ https://github.com/NordicPlayground/nRF5x-custom-ble-service-tutorial
         
         
         <a href="http://fuyi.fun/tags/%E8%AF%B4%E6%98%8E%E4%B9%A6" style="font-size: 12px;">说明书</a>
+        
+        
+        <a href="http://fuyi.fun/tags/%E9%82%AE%E7%AE%B1" style="font-size: 12px;">邮箱</a>
         
         
         <a href="http://fuyi.fun/tags/%E9%93%AD%E7%89%8C" style="font-size: 12px;">铭牌</a>

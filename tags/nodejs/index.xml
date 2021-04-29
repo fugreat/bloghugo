@@ -6,7 +6,18 @@
     <description>Recent content in nodejs on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 24 Mar 2021 11:31:34 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Apr 2021 09:26:32 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu18</title>
+      <link>http://fuyi.fun/2021/04/29/ubuntu18/</link>
+      <pubDate>Thu, 29 Apr 2021 09:26:32 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/04/29/ubuntu18/</guid>
+      <description>Ubuntu 18.04 安装nodejs 12
+参考连接： https://linuxize.com/post/how-to-install-node-js-on-ubuntu-18.04/
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - sudo apt update sudo apt install nodejs node --version npm --version </description>
+    </item>
+    
     <item>
       <title>Node的Arraybuffer做大小端转换</title>
       <link>http://fuyi.fun/2021/03/24/node%E7%9A%84arraybuffer%E5%81%9A%E5%A4%A7%E5%B0%8F%E7%AB%AF%E8%BD%AC%E6%8D%A2/</link>

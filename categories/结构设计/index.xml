@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>结构设计 on 小夫子的随笔</title>
+    <link>http://fuyi.fun/categories/%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1/</link>
+    <description>Recent content in 结构设计 on 小夫子的随笔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 11 Nov 2020 12:55:31 +0800</lastBuildDate><atom:link href="http://fuyi.fun/categories/%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>管径对照表</title>
+      <link>http://fuyi.fun/2020/11/11/%E7%AE%A1%E5%BE%84%E5%AF%B9%E7%85%A7%E8%A1%A8/</link>
+      <pubDate>Wed, 11 Nov 2020 12:55:31 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2020/11/11/%E7%AE%A1%E5%BE%84%E5%AF%B9%E7%85%A7%E8%A1%A8/</guid>
+      <description>管子口径对照表：
+型号尺寸说明 1分=DN6=1/8 2分=DN8=1/4 3分=DN10=3/8 4分=DN15=1/2 6分=DN20=3/4 1寸=DN25 1.2寸=DN32=1-1/4 1.5寸=DN40=1-1/2 2寸=DN50 3寸=DN65=2-1/2 4寸=DN100 DN15 12.7mm， DN20 19.05mm， DN25 25.4mm， DN32 31.75mm， DN40 38.1mm， DN50 50.8mm。 1、DN15....4分管子，内径15mm，外径23mm,壁厚4m 2、DN20....6分管子，内径20mm，外径27mm,壁厚3，5mm 3、DN25....1寸管子，内径25mm，外径32mm,壁厚3，5mm 4、DN32....(1由四分之3寸）内径32mm，外径38mm,壁厚3mm 5、DN40....(1由二分之1寸）.内径40mm，外径48mm,壁厚4mm 6、DN50是2寸管子，内径50mm，外径56mm,壁厚3mm </description>
+    </item>
+    
+  </channel>
+</rss>

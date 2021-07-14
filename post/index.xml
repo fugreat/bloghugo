@@ -6,7 +6,17 @@
     <description>Recent content in Posts on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 29 Apr 2021 09:26:32 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jul 2021 13:44:05 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu网络配置</title>
+      <link>http://fuyi.fun/2021/07/14/ubuntu%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Wed, 14 Jul 2021 13:44:05 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/07/14/ubuntu%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</guid>
+      <description>参考：http://www.3gcomet.com/ubuntu20-04中使用netplan配置网络/
+cat /etc/netplan/00-installer-config.yaml # This is the network config written by &#39;subiquity&#39; network: ethernets: enp1s0: dhcp4: true #addresses: #- 172.18.225.240/24 #gateway4: 172.18.225.254 nameservers: addresses: - 223.6.6.6 - 223.5.5.5 search: [] version: 2 </description>
+    </item>
+    
     <item>
       <title>Ubuntu18</title>
       <link>http://fuyi.fun/2021/04/29/ubuntu18/</link>
@@ -142,7 +152,7 @@ NRF_LOG_INFO(&amp;quot;My float number&amp;quot; NRF_LOG_FLOAT_MARKER &amp;quot;
       
       <guid>http://fuyi.fun/2021/03/24/mysql%E5%BC%80%E5%90%AF%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/</guid>
       <description>Mysql 开放外网访问： 用mysql -uroot -p 登陆mysql，然后采用以下方法开启远程访问权限：
- mysql&amp;gt;use mysql; mysql&amp;gt;update user set host = &#39;%&#39; where user = &#39;root&#39;; mysql&amp;gt;FLUSH PRIVILEGES； </description>
+ mysql&amp;gt;use mysql; mysql&amp;gt;update user set host = &#39;%&#39; where user = &#39;root&#39;; mysql&amp;gt;FLUSH PRIVILEGES； </description>
     </item>
     
     <item>
@@ -660,16 +670,6 @@ docker pull amyhre/docuwiki
     </item>
     
     <item>
-      <title>Markdown Cheat Sheet</title>
-      <link>http://fuyi.fun/2017/05/20/markdown-cheat-sheet/</link>
-      <pubDate>Sat, 20 May 2017 12:10:51 +0200</pubDate>
-      
-      <guid>http://fuyi.fun/2017/05/20/markdown-cheat-sheet/</guid>
-      <description>&lt;p&gt;This note demonstrates some of what &lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;Markdown&lt;/a&gt; is capable of doing.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: Feel free to play with this page. Unlike regular notes, this doesn&amp;rsquo;t automatically save itself.&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>使用封面图片的shortcode</title>
       <link>http://fuyi.fun/2017/05/20/%E4%BD%BF%E7%94%A8%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87%E7%9A%84shortcode/</link>
       <pubDate>Sat, 20 May 2017 12:00:23 +0200</pubDate>
@@ -685,20 +685,11 @@ docker pull amyhre/docuwiki
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://fuyi.fun/1/01/01/</guid>
-      <description>i&amp;mdash; title: &amp;ldquo;Docker加sudo&amp;rdquo; date: 2021-01-14T21:00:23+08:00 draft: false banner : &amp;quot;&amp;quot; categories : [] description : &amp;quot;&amp;quot; menu : &amp;quot;&amp;quot; tags : [&amp;ldquo;docker&amp;rdquo;, &amp;ldquo;sudo&amp;rdquo;] docker加sudo
+      <description>i&amp;mdash; title: &amp;ldquo;Docker加sudo&amp;rdquo; date: 2021-01-14T21:00:23+08:00 draft: false banner : &amp;quot;&amp;quot; categories : [&amp;ldquo;技术&amp;rdquo;] description : &amp;quot;&amp;quot; menu : &amp;quot;&amp;quot; tags : [&amp;ldquo;docker&amp;rdquo;, &amp;ldquo;sudo&amp;rdquo;] docker加sudo
 1.创建docker组：sudo groupadd docker
 2.将当前用户加入docker组：sudo gpasswd -a ${USER} docker
 3.重启服务：sudo service docker restart
 4.刷新docker成员：newgrp - docker</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://fuyi.fun/1/01/01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://fuyi.fun/1/01/01/</guid>
-      <description></description>
     </item>
     
   </channel>

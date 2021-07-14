@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>物联网 on 小夫子的随笔</title>
+    <link>http://fuyi.fun/categories/%E7%89%A9%E8%81%94%E7%BD%91/</link>
+    <description>Recent content in 物联网 on 小夫子的随笔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 11 Nov 2020 10:01:51 +0800</lastBuildDate><atom:link href="http://fuyi.fun/categories/%E7%89%A9%E8%81%94%E7%BD%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker下安装thingsboard</title>
+      <link>http://fuyi.fun/2020/11/11/docker%E4%B8%8B%E5%AE%89%E8%A3%85thingsboard/</link>
+      <pubDate>Wed, 11 Nov 2020 10:01:51 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2020/11/11/docker%E4%B8%8B%E5%AE%89%E8%A3%85thingsboard/</guid>
+      <description>&lt;h2 id=&#34;docker-下安装-thingsboard&#34;&gt;Docker 下安装 thingsboard&lt;/h2&gt;
+&lt;p&gt;镜像地址：https://hub.docker.com/r/thingsboard/tb-cassandra/&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

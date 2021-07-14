@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://fuyi.fun/" />
-<meta property="og:updated_time" content="2021-04-29T09:26:32+08:00" />
+<meta property="og:updated_time" content="2021-07-14T13:44:05+08:00" />
 
     
     <meta itemprop="name" content="小夫子的随笔">
@@ -161,12 +161,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        54
+        53
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          60
+          59
         
         <span>
             标签
@@ -249,6 +249,143 @@
         </a>
 
         <header class="article-header">
+    <a href="http://fuyi.fun/2021/03/24/git%E4%BD%BF%E7%94%A8%E5%9F%B9%E8%AE%AD/">
+    <h1 class="article-title" itemprop="name">
+        Git使用培训
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2021-03-24 11:50:00 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
+            &middot;
+            23
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/categories/%E6%8A%80%E6%9C%AF%E7%AE%A1%E7%90%86">技术管理</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                一、代码仓库的登陆方法： 内网访问：192.168.130.13 外网访问：登陆vpn后，访问10.8.0.11  二、 Git使用说明： 服用说明： 2.1和2.2是文字说明；
+2.3和2.4是视频； 单纯学会操作可以看2.1 或 2.3 学习原理的话看：2.2 学习设计思路的话可以膜拜2.4
+2.1【入门】Git使用说明： http://rogerdudler.github.io/git-guide/index.zh.html
+2.2【精通】Git 图解： http://marklodato.github.io/visual-git-guide/index-zh-cn.html
+2.3【bilibili视频教程】 【git：2小时从入门到精通】https://www.bilibili.com/video/BV1Mf4y117f3?from=search&amp;seid=10359461753628766284
+2.4 【进阶】 【git之父Linus在Ted上访谈】https://www.bilibili.com/video/BV1db411j73A?from=search&amp;seid=10359461753628766284
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2021/03/24/git%E4%BD%BF%E7%94%A8%E5%9F%B9%E8%AE%AD/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2021/03/24/git%E4%BD%BF%E7%94%A8%E5%9F%B9%E8%AE%AD/" data-id="20eed518e8b82777f78847300871a642" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
     <a href="http://fuyi.fun/2021/03/24/mysql%E5%BC%80%E5%90%AF%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/">
     <h1 class="article-title" itemprop="name">
         Mysql开启外网访问
@@ -270,6 +407,15 @@
         
         
             
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/categories/%E6%8A%80%E6%9C%AF">技术</a>
+                
+                
+            </div>
             
         
 
@@ -296,7 +442,7 @@
         <div class="article-entry" itemprop="articleBody">
             <p>
                 Mysql 开放外网访问： 用mysql -uroot -p 登陆mysql，然后采用以下方法开启远程访问权限：
- mysql&gt;use mysql; mysql&gt;update user set host = '%' where user = 'root'; mysql&gt;FLUSH PRIVILEGES； 
+ mysql&gt;use mysql; mysql&gt;update user set host = '%' where user = 'root'; mysql&gt;FLUSH PRIVILEGES； 
             </p>
             <p class="article-more-link">
                 <a href="http://fuyi.fun/2021/03/24/mysql%E5%BC%80%E5%90%AF%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/">
@@ -407,6 +553,15 @@
         
         
             
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/categories/%E6%8A%80%E6%9C%AF">技术</a>
+                
+                
+            </div>
             
         
 
@@ -550,6 +705,15 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
         
             
             
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/categories/ubuntu">Ubuntu</a>
+                
+                
+            </div>
+            
         
 
         
@@ -676,6 +840,15 @@ sudo dpkg-reconfigure dash 选 no
         
             
             
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/categories/ubuntu">Ubuntu</a>
+                
+                
+            </div>
+            
         
 
         
@@ -799,6 +972,15 @@ sudo dpkg-reconfigure dash 选 no
         
             
             
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/categories/%E6%8A%80%E6%9C%AF%E7%AE%A1%E7%90%86">技术管理</a>
+                
+                
+            </div>
+            
         
 
         
@@ -810,13 +992,7 @@ sudo dpkg-reconfigure dash 选 no
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                服务器端配置服务 Ubuntu下：
-# 下载VPN安装文件： curl -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh # 安装/删除vpn/增加用户 sudo bash openvpn-install.sh 增加用户后得到xxxx.ovpn
-给到vpn用户即可。
-客户端启动VPN 运行指令：
-openvpn /home/kakj/vpn/key_from_vpn_admin.ovpn 1&gt;&gt;/dev/null 2&gt;&gt;/dev/null &amp; 解决所有流量都走vpn的问题 默认配置下，所有流量都从VPN走，这样网比较卡；
-在*.ovpn文件中增加配置：
-route-nopull route 10.8.0.0 255.255.0.0 vpn_gateway route 172.16.1.0 255.255.255.0 vpn_gateway 
+                openvpn
             </p>
             <p class="article-more-link">
                 <a href="http://fuyi.fun/2021/02/25/openvpn%E9%85%8D%E7%BD%AE/">
@@ -927,6 +1103,15 @@ route-nopull route 10.8.0.0 255.255.0.0 vpn_gateway route 172.16.1.0 255.255.255
         
         
             
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/categories/%E6%8A%80%E6%9C%AF%E7%AE%A1%E7%90%86">技术管理</a>
+                
+                
+            </div>
             
         
 
@@ -1069,6 +1254,15 @@ route-nopull route 10.8.0.0 255.255.0.0 vpn_gateway route 172.16.1.0 255.255.255
         
             
             
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/categories/ubuntu">Ubuntu</a>
+                
+                
+            </div>
+            
         
 
         
@@ -1207,6 +1401,15 @@ sudo apt install openjdk-8-jdk openjdk-8-jre java -version cat &gt;&gt; /etc/env
         
             
             
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/categories/%E8%93%9D%E7%89%99">蓝牙</a>
+                
+                
+            </div>
+            
         
 
         
@@ -1331,6 +1534,15 @@ https://github.com/NordicPlayground/nRF5x-custom-ble-service-tutorial
         
             
             
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/categories/%E6%8A%80%E6%9C%AF">技术</a>
+                
+                
+            </div>
+            
         
 
         
@@ -1445,151 +1657,6 @@ Bluetooth SIG recommends you to just use the tool found here to generate your UU
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2021/01/27/nano-pb/">
-    <h1 class="article-title" itemprop="name">
-        Nano Pb
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2021-01-27 08:13:36 &#43;0800 CST" itemprop="datePublished">2021-01-27</time>
-            &middot;
-            161
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E5%8D%8F%E8%AE%AE">协议</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/nano-pb">nano-pb</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F">嵌入式</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                一、起因 在新的检测设备中需要做主从机通信。
-二、筛选 目前使用最广泛到modbus通信了。当时移植了modbus到nrf52 和 stm32，但是移植后寄存器协议很麻烦，字节长度都是16bit也不太适合当前32位单片机。 并且在与APP通信中，前端又没有很好的库适配modbus。
-三、发现 犹疑间偶然发现nrf52的sdk里面提供了一个外部通信协议库 nano-pb，程序小巧，又可兼容和APP通信，深得我心。所以移植到系统中测试下可靠性。
-四、使用 4.1 下载移植 移植过程参考了几篇文章，写的比较全面的就是这个了nanopb的安装和使用. 下载最新的库可以从这里Nanopb - downloads
-最新的版本是0.4.4 目录如下
- tree -L 1 . ├── AUTHORS.txt ├── BUILD.bazel ├── CHANGELOG.txt ├── CMakeLists.txt ├── CONTRIBUTING.md ├── LICENSE.txt ├── Package.swift ├── README.md ├── WORKSPACE ├── build.py ├── conan-wrapper ├── conanfile.py ├── docs ├── examples ├── extra ├── generator ├── generator-bin ├── library.json ├── pb.h ├── pb_common.c ├── pb_common.h ├── pb_decode.c ├── pb_decode.h ├── pb_encode.
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2021/01/27/nano-pb/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2021/01/27/nano-pb/" data-id="5e9018319b5e1ddf1cb4bf75803745f7" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1622,6 +1689,32 @@ Bluetooth SIG recommends you to just use the tool found here to generate your UU
             
             <li>
                 <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2021/07/14/ubuntu%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://fuyi.fun/categories/ubuntu">
+                        Ubuntu
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2021/07/14/ubuntu%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/" class="title">Ubuntu网络配置</a></p>
+                    <p class="item-date">
+                        <time datetime="2021-07-14 13:44:05 &#43;0800 CST" itemprop="datePublished">2021-07-14</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
                     <a href="http://fuyi.fun/2021/04/29/ubuntu18/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
@@ -1630,6 +1723,13 @@ Bluetooth SIG recommends you to just use the tool found here to generate your UU
                 </div>
                 <div class="item-inner">
                     
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://fuyi.fun/categories/ubuntu">
+                        Ubuntu
+                        </a>
+                    </p>
                     
                     
                     <p class="item-title"><a href="http://fuyi.fun/2021/04/29/ubuntu18/" class="title">Ubuntu18</a></p>
@@ -1650,6 +1750,13 @@ Bluetooth SIG recommends you to just use the tool found here to generate your UU
                 <div class="item-inner">
                     
                     
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://fuyi.fun/categories/ubuntu">
+                        Ubuntu
+                        </a>
+                    </p>
+                    
                     
                     <p class="item-title"><a href="http://fuyi.fun/2021/03/24/ubuntu%E5%BC%80%E5%85%B3%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2/" class="title">Ubuntu开关图形界面</a></p>
                     <p class="item-date">
@@ -1668,6 +1775,13 @@ Bluetooth SIG recommends you to just use the tool found here to generate your UU
                 </div>
                 <div class="item-inner">
                     
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://fuyi.fun/categories/ubuntu">
+                        Ubuntu
+                        </a>
+                    </p>
                     
                     
                     <p class="item-title"><a href="http://fuyi.fun/2021/03/24/ubuntu%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A7%8D%E5%AD%90%E4%B8%8B%E8%BD%BD/" class="title">Ubuntu命令行种子下载</a></p>
@@ -1688,29 +1802,17 @@ Bluetooth SIG recommends you to just use the tool found here to generate your UU
                 <div class="item-inner">
                     
                     
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://fuyi.fun/categories/ubuntu">
+                        Ubuntu
+                        </a>
+                    </p>
+                    
                     
                     <p class="item-title"><a href="http://fuyi.fun/2021/03/24/ubuntu%E5%A2%9E%E5%8A%A0sudo%E6%9D%83%E9%99%90/" class="title">Ubuntu增加sudo权限</a></p>
                     <p class="item-date">
                         <time datetime="2021-03-24 12:08:50 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2021/03/24/ubuntu%E5%A2%9E%E5%8A%A0swap%E5%88%86%E5%8C%BA/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2021/03/24/ubuntu%E5%A2%9E%E5%8A%A0swap%E5%88%86%E5%8C%BA/" class="title">Ubuntu增加swap分区</a></p>
-                    <p class="item-date">
-                        <time datetime="2021-03-24 12:05:03 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
                     </p>
                 </div>
             </li>
@@ -1730,10 +1832,122 @@ Bluetooth SIG recommends you to just use the tool found here to generate your UU
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="http://fuyi.fun/categories/tech">
-                    tech
+                <a class="category-list-link" href="http://fuyi.fun/categories/macos">
+                    macos
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/categories/ubuntu">
+                    ubuntu
+                </a>
+                <span class="category-list-count">10</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/categories/%E4%BC%A0%E6%84%9F%E5%99%A8">
+                    传感器
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F">
+                    嵌入式
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/categories/%E5%BC%80%E5%8F%91">
+                    开发
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/categories/%E5%BC%80%E5%8F%91%E7%AE%A1%E7%90%86">
+                    开发管理
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/categories/%E6%8A%80%E6%9C%AF">
+                    技术
+                </a>
+                <span class="category-list-count">19</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/categories/%E6%8A%80%E6%9C%AF%E7%AE%A1%E7%90%86">
+                    技术管理
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/categories/%E7%89%A9%E8%81%94%E7%BD%91">
+                    物联网
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/categories/%E7%A1%AC%E4%BB%B6">
+                    硬件
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/categories/%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1">
+                    结构设计
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/categories/%E8%93%9D%E7%89%99">
+                    蓝牙
                 </a>
                 <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/categories/%E8%AE%A4%E8%AF%81">
+                    认证
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/categories/%E8%BF%90%E7%BB%B4">
+                    运维
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/categories/%E9%82%AE%E7%AE%B1">
+                    邮箱
+                </a>
+                <span class="category-list-count">1</span>
             </li>
             
         </ul>
@@ -1870,7 +2084,7 @@ Bluetooth SIG recommends you to just use the tool found here to generate your UU
                 <a class="category-list-link" href="http://fuyi.fun/tags/hugo">
                     hugo
                 </a>
-                <span class="category-list-count">2</span>
+                <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">
@@ -1925,14 +2139,6 @@ Bluetooth SIG recommends you to just use the tool found here to generate your UU
                 
                 <a class="category-list-link" href="http://fuyi.fun/tags/mailcow">
                     mailcow
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="http://fuyi.fun/tags/markdown">
-                    markdown
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -2314,9 +2520,6 @@ Bluetooth SIG recommends you to just use the tool found here to generate your UU
         
         
         <a href="http://fuyi.fun/tags/mailcow" style="font-size: 12px;">mailcow</a>
-        
-        
-        <a href="http://fuyi.fun/tags/markdown" style="font-size: 12px;">markdown</a>
         
         
         <a href="http://fuyi.fun/tags/mesh" style="font-size: 12px;">mesh</a>

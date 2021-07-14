@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术管理 on 小夫子的随笔</title>
+    <link>http://fuyi.fun/categories/%E6%8A%80%E6%9C%AF%E7%AE%A1%E7%90%86/</link>
+    <description>Recent content in 技术管理 on 小夫子的随笔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 24 Mar 2021 12:03:35 +0800</lastBuildDate><atom:link href="http://fuyi.fun/categories/%E6%8A%80%E6%9C%AF%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gitlab部署</title>
+      <link>http://fuyi.fun/2021/03/24/gitlab%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Wed, 24 Mar 2021 12:03:35 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/03/24/gitlab%E9%83%A8%E7%BD%B2/</guid>
+      <description>Gitlab 部署 参考连接： https://docs.gitlab.com/omnibus/docker/
+设置中文： 用户自行设置： https://blog.csdn.net/wh2574021892/article/details/106062266/ 管理员设置： https://blog.csdn.net/weixin_44257023/article/details/109249769
+gitlab 仓库备份: https://www.cnblogs.com/mingerlcm/p/12633720.html
+Gitlab修改域名： https://www.gaotengjiao.com/gitlab%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80%E4%BF%AE%E6%94%B9%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/
+修改gitlab.yml文件，在如下位置中：
+[root@localhost]# cd /opt/gitlab/embedded/service/gitlab-rails/config [root@localhost]# vi gitlab.yml gitlab: ## Web server settings (note: host is the FQDN, do not include http://) host: 此处修改成自己的域名 port: 80 https: false gitlab-ctl restart </description>
+    </item>
+    
+    <item>
+      <title>Git使用培训</title>
+      <link>http://fuyi.fun/2021/03/24/git%E4%BD%BF%E7%94%A8%E5%9F%B9%E8%AE%AD/</link>
+      <pubDate>Wed, 24 Mar 2021 11:50:00 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/03/24/git%E4%BD%BF%E7%94%A8%E5%9F%B9%E8%AE%AD/</guid>
+      <description>一、代码仓库的登陆方法： 内网访问：192.168.130.13 外网访问：登陆vpn后，访问10.8.0.11  二、 Git使用说明： 服用说明： 2.1和2.2是文字说明；
+2.3和2.4是视频； 单纯学会操作可以看2.1 或 2.3 学习原理的话看：2.2 学习设计思路的话可以膜拜2.4
+2.1【入门】Git使用说明： http://rogerdudler.github.io/git-guide/index.zh.html
+2.2【精通】Git 图解： http://marklodato.github.io/visual-git-guide/index-zh-cn.html
+2.3【bilibili视频教程】 【git：2小时从入门到精通】https://www.bilibili.com/video/BV1Mf4y117f3?from=search&amp;amp;seid=10359461753628766284
+2.4 【进阶】 【git之父Linus在Ted上访谈】https://www.bilibili.com/video/BV1db411j73A?from=search&amp;amp;seid=10359461753628766284</description>
+    </item>
+    
+    <item>
+      <title>Openvpn配置</title>
+      <link>http://fuyi.fun/2021/02/25/openvpn%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 25 Feb 2021 15:56:18 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/02/25/openvpn%E9%85%8D%E7%BD%AE/</guid>
+      <description>服务器端配置服务 Ubuntu下：
+# 下载VPN安装文件： curl -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh # 安装/删除vpn/增加用户 sudo bash openvpn-install.sh 增加用户后得到xxxx.ovpn
+给到vpn用户即可。
+客户端启动VPN 运行指令：
+openvpn /home/kakj/vpn/key_from_vpn_admin.ovpn 1&amp;gt;&amp;gt;/dev/null 2&amp;gt;&amp;gt;/dev/null &amp;amp; 解决所有流量都走vpn的问题 默认配置下，所有流量都从VPN走，这样网比较卡；
+在*.ovpn文件中增加配置：
+route-nopull route 10.8.0.0 255.255.0.0 vpn_gateway route 172.16.1.0 255.255.255.0 vpn_gateway </description>
+    </item>
+    
+    <item>
+      <title>Win10安装VPN</title>
+      <link>http://fuyi.fun/2021/02/25/win10%E5%AE%89%E8%A3%85vpn/</link>
+      <pubDate>Thu, 25 Feb 2021 12:57:50 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/02/25/win10%E5%AE%89%E8%A3%85vpn/</guid>
+      <description>Win10安装VPN 1.下载安装文件 点此下载VPN安装程序Win10
+得到安装包压缩文件：
+解压得到安装包：
+2.安装 双击安装
+一直下一步安装完成 双击图标打开程序: 3.导入配置 联系运维（FJX）获取登陆配置文件，每个人的配置文件都不同。
+把配置文件拖拽到此处： 点击ADD完成添加： 4.开始使用 出现下面界面完成VPN连接： </description>
+    </item>
+    
+    <item>
+      <title>Install_wiki</title>
+      <link>http://fuyi.fun/2020/11/11/install_wiki/</link>
+      <pubDate>Wed, 11 Nov 2020 10:21:16 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2020/11/11/install_wiki/</guid>
+      <description>Docker 下安装wiki 下载镜像：
+docker pull amyhre/docuwiki
+运行： docker run -d -v docuwiki_data:/var/www/html --name docuwiki -p 80:80 amyhre/docuwiki</description>
+    </item>
+    
+  </channel>
+</rss>

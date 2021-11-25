@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iot on 小夫子的随笔</title>
+    <link>http://fuyi.fun/tags/iot/</link>
+    <description>Recent content in iot on 小夫子的随笔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 25 Nov 2021 11:32:20 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/iot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IOT安全标准</title>
+      <link>http://fuyi.fun/2021/11/25/iot%E5%AE%89%E5%85%A8%E6%A0%87%E5%87%86/</link>
+      <pubDate>Thu, 25 Nov 2021 11:32:20 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/11/25/iot%E5%AE%89%E5%85%A8%E6%A0%87%E5%87%86/</guid>
+      <description>IoT 安全 https://www.gov.uk/government/publications/secure-by-design/code-of-practice-for-consumer-iot-security ￼ Guidelines
+  No default passwords All IoT device passwords shall be unique and not resettable to any universal factory default value
+  Implement a vulnerability disclosure policy All companies that provide internet-connected devices and services shall provide a public point of contact as part of a vulnerability disclosure policy in order that security researchers and others are able to report issues. Disclosed vulnerabilities should be acted on in a timely manner.</description>
+    </item>
+    
+  </channel>
+</rss>

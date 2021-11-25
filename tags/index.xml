@@ -6,7 +6,16 @@
     <description>Recent content in Tags on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 29 Apr 2021 09:26:32 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Nov 2021 11:32:20 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iot</title>
+      <link>http://fuyi.fun/tags/iot/</link>
+      <pubDate>Thu, 25 Nov 2021 11:32:20 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/tags/iot/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>deploy</title>
       <link>http://fuyi.fun/tags/deploy/</link>

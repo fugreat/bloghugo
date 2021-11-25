@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>Openvpn配置 &middot; 小夫子的随笔</title>
+    <title>功率与dbm的对照表  &middot; 小夫子的随笔</title>
     <meta name="generator" content="Hugo 0.77.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Jixing Fu">
     
-      <meta name="description" content="openvpn">
+      <meta name="description" content="">
     
     
-    <link rel="canonical" href="http://fuyi.fun/2021/02/25/openvpn%E9%85%8D%E7%BD%AE/"/>
+    <link rel="canonical" href="http://fuyi.fun/2021/11/25/%E5%8A%9F%E7%8E%87%E4%B8%8Edbm%E7%9A%84%E5%AF%B9%E7%85%A7%E8%A1%A8/"/>
     <link rel="icon" href="http://fuyi.fun/favicon.ico">
     <link rel="apple-touch-icon" href="http://fuyi.fun/apple-touch-icon.png"/>
     <link rel="stylesheet" href="http://fuyi.fun/css/style.css">
@@ -20,27 +20,27 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Openvpn配置" />
-<meta property="og:description" content="openvpn" />
+    <meta property="og:title" content="功率与dbm的对照表 " />
+<meta property="og:description" content="功率与dbm的对照表 对于无线工程师来说更常用分贝dBm这个单位，dBm单位表示相对于1毫瓦的分贝数，dBm和W之间的关系是：dBm=10lg(mW)1w的功率，换算成dBm就是10×lg1000＝30dBm。2w是33dBm，4W是36dBm……大家发现了吗？瓦数增加一倍，dBm就增加3。为什么要用dBm做单位？原因大致有几个：1、对于无线信号的衰减来说，不是线性的，而是成对数关系衰减的。用分贝更能体现这种关系。2、用分贝做单位比用瓦做单位更容易描述，往往在发射机出来的功率几十上百瓦，到了接收端已经是以微微瓦来计算了。3、计算方便，衰减的计算公式用分贝来计算只用做加减法就可以了。 以1mW 为基准的dB算法，即0dBm=1mW，dBm=10log(Power/1mW)。 发射功率dBm－路径损失dB＝接收信号强度dBm 最小通信功率dBm－路径损失dB≥接收灵敏度下限dBm 最小通信功率dBm≥路径损失dB＋接收灵敏度下限dBm 功率单位mw和dbm的换算表 dBm mW 0 1.0 mW 1 1.3 mW 2 1.6 mW 3 2.0 mW 4 2.5 mW 5 3.2 mW 6 4.0 mW 7 5.0 mW 8 6.0 mW 9 8.0 mW 10 10 mW 11 13 mW 12 16 mW 13 20 mW 14 25 mW 15 32 mW 16 40 mW 17 50 mW 18 64 mW 19 80 mW 20 100 mW 21 128 mW 22 160 mW 23 200 mW 24 250 mW 25 320 mW 26 400mW 27 500mW 28 640mW 29 800mW 30 1." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://fuyi.fun/2021/02/25/openvpn%E9%85%8D%E7%BD%AE/" />
-<meta property="article:published_time" content="2021-02-25T15:56:18+08:00" />
-<meta property="article:modified_time" content="2021-02-25T15:56:18+08:00" />
+<meta property="og:url" content="http://fuyi.fun/2021/11/25/%E5%8A%9F%E7%8E%87%E4%B8%8Edbm%E7%9A%84%E5%AF%B9%E7%85%A7%E8%A1%A8/" />
+<meta property="article:published_time" content="2021-11-25T11:39:26+08:00" />
+<meta property="article:modified_time" content="2021-11-25T11:39:26+08:00" />
 
     
-    <meta itemprop="name" content="Openvpn配置">
-<meta itemprop="description" content="openvpn">
-<meta itemprop="datePublished" content="2021-02-25T15:56:18+08:00" />
-<meta itemprop="dateModified" content="2021-02-25T15:56:18+08:00" />
-<meta itemprop="wordCount" content="33">
+    <meta itemprop="name" content="功率与dbm的对照表 ">
+<meta itemprop="description" content="功率与dbm的对照表 对于无线工程师来说更常用分贝dBm这个单位，dBm单位表示相对于1毫瓦的分贝数，dBm和W之间的关系是：dBm=10lg(mW)1w的功率，换算成dBm就是10×lg1000＝30dBm。2w是33dBm，4W是36dBm……大家发现了吗？瓦数增加一倍，dBm就增加3。为什么要用dBm做单位？原因大致有几个：1、对于无线信号的衰减来说，不是线性的，而是成对数关系衰减的。用分贝更能体现这种关系。2、用分贝做单位比用瓦做单位更容易描述，往往在发射机出来的功率几十上百瓦，到了接收端已经是以微微瓦来计算了。3、计算方便，衰减的计算公式用分贝来计算只用做加减法就可以了。 以1mW 为基准的dB算法，即0dBm=1mW，dBm=10log(Power/1mW)。 发射功率dBm－路径损失dB＝接收信号强度dBm 最小通信功率dBm－路径损失dB≥接收灵敏度下限dBm 最小通信功率dBm≥路径损失dB＋接收灵敏度下限dBm 功率单位mw和dbm的换算表 dBm mW 0 1.0 mW 1 1.3 mW 2 1.6 mW 3 2.0 mW 4 2.5 mW 5 3.2 mW 6 4.0 mW 7 5.0 mW 8 6.0 mW 9 8.0 mW 10 10 mW 11 13 mW 12 16 mW 13 20 mW 14 25 mW 15 32 mW 16 40 mW 17 50 mW 18 64 mW 19 80 mW 20 100 mW 21 128 mW 22 160 mW 23 200 mW 24 250 mW 25 320 mW 26 400mW 27 500mW 28 640mW 29 800mW 30 1.">
+<meta itemprop="datePublished" content="2021-11-25T11:39:26+08:00" />
+<meta itemprop="dateModified" content="2021-11-25T11:39:26+08:00" />
+<meta itemprop="wordCount" content="140">
 
 
 
 <meta itemprop="keywords" content="" />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Openvpn配置"/>
-<meta name="twitter:description" content="openvpn"/>
+<meta name="twitter:title" content="功率与dbm的对照表 "/>
+<meta name="twitter:description" content="功率与dbm的对照表 对于无线工程师来说更常用分贝dBm这个单位，dBm单位表示相对于1毫瓦的分贝数，dBm和W之间的关系是：dBm=10lg(mW)1w的功率，换算成dBm就是10×lg1000＝30dBm。2w是33dBm，4W是36dBm……大家发现了吗？瓦数增加一倍，dBm就增加3。为什么要用dBm做单位？原因大致有几个：1、对于无线信号的衰减来说，不是线性的，而是成对数关系衰减的。用分贝更能体现这种关系。2、用分贝做单位比用瓦做单位更容易描述，往往在发射机出来的功率几十上百瓦，到了接收端已经是以微微瓦来计算了。3、计算方便，衰减的计算公式用分贝来计算只用做加减法就可以了。 以1mW 为基准的dB算法，即0dBm=1mW，dBm=10log(Power/1mW)。 发射功率dBm－路径损失dB＝接收信号强度dBm 最小通信功率dBm－路径损失dB≥接收灵敏度下限dBm 最小通信功率dBm≥路径损失dB＋接收灵敏度下限dBm 功率单位mw和dbm的换算表 dBm mW 0 1.0 mW 1 1.3 mW 2 1.6 mW 3 2.0 mW 4 2.5 mW 5 3.2 mW 6 4.0 mW 7 5.0 mW 8 6.0 mW 9 8.0 mW 10 10 mW 11 13 mW 12 16 mW 13 20 mW 14 25 mW 15 32 mW 16 40 mW 17 50 mW 18 64 mW 19 80 mW 20 100 mW 21 128 mW 22 160 mW 23 200 mW 24 250 mW 25 320 mW 26 400mW 27 500mW 28 640mW 29 800mW 30 1."/>
 
     
 
@@ -251,9 +251,9 @@
         
 
         <header class="article-header">
-    <a href="http://fuyi.fun/2021/02/25/openvpn%E9%85%8D%E7%BD%AE/">
+    <a href="http://fuyi.fun/2021/11/25/%E5%8A%9F%E7%8E%87%E4%B8%8Edbm%E7%9A%84%E5%AF%B9%E7%85%A7%E8%A1%A8/">
     <h1 class="article-title" itemprop="name">
-        Openvpn配置
+        功率与dbm的对照表 
     </h1>
     </a>
     <div class="article-meta">
@@ -261,9 +261,9 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2021-02-25 15:56:18 &#43;0800 CST" itemprop="datePublished">2021-02-25</time>
+            <time datetime="2021-11-25 11:39:26 &#43;0800 CST" itemprop="datePublished">2021-11-25</time>
             &middot;
-            33
+            140
             words
             &middot;
             1
@@ -272,15 +272,6 @@
         
         
             
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/categories/%E6%8A%80%E6%9C%AF%E7%AE%A1%E7%90%86">技术管理</a>
-                
-                
-            </div>
             
         
 
@@ -292,30 +283,71 @@
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="服务器端配置服务">服务器端配置服务</h2>
-<p>Ubuntu下：</p>
-<pre><code># 下载VPN安装文件：
-curl -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
-
-# 安装/删除vpn/增加用户
-sudo bash openvpn-install.sh
-
-</code></pre><p>增加用户后得到xxxx.ovpn<br>
-给到vpn用户即可。</p>
-<h2 id="客户端启动vpn">客户端启动VPN</h2>
-<p>运行指令：</p>
-<pre><code>openvpn /home/kakj/vpn/key_from_vpn_admin.ovpn 1&gt;&gt;/dev/null 2&gt;&gt;/dev/null &amp;
-</code></pre><h3 id="解决所有流量都走vpn的问题">解决所有流量都走vpn的问题</h3>
-<p>默认配置下，所有流量都从VPN走，这样网比较卡；</p>
-<p>在*.ovpn文件中增加配置：</p>
-<pre><code>route-nopull
-route 10.8.0.0 255.255.0.0 vpn_gateway
-route 172.16.1.0 255.255.255.0 vpn_gateway
+            <p>功率与dbm的对照表 
+对于无线工程师来说更常用分贝dBm这个单位，dBm单位表示相对于1毫瓦的分贝数，dBm和W之间的关系是：dBm=10<em>lg(mW)1w的功率，换算成dBm就是10×lg1000＝30dBm。2w是33dBm，4W是36dBm……大家发现了吗？瓦数增加一倍，dBm就增加3。为什么要用dBm做单位？原因大致有几个：1、对于无线信号的衰减来说，不是线性的，而是成对数关系衰减的。用分贝更能体现这种关系。2、用分贝做单位比用瓦做单位更容易描述，往往在发射机出来的功率几十上百瓦，到了接收端已经是以微微瓦来计算了。3、计算方便，衰减的计算公式用分贝来计算只用做加减法就可以了。 
+以1mW 为基准的dB算法，即0dBm=1mW，dBm=10</em>log(Power/1mW)。 
+发射功率dBm－路径损失dB＝接收信号强度dBm 
+最小通信功率dBm－路径损失dB≥接收灵敏度下限dBm 
+最小通信功率dBm≥路径损失dB＋接收灵敏度下限dBm </p>
+<p>功率单位mw和dbm的换算表 </p>
+<pre><code>dBm mW 
+0 1.0 mW 
+1 1.3 mW 
+2 1.6 mW 
+3 2.0 mW 
+4 2.5 mW 
+5 3.2 mW 
+6 4.0 mW 
+7 5.0 mW 
+8 6.0 mW 
+9 8.0 mW 
+10 10 mW 
+11 13 mW 
+12 16 mW 
+13 20 mW 
+14 25 mW 
+15 32 mW 
+16 40 mW 
+17 50 mW 
+18 64 mW 
+19 80 mW 
+20 100 mW 
+21 128 mW 
+22 160 mW 
+23 200 mW 
+24 250 mW 
+25 320 mW 
+26 400mW 
+27 500mW 
+28 640mW 
+29 800mW 
+30 1.0W 
+31 1.3W 
+32 1.6W 
+33 2.0W 
+34 2.5W 
+35 3.0W 
+36 4.0W 
+37 5.0W 
+38 6.0W 
+39 8.0W 
+40 10W 
+41 13W 
+42 16W 
+43 20W 
+44 25W 
+45 32W 
+46 40W 
+47 50W 
+48 64W 
+49 80W 
+50 100W 
+60 1000W 
 
 </code></pre>
         </div>
         <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2021/02/25/openvpn%E9%85%8D%E7%BD%AE/" data-id="1080bc1a6355d55f3b16b5e56474aab6" class="article-share-link">
+    <a data-url="http://fuyi.fun/2021/11/25/%E5%8A%9F%E7%8E%87%E4%B8%8Edbm%E7%9A%84%E5%AF%B9%E7%85%A7%E8%A1%A8/" data-id="9acadc144dc0e16ec8cf603c0299ae37" class="article-share-link">
         <i class="fa fa-share"></i>
         分享
     </a>
@@ -392,21 +424,14 @@ route 172.16.1.0 255.255.255.0 vpn_gateway
     
 <nav id="article-nav">
     
-    <a href="http://fuyi.fun/2021/02/25/win10%E5%AE%89%E8%A3%85vpn/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="http://fuyi.fun/2021/11/25/docker%E5%8E%BB%E6%8E%89sudo/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           上一个
       </strong>
-      <div class="article-nav-title">Win10安装VPN</div>
+      <div class="article-nav-title">Docker去掉sudo</div>
     </a>
     
 
-    
-    <a href="http://fuyi.fun/2021/03/01/ubuntu%E5%85%B3%E9%97%AD%E7%86%84%E5%B1%8F/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">
-          下一个
-      </strong>
-      <div class="article-nav-title">Ubuntu关闭熄屏</div>
-    </a>
     
 </nav>
 

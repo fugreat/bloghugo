@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://fuyi.fun/post/</loc>
+    <lastmod>2021-11-25T11:39:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/2021/11/25/%E5%8A%9F%E7%8E%87%E4%B8%8Edbm%E7%9A%84%E5%AF%B9%E7%85%A7%E8%A1%A8/</loc>
+    <lastmod>2021-11-25T11:39:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fuyi.fun/</loc>
+    <lastmod>2021-11-25T11:39:26+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://fuyi.fun/tags/docker/</loc>
     <lastmod>2021-11-25T11:36:29+08:00</lastmod>
   </url>
@@ -13,22 +28,12 @@
   </url>
   
   <url>
-    <loc>http://fuyi.fun/post/</loc>
-    <lastmod>2021-11-25T11:36:29+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://fuyi.fun/tags/sudo/</loc>
     <lastmod>2021-11-25T11:36:29+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://fuyi.fun/tags/</loc>
-    <lastmod>2021-11-25T11:36:29+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://fuyi.fun/</loc>
     <lastmod>2021-11-25T11:36:29+08:00</lastmod>
   </url>
   

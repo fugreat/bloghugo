@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://fuyi.fun/" />
-<meta property="og:updated_time" content="2021-11-25T11:36:29+08:00" />
+<meta property="og:updated_time" content="2021-11-25T11:39:26+08:00" />
 
     
     <meta itemprop="name" content="小夫子的随笔">
@@ -161,7 +161,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        56
+        57
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -242,6 +242,143 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2021/03/24/gitlab%E9%83%A8%E7%BD%B2/">
+    <h1 class="article-title" itemprop="name">
+        Gitlab部署
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2021-03-24 12:03:35 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
+            &middot;
+            43
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/categories/%E6%8A%80%E6%9C%AF%E7%AE%A1%E7%90%86">技术管理</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                Gitlab 部署 参考连接： https://docs.gitlab.com/omnibus/docker/
+设置中文： 用户自行设置： https://blog.csdn.net/wh2574021892/article/details/106062266/ 管理员设置： https://blog.csdn.net/weixin_44257023/article/details/109249769
+gitlab 仓库备份: https://www.cnblogs.com/mingerlcm/p/12633720.html
+Gitlab修改域名： https://www.gaotengjiao.com/gitlab%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80%E4%BF%AE%E6%94%B9%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/
+修改gitlab.yml文件，在如下位置中：
+[root@localhost]# cd /opt/gitlab/embedded/service/gitlab-rails/config [root@localhost]# vi gitlab.yml gitlab: ## Web server settings (note: host is the FQDN, do not include http://) host: 此处修改成自己的域名 port: 80 https: false gitlab-ctl restart 
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2021/03/24/gitlab%E9%83%A8%E7%BD%B2/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2021/03/24/gitlab%E9%83%A8%E7%BD%B2/" data-id="11ac5e467ed26206df8dac47ed6b1b07" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1516,156 +1653,6 @@ sudo dpkg-reconfigure dash 选 no
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2021/02/25/win10%E5%AE%89%E8%A3%85vpn/">
-    <h1 class="article-title" itemprop="name">
-        Win10安装VPN
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2021-02-25 12:57:50 &#43;0800 CST" itemprop="datePublished">2021-02-25</time>
-            &middot;
-            15
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/categories/%E6%8A%80%E6%9C%AF%E7%AE%A1%E7%90%86">技术管理</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/win10">win10</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/install-vpn">install VPN</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                Win10安装VPN 1.下载安装文件 点此下载VPN安装程序Win10
-得到安装包压缩文件：
-解压得到安装包：
-2.安装 双击安装
-一直下一步安装完成 双击图标打开程序: 3.导入配置 联系运维（FJX）获取登陆配置文件，每个人的配置文件都不同。
-把配置文件拖拽到此处： 点击ADD完成添加： 4.开始使用 出现下面界面完成VPN连接： 
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2021/02/25/win10%E5%AE%89%E8%A3%85vpn/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2021/02/25/win10%E5%AE%89%E8%A3%85vpn/" data-id="e726f8edf46075f04a6947a9c5de20bc" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1695,6 +1682,25 @@ sudo dpkg-reconfigure dash 选 no
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2021/11/25/%E5%8A%9F%E7%8E%87%E4%B8%8Edbm%E7%9A%84%E5%AF%B9%E7%85%A7%E8%A1%A8/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2021/11/25/%E5%8A%9F%E7%8E%87%E4%B8%8Edbm%E7%9A%84%E5%AF%B9%E7%85%A7%E8%A1%A8/" class="title">功率与dbm的对照表 </a></p>
+                    <p class="item-date">
+                        <time datetime="2021-11-25 11:39:26 &#43;0800 CST" itemprop="datePublished">2021-11-25</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1775,32 +1781,6 @@ sudo dpkg-reconfigure dash 选 no
                     <p class="item-title"><a href="http://fuyi.fun/2021/07/14/ubuntu%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/" class="title">Ubuntu网络配置</a></p>
                     <p class="item-date">
                         <time datetime="2021-07-14 13:44:05 &#43;0800 CST" itemprop="datePublished">2021-07-14</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2021/04/29/ubuntu18/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="http://fuyi.fun/categories/ubuntu">
-                        Ubuntu
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2021/04/29/ubuntu18/" class="title">Ubuntu18</a></p>
-                    <p class="item-date">
-                        <time datetime="2021-04-29 09:26:32 &#43;0800 CST" itemprop="datePublished">2021-04-29</time>
                     </p>
                 </div>
             </li>

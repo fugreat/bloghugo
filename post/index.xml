@@ -6,7 +6,39 @@
     <description>Recent content in Posts on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 25 Nov 2021 11:32:20 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Nov 2021 11:36:29 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker去掉sudo</title>
+      <link>http://fuyi.fun/2021/11/25/docker%E5%8E%BB%E6%8E%89sudo/</link>
+      <pubDate>Thu, 25 Nov 2021 11:36:29 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/11/25/docker%E5%8E%BB%E6%8E%89sudo/</guid>
+      <description>Docker sudo
+查看用户组及成员
+sudo cat /etc/group | grep docker
+可以添加docker组
+sudo groupadd docker
+添加用户到docker组
+sudo gpasswd -a ${USER} docker
+增加读写权限
+sudo chmod a+rw /var/run/docker.sock
+重启docker
+sudo systemctl restart docker</description>
+    </item>
+    
+    <item>
+      <title>Win10下自动运行脚本</title>
+      <link>http://fuyi.fun/2021/11/25/win10%E4%B8%8B%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/</link>
+      <pubDate>Thu, 25 Nov 2021 11:34:17 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2021/11/25/win10%E4%B8%8B%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/</guid>
+      <description>Win10 下自动运行脚本
+https://www.lidaren.com/archives/1656
+————————————————————————
+@echo off ::检测时间间隔，单位：秒 set _interval=5 ::需要守护的进程名称 set _processName=ProcessName ::需要守护的进程启动命令 set _processCmd=C:\xxxx.exe ::需要守护的进程预估启动完毕所需时间，单位：秒 set _processTimeout=10 ::需要守护的进程所监听的端口 set _port=8080 ::进程用户名，一般是Administrator set _username=Administrator ————————————————————————
+@echo off :LOOP set /a isAlive=false ::通过进程名称检测 ::tasklist /FI &amp;quot;username eq %_username%&amp;quot; | find /C &amp;quot;%_processName%&amp;quot; &amp;gt; temp.txt ::set /p num= &amp;lt; temp.txt ::del /F temp.txt ::通过进程的端口是否正在被监听检测 netstat -an | find /C &amp;quot;0.0.0.0:%_port%&amp;quot; &amp;gt; temp.txt set /p num= &amp;lt; temp.txt del /F temp.txt if &amp;quot;%num%&amp;quot; == &amp;quot;0&amp;quot; ( start %_processCmd% | echo 启动 %_processName% 于 %time% choice /D y /t %_processTimeout% &amp;gt; nul ) if &amp;quot;%num%&amp;quot; NEQ &amp;quot;0&amp;quot; echo 已启动 ::ping -n %_interval% 127.</description>
+    </item>
+    
     <item>
       <title>IOT安全标准</title>
       <link>http://fuyi.fun/2021/11/25/iot%E5%AE%89%E5%85%A8%E6%A0%87%E5%87%86/</link>

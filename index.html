@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://fuyi.fun/" />
-<meta property="og:updated_time" content="2021-11-25T11:32:20+08:00" />
+<meta property="og:updated_time" content="2021-11-25T11:36:29+08:00" />
 
     
     <meta itemprop="name" content="小夫子的随笔">
@@ -161,12 +161,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        54
+        56
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          60
+          61
         
         <span>
             标签
@@ -242,6 +242,279 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2021/11/25/docker%E5%8E%BB%E6%8E%89sudo/">
+    <h1 class="article-title" itemprop="name">
+        Docker去掉sudo
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2021-11-25 11:36:29 &#43;0800 CST" itemprop="datePublished">2021-11-25</time>
+            &middot;
+            29
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/docker">docker</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/sudo">sudo</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                Docker sudo
+查看用户组及成员
+sudo cat /etc/group | grep docker
+可以添加docker组
+sudo groupadd docker
+添加用户到docker组
+sudo gpasswd -a ${USER} docker
+增加读写权限
+sudo chmod a+rw /var/run/docker.sock
+重启docker
+sudo systemctl restart docker
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2021/11/25/docker%E5%8E%BB%E6%8E%89sudo/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2021/11/25/docker%E5%8E%BB%E6%8E%89sudo/" data-id="9eaf6ae30d79b7ef213f7e5bee1486ad" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2021/11/25/win10%E4%B8%8B%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/">
+    <h1 class="article-title" itemprop="name">
+        Win10下自动运行脚本
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2021-11-25 11:34:17 &#43;0800 CST" itemprop="datePublished">2021-11-25</time>
+            &middot;
+            114
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                Win10 下自动运行脚本
+https://www.lidaren.com/archives/1656
+————————————————————————
+@echo off ::检测时间间隔，单位：秒 set _interval=5 ::需要守护的进程名称 set _processName=ProcessName ::需要守护的进程启动命令 set _processCmd=C:\xxxx.exe ::需要守护的进程预估启动完毕所需时间，单位：秒 set _processTimeout=10 ::需要守护的进程所监听的端口 set _port=8080 ::进程用户名，一般是Administrator set _username=Administrator ————————————————————————
+@echo off :LOOP set /a isAlive=false ::通过进程名称检测 ::tasklist /FI &quot;username eq %_username%&quot; | find /C &quot;%_processName%&quot; &gt; temp.txt ::set /p num= &lt; temp.txt ::del /F temp.txt ::通过进程的端口是否正在被监听检测 netstat -an | find /C &quot;0.0.0.0:%_port%&quot; &gt; temp.txt set /p num= &lt; temp.txt del /F temp.txt if &quot;%num%&quot; == &quot;0&quot; ( start %_processCmd% | echo 启动 %_processName% 于 %time% choice /D y /t %_processTimeout% &gt; nul ) if &quot;%num%&quot; NEQ &quot;0&quot; echo 已启动 ::ping -n %_interval% 127.
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2021/11/25/win10%E4%B8%8B%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2021/11/25/win10%E4%B8%8B%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/" data-id="1ebd090379f03b4ff1dd948778e708dd" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1353,312 +1626,6 @@ Gitlab修改域名： https://www.gaotengjiao.com/gitlab%E9%A1%B9%E7%9B%AE%E5%9C
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2021/03/24/%E9%83%A8%E7%BD%B2%E7%A7%81%E6%9C%89%E5%8C%96%E9%82%AE%E7%AE%B1/">
-    <h1 class="article-title" itemprop="name">
-        部署私有化邮箱
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2021-03-24 11:57:27 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
-            &middot;
-            53
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/categories/ubuntu">ubuntu</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/categories/%E9%82%AE%E7%AE%B1">邮箱</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/mailcow">mailcow</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E9%82%AE%E7%AE%B1">邮箱</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                安装mailcow 邮箱 1.官网查看安装教程 2.LAST： 爬的坑： 报错：ERROR: Invalid interpolation format for “environment” option in service “postfix-mailcow”: “REDIS_SLAVEOF_IP=${REDIS_SLAVEOF_IP:-}”
-解决方案： 参考：https://community.mailcow.email/d/39-docker-composeyml-errors-redis-slaveof-ip-oom-kill-disable docker-compose版本太低，更新到1.28就好了；
-更新方法：  sudo pip3 install --upgrade docker-comopse 
-其实安装文档里面着重的说明了需要最新版本的docker-compose，又跳步了。。。 ￼
-配置dns： https://low.bi/p/r7VbxEKo3zA#h3-4
-# Name Type Value mail IN A 1.2.3.4（服务器ip） autodiscover IN CNAME mail autoconfig IN CNAME mail @ IN MX 10 mail 3.论坛 可搜索异常问题 https://community.mailcow.email/
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2021/03/24/%E9%83%A8%E7%BD%B2%E7%A7%81%E6%9C%89%E5%8C%96%E9%82%AE%E7%AE%B1/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2021/03/24/%E9%83%A8%E7%BD%B2%E7%A7%81%E6%9C%89%E5%8C%96%E9%82%AE%E7%AE%B1/" data-id="d35edcd80086b3273cf2e3d19634d0cd" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2021/03/24/%E5%B0%8F%E5%9B%A2%E9%98%9F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/">
-    <h1 class="article-title" itemprop="name">
-        小团队代码管理
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2021-03-24 11:55:32 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
-            &middot;
-            20
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/categories/%E5%BC%80%E5%8F%91%E7%AE%A1%E7%90%86">开发管理</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E7%AE%A1%E7%90%86">管理</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86">代码管理</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/git">git</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                如何在小团队内实践代码管理？ 1.使用gitee 或 gitlab 托管代码 gitee: 优点：wiki和项目管理比较好用，速度快，不用维护； 缺点：免费的只能5个人一下的小团队
-gitlab: 优点：免费；docker下部署很简单； 缺点：需要一台服务器或vps 并且需要维护；
-github bitbucket 太慢不考虑 2. 使用mailcow建立公司邮箱系统，用于创建公司人员账号； 必要条件：域名、服务器
-3.使用培训：培训基本git操作，设置各开发组负责人，确保日常代码提交； 4.通过访谈评估代码管理效果 
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2021/03/24/%E5%B0%8F%E5%9B%A2%E9%98%9F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2021/03/24/%E5%B0%8F%E5%9B%A2%E9%98%9F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/" data-id="d9921722cd413e89d7dee30d66d567a5" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1684,6 +1651,44 @@ github bitbucket 太慢不考虑 2. 使用mailcow建立公司邮箱系统，用�
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2021/11/25/docker%E5%8E%BB%E6%8E%89sudo/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2021/11/25/docker%E5%8E%BB%E6%8E%89sudo/" class="title">Docker去掉sudo</a></p>
+                    <p class="item-date">
+                        <time datetime="2021-11-25 11:36:29 &#43;0800 CST" itemprop="datePublished">2021-11-25</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2021/11/25/win10%E4%B8%8B%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2021/11/25/win10%E4%B8%8B%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/" class="title">Win10下自动运行脚本</a></p>
+                    <p class="item-date">
+                        <time datetime="2021-11-25 11:34:17 &#43;0800 CST" itemprop="datePublished">2021-11-25</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1752,58 +1757,6 @@ github bitbucket 太慢不考虑 2. 使用mailcow建立公司邮箱系统，用�
                     <p class="item-title"><a href="http://fuyi.fun/2021/04/29/ubuntu18/" class="title">Ubuntu18</a></p>
                     <p class="item-date">
                         <time datetime="2021-04-29 09:26:32 &#43;0800 CST" itemprop="datePublished">2021-04-29</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2021/03/24/ubuntu%E5%BC%80%E5%85%B3%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="http://fuyi.fun/categories/ubuntu">
-                        Ubuntu
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2021/03/24/ubuntu%E5%BC%80%E5%85%B3%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2/" class="title">Ubuntu开关图形界面</a></p>
-                    <p class="item-date">
-                        <time datetime="2021-03-24 12:14:30 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2021/03/24/ubuntu%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A7%8D%E5%AD%90%E4%B8%8B%E8%BD%BD/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="http://fuyi.fun/categories/ubuntu">
-                        Ubuntu
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2021/03/24/ubuntu%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A7%8D%E5%AD%90%E4%B8%8B%E8%BD%BD/" class="title">Ubuntu命令行种子下载</a></p>
-                    <p class="item-date">
-                        <time datetime="2021-03-24 12:10:32 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
                     </p>
                 </div>
             </li>
@@ -2027,7 +1980,7 @@ github bitbucket 太慢不考虑 2. 使用mailcow建立公司邮箱系统，用�
                 <a class="category-list-link" href="http://fuyi.fun/tags/docker">
                     docker
                 </a>
-                <span class="category-list-count">5</span>
+                <span class="category-list-count">6</span>
             </li>
             
             <li class="category-list-item">
@@ -2234,6 +2187,14 @@ github bitbucket 太慢不考虑 2. 使用mailcow建立公司邮箱系统，用�
                 
                 <a class="category-list-link" href="http://fuyi.fun/tags/stm32">
                     stm32
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/sudo">
+                    sudo
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -2558,6 +2519,9 @@ github bitbucket 太慢不考虑 2. 使用mailcow建立公司邮箱系统，用�
         
         
         <a href="http://fuyi.fun/tags/stm32" style="font-size: 12px;">stm32</a>
+        
+        
+        <a href="http://fuyi.fun/tags/sudo" style="font-size: 12px;">sudo</a>
         
         
         <a href="http://fuyi.fun/tags/swap" style="font-size: 12px;">swap</a>

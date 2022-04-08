@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <title>部署私有化邮箱 &middot; 小夫子的随笔</title>
-    <meta name="generator" content="Hugo 0.77.0" />
+    <meta name="generator" content="Hugo 0.94.2" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Jixing Fu">
@@ -28,9 +28,10 @@
 配置dns： https://low.bi/p/r7VbxEKo3zA#h3-4
 # Name Type Value mail IN A 1.2.3.4（服务器ip） autodiscover IN CNAME mail autoconfig IN CNAME mail @ IN MX 10 mail 3.论坛 可搜索异常问题 https://community.mailcow.email/" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://fuyi.fun/2021/03/24/%E9%83%A8%E7%BD%B2%E7%A7%81%E6%9C%89%E5%8C%96%E9%82%AE%E7%AE%B1/" />
+<meta property="og:url" content="http://fuyi.fun/2021/03/24/%E9%83%A8%E7%BD%B2%E7%A7%81%E6%9C%89%E5%8C%96%E9%82%AE%E7%AE%B1/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-03-24T11:57:27+08:00" />
 <meta property="article:modified_time" content="2021-03-24T11:57:27+08:00" />
+
 
     
     <meta itemprop="name" content="部署私有化邮箱">
@@ -39,15 +40,10 @@
 更新方法：  sudo pip3 install --upgrade docker-comopse 
 其实安装文档里面着重的说明了需要最新版本的docker-compose，又跳步了。。。 ￼
 配置dns： https://low.bi/p/r7VbxEKo3zA#h3-4
-# Name Type Value mail IN A 1.2.3.4（服务器ip） autodiscover IN CNAME mail autoconfig IN CNAME mail @ IN MX 10 mail 3.论坛 可搜索异常问题 https://community.mailcow.email/">
-<meta itemprop="datePublished" content="2021-03-24T11:57:27+08:00" />
+# Name Type Value mail IN A 1.2.3.4（服务器ip） autodiscover IN CNAME mail autoconfig IN CNAME mail @ IN MX 10 mail 3.论坛 可搜索异常问题 https://community.mailcow.email/"><meta itemprop="datePublished" content="2021-03-24T11:57:27+08:00" />
 <meta itemprop="dateModified" content="2021-03-24T11:57:27+08:00" />
 <meta itemprop="wordCount" content="53">
-
-
-
 <meta itemprop="keywords" content="mailcow,邮箱," />
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="部署私有化邮箱"/>
 <meta name="twitter:description" content="安装mailcow 邮箱 1.官网查看安装教程 2.LAST： 爬的坑： 报错：ERROR: Invalid interpolation format for “environment” option in service “postfix-mailcow”: “REDIS_SLAVEOF_IP=${REDIS_SLAVEOF_IP:-}”
@@ -338,12 +334,11 @@ docker-compose版本太低，更新到1.28就好了；</p>
 ￼</p>
 <h3 id="配置dns">配置dns：</h3>
 <p><a href="https://low.bi/p/r7VbxEKo3zA#h3-4">https://low.bi/p/r7VbxEKo3zA#h3-4</a></p>
-<pre><code># Name              Type       Value
+<pre tabindex="0"><code># Name              Type       Value
 mail                      IN A       1.2.3.4（服务器ip）
 autodiscover        IN CNAME   mail
 autoconfig          IN CNAME   mail
 @                   IN MX 10   mail
-
 </code></pre><h2 id="3论坛-可搜索异常问题">3.论坛 可搜索异常问题</h2>
 <p><a href="https://community.mailcow.email/">https://community.mailcow.email/</a></p>
 

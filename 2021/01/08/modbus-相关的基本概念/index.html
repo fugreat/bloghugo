@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <title>Modbus 相关的基本概念 &middot; 小夫子的随笔</title>
-    <meta name="generator" content="Hugo 0.77.0" />
+    <meta name="generator" content="Hugo 0.94.2" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Jixing Fu">
@@ -30,9 +30,10 @@
 Modbus协议的coil和discrete，针对的是位寄存器；holding和input，针对的是16位寄存器。但这两者也是模糊的。光靠coil和discrete，或者光靠holding和input，其实都已足够。两套方法都可以用，让我这种选择困难患者感觉很难取舍。我最后的方案是，不管什么寄存器，全用holding和input。
 【参考文档】：Modbus总结 【参考文档】:移植Modbus到STM32F103" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://fuyi.fun/2021/01/08/modbus-%E7%9B%B8%E5%85%B3%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" />
+<meta property="og:url" content="http://fuyi.fun/2021/01/08/modbus-%E7%9B%B8%E5%85%B3%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-01-08T09:49:01+08:00" />
 <meta property="article:modified_time" content="2021-01-08T09:49:01+08:00" />
+
 
     
     <meta itemprop="name" content="Modbus 相关的基本概念">
@@ -43,15 +44,10 @@ Modbus协议的coil和discrete，针对的是位寄存器；holding和input，�
 保守的做法，是利用自定义命令来读写这些易失性寄存器，但是这样做会丧失通用性，而且很多现成的移植也失效了。 更方便的方法还是按读写能力来分类， 单纯地将coil和holding理解为可读写寄存器，
 而把discrete和input理解为协议里的只读寄存器。
 Modbus协议的coil和discrete，针对的是位寄存器；holding和input，针对的是16位寄存器。但这两者也是模糊的。光靠coil和discrete，或者光靠holding和input，其实都已足够。两套方法都可以用，让我这种选择困难患者感觉很难取舍。我最后的方案是，不管什么寄存器，全用holding和input。
-【参考文档】：Modbus总结 【参考文档】:移植Modbus到STM32F103">
-<meta itemprop="datePublished" content="2021-01-08T09:49:01+08:00" />
+【参考文档】：Modbus总结 【参考文档】:移植Modbus到STM32F103"><meta itemprop="datePublished" content="2021-01-08T09:49:01+08:00" />
 <meta itemprop="dateModified" content="2021-01-08T09:49:01+08:00" />
 <meta itemprop="wordCount" content="37">
-
-
-
 <meta itemprop="keywords" content="modbus," />
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Modbus 相关的基本概念"/>
 <meta name="twitter:description" content="变量 Coil是bit变量； Register是整形16bit变量；

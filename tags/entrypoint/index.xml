@@ -17,7 +17,7 @@
 但是在实际使用过程中，可能需要带参数或者make不同的目标。
 因为需要屏蔽掉默认的entrypoint。
 屏蔽方法是：
-# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &amp;quot;cd /code &amp;amp;&amp;amp; make -j8 &amp;amp;&amp;amp; make flash&amp;quot; [docker_imag】 </description>
+# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &amp;#34;cd /code &amp;amp;&amp;amp; make -j8 &amp;amp;&amp;amp; make flash&amp;#34; [docker_imag】 </description>
     </item>
     
   </channel>

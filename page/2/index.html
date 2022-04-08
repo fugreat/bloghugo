@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <title>小夫子的随笔</title>
-    <meta name="generator" content="Hugo 0.77.0" />
+    <meta name="generator" content="Hugo 0.94.2" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Jixing Fu">
@@ -27,12 +27,11 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://fuyi.fun/" />
-<meta property="og:updated_time" content="2021-11-25T11:39:26+08:00" />
+
 
     
     <meta itemprop="name" content="小夫子的随笔">
 <meta itemprop="description" content="">
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="小夫子的随笔"/>
 <meta name="twitter:description" content=""/>
@@ -736,7 +735,7 @@ github bitbucket 太慢不考虑 2. 使用mailcow建立公司邮箱系统，用�
             <p>
                 Nrf52 打印浮点数据：
 https://devzone.nordicsemi.com/f/nordic-q-a/18625/nrf_log_info-does-not-show-float-number
-NRF_LOG_INFO(&quot;My float number&quot; NRF_LOG_FLOAT_MARKER &quot;\r\n&quot;, NRF_LOG_FLOAT(f))) 
+NRF_LOG_INFO(&#34;My float number&#34; NRF_LOG_FLOAT_MARKER &#34;\r\n&#34;, NRF_LOG_FLOAT(f))) 
             </p>
             <p class="article-more-link">
                 <a href="http://fuyi.fun/2021/03/24/nrf52%E6%89%93%E5%8D%B0%E6%B5%AE%E7%82%B9%E6%95%B0%E6%8D%AE/">
@@ -1019,7 +1018,7 @@ NRF_LOG_INFO(&quot;My float number&quot; NRF_LOG_FLOAT_MARKER &quot;\r\n&quot;, 
         <div class="article-entry" itemprop="articleBody">
             <p>
                 Mysql 开放外网访问： 用mysql -uroot -p 登陆mysql，然后采用以下方法开启远程访问权限：
- mysql&gt;use mysql; mysql&gt;update user set host = '%' where user = 'root'; mysql&gt;FLUSH PRIVILEGES； 
+ mysql&gt;use mysql; mysql&gt;update user set host = &#39;%&#39; where user = &#39;root&#39;; mysql&gt;FLUSH PRIVILEGES； 
             </p>
             <p class="article-more-link">
                 <a href="http://fuyi.fun/2021/03/24/mysql%E5%BC%80%E5%90%AF%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/">
@@ -1170,7 +1169,7 @@ NRF_LOG_INFO(&quot;My float number&quot; NRF_LOG_FLOAT_MARKER &quot;\r\n&quot;, 
             <p>
                 Nodejs 的 ArrayBuffeer大小端序转换：
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getUint32
-// 创建 ArrayBuffer const buffer = new ArrayBuffer(4); // 赋初始值 var bytes = new Uint32Array(buffer) bytes[0] = 0x05; bytes[1] = 0x00; bytes[2] = 0x00; bytes[3] = 0x00; // buffer和Dataview const view = new DataView(buffer); // 按小端序取出数据 console.log(&quot;小端序：&quot;+view.getUint32(0, 1)); // 按大端序取出数据 console.log(&quot;大端序：&quot;+ view.getUint32(0, 0)); 
+// 创建 ArrayBuffer const buffer = new ArrayBuffer(4); // 赋初始值 var bytes = new Uint32Array(buffer) bytes[0] = 0x05; bytes[1] = 0x00; bytes[2] = 0x00; bytes[3] = 0x00; // buffer和Dataview const view = new DataView(buffer); // 按小端序取出数据 console.log(&#34;小端序：&#34;+view.getUint32(0, 1)); // 按大端序取出数据 console.log(&#34;大端序：&#34;+ view.getUint32(0, 0)); 
             </p>
             <p class="article-more-link">
                 <a href="http://fuyi.fun/2021/03/24/node%E7%9A%84arraybuffer%E5%81%9A%E5%A4%A7%E5%B0%8F%E7%AB%AF%E8%BD%AC%E6%8D%A2/">

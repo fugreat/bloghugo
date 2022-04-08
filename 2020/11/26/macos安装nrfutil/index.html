@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <title>MacOS安装nrfutil &middot; 小夫子的随笔</title>
-    <meta name="generator" content="Hugo 0.77.0" />
+    <meta name="generator" content="Hugo 0.94.2" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Jixing Fu">
@@ -25,23 +25,19 @@
 pip install nrfutil macOS: pip install --ignore-installed six nrfutil ～～～～～～～～～～～～～
 Installing from PyPI nRF Util is available as a package in the Python Package Index (PyPI) and can be downloaded and installed directly using the Python installer program pip. Enter the following command to install the latest published version from PyPI: pip install nrfutil This command installs nRF Util and all required packages. When installing on macOS, you might get an error about the Python module six." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/" />
+<meta property="og:url" content="http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2020-11-26T11:09:19+08:00" />
 <meta property="article:modified_time" content="2020-11-26T11:09:19+08:00" />
+
 
     
     <meta itemprop="name" content="MacOS安装nrfutil">
 <meta itemprop="description" content="参考：https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_nrfutil%2FUG%2Fnrfutil%2Fnrfutil_intro.html
 pip install nrfutil macOS: pip install --ignore-installed six nrfutil ～～～～～～～～～～～～～
-Installing from PyPI nRF Util is available as a package in the Python Package Index (PyPI) and can be downloaded and installed directly using the Python installer program pip. Enter the following command to install the latest published version from PyPI: pip install nrfutil This command installs nRF Util and all required packages. When installing on macOS, you might get an error about the Python module six.">
-<meta itemprop="datePublished" content="2020-11-26T11:09:19+08:00" />
+Installing from PyPI nRF Util is available as a package in the Python Package Index (PyPI) and can be downloaded and installed directly using the Python installer program pip. Enter the following command to install the latest published version from PyPI: pip install nrfutil This command installs nRF Util and all required packages. When installing on macOS, you might get an error about the Python module six."><meta itemprop="datePublished" content="2020-11-26T11:09:19+08:00" />
 <meta itemprop="dateModified" content="2020-11-26T11:09:19+08:00" />
 <meta itemprop="wordCount" content="181">
-
-
-
 <meta itemprop="keywords" content="nordic," />
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="MacOS安装nrfutil"/>
 <meta name="twitter:description" content="参考：https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_nrfutil%2FUG%2Fnrfutil%2Fnrfutil_intro.html
@@ -308,11 +304,11 @@ Installing from PyPI nRF Util is available as a package in the Python Package In
 
         <div class="article-entry" itemprop="articleBody">
             <p>参考：https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_nrfutil%2FUG%2Fnrfutil%2Fnrfutil_intro.html</p>
-<pre><code>pip install nrfutil
+<pre tabindex="0"><code>pip install nrfutil
 
 macOS: pip install --ignore-installed six nrfutil
 </code></pre><p>～～～～～～～～～～～～～</p>
-<pre><code>Installing from PyPI
+<pre tabindex="0"><code>Installing from PyPI
 nRF Util is available as a package in the Python Package Index (PyPI) and can be downloaded and installed directly using the Python installer program pip.
 
 Enter the following command to install the latest published version from PyPI:
@@ -322,11 +318,12 @@ When installing on macOS, you might get an error about the Python module six. In
 pip install --ignore-installed six nrfutil
 If you are running nRF Util on Windows, the runtime libraries targeted during the library build must be present when running code using the library. The following errors indicate that the runtime libraries are not available:
 Missing MSVC*120.DLL or MSVC*140.DLL
-RuntimeError: Could not load shared library &lt;path&gt;/pc_ble_driver_shared.dll : '[Error 193] %1 is not a valid Win32 application
+RuntimeError: Could not load shared library &lt;path&gt;/pc_ble_driver_shared.dll : &#39;[Error 193] %1 is not a valid Win32 application
 In this case, install the Visual C++ redistributable packages for Visual Studio 2013 or Visual Studio 2015. Select the version that corresponds to the architecture of your Python installation (x86 or x64).
 
 
-````s</code></pre>
+````s
+</code></pre>
         </div>
         <footer class="article-footer">
     <a data-url="http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/" data-id="c51f77ab24348d9c9aa33fc99d9bd786" class="article-share-link">

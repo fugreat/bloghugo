@@ -14,7 +14,7 @@
       
       <guid>http://fuyi.fun/2021/03/24/mysql%E5%BC%80%E5%90%AF%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/</guid>
       <description>Mysql 开放外网访问： 用mysql -uroot -p 登陆mysql，然后采用以下方法开启远程访问权限：
- mysql&amp;gt;use mysql; mysql&amp;gt;update user set host = &#39;%&#39; where user = &#39;root&#39;; mysql&amp;gt;FLUSH PRIVILEGES； </description>
+ mysql&amp;gt;use mysql; mysql&amp;gt;update user set host = &amp;#39;%&amp;#39; where user = &amp;#39;root&amp;#39;; mysql&amp;gt;FLUSH PRIVILEGES； </description>
     </item>
     
     <item>
@@ -25,7 +25,7 @@
       <guid>http://fuyi.fun/2021/03/24/node%E7%9A%84arraybuffer%E5%81%9A%E5%A4%A7%E5%B0%8F%E7%AB%AF%E8%BD%AC%E6%8D%A2/</guid>
       <description>Nodejs 的 ArrayBuffeer大小端序转换：
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getUint32
-// 创建 ArrayBuffer const buffer = new ArrayBuffer(4); // 赋初始值 var bytes = new Uint32Array(buffer) bytes[0] = 0x05; bytes[1] = 0x00; bytes[2] = 0x00; bytes[3] = 0x00; // buffer和Dataview const view = new DataView(buffer); // 按小端序取出数据 console.log(&amp;quot;小端序：&amp;quot;+view.getUint32(0, 1)); // 按大端序取出数据 console.log(&amp;quot;大端序：&amp;quot;+ view.getUint32(0, 0)); </description>
+// 创建 ArrayBuffer const buffer = new ArrayBuffer(4); // 赋初始值 var bytes = new Uint32Array(buffer) bytes[0] = 0x05; bytes[1] = 0x00; bytes[2] = 0x00; bytes[3] = 0x00; // buffer和Dataview const view = new DataView(buffer); // 按小端序取出数据 console.log(&amp;#34;小端序：&amp;#34;+view.getUint32(0, 1)); // 按大端序取出数据 console.log(&amp;#34;大端序：&amp;#34;+ view.getUint32(0, 0)); </description>
     </item>
     
     <item>
@@ -106,7 +106,7 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清�
 但是在实际使用过程中，可能需要带参数或者make不同的目标。
 因为需要屏蔽掉默认的entrypoint。
 屏蔽方法是：
-# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &amp;quot;cd /code &amp;amp;&amp;amp; make -j8 &amp;amp;&amp;amp; make flash&amp;quot; [docker_imag】 </description>
+# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &amp;#34;cd /code &amp;amp;&amp;amp; make -j8 &amp;amp;&amp;amp; make flash&amp;#34; [docker_imag】 </description>
     </item>
     
     <item>
@@ -131,7 +131,7 @@ macOS支持不好；</description>
 thread1 对象的内存空间，包括线程控制块 thread1 与栈空间 thread1_stack 都是编译时决定的，因为代码中都不存在初始值，都统一放在未初始化数据段中。
 thread2 运行中用到的空间都是动态分配的，包括线程控制块（thread2_ptr 指向的内容）和栈空间。
 静态对象会占用 RAM 空间，不依赖于内存堆管理器，内存分配时间确定。 动态对象则依赖于内存堆管理器，运行时申请 RAM 空间，当对象被删除后，占用的 RAM 空间被释放。 这两种方式各有利弊，可以根据实际环境需求选择具体使用方式。
-/* 线程 1 的对象和运行时用到的栈 */ static struct rt_thread thread1; static rt_uint8_t thread1_stack[512]; /* 线程 1 入口 */ void thread1_entry(void* parameter) { int i; while (1) { for (i = 0; i &amp;lt; 10; i ++) { rt_kprintf(&amp;#34;%d\n&amp;#34;, i); /* 延时 100ms */ rt_thread_mdelay(100); } } } /* 线程 2 入口 */ void thread2_entry(void* parameter) { int count = 0; while (1) { rt_kprintf(&amp;#34;Thread2 count:%d\n&amp;#34;, ++count); /* 延时 50ms */ rt_thread_mdelay(50); } } /* 线程例程初始化 */ int thread_sample_init() { rt_thread_t thread2_ptr; rt_err_t result; /* 初始化线程 1 */ /* 线程的入口是 thread1_entry，参数是 RT_NULL * 线程栈是 thread1_stack * 优先级是 200，时间片是 10 个 OS Tick */ result = rt_thread_init(&amp;amp;thread1, &amp;#34;thread1&amp;#34;, thread1_entry, RT_NULL, &amp;amp;thread1_stack[0], sizeof(thread1_stack), 200, 10); /* 启动线程 */ if (result == RT_EOK) rt_thread_startup(&amp;amp;thread1); /* 创建线程 2 */ /* 线程的入口是 thread2_entry, 参数是 RT_NULL * 栈空间是 512，优先级是 250，时间片是 25 个 OS Tick */ thread2_ptr = rt_thread_create(&amp;#34;thread2&amp;#34;, thread2_entry, RT_NULL, 512, 250, 25); /* 启动线程 */ if (thread2_ptr !</description>
+/* 线程 1 的对象和运行时用到的栈 */ static struct rt_thread thread1; static rt_uint8_t thread1_stack[512];  /* 线程 1 入口 */ void thread1_entry(void* parameter) {  int i;   while (1)  {  for (i = 0; i &amp;lt; 10; i ++)  {  rt_kprintf(&amp;#34;%d\n&amp;#34;, i);   /* 延时 100ms */  rt_thread_mdelay(100);  }  } }  /* 线程 2 入口 */ void thread2_entry(void* parameter) {  int count = 0;  while (1)  {  rt_kprintf(&amp;#34;Thread2 count:%d\n&amp;#34;, ++count);   /* 延时 50ms */  rt_thread_mdelay(50);  } }  /* 线程例程初始化 */ int thread_sample_init() {  rt_thread_t thread2_ptr;  rt_err_t result;   /* 初始化线程 1 */  /* 线程的入口是 thread1_entry，参数是 RT_NULL * 线程栈是 thread1_stack * 优先级是 200，时间片是 10 个 OS Tick */  result = rt_thread_init(&amp;amp;thread1,  &amp;#34;thread1&amp;#34;,  thread1_entry, RT_NULL,  &amp;amp;thread1_stack[0], sizeof(thread1_stack),  200, 10);   /* 启动线程 */  if (result == RT_EOK) rt_thread_startup(&amp;amp;thread1);   /* 创建线程 2 */  /* 线程的入口是 thread2_entry, 参数是 RT_NULL * 栈空间是 512，优先级是 250，时间片是 25 个 OS Tick */  thread2_ptr = rt_thread_create(&amp;#34;thread2&amp;#34;,  thread2_entry, RT_NULL,  512, 250, 25);   /* 启动线程 */  if (thread2_ptr !</description>
     </item>
     
     <item>
@@ -145,7 +145,7 @@ thread2 运行中用到的空间都是动态分配的，包括线程控制块（
  RT-Thread 启动流程 RT-Thread 支持多种平台和多种编译器，而 rtthread_startup() 函数是 RT-Thread 规定的统一启动入口。 一般执行顺序是：
 系统先从启动文件开始运行， 然后进入 RT-Thread 的启动 rtthread_startup() ，
 最后进入用户入口 main()，如下图所示：  启动代码
-int rtthread_startup(void) { rt_hw_interrupt_disable(); /* 板级初始化：需在该函数内部进行系统堆的初始化 */ rt_hw_board_init(); /* 打印 RT-Thread 版本信息 */ rt_show_version(); /* 定时器初始化 */ rt_system_timer_init(); /* 调度器初始化 */ rt_system_scheduler_init(); #ifdef RT_USING_SIGNALS  /* 信号初始化 */ rt_system_signal_init(); #endif  /* 由此创建一个用户 main 线程 */ rt_application_init(); /* 定时器线程初始化 */ rt_system_timer_thread_init(); /* 空闲线程初始化 */ rt_thread_idle_init(); /* 启动调度器 */ rt_system_scheduler_start(); /* 不会执行至此 */ return 0; } 大致可以分为四个部分：</description>
+int rtthread_startup(void) {  rt_hw_interrupt_disable();   /* 板级初始化：需在该函数内部进行系统堆的初始化 */  rt_hw_board_init();   /* 打印 RT-Thread 版本信息 */  rt_show_version();   /* 定时器初始化 */  rt_system_timer_init();   /* 调度器初始化 */  rt_system_scheduler_init();  #ifdef RT_USING_SIGNALS  /* 信号初始化 */  rt_system_signal_init(); #endif   /* 由此创建一个用户 main 线程 */  rt_application_init();   /* 定时器线程初始化 */  rt_system_timer_thread_init();   /* 空闲线程初始化 */  rt_thread_idle_init();   /* 启动调度器 */  rt_system_scheduler_start();   /* 不会执行至此 */  return 0; } 大致可以分为四个部分：</description>
     </item>
     
     <item>

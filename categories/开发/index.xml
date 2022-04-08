@@ -19,7 +19,7 @@
   下载nrf52开发环境 docker pull fugreat/nrf52
   创建容器
   docker run --name nrf52-1 -v /Users/user_name/data:/data -itd fugreat/nrf52 bash  此步把 /Users/user_name/data目录映射到编译环境的/data中
- 编译  docker exec -it nrf52 bash -c &amp;quot;cd /data/project_name &amp;amp;&amp;amp; make&amp;quot; 启/停容器  docker start nrf52 docker stop nrf52 </description>
+ 编译  docker exec -it nrf52 bash -c &amp;#34;cd /data/project_name &amp;amp;&amp;amp; make&amp;#34; 启/停容器  docker start nrf52 docker stop nrf52 </description>
     </item>
     
   </channel>

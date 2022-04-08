@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <title>Docker覆盖entrypoint &middot; 小夫子的随笔</title>
-    <meta name="generator" content="Hugo 0.77.0" />
+    <meta name="generator" content="Hugo 0.94.2" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Jixing Fu">
@@ -25,11 +25,12 @@
 但是在实际使用过程中，可能需要带参数或者make不同的目标。
 因为需要屏蔽掉默认的entrypoint。
 屏蔽方法是：
-# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &quot;cd /code &amp;&amp; make -j8 &amp;&amp; make flash&quot; [docker_imag】 " />
+# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &#34;cd /code &amp;&amp; make -j8 &amp;&amp; make flash&#34; [docker_imag】 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://fuyi.fun/2020/11/25/docker%E8%A6%86%E7%9B%96entrypoint/" />
+<meta property="og:url" content="http://fuyi.fun/2020/11/25/docker%E8%A6%86%E7%9B%96entrypoint/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2020-11-25T10:17:53+08:00" />
 <meta property="article:modified_time" content="2020-11-25T10:17:53+08:00" />
+
 
     
     <meta itemprop="name" content="Docker覆盖entrypoint">
@@ -37,22 +38,17 @@
 但是在实际使用过程中，可能需要带参数或者make不同的目标。
 因为需要屏蔽掉默认的entrypoint。
 屏蔽方法是：
-# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &quot;cd /code &amp;&amp; make -j8 &amp;&amp; make flash&quot; [docker_imag】 ">
-<meta itemprop="datePublished" content="2020-11-25T10:17:53+08:00" />
+# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &#34;cd /code &amp;&amp; make -j8 &amp;&amp; make flash&#34; [docker_imag】 "><meta itemprop="datePublished" content="2020-11-25T10:17:53+08:00" />
 <meta itemprop="dateModified" content="2020-11-25T10:17:53+08:00" />
 <meta itemprop="wordCount" content="31">
-
-
-
 <meta itemprop="keywords" content="docker,entrypoint," />
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Docker覆盖entrypoint"/>
 <meta name="twitter:description" content="在使用docker简化编译环境搭建过程中碰到一个问题是 pull下来的镜像默认提供entrypoint，自动对指定的目录进行编译(运行make)。
 但是在实际使用过程中，可能需要带参数或者make不同的目标。
 因为需要屏蔽掉默认的entrypoint。
 屏蔽方法是：
-# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &quot;cd /code &amp;&amp; make -j8 &amp;&amp; make flash&quot; [docker_imag】 "/>
+# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &#34;cd /code &amp;&amp; make -j8 &amp;&amp; make flash&#34; [docker_imag】 "/>
 
     
 
@@ -321,12 +317,11 @@
 但是在实际使用过程中，可能需要带参数或者make不同的目标。<br>
 因为需要屏蔽掉默认的entrypoint。</p>
 <p>屏蔽方法是：</p>
-<pre><code># 进入镜像的， 运行bash
+<pre tabindex="0"><code># 进入镜像的， 运行bash
 docker run -it --entrypoint /bin/bash [docker_image]
 
 # 在上面基础上运行自己想要的指令，如
-docker run -it --entrypoint /bin/bash -c &quot;cd /code &amp;&amp; make -j8 &amp;&amp; make flash&quot; [docker_imag】
-
+docker run -it --entrypoint /bin/bash -c &#34;cd /code &amp;&amp; make -j8 &amp;&amp; make flash&#34; [docker_imag】
 </code></pre>
         </div>
         <footer class="article-footer">

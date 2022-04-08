@@ -29,7 +29,7 @@ github bitbucket 太慢不考虑 2. 使用mailcow建立公司邮箱系统，用�
 安装 点此查看官方文档的详细安装步骤。
 摘抄如下，docker下安装： 1.下载docker-compose.yml
 wget https://docs.seafile.com/d/cb1d3f97106847abbf31/files/?p=/docker/docker-compose.yml 2.按照实际情况修改配置：
-version: &#39;2.0&#39; services: db: image: mariadb:10.1 container_name: seafile-mysql environment: - MYSQL_ROOT_PASSWORD=db_dev # Requested, set the root&#39;s password of MySQL service. - MYSQL_LOG_CONSOLE=true volumes: - /opt/seafile-mysql/db:/var/lib/mysql # Requested, specifies the path to MySQL data persistent store. networks: - seafile-net memcached: image: memcached:1.5.6 container_name: seafile-memcached entrypoint: memcached -m 256 networks: - seafile-net seafile: image: seafileltd/seafile-mc:latest container_name: seafile ports: - &amp;quot;80:80&amp;quot; # - &amp;quot;443:443&amp;quot; # If https is enabled, cancel the comment.</description>
+version: &amp;#39;2.0&amp;#39; services: db: image: mariadb:10.1 container_name: seafile-mysql environment: - MYSQL_ROOT_PASSWORD=db_dev # Requested, set the root&amp;#39;s password of MySQL service. - MYSQL_LOG_CONSOLE=true volumes: - /opt/seafile-mysql/db:/var/lib/mysql # Requested, specifies the path to MySQL data persistent store. networks: - seafile-net memcached: image: memcached:1.5.6 container_name: seafile-memcached entrypoint: memcached -m 256 networks: - seafile-net seafile: image: seafileltd/seafile-mc:latest container_name: seafile ports: - &amp;#34;80:80&amp;#34; # - &amp;#34;443:443&amp;#34; # If https is enabled, cancel the comment.</description>
     </item>
     
   </channel>

@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <title>Node的Arraybuffer做大小端转换 &middot; 小夫子的随笔</title>
-    <meta name="generator" content="Hugo 0.77.0" />
+    <meta name="generator" content="Hugo 0.94.2" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Jixing Fu">
@@ -23,30 +23,26 @@
     <meta property="og:title" content="Node的Arraybuffer做大小端转换" />
 <meta property="og:description" content="Nodejs 的 ArrayBuffeer大小端序转换：
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getUint32
-// 创建 ArrayBuffer const buffer = new ArrayBuffer(4); // 赋初始值 var bytes = new Uint32Array(buffer) bytes[0] = 0x05; bytes[1] = 0x00; bytes[2] = 0x00; bytes[3] = 0x00; // buffer和Dataview const view = new DataView(buffer); // 按小端序取出数据 console.log(&quot;小端序：&quot;&#43;view.getUint32(0, 1)); // 按大端序取出数据 console.log(&quot;大端序：&quot;&#43; view.getUint32(0, 0)); " />
+// 创建 ArrayBuffer const buffer = new ArrayBuffer(4); // 赋初始值 var bytes = new Uint32Array(buffer) bytes[0] = 0x05; bytes[1] = 0x00; bytes[2] = 0x00; bytes[3] = 0x00; // buffer和Dataview const view = new DataView(buffer); // 按小端序取出数据 console.log(&#34;小端序：&#34;&#43;view.getUint32(0, 1)); // 按大端序取出数据 console.log(&#34;大端序：&#34;&#43; view.getUint32(0, 0)); " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://fuyi.fun/2021/03/24/node%E7%9A%84arraybuffer%E5%81%9A%E5%A4%A7%E5%B0%8F%E7%AB%AF%E8%BD%AC%E6%8D%A2/" />
+<meta property="og:url" content="http://fuyi.fun/2021/03/24/node%E7%9A%84arraybuffer%E5%81%9A%E5%A4%A7%E5%B0%8F%E7%AB%AF%E8%BD%AC%E6%8D%A2/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-03-24T11:31:34+08:00" />
 <meta property="article:modified_time" content="2021-03-24T11:31:34+08:00" />
+
 
     
     <meta itemprop="name" content="Node的Arraybuffer做大小端转换">
 <meta itemprop="description" content="Nodejs 的 ArrayBuffeer大小端序转换：
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getUint32
-// 创建 ArrayBuffer const buffer = new ArrayBuffer(4); // 赋初始值 var bytes = new Uint32Array(buffer) bytes[0] = 0x05; bytes[1] = 0x00; bytes[2] = 0x00; bytes[3] = 0x00; // buffer和Dataview const view = new DataView(buffer); // 按小端序取出数据 console.log(&quot;小端序：&quot;&#43;view.getUint32(0, 1)); // 按大端序取出数据 console.log(&quot;大端序：&quot;&#43; view.getUint32(0, 0)); ">
-<meta itemprop="datePublished" content="2021-03-24T11:31:34+08:00" />
+// 创建 ArrayBuffer const buffer = new ArrayBuffer(4); // 赋初始值 var bytes = new Uint32Array(buffer) bytes[0] = 0x05; bytes[1] = 0x00; bytes[2] = 0x00; bytes[3] = 0x00; // buffer和Dataview const view = new DataView(buffer); // 按小端序取出数据 console.log(&#34;小端序：&#34;&#43;view.getUint32(0, 1)); // 按大端序取出数据 console.log(&#34;大端序：&#34;&#43; view.getUint32(0, 0)); "><meta itemprop="datePublished" content="2021-03-24T11:31:34+08:00" />
 <meta itemprop="dateModified" content="2021-03-24T11:31:34+08:00" />
 <meta itemprop="wordCount" content="47">
-
-
-
 <meta itemprop="keywords" content="nodejs,大端序,小端序," />
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Node的Arraybuffer做大小端转换"/>
 <meta name="twitter:description" content="Nodejs 的 ArrayBuffeer大小端序转换：
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getUint32
-// 创建 ArrayBuffer const buffer = new ArrayBuffer(4); // 赋初始值 var bytes = new Uint32Array(buffer) bytes[0] = 0x05; bytes[1] = 0x00; bytes[2] = 0x00; bytes[3] = 0x00; // buffer和Dataview const view = new DataView(buffer); // 按小端序取出数据 console.log(&quot;小端序：&quot;&#43;view.getUint32(0, 1)); // 按大端序取出数据 console.log(&quot;大端序：&quot;&#43; view.getUint32(0, 0)); "/>
+// 创建 ArrayBuffer const buffer = new ArrayBuffer(4); // 赋初始值 var bytes = new Uint32Array(buffer) bytes[0] = 0x05; bytes[1] = 0x00; bytes[2] = 0x00; bytes[3] = 0x00; // buffer和Dataview const view = new DataView(buffer); // 按小端序取出数据 console.log(&#34;小端序：&#34;&#43;view.getUint32(0, 1)); // 按大端序取出数据 console.log(&#34;大端序：&#34;&#43; view.getUint32(0, 0)); "/>
 
     
 
@@ -317,7 +313,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
         <div class="article-entry" itemprop="articleBody">
             <p>Nodejs  的 ArrayBuffeer大小端序转换：</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getUint32">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getUint32</a></p>
-<pre><code>// 创建 ArrayBuffer
+<pre tabindex="0"><code>// 创建 ArrayBuffer
 const buffer = new ArrayBuffer(4);
 
 // 赋初始值
@@ -331,11 +327,10 @@ bytes[3] = 0x00;
 const view = new DataView(buffer);
 
 // 按小端序取出数据
-console.log(&quot;小端序：&quot;+view.getUint32(0, 1));
+console.log(&#34;小端序：&#34;+view.getUint32(0, 1));
 
 // 按大端序取出数据
-console.log(&quot;大端序：&quot;+ view.getUint32(0, 0));
-
+console.log(&#34;大端序：&#34;+ view.getUint32(0, 0));
 </code></pre>
         </div>
         <footer class="article-footer">

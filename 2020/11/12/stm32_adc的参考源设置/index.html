@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <title>Stm32_adc的参考源设置 &middot; 小夫子的随笔</title>
-    <meta name="generator" content="Hugo 0.77.0" />
+    <meta name="generator" content="Hugo 0.94.2" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Jixing Fu">
@@ -34,9 +34,10 @@ Vchx = Vrefint * (ADchx/ADrefint)
 其中Vrefint为参照电压=1.20V（STM32F107）。
 如何用VDDA作为ADC参考电压，当测量信号电压超过这个范围可以用精密电阻分压或者放大器分压，或者选择合适的外部电压基准芯片。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://fuyi.fun/2020/11/12/stm32_adc%E7%9A%84%E5%8F%82%E8%80%83%E6%BA%90%E8%AE%BE%E7%BD%AE/" />
+<meta property="og:url" content="http://fuyi.fun/2020/11/12/stm32_adc%E7%9A%84%E5%8F%82%E8%80%83%E6%BA%90%E8%AE%BE%E7%BD%AE/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2020-11-12T09:02:37+08:00" />
 <meta property="article:modified_time" content="2020-11-12T09:02:37+08:00" />
+
 
     
     <meta itemprop="name" content="Stm32_adc的参考源设置">
@@ -51,15 +52,10 @@ ADC的参考电压都是通过Vref&#43;提供的。
 具体方法是在测量某个通道的电压值之前，先读出参照电压的ADC测量数值，记为ADrefint；再读出要测量通道的ADC转换数值，记为ADchx；则要测量的电压为：
 Vchx = Vrefint * (ADchx/ADrefint)
 其中Vrefint为参照电压=1.20V（STM32F107）。
-如何用VDDA作为ADC参考电压，当测量信号电压超过这个范围可以用精密电阻分压或者放大器分压，或者选择合适的外部电压基准芯片。">
-<meta itemprop="datePublished" content="2020-11-12T09:02:37+08:00" />
+如何用VDDA作为ADC参考电压，当测量信号电压超过这个范围可以用精密电阻分压或者放大器分压，或者选择合适的外部电压基准芯片。"><meta itemprop="datePublished" content="2020-11-12T09:02:37+08:00" />
 <meta itemprop="dateModified" content="2020-11-12T09:02:37+08:00" />
 <meta itemprop="wordCount" content="19">
-
-
-
 <meta itemprop="keywords" content="stm32,adc,嵌入式," />
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Stm32_adc的参考源设置"/>
 <meta name="twitter:description" content="转 STM32内部参照电压VREFIN的使用 https://blog.csdn.net/uncle_guo/article/details/50625660

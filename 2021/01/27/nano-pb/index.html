@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <title>Nano Pb &middot; 小夫子的随笔</title>
-    <meta name="generator" content="Hugo 0.77.0" />
+    <meta name="generator" content="Hugo 0.94.2" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Jixing Fu">
@@ -28,9 +28,10 @@
 最新的版本是0.4.4 目录如下
  tree -L 1 . ├── AUTHORS.txt ├── BUILD.bazel ├── CHANGELOG.txt ├── CMakeLists.txt ├── CONTRIBUTING.md ├── LICENSE.txt ├── Package.swift ├── README.md ├── WORKSPACE ├── build.py ├── conan-wrapper ├── conanfile.py ├── docs ├── examples ├── extra ├── generator ├── generator-bin ├── library.json ├── pb.h ├── pb_common.c ├── pb_common.h ├── pb_decode.c ├── pb_decode.h ├── pb_encode." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://fuyi.fun/2021/01/27/nano-pb/" />
+<meta property="og:url" content="http://fuyi.fun/2021/01/27/nano-pb/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-01-27T08:13:36+08:00" />
 <meta property="article:modified_time" content="2021-01-27T08:13:36+08:00" />
+
 
     
     <meta itemprop="name" content="Nano Pb">
@@ -39,15 +40,10 @@
 三、发现 犹疑间偶然发现nrf52的sdk里面提供了一个外部通信协议库 nano-pb，程序小巧，又可兼容和APP通信，深得我心。所以移植到系统中测试下可靠性。
 四、使用 4.1 下载移植 移植过程参考了几篇文章，写的比较全面的就是这个了nanopb的安装和使用. 下载最新的库可以从这里Nanopb - downloads
 最新的版本是0.4.4 目录如下
- tree -L 1 . ├── AUTHORS.txt ├── BUILD.bazel ├── CHANGELOG.txt ├── CMakeLists.txt ├── CONTRIBUTING.md ├── LICENSE.txt ├── Package.swift ├── README.md ├── WORKSPACE ├── build.py ├── conan-wrapper ├── conanfile.py ├── docs ├── examples ├── extra ├── generator ├── generator-bin ├── library.json ├── pb.h ├── pb_common.c ├── pb_common.h ├── pb_decode.c ├── pb_decode.h ├── pb_encode.">
-<meta itemprop="datePublished" content="2021-01-27T08:13:36+08:00" />
+ tree -L 1 . ├── AUTHORS.txt ├── BUILD.bazel ├── CHANGELOG.txt ├── CMakeLists.txt ├── CONTRIBUTING.md ├── LICENSE.txt ├── Package.swift ├── README.md ├── WORKSPACE ├── build.py ├── conan-wrapper ├── conanfile.py ├── docs ├── examples ├── extra ├── generator ├── generator-bin ├── library.json ├── pb.h ├── pb_common.c ├── pb_common.h ├── pb_decode.c ├── pb_decode.h ├── pb_encode."><meta itemprop="datePublished" content="2021-01-27T08:13:36+08:00" />
 <meta itemprop="dateModified" content="2021-01-27T08:13:36+08:00" />
 <meta itemprop="wordCount" content="161">
-
-
-
 <meta itemprop="keywords" content="协议,nano-pb,嵌入式," />
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Nano Pb"/>
 <meta name="twitter:description" content="一、起因 在新的检测设备中需要做主从机通信。
@@ -337,7 +333,7 @@
 下载最新的库可以从这里<a href="https://jpa.kapsi.fi/nanopb/download/">Nanopb - downloads</a></p>
 <p>最新的版本是0.4.4
 目录如下</p>
-<pre><code> tree -L 1
+<pre tabindex="0"><code> tree -L 1
 .
 ├── AUTHORS.txt
 ├── BUILD.bazel
@@ -368,7 +364,6 @@
 ├── spm_headers
 ├── tests
 └── tools
-
 </code></pre><p>简单的测试可以查看examples，编译sample。 <br>
 对于传输复杂格式例如string 或者 数组bytes可以参考tests/alltypes工程。</p>
 <h2 id="42-必要工具">4.2 必要工具</h2>
@@ -382,7 +377,7 @@
 <p>得到</p>
 </li>
 </ol>
-<pre><code>./protoc-3.14.0-osx-x86_64
+<pre tabindex="0"><code>./protoc-3.14.0-osx-x86_64
 ├── bin
 │   └── protoc
 ├── include
@@ -402,7 +397,6 @@
 │           ├── type.proto
 │           └── wrappers.proto
 └── readme.txt
-
 </code></pre><ol start="3">
 <li>
 <p>拷贝文件安装

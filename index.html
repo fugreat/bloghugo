@@ -160,7 +160,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        57
+        58
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -241,6 +241,132 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/">
+    <h1 class="article-title" itemprop="name">
+        Fedora从命令行启动
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2022-04-08 20:26:01 &#43;0800 CST" itemprop="datePublished">2022-04-08</time>
+            &middot;
+            31
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                Fedora 从命令行启动
+一、实现代码 删除目标链接并创建新的符号链接 （1）从命令行启动
+ln-sf /lib/systemd/system/multi-user.target /etc/systemd/system/default. target （2）从图形界面启动
+ln-sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target 二、代码解释 ln命令：是一个在文件之间建立链接的命令，默认情况是硬链接（hard link），我们要用的是符号链接（symboli link），它可以为在不同文件系统中文件创建链接。 Options：-s 创建符号链接 -f 删除已经存在的同名链接 oneof the Usages：ln [被链接目标] [链接文件或目录] Example：ln -s xx yy 为xx创建一个符号链接yy
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/" data-id="973dac0025cfc04f9daec338b4db1cc6" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1466,151 +1592,6 @@ sudo usermod -aG sudo 方法二、修改/etc/sudoers文件
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2021/03/24/ubuntu%E5%A2%9E%E5%8A%A0swap%E5%88%86%E5%8C%BA/">
-    <h1 class="article-title" itemprop="name">
-        Ubuntu增加swap分区
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2021-03-24 12:05:03 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
-            &middot;
-            35
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/categories/ubuntu">Ubuntu</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/ubuntu">ubuntu</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/swap">swap</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                # 创建文件： sudo fallocate -l 1G /swapfile # 设置为swapfile sudo chmod 600 /swapfile sudo mkswap /swapfile # 激活： sudo swapon /swapfile # 在/etc/fstab中写入配置，开机自动激活 /swapfile swap swap defaults 0 0 # 查看是否激活： sudo swapon --show 参考：https://www.sysgeek.cn/ubuntu-18-04-swap/
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2021/03/24/ubuntu%E5%A2%9E%E5%8A%A0swap%E5%88%86%E5%8C%BA/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2021/03/24/ubuntu%E5%A2%9E%E5%8A%A0swap%E5%88%86%E5%8C%BA/" data-id="22487131fcbe9508e8478f3ac581b59d" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1636,6 +1617,25 @@ sudo usermod -aG sudo 方法二、修改/etc/sudoers文件
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/" class="title">Fedora从命令行启动</a></p>
+                    <p class="item-date">
+                        <time datetime="2022-04-08 20:26:01 &#43;0800 CST" itemprop="datePublished">2022-04-08</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1709,32 +1709,6 @@ sudo usermod -aG sudo 方法二、修改/etc/sudoers文件
                     <p class="item-title"><a href="http://fuyi.fun/2021/11/25/iot%E5%AE%89%E5%85%A8%E6%A0%87%E5%87%86/" class="title">IOT安全标准</a></p>
                     <p class="item-date">
                         <time datetime="2021-11-25 11:32:20 &#43;0800 CST" itemprop="datePublished">2021-11-25</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2021/07/14/ubuntu%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="http://fuyi.fun/categories/ubuntu">
-                        Ubuntu
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2021/07/14/ubuntu%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/" class="title">Ubuntu网络配置</a></p>
-                    <p class="item-date">
-                        <time datetime="2021-07-14 13:44:05 &#43;0800 CST" itemprop="datePublished">2021-07-14</time>
                     </p>
                 </div>
             </li>

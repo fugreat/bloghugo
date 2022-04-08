@@ -160,7 +160,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        57
+        58
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -241,6 +241,138 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2021/02/25/openvpn%E9%85%8D%E7%BD%AE/">
+    <h1 class="article-title" itemprop="name">
+        Openvpn配置
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2021-02-25 15:56:18 &#43;0800 CST" itemprop="datePublished">2021-02-25</time>
+            &middot;
+            33
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/categories/%E6%8A%80%E6%9C%AF%E7%AE%A1%E7%90%86">技术管理</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                openvpn
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2021/02/25/openvpn%E9%85%8D%E7%BD%AE/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2021/02/25/openvpn%E9%85%8D%E7%BD%AE/" data-id="1080bc1a6355d55f3b16b5e56474aab6" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1565,169 +1697,6 @@ Modbus协议的coil和discrete，针对的是位寄存器；holding和input，�
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2020/12/16/%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BBgbt9969-2008%E5%B7%A5%E4%B8%9A%E4%BA%A7%E5%93%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6/">
-    <h1 class="article-title" itemprop="name">
-        标准解读：GBT9969 2008工业产品使用说明书
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2020-12-16 09:00:08 &#43;0800 CST" itemprop="datePublished">2020-12-16</time>
-            &middot;
-            27
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/categories/%E8%AE%A4%E8%AF%81">认证</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E6%A0%87%E5%87%86">标准</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E5%9B%BD%E6%A0%87">国标</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E8%AF%B4%E6%98%8E%E4%B9%A6">说明书</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                标准解读：GBT9969-2008工业产品使用说明书、总则
-文档链接：GBT9969-2008
-基本要求  说明书内容 产品用途和使用范围 根据产品特点给出： 主要结构、性能、型号、规格 吊运、安装、使用、操作、维修、保养、贮存；   应提供：必要的环保和节约能源方面的内容； 易燃易爆有毒有腐蚀有放射性的产品，说明书应包含注意事项、防护措施和发生意外时的紧急处理方法； 对于安全限制有要求或存在有效年限的产品应提供产品上的生产日期和有效期； 实行生产许可证管理的产品，应在包装上标注有效的生产许可证编号；  模版 概述
-安全使用注意事项
-结构特征与工作原理
-技术特性
-尺寸重量
-安装、调整
-使用操作
-故障分析与排除
-安全保护装置与事故处理
-保养维护
-运输贮存
-开箱及检查 环保及其他
-图、表、照片
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2020/12/16/%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BBgbt9969-2008%E5%B7%A5%E4%B8%9A%E4%BA%A7%E5%93%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/12/16/%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BBgbt9969-2008%E5%B7%A5%E4%B8%9A%E4%BA%A7%E5%93%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6/" data-id="de0460312365379ea9234723815c51ec" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1757,6 +1726,25 @@ Modbus协议的coil和discrete，针对的是位寄存器；holding和input，�
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/" class="title">Fedora从命令行启动</a></p>
+                    <p class="item-date">
+                        <time datetime="2022-04-08 20:26:01 &#43;0800 CST" itemprop="datePublished">2022-04-08</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1830,32 +1818,6 @@ Modbus协议的coil和discrete，针对的是位寄存器；holding和input，�
                     <p class="item-title"><a href="http://fuyi.fun/2021/11/25/iot%E5%AE%89%E5%85%A8%E6%A0%87%E5%87%86/" class="title">IOT安全标准</a></p>
                     <p class="item-date">
                         <time datetime="2021-11-25 11:32:20 &#43;0800 CST" itemprop="datePublished">2021-11-25</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2021/07/14/ubuntu%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="http://fuyi.fun/categories/ubuntu">
-                        Ubuntu
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2021/07/14/ubuntu%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/" class="title">Ubuntu网络配置</a></p>
-                    <p class="item-date">
-                        <time datetime="2021-07-14 13:44:05 &#43;0800 CST" itemprop="datePublished">2021-07-14</time>
                     </p>
                 </div>
             </li>

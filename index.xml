@@ -6,7 +6,19 @@
     <description>Recent content on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 25 Nov 2021 11:39:26 +0800</lastBuildDate><atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Apr 2022 20:26:01 +0800</lastBuildDate><atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fedora从命令行启动</title>
+      <link>http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/</link>
+      <pubDate>Fri, 08 Apr 2022 20:26:01 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/</guid>
+      <description>Fedora 从命令行启动
+一、实现代码 删除目标链接并创建新的符号链接 （1）从命令行启动
+ln-sf /lib/systemd/system/multi-user.target /etc/systemd/system/default. target （2）从图形界面启动
+ln-sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target 二、代码解释 ln命令：是一个在文件之间建立链接的命令，默认情况是硬链接（hard link），我们要用的是符号链接（symboli link），它可以为在不同文件系统中文件创建链接。 Options：-s 创建符号链接 -f 删除已经存在的同名链接 oneof the Usages：ln [被链接目标] [链接文件或目录] Example：ln -s xx yy 为xx创建一个符号链接yy</description>
+    </item>
+    
     <item>
       <title>功率与dbm的对照表 </title>
       <link>http://fuyi.fun/2021/11/25/%E5%8A%9F%E7%8E%87%E4%B8%8Edbm%E7%9A%84%E5%AF%B9%E7%85%A7%E8%A1%A8/</link>

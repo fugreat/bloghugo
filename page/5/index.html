@@ -160,7 +160,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        57
+        58
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -241,6 +241,143 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2020/11/12/rt-thread_%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97/">
+    <h1 class="article-title" itemprop="name">
+        RT-Thread_编程指南
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-11-12 09:25:45 &#43;0800 CST" itemprop="datePublished">2020-11-12</time>
+            &middot;
+            88
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/categories/%E6%8A%80%E6%9C%AF">技术</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                RT-Thread 编程指南 https://www.rt-thread.org/document/site/programming-manual/basic/basic/
+ 内核架构： 实时内核的实现包括：对象管理、线程管理及调度器、线程间通信管理、时钟管理及内存管理等等，内核最小的资源占用情况是 3KB ROM，1.2KB RAM。
+ RT-Thread 启动流程 RT-Thread 支持多种平台和多种编译器，而 rtthread_startup() 函数是 RT-Thread 规定的统一启动入口。 一般执行顺序是：
+系统先从启动文件开始运行， 然后进入 RT-Thread 的启动 rtthread_startup() ，
+最后进入用户入口 main()，如下图所示：  启动代码
+int rtthread_startup(void) {  rt_hw_interrupt_disable();   /* 板级初始化：需在该函数内部进行系统堆的初始化 */  rt_hw_board_init();   /* 打印 RT-Thread 版本信息 */  rt_show_version();   /* 定时器初始化 */  rt_system_timer_init();   /* 调度器初始化 */  rt_system_scheduler_init();  #ifdef RT_USING_SIGNALS  /* 信号初始化 */  rt_system_signal_init(); #endif   /* 由此创建一个用户 main 线程 */  rt_application_init();   /* 定时器线程初始化 */  rt_system_timer_thread_init();   /* 空闲线程初始化 */  rt_thread_idle_init();   /* 启动调度器 */  rt_system_scheduler_start();   /* 不会执行至此 */  return 0; } 大致可以分为四个部分：
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2020/11/12/rt-thread_%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2020/11/12/rt-thread_%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97/" data-id="c299948645c31d2b8d544d6b76e0e2c6" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1582,156 +1719,6 @@ MacOS下搭建开发环境 https://docs.espressif.com/projects/esp-idf/zh_CN/sta
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2020/11/11/homebrew-%E5%91%BD%E4%BB%A4%E8%BF%81%E7%A7%BB%E5%88%B0%E6%96%B0%E7%94%B5%E8%84%91/">
-    <h1 class="article-title" itemprop="name">
-        Homebrew 命令迁移到新电脑 
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2020-11-11 10:41:08 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
-            &middot;
-            14
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/categories/macos">macOS</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/macos">macOS</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/homebrew">homebrew</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                这里的备份不是简单把这些安装包备份到硬盘，而是备份安装安装了哪些命令行，安装的时候用了什么选项。
-homebrew为我们提供了非常方便的子命令：bundle
- brew bundle dump
-首次执行上面这条命令，将会自动tap homebrew/bundle， 然后将以往安装的命令以及安装的命令行选项保存在当前的路径下的Brewfile。 用编辑器打开来看其实就是一个脚本包含了所有已经安装的命令行以及相应的选项。 你要备份的文件就是这个Brewfile
-在全新的macOS上想要恢复的话，就使用该Brewfile. brew bundle
-该命令会在当前文件夹下寻找Brewfile文件然后开始执行。
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2020/11/11/homebrew-%E5%91%BD%E4%BB%A4%E8%BF%81%E7%A7%BB%E5%88%B0%E6%96%B0%E7%94%B5%E8%84%91/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/11/11/homebrew-%E5%91%BD%E4%BB%A4%E8%BF%81%E7%A7%BB%E5%88%B0%E6%96%B0%E7%94%B5%E8%84%91/" data-id="3a7745e83b56ff71816fc2b5c6d0e80e" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1761,6 +1748,25 @@ homebrew为我们提供了非常方便的子命令：bundle
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/" class="title">Fedora从命令行启动</a></p>
+                    <p class="item-date">
+                        <time datetime="2022-04-08 20:26:01 &#43;0800 CST" itemprop="datePublished">2022-04-08</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1834,32 +1840,6 @@ homebrew为我们提供了非常方便的子命令：bundle
                     <p class="item-title"><a href="http://fuyi.fun/2021/11/25/iot%E5%AE%89%E5%85%A8%E6%A0%87%E5%87%86/" class="title">IOT安全标准</a></p>
                     <p class="item-date">
                         <time datetime="2021-11-25 11:32:20 &#43;0800 CST" itemprop="datePublished">2021-11-25</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2021/07/14/ubuntu%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="http://fuyi.fun/categories/ubuntu">
-                        Ubuntu
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2021/07/14/ubuntu%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/" class="title">Ubuntu网络配置</a></p>
-                    <p class="item-date">
-                        <time datetime="2021-07-14 13:44:05 &#43;0800 CST" itemprop="datePublished">2021-07-14</time>
                     </p>
                 </div>
             </li>

@@ -160,7 +160,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        58
+        59
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -241,6 +241,130 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2022/05/06/ubuntn%E6%9B%B4%E6%96%B0gcc%E6%94%AF%E6%8C%81c-17/">
+    <h1 class="article-title" itemprop="name">
+        Ubuntn更新gcc支持C&#43;&#43;17
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2022-05-06 09:30:28 &#43;0800 CST" itemprop="datePublished">2022-05-06</time>
+            &middot;
+            17
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                ubuntn 更新gcc 支持 C++ 17 https://askubuntu.com/questions/1256440/how-to-get-libstdc-with-c17-filesystem-headers-on-ubuntu-18-bionic
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test sudo apt update sudo apt install gcc-9 g++-9 
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2022/05/06/ubuntn%E6%9B%B4%E6%96%B0gcc%E6%94%AF%E6%8C%81c-17/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2022/05/06/ubuntn%E6%9B%B4%E6%96%B0gcc%E6%94%AF%E6%8C%81c-17/" data-id="e86a10e016c71a21fd5798c8e95773b5" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1450,148 +1574,6 @@ Ctrl + q 退出
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2021/03/24/ubuntu%E5%A2%9E%E5%8A%A0sudo%E6%9D%83%E9%99%90/">
-    <h1 class="article-title" itemprop="name">
-        Ubuntu增加sudo权限
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2021-03-24 12:08:50 &#43;0800 CST" itemprop="datePublished">2021-03-24</time>
-            &middot;
-            33
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/categories/ubuntu">Ubuntu</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                ubuntu 增加sudoer
-https://www.cnblogs.com/jiangz/p/4183461.html
-方法一、使用usermod命令
-新增user
-sudo adduser username
-增加sudo权限
-sudo usermod -aG sudo username
-sudo usermod -aG sudo 方法二、修改/etc/sudoers文件
-修改文件前先开通root
-具体方法是：Ubuntu技巧之 is not in the sudoers file解决方法_Linux教程_Linux公社-Linux系统门户网站
-修改文件前先开通root，如果没看通，问题很严重。就是修改了/etc/sudoer权限之后再改不回去了，导致当前用户的sudo权限也没有了，需要进入 recovery模式修复。见ubuntu手贱改了sudoers权限之后的恢复 - piaomiao1314 - 博客园
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2021/03/24/ubuntu%E5%A2%9E%E5%8A%A0sudo%E6%9D%83%E9%99%90/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2021/03/24/ubuntu%E5%A2%9E%E5%8A%A0sudo%E6%9D%83%E9%99%90/" data-id="066eeae920920cd1f437db371b15d89d" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1617,6 +1599,25 @@ sudo usermod -aG sudo 方法二、修改/etc/sudoers文件
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2022/05/06/ubuntn%E6%9B%B4%E6%96%B0gcc%E6%94%AF%E6%8C%81c-17/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2022/05/06/ubuntn%E6%9B%B4%E6%96%B0gcc%E6%94%AF%E6%8C%81c-17/" class="title">Ubuntn更新gcc支持C&#43;&#43;17</a></p>
+                    <p class="item-date">
+                        <time datetime="2022-05-06 09:30:28 &#43;0800 CST" itemprop="datePublished">2022-05-06</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1690,25 +1691,6 @@ sudo usermod -aG sudo 方法二、修改/etc/sudoers文件
                     <p class="item-title"><a href="http://fuyi.fun/2021/11/25/win10%E4%B8%8B%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/" class="title">Win10下自动运行脚本</a></p>
                     <p class="item-date">
                         <time datetime="2021-11-25 11:34:17 &#43;0800 CST" itemprop="datePublished">2021-11-25</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2021/11/25/iot%E5%AE%89%E5%85%A8%E6%A0%87%E5%87%86/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2021/11/25/iot%E5%AE%89%E5%85%A8%E6%A0%87%E5%87%86/" class="title">IOT安全标准</a></p>
-                    <p class="item-date">
-                        <time datetime="2021-11-25 11:32:20 &#43;0800 CST" itemprop="datePublished">2021-11-25</time>
                     </p>
                 </div>
             </li>

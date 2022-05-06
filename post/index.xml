@@ -6,7 +6,17 @@
     <description>Recent content in Posts on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 08 Apr 2022 20:26:01 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 May 2022 09:30:28 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntn更新gcc支持C&#43;&#43;17</title>
+      <link>http://fuyi.fun/2022/05/06/ubuntn%E6%9B%B4%E6%96%B0gcc%E6%94%AF%E6%8C%81c-17/</link>
+      <pubDate>Fri, 06 May 2022 09:30:28 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2022/05/06/ubuntn%E6%9B%B4%E6%96%B0gcc%E6%94%AF%E6%8C%81c-17/</guid>
+      <description>ubuntn 更新gcc 支持 C++ 17 https://askubuntu.com/questions/1256440/how-to-get-libstdc-with-c17-filesystem-headers-on-ubuntu-18-bionic
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test sudo apt update sudo apt install gcc-9 g++-9 </description>
+    </item>
+    
     <item>
       <title>Fedora从命令行启动</title>
       <link>http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/</link>

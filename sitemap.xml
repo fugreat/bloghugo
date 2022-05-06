@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/</loc>
-    <lastmod>2022-04-08T20:26:01+08:00</lastmod>
-  </url><url>
     <loc>http://fuyi.fun/post/</loc>
-    <lastmod>2022-04-08T20:26:01+08:00</lastmod>
+    <lastmod>2022-05-06T09:30:28+08:00</lastmod>
+  </url><url>
+    <loc>http://fuyi.fun/2022/05/06/ubuntn%E6%9B%B4%E6%96%B0gcc%E6%94%AF%E6%8C%81c-17/</loc>
+    <lastmod>2022-05-06T09:30:28+08:00</lastmod>
   </url><url>
     <loc>http://fuyi.fun/</loc>
+    <lastmod>2022-05-06T09:30:28+08:00</lastmod>
+  </url><url>
+    <loc>http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/</loc>
     <lastmod>2022-04-08T20:26:01+08:00</lastmod>
   </url><url>
     <loc>http://fuyi.fun/2021/11/25/%E5%8A%9F%E7%8E%87%E4%B8%8Edbm%E7%9A%84%E5%AF%B9%E7%85%A7%E8%A1%A8/</loc>

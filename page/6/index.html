@@ -160,7 +160,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        59
+        60
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -241,6 +241,147 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2020/11/11/float_to_hex/">
+    <h1 class="article-title" itemprop="name">
+        Float_to_hex
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-11-11 10:46:35 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
+            &middot;
+            3
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F">嵌入式</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/tool">tool</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                浮点转hex 在线: https://www.h-schmidt.net/FloatConverter/IEEE754.html
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2020/11/11/float_to_hex/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2020/11/11/float_to_hex/" data-id="ea14d5826c43fc316f87f7cc95675368" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1529,6 +1670,25 @@ docker pull amyhre/docuwiki
             
             <li>
                 <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2022/12/01/%E9%98%B2%E7%88%86%E7%AD%89%E7%BA%A7/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2022/12/01/%E9%98%B2%E7%88%86%E7%AD%89%E7%BA%A7/" class="title">防爆等级</a></p>
+                    <p class="item-date">
+                        <time datetime="2022-12-01 09:47:37 &#43;0800 CST" itemprop="datePublished">2022-12-01</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
                     <a href="http://fuyi.fun/2022/05/06/ubuntn%E6%9B%B4%E6%96%B0gcc%E6%94%AF%E6%8C%81c-17/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
@@ -1599,25 +1759,6 @@ docker pull amyhre/docuwiki
                     <p class="item-title"><a href="http://fuyi.fun/2021/11/25/docker%E5%8E%BB%E6%8E%89sudo/" class="title">Docker去掉sudo</a></p>
                     <p class="item-date">
                         <time datetime="2021-11-25 11:36:29 &#43;0800 CST" itemprop="datePublished">2021-11-25</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2021/11/25/win10%E4%B8%8B%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2021/11/25/win10%E4%B8%8B%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/" class="title">Win10下自动运行脚本</a></p>
-                    <p class="item-date">
-                        <time datetime="2021-11-25 11:34:17 &#43;0800 CST" itemprop="datePublished">2021-11-25</time>
                     </p>
                 </div>
             </li>

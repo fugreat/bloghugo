@@ -160,7 +160,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        59
+        60
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -241,6 +241,160 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2020/11/13/%E6%9C%AC%E5%AE%89%E7%94%B5%E6%BA%90%E5%88%86%E6%9E%90/">
+    <h1 class="article-title" itemprop="name">
+        本安电源分析
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-11-13 09:12:35 &#43;0800 CST" itemprop="datePublished">2020-11-13</time>
+            &middot;
+            6
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/categories/%E7%A1%AC%E4%BB%B6">硬件</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/%E7%94%B5%E8%B7%AF">电路</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/%E6%9C%AC%E5%AE%89">本安</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/%E5%88%86%E6%9E%90">分析</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                本安电路电源分析
+1、电芯输出端保险丝F3、限流电阻R16是短路保护和限制短路电流的器件，是必须要用的。
+2、R7、Q7、Q3、R9、D3是过电流保护，电流通过取样电阻R7两端的压降来调节Q7的导通角，从而使Q3的基极电压高低变化，使得通过Q3的负载电流得到控制；同理R8、Q8、Q4、R10、D4功能完全一样，只不过是与前面的一组过电流保护串联在电路中。
+3、U2与电阻R12、R14组成输出稳压电路，即使电芯电压波动也能保证负载上的电压恒定。
+4、因为是本安电源，必须做二次保护验证的，上面回复的第二点中就是为了满足这个要求。认证过程是当短接Q3时还有Q4正常做过电流保护，当短接Q4时则有Q3正常做过电流保护，且无论短接Q3还是Q4必须保证电流保护的动作值是完全一样的。
+5、因为是本安电源，R16是必须有的，当做短路验证时，就由这个保证短路电流符合认证要求的。
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2020/11/13/%E6%9C%AC%E5%AE%89%E7%94%B5%E6%BA%90%E5%88%86%E6%9E%90/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2020/11/13/%E6%9C%AC%E5%AE%89%E7%94%B5%E6%BA%90%E5%88%86%E6%9E%90/" data-id="da2db8b24336f7e762cbd7bf069a079a" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1567,147 +1721,6 @@ LED电流和光强: 设备结构: 论文全文: 基于双窄带LED光源的红�
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2020/11/11/float_to_hex/">
-    <h1 class="article-title" itemprop="name">
-        Float_to_hex
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2020-11-11 10:46:35 &#43;0800 CST" itemprop="datePublished">2020-11-11</time>
-            &middot;
-            3
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F">嵌入式</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/tool">tool</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                浮点转hex 在线: https://www.h-schmidt.net/FloatConverter/IEEE754.html
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2020/11/11/float_to_hex/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/11/11/float_to_hex/" data-id="ea14d5826c43fc316f87f7cc95675368" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1737,6 +1750,25 @@ LED电流和光强: 设备结构: 论文全文: 基于双窄带LED光源的红�
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2022/12/01/%E9%98%B2%E7%88%86%E7%AD%89%E7%BA%A7/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2022/12/01/%E9%98%B2%E7%88%86%E7%AD%89%E7%BA%A7/" class="title">防爆等级</a></p>
+                    <p class="item-date">
+                        <time datetime="2022-12-01 09:47:37 &#43;0800 CST" itemprop="datePublished">2022-12-01</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1810,25 +1842,6 @@ LED电流和光强: 设备结构: 论文全文: 基于双窄带LED光源的红�
                     <p class="item-title"><a href="http://fuyi.fun/2021/11/25/docker%E5%8E%BB%E6%8E%89sudo/" class="title">Docker去掉sudo</a></p>
                     <p class="item-date">
                         <time datetime="2021-11-25 11:36:29 &#43;0800 CST" itemprop="datePublished">2021-11-25</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2021/11/25/win10%E4%B8%8B%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2021/11/25/win10%E4%B8%8B%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/" class="title">Win10下自动运行脚本</a></p>
-                    <p class="item-date">
-                        <time datetime="2021-11-25 11:34:17 &#43;0800 CST" itemprop="datePublished">2021-11-25</time>
                     </p>
                 </div>
             </li>

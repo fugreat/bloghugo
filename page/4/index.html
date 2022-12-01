@@ -160,7 +160,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        59
+        60
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -241,6 +241,154 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2021/01/08/modbus-%E7%9B%B8%E5%85%B3%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+    <h1 class="article-title" itemprop="name">
+        Modbus 相关的基本概念
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2021-01-08 09:49:01 &#43;0800 CST" itemprop="datePublished">2021-01-08</time>
+            &middot;
+            37
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/categories/%E6%8A%80%E6%9C%AF">技术</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/modbus">modbus</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                变量 Coil是bit变量； Register是整形16bit变量；
+四种数据类型：    名称 变量类型 读写     Discretes Input 位变量 只读   Coils 位变量 读写   Input Registers 16-bit整型 只读   Holding Registers 16-bit整型 读写     线圈状态(coil)， 离散输入状态(discrete) 保持寄存器(holding) 输入寄存器(input)。
+这四种寄存器的分类有其历史原因。
+因为Modbus起源于PLC通信，而PLC是基于非易失性存储介质的，所以使用了coil和holding来表示PLC内部的非易失性变量， 使用了discrete和input来表示PLC外界的信号。 但现在的系统，其寄存器基本都是掉电丢失的，无论使用哪个来称呼这些寄存器，都会感到有些困惑。
+保守的做法，是利用自定义命令来读写这些易失性寄存器，但是这样做会丧失通用性，而且很多现成的移植也失效了。 更方便的方法还是按读写能力来分类， 单纯地将coil和holding理解为可读写寄存器，
+而把discrete和input理解为协议里的只读寄存器。
+Modbus协议的coil和discrete，针对的是位寄存器；holding和input，针对的是16位寄存器。但这两者也是模糊的。光靠coil和discrete，或者光靠holding和input，其实都已足够。两套方法都可以用，让我这种选择困难患者感觉很难取舍。我最后的方案是，不管什么寄存器，全用holding和input。
+【参考文档】：Modbus总结 【参考文档】:移植Modbus到STM32F103
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2021/01/08/modbus-%E7%9B%B8%E5%85%B3%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2021/01/08/modbus-%E7%9B%B8%E5%85%B3%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" data-id="44a3348a9cbb1751440b428e138afdc8" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1588,160 +1736,6 @@ macOS支持不好；
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2020/11/13/%E6%9C%AC%E5%AE%89%E7%94%B5%E6%BA%90%E5%88%86%E6%9E%90/">
-    <h1 class="article-title" itemprop="name">
-        本安电源分析
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2020-11-13 09:12:35 &#43;0800 CST" itemprop="datePublished">2020-11-13</time>
-            &middot;
-            6
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/categories/%E7%A1%AC%E4%BB%B6">硬件</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E7%94%B5%E8%B7%AF">电路</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E6%9C%AC%E5%AE%89">本安</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E5%88%86%E6%9E%90">分析</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                本安电路电源分析
-1、电芯输出端保险丝F3、限流电阻R16是短路保护和限制短路电流的器件，是必须要用的。
-2、R7、Q7、Q3、R9、D3是过电流保护，电流通过取样电阻R7两端的压降来调节Q7的导通角，从而使Q3的基极电压高低变化，使得通过Q3的负载电流得到控制；同理R8、Q8、Q4、R10、D4功能完全一样，只不过是与前面的一组过电流保护串联在电路中。
-3、U2与电阻R12、R14组成输出稳压电路，即使电芯电压波动也能保证负载上的电压恒定。
-4、因为是本安电源，必须做二次保护验证的，上面回复的第二点中就是为了满足这个要求。认证过程是当短接Q3时还有Q4正常做过电流保护，当短接Q4时则有Q3正常做过电流保护，且无论短接Q3还是Q4必须保证电流保护的动作值是完全一样的。
-5、因为是本安电源，R16是必须有的，当做短路验证时，就由这个保证短路电流符合认证要求的。
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2020/11/13/%E6%9C%AC%E5%AE%89%E7%94%B5%E6%BA%90%E5%88%86%E6%9E%90/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/11/13/%E6%9C%AC%E5%AE%89%E7%94%B5%E6%BA%90%E5%88%86%E6%9E%90/" data-id="da2db8b24336f7e762cbd7bf069a079a" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1771,6 +1765,25 @@ macOS支持不好；
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2022/12/01/%E9%98%B2%E7%88%86%E7%AD%89%E7%BA%A7/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2022/12/01/%E9%98%B2%E7%88%86%E7%AD%89%E7%BA%A7/" class="title">防爆等级</a></p>
+                    <p class="item-date">
+                        <time datetime="2022-12-01 09:47:37 &#43;0800 CST" itemprop="datePublished">2022-12-01</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1844,25 +1857,6 @@ macOS支持不好；
                     <p class="item-title"><a href="http://fuyi.fun/2021/11/25/docker%E5%8E%BB%E6%8E%89sudo/" class="title">Docker去掉sudo</a></p>
                     <p class="item-date">
                         <time datetime="2021-11-25 11:36:29 &#43;0800 CST" itemprop="datePublished">2021-11-25</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2021/11/25/win10%E4%B8%8B%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2021/11/25/win10%E4%B8%8B%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/" class="title">Win10下自动运行脚本</a></p>
-                    <p class="item-date">
-                        <time datetime="2021-11-25 11:34:17 &#43;0800 CST" itemprop="datePublished">2021-11-25</time>
                     </p>
                 </div>
             </li>

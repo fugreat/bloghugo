@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>在nrf52中增加自定义服务 &middot; 小夫子的随笔</title>
+    <title>小夫子的随笔</title>
     <meta name="generator" content="Hugo 0.94.2" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,10 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="http://fuyi.fun/2021/01/27/%E5%9C%A8nrf52%E4%B8%AD%E5%A2%9E%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/"/>
+      <link href="/index.xml" rel="alternate" type="application/rss+xml" title="小夫子的随笔" />
+      <link href="/index.xml" rel="feed" type="application/rss+xml" title="小夫子的随笔" />
+    
+    <link rel="canonical" href="http://fuyi.fun/"/>
     <link rel="icon" href="http://fuyi.fun/favicon.ico">
     <link rel="apple-touch-icon" href="http://fuyi.fun/apple-touch-icon.png"/>
     <link rel="stylesheet" href="http://fuyi.fun/css/style.css">
@@ -20,26 +23,18 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="在nrf52中增加自定义服务" />
-<meta property="og:description" content="在nrf52中增加自定义服务 官方教程写的很详细：
-https://github.com/NordicPlayground/nRF5x-custom-ble-service-tutorial" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://fuyi.fun/2021/01/27/%E5%9C%A8nrf52%E4%B8%AD%E5%A2%9E%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-01-27T13:30:09+08:00" />
-<meta property="article:modified_time" content="2021-01-27T13:30:09+08:00" />
+    <meta property="og:title" content="小夫子的随笔" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://fuyi.fun/" />
 
 
     
-    <meta itemprop="name" content="在nrf52中增加自定义服务">
-<meta itemprop="description" content="在nrf52中增加自定义服务 官方教程写的很详细：
-https://github.com/NordicPlayground/nRF5x-custom-ble-service-tutorial"><meta itemprop="datePublished" content="2021-01-27T13:30:09+08:00" />
-<meta itemprop="dateModified" content="2021-01-27T13:30:09+08:00" />
-<meta itemprop="wordCount" content="3">
-<meta itemprop="keywords" content="" />
+    <meta itemprop="name" content="小夫子的随笔">
+<meta itemprop="description" content="">
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="在nrf52中增加自定义服务"/>
-<meta name="twitter:description" content="在nrf52中增加自定义服务 官方教程写的很详细：
-https://github.com/NordicPlayground/nRF5x-custom-ble-service-tutorial"/>
+<meta name="twitter:title" content="小夫子的随笔"/>
+<meta name="twitter:description" content=""/>
 
     
 
@@ -245,14 +240,17 @@ https://github.com/NordicPlayground/nRF5x-custom-ble-service-tutorial"/>
 
     <section id="main">
     
-    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
+        </a>
 
         <header class="article-header">
-    <a href="http://fuyi.fun/2021/01/27/%E5%9C%A8nrf52%E4%B8%AD%E5%A2%9E%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/">
+    <a href="http://fuyi.fun/1/01/01/">
     <h1 class="article-title" itemprop="name">
-        在nrf52中增加自定义服务
+        
     </h1>
     </a>
     <div class="article-meta">
@@ -260,9 +258,9 @@ https://github.com/NordicPlayground/nRF5x-custom-ble-service-tutorial"/>
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2021-01-27 13:30:09 &#43;0800 CST" itemprop="datePublished">2021-01-27</time>
+            <time datetime="0001-01-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">0001-01-01</time>
             &middot;
-            3
+            39
             words
             &middot;
             1
@@ -270,34 +268,27 @@ https://github.com/NordicPlayground/nRF5x-custom-ble-service-tutorial"/>
         </div>
         
         
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/categories/%E8%93%9D%E7%89%99">蓝牙</a>
-                
-                
-            </div>
-            
-        
 
-        
-            
-            
         
     </div>
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="在nrf52中增加自定义服务">在nrf52中增加自定义服务</h1>
-<p>官方教程写的很详细：</p>
-<p><a href="https://github.com/NordicPlayground/nRF5x-custom-ble-service-tutorial">https://github.com/NordicPlayground/nRF5x-custom-ble-service-tutorial</a></p>
-
+            <p>
+                i&mdash; title: &ldquo;Docker加sudo&rdquo; date: 2021-01-14T21:00:23+08:00 draft: false banner : &quot;&quot; categories : [&ldquo;技术&rdquo;] description : &quot;&quot; menu : &quot;&quot; tags : [&ldquo;docker&rdquo;, &ldquo;sudo&rdquo;] docker加sudo
+1.创建docker组：sudo groupadd docker
+2.将当前用户加入docker组：sudo gpasswd -a ${USER} docker
+3.重启服务：sudo service docker restart
+4.刷新docker成员：newgrp - docker
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/1/01/01/">
+                    阅读更多
+                </a>
+            </p>
         </div>
         <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2021/01/27/%E5%9C%A8nrf52%E4%B8%AD%E5%A2%9E%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/" data-id="8cc6540212c08be37f36aeb7f8acda28" class="article-share-link">
+    <a data-url="http://fuyi.fun/1/01/01/" data-id="b0ba51f78898d2abbc6bab00b1051fe9" class="article-share-link">
         <i class="fa fa-share"></i>
         分享
     </a>
@@ -370,30 +361,19 @@ https://github.com/NordicPlayground/nRF5x-custom-ble-service-tutorial"/>
 </footer>
 
     </div>
-
-    
-<nav id="article-nav">
-    
-    <a href="http://fuyi.fun/2021/01/27/%E8%93%9D%E7%89%99%E5%AE%98%E7%BD%91%E7%94%9F%E6%88%90%E8%93%9D%E7%89%99%E6%9C%8D%E5%8A%A1%E7%9A%84uuid/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">
-          上一个
-      </strong>
-      <div class="article-nav-title">蓝牙官网生成蓝牙服务的uuid</div>
-    </a>
-    
-
-    
-    <a href="http://fuyi.fun/2021/02/23/ubuntu%E4%B8%8B%E9%83%A8%E7%BD%B2jar/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">
-          下一个
-      </strong>
-      <div class="article-nav-title">Ubuntu下部署jar</div>
-    </a>
-    
-</nav>
-
-
 </article>
+
+
+<nav id="page-nav">
+
+    
+        <a class="extend prev" rel="prev" href="http://fuyi.fun/page/6/">
+            « 前一页
+        </a>
+    
+    
+
+</nav>
 
 
 

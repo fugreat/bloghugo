@@ -160,7 +160,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        63
+        64
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -241,6 +241,157 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2021/01/27/%E8%93%9D%E7%89%99%E5%AE%98%E7%BD%91%E7%94%9F%E6%88%90%E8%93%9D%E7%89%99%E6%9C%8D%E5%8A%A1%E7%9A%84uuid/">
+    <h1 class="article-title" itemprop="name">
+        蓝牙官网生成蓝牙服务的uuid
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2021-01-27 08:54:18 &#43;0800 CST" itemprop="datePublished">2021-01-27</time>
+            &middot;
+            113
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/categories/%E6%8A%80%E6%9C%AF">技术</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/ble">ble</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/uuid">uuid</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                蓝牙如何申请厂商UUID
+参考论坛： https://devzone.nordicsemi.com/f/nordic-q-a/7260/how-to-acquire-a-vendor-base-uuid/25668#25668
+建议用此处工具生成UUID
+不需要注册和付费
+Bluetooth SIG recommends you to just use the tool found here to generate your UUID. It is extremely unlikely that you will generate a UUID that collides with some other company, so you are not required to register or pay for it. I am not not even sure the SIG even gives you the option to register it at the moment.
+生成UUID的国际组织： https://www.itu.int/en/ITU-T/asn1/Pages/UUID/uuids.aspx
+生成UUID的界面： https://www.itu.int/en/ITU-T/asn1/Pages/UUID/generate_uuid.aspx
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2021/01/27/%E8%93%9D%E7%89%99%E5%AE%98%E7%BD%91%E7%94%9F%E6%88%90%E8%93%9D%E7%89%99%E6%9C%8D%E5%8A%A1%E7%9A%84uuid/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2021/01/27/%E8%93%9D%E7%89%99%E5%AE%98%E7%BD%91%E7%94%9F%E6%88%90%E8%93%9D%E7%89%99%E6%9C%8D%E5%8A%A1%E7%9A%84uuid/" data-id="d0843963edd9bfbe76c0a96b98172690" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1585,149 +1736,6 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清�
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/">
-    <h1 class="article-title" itemprop="name">
-        MacOS安装nrfutil
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2020-11-26 11:09:19 &#43;0800 CST" itemprop="datePublished">2020-11-26</time>
-            &middot;
-            181
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/categories/%E8%93%9D%E7%89%99">蓝牙</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/nordic">nordic</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                参考：https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_nrfutil%2FUG%2Fnrfutil%2Fnrfutil_intro.html
-pip install nrfutil macOS: pip install --ignore-installed six nrfutil ～～～～～～～～～～～～～
-Installing from PyPI nRF Util is available as a package in the Python Package Index (PyPI) and can be downloaded and installed directly using the Python installer program pip. Enter the following command to install the latest published version from PyPI: pip install nrfutil This command installs nRF Util and all required packages. When installing on macOS, you might get an error about the Python module six.
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/11/26/macos%E5%AE%89%E8%A3%85nrfutil/" data-id="c51f77ab24348d9c9aa33fc99d9bd786" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1757,6 +1765,25 @@ Installing from PyPI nRF Util is available as a package in the Python Package In
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2022/12/01/ubuntu%E5%BC%80%E5%90%AFcrontab%E6%97%A5%E5%BF%97/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2022/12/01/ubuntu%E5%BC%80%E5%90%AFcrontab%E6%97%A5%E5%BF%97/" class="title">Ubuntu开启crontab日志</a></p>
+                    <p class="item-date">
+                        <time datetime="2022-12-01 10:19:26 &#43;0800 CST" itemprop="datePublished">2022-12-01</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1830,25 +1857,6 @@ Installing from PyPI nRF Util is available as a package in the Python Package In
                     <p class="item-title"><a href="http://fuyi.fun/2022/12/01/%E9%98%B2%E7%88%86%E7%AD%89%E7%BA%A7/" class="title">防爆等级</a></p>
                     <p class="item-date">
                         <time datetime="2022-12-01 09:47:37 &#43;0800 CST" itemprop="datePublished">2022-12-01</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2022/05/06/ubuntn%E6%9B%B4%E6%96%B0gcc%E6%94%AF%E6%8C%81c-17/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2022/05/06/ubuntn%E6%9B%B4%E6%96%B0gcc%E6%94%AF%E6%8C%81c-17/" class="title">Ubuntn更新gcc支持C&#43;&#43;17</a></p>
-                    <p class="item-date">
-                        <time datetime="2022-05-06 09:30:28 &#43;0800 CST" itemprop="datePublished">2022-05-06</time>
                     </p>
                 </div>
             </li>

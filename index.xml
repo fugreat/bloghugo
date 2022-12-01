@@ -6,7 +6,19 @@
     <description>Recent content on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 01 Dec 2022 09:57:03 +0800</lastBuildDate><atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Dec 2022 10:19:26 +0800</lastBuildDate><atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu开启crontab日志</title>
+      <link>http://fuyi.fun/2022/12/01/ubuntu%E5%BC%80%E5%90%AFcrontab%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Thu, 01 Dec 2022 10:19:26 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2022/12/01/ubuntu%E5%BC%80%E5%90%AFcrontab%E6%97%A5%E5%BF%97/</guid>
+      <description>Ubuntu 开启crontab 日志
+https://blog.csdn.net/a772304419/article/details/125656991
+Ubuntu系统默认是不打开cron日志的，在cd 到/var/log目录下是找不到cron.log文件 可以通过sudo gedit /etc/rsyslog.d/50-default.conf
+sudo vi /etc/rsyslog.d/50-default.conf</description>
+    </item>
+    
     <item>
       <title>Seafile迁移</title>
       <link>http://fuyi.fun/2022/12/01/seafile%E8%BF%81%E7%A7%BB/</link>

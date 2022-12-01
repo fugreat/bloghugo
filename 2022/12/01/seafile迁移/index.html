@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>标准解读：GBT9969 2008工业产品使用说明书 &middot; 小夫子的随笔</title>
+    <title>Seafile迁移 &middot; 小夫子的随笔</title>
     <meta name="generator" content="Hugo 0.94.2" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="http://fuyi.fun/2020/12/16/%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BBgbt9969-2008%E5%B7%A5%E4%B8%9A%E4%BA%A7%E5%93%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
+    <link rel="canonical" href="http://fuyi.fun/2022/12/01/seafile%E8%BF%81%E7%A7%BB/"/>
     <link rel="icon" href="http://fuyi.fun/favicon.ico">
     <link rel="apple-touch-icon" href="http://fuyi.fun/apple-touch-icon.png"/>
     <link rel="stylesheet" href="http://fuyi.fun/css/style.css">
@@ -20,65 +20,41 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="标准解读：GBT9969 2008工业产品使用说明书" />
-<meta property="og:description" content="标准解读：GBT9969-2008工业产品使用说明书、总则
-文档链接：GBT9969-2008
-基本要求  说明书内容 产品用途和使用范围 根据产品特点给出： 主要结构、性能、型号、规格 吊运、安装、使用、操作、维修、保养、贮存；   应提供：必要的环保和节约能源方面的内容； 易燃易爆有毒有腐蚀有放射性的产品，说明书应包含注意事项、防护措施和发生意外时的紧急处理方法； 对于安全限制有要求或存在有效年限的产品应提供产品上的生产日期和有效期； 实行生产许可证管理的产品，应在包装上标注有效的生产许可证编号；  模版 概述
-安全使用注意事项
-结构特征与工作原理
-技术特性
-尺寸重量
-安装、调整
-使用操作
-故障分析与排除
-安全保护装置与事故处理
-保养维护
-运输贮存
-开箱及检查 环保及其他
-图、表、照片" />
+    <meta property="og:title" content="Seafile迁移" />
+<meta property="og:description" content="seafile迁移 https://bbs.seafile.com/t/topic/10958
+官方文档：使用docker部署seafile： https://cloud.seafile.com/published/seafile-manual-cn/docker/用Docker部署Seafile.md
+还原数据文件 注意：docker教程中还原了conf、seafile-data、seahub-data三个文件，但是当环境不同时，conf是不能还原的，否则会page-unavailable。 docker的数据文件位置取决于你在docker-compose.yml中的配置，默认在/opt目录下有seafile-data、seafile-mysql两个文件夹， /opt/ ├── seafile-data │ ├── logs │ └── seafile │ ├── ccnet │ ├── conf │ ├── seafile-data │ └── seahub-data ├── seafile-mysql 我们要做的就是用备份的seafile-data、seahub-data替换掉/opt/seafile-data/seafile/下对应的两个文件夹 cp -r seafile-data /opt/seafile-data/seafile/ cp -r seahub-data /opt/seafile-data/seafile/
+docker导出镜像： https://blog.csdn.net/weixin_45963617/article/details/123771874
+Docker 容器导出 导入 一、docker容器的导出 docker export [options] container OPTIONS说明： -o表示输出的文件，这里指定了输出的路径，如果没有指定路径，则默认生成到当前文件夹。 示例1：docker export -o redis.tar.gz redis 或 docker export redis &gt; redis1.tar.gz 说明：将运行中的redis容器导出为redis.tar.gz包
+scp [参数] &lt;源地址（用户名@IP地址或主机名）&gt;:&lt;文件路径&gt; &lt;目的地址（用户名 @IP 地址或主机名）&gt;:&lt;文件路径&gt;
+二、docker容器的导入 从tar包导入内容为docker镜像 docker import [OPTIONS] file|URL|- [REPOSITORY[:TAG]] OPTIONS说明： -c :应用docker 指令创建镜像； -m :提交时的说明文字 示例1：docker import redis." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://fuyi.fun/2020/12/16/%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BBgbt9969-2008%E5%B7%A5%E4%B8%9A%E4%BA%A7%E5%93%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-12-16T09:00:08+08:00" />
-<meta property="article:modified_time" content="2020-12-16T09:00:08+08:00" />
+<meta property="og:url" content="http://fuyi.fun/2022/12/01/seafile%E8%BF%81%E7%A7%BB/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-12-01T09:57:03+08:00" />
+<meta property="article:modified_time" content="2022-12-01T09:57:03+08:00" />
 
 
     
-    <meta itemprop="name" content="标准解读：GBT9969 2008工业产品使用说明书">
-<meta itemprop="description" content="标准解读：GBT9969-2008工业产品使用说明书、总则
-文档链接：GBT9969-2008
-基本要求  说明书内容 产品用途和使用范围 根据产品特点给出： 主要结构、性能、型号、规格 吊运、安装、使用、操作、维修、保养、贮存；   应提供：必要的环保和节约能源方面的内容； 易燃易爆有毒有腐蚀有放射性的产品，说明书应包含注意事项、防护措施和发生意外时的紧急处理方法； 对于安全限制有要求或存在有效年限的产品应提供产品上的生产日期和有效期； 实行生产许可证管理的产品，应在包装上标注有效的生产许可证编号；  模版 概述
-安全使用注意事项
-结构特征与工作原理
-技术特性
-尺寸重量
-安装、调整
-使用操作
-故障分析与排除
-安全保护装置与事故处理
-保养维护
-运输贮存
-开箱及检查 环保及其他
-图、表、照片"><meta itemprop="datePublished" content="2020-12-16T09:00:08+08:00" />
-<meta itemprop="dateModified" content="2020-12-16T09:00:08+08:00" />
-<meta itemprop="wordCount" content="27">
-<meta itemprop="keywords" content="标准,国标,说明书," />
+    <meta itemprop="name" content="Seafile迁移">
+<meta itemprop="description" content="seafile迁移 https://bbs.seafile.com/t/topic/10958
+官方文档：使用docker部署seafile： https://cloud.seafile.com/published/seafile-manual-cn/docker/用Docker部署Seafile.md
+还原数据文件 注意：docker教程中还原了conf、seafile-data、seahub-data三个文件，但是当环境不同时，conf是不能还原的，否则会page-unavailable。 docker的数据文件位置取决于你在docker-compose.yml中的配置，默认在/opt目录下有seafile-data、seafile-mysql两个文件夹， /opt/ ├── seafile-data │ ├── logs │ └── seafile │ ├── ccnet │ ├── conf │ ├── seafile-data │ └── seahub-data ├── seafile-mysql 我们要做的就是用备份的seafile-data、seahub-data替换掉/opt/seafile-data/seafile/下对应的两个文件夹 cp -r seafile-data /opt/seafile-data/seafile/ cp -r seahub-data /opt/seafile-data/seafile/
+docker导出镜像： https://blog.csdn.net/weixin_45963617/article/details/123771874
+Docker 容器导出 导入 一、docker容器的导出 docker export [options] container OPTIONS说明： -o表示输出的文件，这里指定了输出的路径，如果没有指定路径，则默认生成到当前文件夹。 示例1：docker export -o redis.tar.gz redis 或 docker export redis &gt; redis1.tar.gz 说明：将运行中的redis容器导出为redis.tar.gz包
+scp [参数] &lt;源地址（用户名@IP地址或主机名）&gt;:&lt;文件路径&gt; &lt;目的地址（用户名 @IP 地址或主机名）&gt;:&lt;文件路径&gt;
+二、docker容器的导入 从tar包导入内容为docker镜像 docker import [OPTIONS] file|URL|- [REPOSITORY[:TAG]] OPTIONS说明： -c :应用docker 指令创建镜像； -m :提交时的说明文字 示例1：docker import redis."><meta itemprop="datePublished" content="2022-12-01T09:57:03+08:00" />
+<meta itemprop="dateModified" content="2022-12-01T09:57:03+08:00" />
+<meta itemprop="wordCount" content="126">
+<meta itemprop="keywords" content="" />
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="标准解读：GBT9969 2008工业产品使用说明书"/>
-<meta name="twitter:description" content="标准解读：GBT9969-2008工业产品使用说明书、总则
-文档链接：GBT9969-2008
-基本要求  说明书内容 产品用途和使用范围 根据产品特点给出： 主要结构、性能、型号、规格 吊运、安装、使用、操作、维修、保养、贮存；   应提供：必要的环保和节约能源方面的内容； 易燃易爆有毒有腐蚀有放射性的产品，说明书应包含注意事项、防护措施和发生意外时的紧急处理方法； 对于安全限制有要求或存在有效年限的产品应提供产品上的生产日期和有效期； 实行生产许可证管理的产品，应在包装上标注有效的生产许可证编号；  模版 概述
-安全使用注意事项
-结构特征与工作原理
-技术特性
-尺寸重量
-安装、调整
-使用操作
-故障分析与排除
-安全保护装置与事故处理
-保养维护
-运输贮存
-开箱及检查 环保及其他
-图、表、照片"/>
+<meta name="twitter:title" content="Seafile迁移"/>
+<meta name="twitter:description" content="seafile迁移 https://bbs.seafile.com/t/topic/10958
+官方文档：使用docker部署seafile： https://cloud.seafile.com/published/seafile-manual-cn/docker/用Docker部署Seafile.md
+还原数据文件 注意：docker教程中还原了conf、seafile-data、seahub-data三个文件，但是当环境不同时，conf是不能还原的，否则会page-unavailable。 docker的数据文件位置取决于你在docker-compose.yml中的配置，默认在/opt目录下有seafile-data、seafile-mysql两个文件夹， /opt/ ├── seafile-data │ ├── logs │ └── seafile │ ├── ccnet │ ├── conf │ ├── seafile-data │ └── seahub-data ├── seafile-mysql 我们要做的就是用备份的seafile-data、seahub-data替换掉/opt/seafile-data/seafile/下对应的两个文件夹 cp -r seafile-data /opt/seafile-data/seafile/ cp -r seahub-data /opt/seafile-data/seafile/
+docker导出镜像： https://blog.csdn.net/weixin_45963617/article/details/123771874
+Docker 容器导出 导入 一、docker容器的导出 docker export [options] container OPTIONS说明： -o表示输出的文件，这里指定了输出的路径，如果没有指定路径，则默认生成到当前文件夹。 示例1：docker export -o redis.tar.gz redis 或 docker export redis &gt; redis1.tar.gz 说明：将运行中的redis容器导出为redis.tar.gz包
+scp [参数] &lt;源地址（用户名@IP地址或主机名）&gt;:&lt;文件路径&gt; &lt;目的地址（用户名 @IP 地址或主机名）&gt;:&lt;文件路径&gt;
+二、docker容器的导入 从tar包导入内容为docker镜像 docker import [OPTIONS] file|URL|- [REPOSITORY[:TAG]] OPTIONS说明： -c :应用docker 指令创建镜像； -m :提交时的说明文字 示例1：docker import redis."/>
 
     
 
@@ -289,9 +265,9 @@
         
 
         <header class="article-header">
-    <a href="http://fuyi.fun/2020/12/16/%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BBgbt9969-2008%E5%B7%A5%E4%B8%9A%E4%BA%A7%E5%93%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6/">
+    <a href="http://fuyi.fun/2022/12/01/seafile%E8%BF%81%E7%A7%BB/">
     <h1 class="article-title" itemprop="name">
-        标准解读：GBT9969 2008工业产品使用说明书
+        Seafile迁移
     </h1>
     </a>
     <div class="article-meta">
@@ -299,9 +275,9 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2020-12-16 09:00:08 &#43;0800 CST" itemprop="datePublished">2020-12-16</time>
+            <time datetime="2022-12-01 09:57:03 &#43;0800 CST" itemprop="datePublished">2022-12-01</time>
             &middot;
-            27
+            126
             words
             &middot;
             1
@@ -311,77 +287,73 @@
         
             
             
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/categories/%E8%AE%A4%E8%AF%81">认证</a>
-                
-                
-            </div>
-            
         
 
         
             
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E6%A0%87%E5%87%86">标准</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E5%9B%BD%E6%A0%87">国标</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/%E8%AF%B4%E6%98%8E%E4%B9%A6">说明书</a>
-                
-                
-            </div>
             
         
     </div>
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <p>标准解读：GBT9969-2008工业产品使用说明书、总则</p>
-<p><a href="https://wenku.baidu.com/view/ed54abbef4335a8102d276a20029bd64793e6202.html?fr=search-1-income1">文档链接：GBT9969-2008</a></p>
-<h2 id="基本要求">基本要求</h2>
-<ol>
-<li>说明书内容
-产品用途和使用范围
-根据产品特点给出：
-主要结构、性能、型号、规格
-吊运、安装、使用、操作、维修、保养、贮存；</li>
-</ol>
-<ul>
-<li>应提供：必要的环保和节约能源方面的内容；</li>
-<li>易燃易爆有毒有腐蚀有放射性的产品，说明书应包含注意事项、防护措施和发生意外时的紧急处理方法；</li>
-<li>对于安全限制有要求或存在有效年限的产品应提供产品上的生产日期和有效期；</li>
-<li>实行生产许可证管理的产品，应在包装上标注有效的生产许可证编号；</li>
-</ul>
-<h2 id="模版">模版</h2>
-<p>概述<br>
-安全使用注意事项<br>
-结构特征与工作原理<br>
-技术特性<br>
-尺寸重量<br>
-安装、调整<br>
-使用操作<br>
-故障分析与排除<br>
-安全保护装置与事故处理<br>
-保养维护<br>
-运输贮存<br>
-开箱及检查 <br>
-环保及其他<br>
-图、表、照片</p>
-
+            <h4 id="seafile迁移">seafile迁移</h4>
+<p><a href="https://bbs.seafile.com/t/topic/10958">https://bbs.seafile.com/t/topic/10958</a></p>
+<h4 id="官方文档使用docker部署seafile">官方文档：使用docker部署seafile：</h4>
+<p><a href="https://cloud.seafile.com/published/seafile-manual-cn/docker/">https://cloud.seafile.com/published/seafile-manual-cn/docker/</a>用Docker部署Seafile.md</p>
+<p>还原数据文件
+注意：docker教程中还原了conf、seafile-data、seahub-data三个文件，但是当环境不同时，conf是不能还原的，否则会page-unavailable。
+docker的数据文件位置取决于你在docker-compose.yml中的配置，默认在/opt目录下有seafile-data、seafile-mysql两个文件夹，
+/opt/
+├── seafile-data
+│   ├── logs
+│   └── seafile
+│       ├── ccnet
+│       ├── conf
+│       ├── seafile-data
+│       └── seahub-data
+├── seafile-mysql
+我们要做的就是用备份的seafile-data、seahub-data替换掉/opt/seafile-data/seafile/下对应的两个文件夹
+cp -r seafile-data /opt/seafile-data/seafile/
+cp -r seahub-data /opt/seafile-data/seafile/</p>
+<h4 id="docker导出镜像">docker导出镜像：</h4>
+<p><a href="https://blog.csdn.net/weixin_45963617/article/details/123771874">https://blog.csdn.net/weixin_45963617/article/details/123771874</a></p>
+<h4 id="docker-容器导出-导入">Docker 容器导出 导入</h4>
+<p>一、docker容器的导出
+docker export [options] container
+OPTIONS说明：
+-o表示输出的文件，这里指定了输出的路径，如果没有指定路径，则默认生成到当前文件夹。
+示例1：docker export -o redis.tar.gz redis 或 docker export redis &gt; redis1.tar.gz
+说明：将运行中的redis容器导出为redis.tar.gz包</p>
+<p>scp [参数] &lt;源地址（用户名@IP地址或主机名）&gt;:&lt;文件路径&gt; &lt;目的地址（用户名 @IP 地址或主机名）&gt;:&lt;文件路径&gt;</p>
+<p>二、docker容器的导入
+从tar包导入内容为docker镜像
+docker import [OPTIONS] file|URL|- [REPOSITORY[:TAG]]
+OPTIONS说明：
+-c :应用docker 指令创建镜像；
+-m :提交时的说明文字
+示例1：docker import redis.tar.gz redis:v1
+示例2：docker import <a href="https://example.com/exampleimage.tgz">https://example.com/exampleimage.tgz</a></p>
+<hr>
+<h4 id="1先在seafile后台删除文件并清空回收站">1、先在Seafile后台删除文件，并清空回收站。</h4>
+<h4 id="2cd到seafile的安装目录然后停用seafile和seahub服务命令如下">2、cd到Seafile的安装目录，然后停用Seafile和Seahub服务，命令如下：</h4>
+<pre><code>cd /opt/seafile/seafile-server-latest
+#注意，上述命令的目录路径请根据Seafile安装路径修改。
+./seafile.sh stop
+./seahub.sh stop
+</code></pre>
+<p>在停用服务后，执行清盘命令，如下：
+./seaf-gc.sh -r
+等待执行完比后再启用Seafile和Seahub服务，命令如下：
+./seafile.sh start
+./seahub.sh start</p>
+<p>—————————</p>
+<h4 id="seafile-docker-垃圾回收">Seafile docker 垃圾回收：</h4>
+<pre tabindex="0"><code>docker exec seafile /opt/seafile/seafile-server-latest/seafile.sh stop &amp;&amp; docker exec seafile /opt/seafile/seafile-server-latest/seaf-gc.sh &amp;&amp; docker exec seafile /opt/seafile/seafile-server-latest/seafile.sh start
+</code></pre>
         </div>
         <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/12/16/%E6%A0%87%E5%87%86%E8%A7%A3%E8%AF%BBgbt9969-2008%E5%B7%A5%E4%B8%9A%E4%BA%A7%E5%93%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6/" data-id="de0460312365379ea9234723815c51ec" class="article-share-link">
+    <a data-url="http://fuyi.fun/2022/12/01/seafile%E8%BF%81%E7%A7%BB/" data-id="42db170ad63fe130c6a98e24b8ec308e" class="article-share-link">
         <i class="fa fa-share"></i>
         分享
     </a>
@@ -458,21 +430,14 @@
     
 <nav id="article-nav">
     
-    <a href="http://fuyi.fun/2020/11/27/pip%E5%AE%89%E8%A3%85%E5%A4%AA%E6%85%A2%E6%9B%B4%E6%8D%A2%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="http://fuyi.fun/2022/12/01/%E9%98%B2%E7%AA%81%E7%BB%86%E5%88%992019%E5%AE%98%E6%96%B9%E4%B8%8B%E8%BD%BD/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           上一个
       </strong>
-      <div class="article-nav-title">Pip安装太慢更换为国内源</div>
+      <div class="article-nav-title">防突细则2019官方下载</div>
     </a>
     
 
-    
-    <a href="http://fuyi.fun/2020/12/25/%E5%9C%A8stm32%E4%B8%AD%E5%BC%95%E5%85%A5jlink%E8%B0%83%E8%AF%95_jlink-rtt/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">
-          下一个
-      </strong>
-      <div class="article-nav-title">在stm32中引入jlink调试_JLINK RTT</div>
-    </a>
     
 </nav>
 

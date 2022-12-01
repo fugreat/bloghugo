@@ -6,7 +6,22 @@
     <description>Recent content in Posts on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 01 Dec 2022 09:55:32 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Dec 2022 09:57:03 +0800</lastBuildDate><atom:link href="http://fuyi.fun/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Seafile迁移</title>
+      <link>http://fuyi.fun/2022/12/01/seafile%E8%BF%81%E7%A7%BB/</link>
+      <pubDate>Thu, 01 Dec 2022 09:57:03 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2022/12/01/seafile%E8%BF%81%E7%A7%BB/</guid>
+      <description>seafile迁移 https://bbs.seafile.com/t/topic/10958
+官方文档：使用docker部署seafile： https://cloud.seafile.com/published/seafile-manual-cn/docker/用Docker部署Seafile.md
+还原数据文件 注意：docker教程中还原了conf、seafile-data、seahub-data三个文件，但是当环境不同时，conf是不能还原的，否则会page-unavailable。 docker的数据文件位置取决于你在docker-compose.yml中的配置，默认在/opt目录下有seafile-data、seafile-mysql两个文件夹， /opt/ ├── seafile-data │ ├── logs │ └── seafile │ ├── ccnet │ ├── conf │ ├── seafile-data │ └── seahub-data ├── seafile-mysql 我们要做的就是用备份的seafile-data、seahub-data替换掉/opt/seafile-data/seafile/下对应的两个文件夹 cp -r seafile-data /opt/seafile-data/seafile/ cp -r seahub-data /opt/seafile-data/seafile/
+docker导出镜像： https://blog.csdn.net/weixin_45963617/article/details/123771874
+Docker 容器导出 导入 一、docker容器的导出 docker export [options] container OPTIONS说明： -o表示输出的文件，这里指定了输出的路径，如果没有指定路径，则默认生成到当前文件夹。 示例1：docker export -o redis.tar.gz redis 或 docker export redis &amp;gt; redis1.tar.gz 说明：将运行中的redis容器导出为redis.tar.gz包
+scp [参数] &amp;lt;源地址（用户名@IP地址或主机名）&amp;gt;:&amp;lt;文件路径&amp;gt; &amp;lt;目的地址（用户名 @IP 地址或主机名）&amp;gt;:&amp;lt;文件路径&amp;gt;
+二、docker容器的导入 从tar包导入内容为docker镜像 docker import [OPTIONS] file|URL|- [REPOSITORY[:TAG]] OPTIONS说明： -c :应用docker 指令创建镜像； -m :提交时的说明文字 示例1：docker import redis.</description>
+    </item>
+    
     <item>
       <title>防突细则2019官方下载</title>
       <link>http://fuyi.fun/2022/12/01/%E9%98%B2%E7%AA%81%E7%BB%86%E5%88%992019%E5%AE%98%E6%96%B9%E4%B8%8B%E8%BD%BD/</link>

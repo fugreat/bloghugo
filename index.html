@@ -160,12 +160,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        64
+        65
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          62
+          63
         
         <span>
             标签
@@ -241,6 +241,142 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2022/12/08/%E7%A6%85%E9%81%93%E9%87%8D%E5%90%AF%E5%90%8E%E7%99%BD%E5%B1%8F/">
+    <h1 class="article-title" itemprop="name">
+        禅道重启后白屏
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2022-12-08 09:53:15 &#43;0800 CST" itemprop="datePublished">2022-12-08</time>
+            &middot;
+            20
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/%E7%A6%85%E9%81%93">禅道</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                禅道 重启后白屏 查看/app/zentaopms/config 配置， 检查config-&gt;db配置 ￼
+修改配置： 安装vim： apt update apt install vim
+更新配置： vi /app/zentaopms/config/my.php 修改：config-&gt;db-&gt;host 配置
+重启服务，恢复正常：
+参考：https://www.cnblogs.com/hanfengyeqiao/p/16241867.html
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2022/12/08/%E7%A6%85%E9%81%93%E9%87%8D%E5%90%AF%E5%90%8E%E7%99%BD%E5%B1%8F/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2022/12/08/%E7%A6%85%E9%81%93%E9%87%8D%E5%90%AF%E5%90%8E%E7%99%BD%E5%B1%8F/" data-id="c39722dfbe04223f6e42831e19ff246e" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1393,133 +1529,6 @@ sudo systemctl restart docker
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2021/11/25/win10%E4%B8%8B%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/">
-    <h1 class="article-title" itemprop="name">
-        Win10下自动运行脚本
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2021-11-25 11:34:17 &#43;0800 CST" itemprop="datePublished">2021-11-25</time>
-            &middot;
-            114
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-        
-
-        
-            
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                Win10 下自动运行脚本
-https://www.lidaren.com/archives/1656
-————————————————————————
-@echo off ::检测时间间隔，单位：秒 set _interval=5 ::需要守护的进程名称 set _processName=ProcessName ::需要守护的进程启动命令 set _processCmd=C:\xxxx.exe ::需要守护的进程预估启动完毕所需时间，单位：秒 set _processTimeout=10 ::需要守护的进程所监听的端口 set _port=8080 ::进程用户名，一般是Administrator set _username=Administrator ————————————————————————
-@echo off :LOOP set /a isAlive=false ::通过进程名称检测 ::tasklist /FI &#34;username eq %_username%&#34; | find /C &#34;%_processName%&#34; &gt; temp.txt ::set /p num= &lt; temp.txt ::del /F temp.txt ::通过进程的端口是否正在被监听检测 netstat -an | find /C &#34;0.0.0.0:%_port%&#34; &gt; temp.txt set /p num= &lt; temp.txt del /F temp.txt if &#34;%num%&#34; == &#34;0&#34; ( start %_processCmd% | echo 启动 %_processName% 于 %time% choice /D y /t %_processTimeout% &gt; nul ) if &#34;%num%&#34; NEQ &#34;0&#34; echo 已启动 ::ping -n %_interval% 127.
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2021/11/25/win10%E4%B8%8B%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2021/11/25/win10%E4%B8%8B%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/" data-id="1ebd090379f03b4ff1dd948778e708dd" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1545,6 +1554,25 @@ https://www.lidaren.com/archives/1656
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2022/12/08/%E7%A6%85%E9%81%93%E9%87%8D%E5%90%AF%E5%90%8E%E7%99%BD%E5%B1%8F/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2022/12/08/%E7%A6%85%E9%81%93%E9%87%8D%E5%90%AF%E5%90%8E%E7%99%BD%E5%B1%8F/" class="title">禅道重启后白屏</a></p>
+                    <p class="item-date">
+                        <time datetime="2022-12-08 09:53:15 &#43;0800 CST" itemprop="datePublished">2022-12-08</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1618,25 +1646,6 @@ https://www.lidaren.com/archives/1656
                     <p class="item-title"><a href="http://fuyi.fun/2022/12/01/%E9%98%B2%E7%88%86%E7%94%B5%E5%99%A8%E7%9A%843c%E8%AE%A4%E8%AF%81%E8%A7%84%E5%AE%9A/" class="title">防爆电器的3C认证规定</a></p>
                     <p class="item-date">
                         <time datetime="2022-12-01 09:53:14 &#43;0800 CST" itemprop="datePublished">2022-12-01</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2022/12/01/%E9%98%B2%E7%88%86%E7%AD%89%E7%BA%A7/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2022/12/01/%E9%98%B2%E7%88%86%E7%AD%89%E7%BA%A7/" class="title">防爆等级</a></p>
-                    <p class="item-date">
-                        <time datetime="2022-12-01 09:47:37 &#43;0800 CST" itemprop="datePublished">2022-12-01</time>
                     </p>
                 </div>
             </li>
@@ -2241,6 +2250,14 @@ https://www.lidaren.com/archives/1656
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="http://fuyi.fun/tags/%E7%A6%85%E9%81%93">
+                    禅道
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="http://fuyi.fun/tags/%E7%AE%A1%E5%BE%84">
                     管径
                 </a>
@@ -2470,6 +2487,9 @@ https://www.lidaren.com/archives/1656
         
         
         <a href="http://fuyi.fun/tags/%E7%94%B5%E8%B7%AF" style="font-size: 12px;">电路</a>
+        
+        
+        <a href="http://fuyi.fun/tags/%E7%A6%85%E9%81%93" style="font-size: 12px;">禅道</a>
         
         
         <a href="http://fuyi.fun/tags/%E7%AE%A1%E5%BE%84" style="font-size: 12px;">管径</a>

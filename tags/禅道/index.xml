@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>禅道 on 小夫子的随笔</title>
+    <link>http://fuyi.fun/tags/%E7%A6%85%E9%81%93/</link>
+    <description>Recent content in 禅道 on 小夫子的随笔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 08 Dec 2022 09:53:15 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/%E7%A6%85%E9%81%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>禅道重启后白屏</title>
+      <link>http://fuyi.fun/2022/12/08/%E7%A6%85%E9%81%93%E9%87%8D%E5%90%AF%E5%90%8E%E7%99%BD%E5%B1%8F/</link>
+      <pubDate>Thu, 08 Dec 2022 09:53:15 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2022/12/08/%E7%A6%85%E9%81%93%E9%87%8D%E5%90%AF%E5%90%8E%E7%99%BD%E5%B1%8F/</guid>
+      <description>禅道 重启后白屏 查看/app/zentaopms/config 配置， 检查config-&amp;gt;db配置 ￼
+修改配置： 安装vim： apt update apt install vim
+更新配置： vi /app/zentaopms/config/my.php 修改：config-&amp;gt;db-&amp;gt;host 配置
+重启服务，恢复正常：
+参考：https://www.cnblogs.com/hanfengyeqiao/p/16241867.html</description>
+    </item>
+    
+  </channel>
+</rss>

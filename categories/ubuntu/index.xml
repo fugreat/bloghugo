@@ -6,7 +6,11 @@
     <description>Recent content in Ubuntu on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 14 Jul 2021 13:44:05 +0800</lastBuildDate><atom:link href="http://fuyi.fun/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jul 2021 13:44:05 +0800</lastBuildDate>
+    
+	<atom:link href="http://fuyi.fun/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Ubuntu网络配置</title>
       <link>http://fuyi.fun/2021/07/14/ubuntu%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</link>
@@ -14,7 +18,7 @@
       
       <guid>http://fuyi.fun/2021/07/14/ubuntu%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</guid>
       <description>参考：http://www.3gcomet.com/ubuntu20-04中使用netplan配置网络/
-cat /etc/netplan/00-installer-config.yaml # This is the network config written by &amp;#39;subiquity&amp;#39; network: ethernets: enp1s0: dhcp4: true #addresses: #- 172.18.225.240/24 #gateway4: 172.18.225.254 nameservers: addresses: - 223.6.6.6 - 223.5.5.5 search: [] version: 2 </description>
+cat /etc/netplan/00-installer-config.yaml # This is the network config written by &#39;subiquity&#39; network: ethernets: enp1s0: dhcp4: true #addresses: #- 172.18.225.240/24 #gateway4: 172.18.225.254 nameservers: addresses: - 223.6.6.6 - 223.5.5.5 search: [] version: 2 </description>
     </item>
     
     <item>

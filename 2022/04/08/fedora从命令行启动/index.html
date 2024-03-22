@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <title>Fedora从命令行启动 &middot; 小夫子的随笔</title>
-    <meta name="generator" content="Hugo 0.94.2" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Jixing Fu">
@@ -26,19 +26,22 @@
 ln-sf /lib/systemd/system/multi-user.target /etc/systemd/system/default. target （2）从图形界面启动
 ln-sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target 二、代码解释 ln命令：是一个在文件之间建立链接的命令，默认情况是硬链接（hard link），我们要用的是符号链接（symboli link），它可以为在不同文件系统中文件创建链接。 Options：-s 创建符号链接 -f 删除已经存在的同名链接 oneof the Usages：ln [被链接目标] [链接文件或目录] Example：ln -s xx yy 为xx创建一个符号链接yy" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/" /><meta property="article:section" content="post" />
+<meta property="og:url" content="http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/" />
 <meta property="article:published_time" content="2022-04-08T20:26:01+08:00" />
 <meta property="article:modified_time" content="2022-04-08T20:26:01+08:00" />
-
 
     
     <meta itemprop="name" content="Fedora从命令行启动">
 <meta itemprop="description" content="Fedora 从命令行启动
 一、实现代码 删除目标链接并创建新的符号链接 （1）从命令行启动
 ln-sf /lib/systemd/system/multi-user.target /etc/systemd/system/default. target （2）从图形界面启动
-ln-sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target 二、代码解释 ln命令：是一个在文件之间建立链接的命令，默认情况是硬链接（hard link），我们要用的是符号链接（symboli link），它可以为在不同文件系统中文件创建链接。 Options：-s 创建符号链接 -f 删除已经存在的同名链接 oneof the Usages：ln [被链接目标] [链接文件或目录] Example：ln -s xx yy 为xx创建一个符号链接yy"><meta itemprop="datePublished" content="2022-04-08T20:26:01+08:00" />
-<meta itemprop="dateModified" content="2022-04-08T20:26:01+08:00" />
+ln-sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target 二、代码解释 ln命令：是一个在文件之间建立链接的命令，默认情况是硬链接（hard link），我们要用的是符号链接（symboli link），它可以为在不同文件系统中文件创建链接。 Options：-s 创建符号链接 -f 删除已经存在的同名链接 oneof the Usages：ln [被链接目标] [链接文件或目录] Example：ln -s xx yy 为xx创建一个符号链接yy">
+<meta itemprop="datePublished" content="2022-04-08T20:26:01&#43;08:00" />
+<meta itemprop="dateModified" content="2022-04-08T20:26:01&#43;08:00" />
 <meta itemprop="wordCount" content="31">
+
+
+
 <meta itemprop="keywords" content="" />
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Fedora从命令行启动"/>
@@ -292,10 +295,10 @@ ln-sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target �
 <h2 id="一实现代码">一、实现代码</h2>
 <p>删除目标链接并创建新的符号链接
 （1）从命令行启动</p>
-<pre tabindex="0"><code>ln-sf /lib/systemd/system/multi-user.target /etc/systemd/system/default.
+<pre><code>ln-sf /lib/systemd/system/multi-user.target /etc/systemd/system/default.
 target
 </code></pre><p>（2）从图形界面启动</p>
-<pre tabindex="0"><code>ln-sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target 
+<pre><code>ln-sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target 
 </code></pre><h2 id="二代码解释">二、代码解释</h2>
 <p>ln命令：是一个在文件之间建立链接的命令，默认情况是硬链接（hard link），我们要用的是符号链接（symboli link），它可以为在不同文件系统中文件创建链接。
 Options：-s  创建符号链接
@@ -1388,7 +1391,7 @@ Example：ln -s xx yy  为xx创建一个符号链接yy</p>
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2023
+      &copy; 2024
       Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="https://github.com/ppoffice">PPOffice</a>.
     </div>
   </div>

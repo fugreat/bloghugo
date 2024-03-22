@@ -6,7 +6,11 @@
     <description>Recent content in Tags on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 08 Dec 2022 09:53:15 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Dec 2022 09:53:15 +0800</lastBuildDate>
+    
+	<atom:link href="http://fuyi.fun/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>禅道</title>
       <link>http://fuyi.fun/tags/%E7%A6%85%E9%81%93/</link>
@@ -157,6 +161,15 @@
       <pubDate>Wed, 24 Mar 2021 11:31:34 +0800</pubDate>
       
       <guid>http://fuyi.fun/tags/%E5%B0%8F%E7%AB%AF%E5%BA%8F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>install</title>
+      <link>http://fuyi.fun/tags/install/</link>
+      <pubDate>Thu, 25 Feb 2021 12:57:50 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/tags/install/</guid>
       <description></description>
     </item>
     
@@ -544,15 +557,6 @@
       <pubDate>Wed, 11 Nov 2020 10:41:08 +0800</pubDate>
       
       <guid>http://fuyi.fun/tags/macos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>install</title>
-      <link>http://fuyi.fun/tags/install/</link>
-      <pubDate>Wed, 11 Nov 2020 10:01:51 +0800</pubDate>
-      
-      <guid>http://fuyi.fun/tags/install/</guid>
       <description></description>
     </item>
     

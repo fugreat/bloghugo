@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <title>使用doker搭建nrf52开发环境 &middot; 小夫子的随笔</title>
-    <meta name="generator" content="Hugo 0.94.2" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Jixing Fu">
@@ -27,12 +27,11 @@
   下载nrf52开发环境 docker pull fugreat/nrf52
   创建容器
   docker run --name nrf52-1 -v /Users/user_name/data:/data -itd fugreat/nrf52 bash  此步把 /Users/user_name/data目录映射到编译环境的/data中
- 编译  docker exec -it nrf52 bash -c &#34;cd /data/project_name &amp;&amp; make&#34; 启/停容器  docker start nrf52 docker stop nrf52 " />
+ 编译  docker exec -it nrf52 bash -c &quot;cd /data/project_name &amp;&amp; make&quot; 启/停容器  docker start nrf52 docker stop nrf52 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://fuyi.fun/2020/11/26/%E4%BD%BF%E7%94%A8doker%E6%90%AD%E5%BB%BAnrf52%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" /><meta property="article:section" content="post" />
+<meta property="og:url" content="http://fuyi.fun/2020/11/26/%E4%BD%BF%E7%94%A8doker%E6%90%AD%E5%BB%BAnrf52%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" />
 <meta property="article:published_time" content="2020-11-26T11:11:27+08:00" />
 <meta property="article:modified_time" content="2020-11-26T11:11:27+08:00" />
-
 
     
     <meta itemprop="name" content="使用doker搭建nrf52开发环境">
@@ -42,9 +41,13 @@
   下载nrf52开发环境 docker pull fugreat/nrf52
   创建容器
   docker run --name nrf52-1 -v /Users/user_name/data:/data -itd fugreat/nrf52 bash  此步把 /Users/user_name/data目录映射到编译环境的/data中
- 编译  docker exec -it nrf52 bash -c &#34;cd /data/project_name &amp;&amp; make&#34; 启/停容器  docker start nrf52 docker stop nrf52 "><meta itemprop="datePublished" content="2020-11-26T11:11:27+08:00" />
-<meta itemprop="dateModified" content="2020-11-26T11:11:27+08:00" />
+ 编译  docker exec -it nrf52 bash -c &quot;cd /data/project_name &amp;&amp; make&quot; 启/停容器  docker start nrf52 docker stop nrf52 ">
+<meta itemprop="datePublished" content="2020-11-26T11:11:27&#43;08:00" />
+<meta itemprop="dateModified" content="2020-11-26T11:11:27&#43;08:00" />
 <meta itemprop="wordCount" content="39">
+
+
+
 <meta itemprop="keywords" content="docker,nrf52," />
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="使用doker搭建nrf52开发环境"/>
@@ -54,7 +57,7 @@
   下载nrf52开发环境 docker pull fugreat/nrf52
   创建容器
   docker run --name nrf52-1 -v /Users/user_name/data:/data -itd fugreat/nrf52 bash  此步把 /Users/user_name/data目录映射到编译环境的/data中
- 编译  docker exec -it nrf52 bash -c &#34;cd /data/project_name &amp;&amp; make&#34; 启/停容器  docker start nrf52 docker stop nrf52 "/>
+ 编译  docker exec -it nrf52 bash -c &quot;cd /data/project_name &amp;&amp; make&quot; 启/停容器  docker start nrf52 docker stop nrf52 "/>
 
     
 
@@ -335,18 +338,18 @@
 <p>创建容器</p>
 </li>
 </ol>
-<pre tabindex="0"><code>docker run --name nrf52-1 -v /Users/user_name/data:/data -itd fugreat/nrf52 bash
+<pre><code>docker run --name nrf52-1 -v /Users/user_name/data:/data -itd fugreat/nrf52 bash
 </code></pre><blockquote>
 <p>此步把 /Users/user_name/data目录映射到编译环境的/data中</p>
 </blockquote>
 <ol start="4">
 <li>编译</li>
 </ol>
-<pre tabindex="0"><code>docker exec -it nrf52 bash -c &#34;cd /data/project_name &amp;&amp; make&#34;
+<pre><code>docker exec -it nrf52 bash -c &quot;cd /data/project_name &amp;&amp; make&quot;
 </code></pre><ol start="5">
 <li>启/停容器</li>
 </ol>
-<pre tabindex="0"><code>docker start nrf52
+<pre><code>docker start nrf52
 docker stop nrf52
 </code></pre>
         </div>
@@ -1434,7 +1437,7 @@ docker stop nrf52
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2023
+      &copy; 2024
       Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="https://github.com/ppoffice">PPOffice</a>.
     </div>
   </div>

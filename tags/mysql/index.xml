@@ -6,7 +6,11 @@
     <description>Recent content in mysql on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 24 Mar 2021 11:42:15 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Mar 2021 11:42:15 +0800</lastBuildDate>
+    
+	<atom:link href="http://fuyi.fun/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Mysql开启外网访问</title>
       <link>http://fuyi.fun/2021/03/24/mysql%E5%BC%80%E5%90%AF%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/</link>
@@ -14,7 +18,7 @@
       
       <guid>http://fuyi.fun/2021/03/24/mysql%E5%BC%80%E5%90%AF%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/</guid>
       <description>Mysql 开放外网访问： 用mysql -uroot -p 登陆mysql，然后采用以下方法开启远程访问权限：
- mysql&amp;gt;use mysql; mysql&amp;gt;update user set host = &amp;#39;%&amp;#39; where user = &amp;#39;root&amp;#39;; mysql&amp;gt;FLUSH PRIVILEGES； </description>
+ mysql&amp;gt;use mysql; mysql&amp;gt;update user set host = &#39;%&#39; where user = &#39;root&#39;; mysql&amp;gt;FLUSH PRIVILEGES； </description>
     </item>
     
   </channel>

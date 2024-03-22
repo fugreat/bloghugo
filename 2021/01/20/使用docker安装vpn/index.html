@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <title>使用docker安装vpn &middot; 小夫子的随笔</title>
-    <meta name="generator" content="Hugo 0.94.2" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Jixing Fu">
@@ -25,18 +25,21 @@
 你还在一条条命令复制粘贴搭建 SVN 服务器？快别麻烦了，一个 docker 镜像就都帮你搞定了。如果你的服务器安装了 docker，直接使用以下命令 （要修改你自己的账户和密码信息哦）拉取一个已经配置好的 VPN 镜像就可以直接使用了，不用那么那麻烦的自己又改配置文件又要安装软件。
 docker run \ --name ipsec-vpn-server \ --restart=always \ -e VPN_IPSEC_PSK=你的PSK密码 \ -e VPN_USER=你的VPN用户名 \ -e VPN_PASSWORD=你的VPN密码 \ -p 500:500/udp \ -p 4500:4500/udp \ -v /lib/modules:/lib/modules:ro \ -d --privileged \ hwdsl2/ipsec-vpn-server 参考连接：使用 docker 快速搭建一个 VPN 服务器" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://fuyi.fun/2021/01/20/%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85vpn/" /><meta property="article:section" content="post" />
+<meta property="og:url" content="http://fuyi.fun/2021/01/20/%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85vpn/" />
 <meta property="article:published_time" content="2021-01-20T11:38:39+08:00" />
 <meta property="article:modified_time" content="2021-01-20T11:38:39+08:00" />
-
 
     
     <meta itemprop="name" content="使用docker安装vpn">
 <meta itemprop="description" content="使用 docker 快速搭建一个 VPN 服务器
 你还在一条条命令复制粘贴搭建 SVN 服务器？快别麻烦了，一个 docker 镜像就都帮你搞定了。如果你的服务器安装了 docker，直接使用以下命令 （要修改你自己的账户和密码信息哦）拉取一个已经配置好的 VPN 镜像就可以直接使用了，不用那么那麻烦的自己又改配置文件又要安装软件。
-docker run \ --name ipsec-vpn-server \ --restart=always \ -e VPN_IPSEC_PSK=你的PSK密码 \ -e VPN_USER=你的VPN用户名 \ -e VPN_PASSWORD=你的VPN密码 \ -p 500:500/udp \ -p 4500:4500/udp \ -v /lib/modules:/lib/modules:ro \ -d --privileged \ hwdsl2/ipsec-vpn-server 参考连接：使用 docker 快速搭建一个 VPN 服务器"><meta itemprop="datePublished" content="2021-01-20T11:38:39+08:00" />
-<meta itemprop="dateModified" content="2021-01-20T11:38:39+08:00" />
+docker run \ --name ipsec-vpn-server \ --restart=always \ -e VPN_IPSEC_PSK=你的PSK密码 \ -e VPN_USER=你的VPN用户名 \ -e VPN_PASSWORD=你的VPN密码 \ -p 500:500/udp \ -p 4500:4500/udp \ -v /lib/modules:/lib/modules:ro \ -d --privileged \ hwdsl2/ipsec-vpn-server 参考连接：使用 docker 快速搭建一个 VPN 服务器">
+<meta itemprop="datePublished" content="2021-01-20T11:38:39&#43;08:00" />
+<meta itemprop="dateModified" content="2021-01-20T11:38:39&#43;08:00" />
 <meta itemprop="wordCount" content="49">
+
+
+
 <meta itemprop="keywords" content="VPN,Docker," />
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="使用docker安装vpn"/>
@@ -309,7 +312,7 @@ docker run \ --name ipsec-vpn-server \ --restart=always \ -e VPN_IPSEC_PSK=你�
         <div class="article-entry" itemprop="articleBody">
             <p>使用 docker 快速搭建一个 VPN 服务器</p>
 <p>你还在一条条命令复制粘贴搭建 SVN 服务器？快别麻烦了，一个 docker 镜像就都帮你搞定了。如果你的服务器安装了 docker，直接使用以下命令  （要修改你自己的账户和密码信息哦）拉取一个已经配置好的 VPN 镜像就可以直接使用了，不用那么那麻烦的自己又改配置文件又要安装软件。</p>
-<pre tabindex="0"><code>docker run \
+<pre><code>docker run \
     --name ipsec-vpn-server \
     --restart=always \
     -e VPN_IPSEC_PSK=你的PSK密码 \
@@ -1407,7 +1410,7 @@ docker run \ --name ipsec-vpn-server \ --restart=always \ -e VPN_IPSEC_PSK=你�
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2023
+      &copy; 2024
       Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="https://github.com/ppoffice">PPOffice</a>.
     </div>
   </div>

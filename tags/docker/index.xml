@@ -6,7 +6,11 @@
     <description>Recent content in docker on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 25 Nov 2021 11:36:29 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Nov 2021 11:36:29 +0800</lastBuildDate>
+    
+	<atom:link href="http://fuyi.fun/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Docker去掉sudo</title>
       <link>http://fuyi.fun/2021/11/25/docker%E5%8E%BB%E6%8E%89sudo/</link>
@@ -58,7 +62,7 @@ docker run \ --name ipsec-vpn-server \ --restart=always \ -e VPN_IPSEC_PSK=你�
   下载nrf52开发环境 docker pull fugreat/nrf52
   创建容器
   docker run --name nrf52-1 -v /Users/user_name/data:/data -itd fugreat/nrf52 bash  此步把 /Users/user_name/data目录映射到编译环境的/data中
- 编译  docker exec -it nrf52 bash -c &amp;#34;cd /data/project_name &amp;amp;&amp;amp; make&amp;#34; 启/停容器  docker start nrf52 docker stop nrf52 </description>
+ 编译  docker exec -it nrf52 bash -c &amp;quot;cd /data/project_name &amp;amp;&amp;amp; make&amp;quot; 启/停容器  docker start nrf52 docker stop nrf52 </description>
     </item>
     
     <item>
@@ -71,7 +75,7 @@ docker run \ --name ipsec-vpn-server \ --restart=always \ -e VPN_IPSEC_PSK=你�
 但是在实际使用过程中，可能需要带参数或者make不同的目标。
 因为需要屏蔽掉默认的entrypoint。
 屏蔽方法是：
-# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &amp;#34;cd /code &amp;amp;&amp;amp; make -j8 &amp;amp;&amp;amp; make flash&amp;#34; [docker_imag】 </description>
+# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &amp;quot;cd /code &amp;amp;&amp;amp; make -j8 &amp;amp;&amp;amp; make flash&amp;quot; [docker_imag】 </description>
     </item>
     
     <item>

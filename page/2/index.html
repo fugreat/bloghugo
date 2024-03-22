@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <title>小夫子的随笔</title>
-    <meta name="generator" content="Hugo 0.94.2" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Jixing Fu">
@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://fuyi.fun/" />
-
+<meta property="og:updated_time" content="2022-12-08T09:53:15+08:00" />
 
     
     <meta itemprop="name" content="小夫子的随笔">
@@ -285,7 +285,7 @@
 https://www.lidaren.com/archives/1656
 ————————————————————————
 @echo off ::检测时间间隔，单位：秒 set _interval=5 ::需要守护的进程名称 set _processName=ProcessName ::需要守护的进程启动命令 set _processCmd=C:\xxxx.exe ::需要守护的进程预估启动完毕所需时间，单位：秒 set _processTimeout=10 ::需要守护的进程所监听的端口 set _port=8080 ::进程用户名，一般是Administrator set _username=Administrator ————————————————————————
-@echo off :LOOP set /a isAlive=false ::通过进程名称检测 ::tasklist /FI &#34;username eq %_username%&#34; | find /C &#34;%_processName%&#34; &gt; temp.txt ::set /p num= &lt; temp.txt ::del /F temp.txt ::通过进程的端口是否正在被监听检测 netstat -an | find /C &#34;0.0.0.0:%_port%&#34; &gt; temp.txt set /p num= &lt; temp.txt del /F temp.txt if &#34;%num%&#34; == &#34;0&#34; ( start %_processCmd% | echo 启动 %_processName% 于 %time% choice /D y /t %_processTimeout% &gt; nul ) if &#34;%num%&#34; NEQ &#34;0&#34; echo 已启动 ::ping -n %_interval% 127.
+@echo off :LOOP set /a isAlive=false ::通过进程名称检测 ::tasklist /FI &quot;username eq %_username%&quot; | find /C &quot;%_processName%&quot; &gt; temp.txt ::set /p num= &lt; temp.txt ::del /F temp.txt ::通过进程的端口是否正在被监听检测 netstat -an | find /C &quot;0.0.0.0:%_port%&quot; &gt; temp.txt set /p num= &lt; temp.txt del /F temp.txt if &quot;%num%&quot; == &quot;0&quot; ( start %_processCmd% | echo 启动 %_processName% 于 %time% choice /D y /t %_processTimeout% &gt; nul ) if &quot;%num%&quot; NEQ &quot;0&quot; echo 已启动 ::ping -n %_interval% 127.
             </p>
             <p class="article-more-link">
                 <a href="http://fuyi.fun/2021/11/25/win10%E4%B8%8B%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/">
@@ -550,7 +550,7 @@ https://www.lidaren.com/archives/1656
         <div class="article-entry" itemprop="articleBody">
             <p>
                 参考：http://www.3gcomet.com/ubuntu20-04中使用netplan配置网络/
-cat /etc/netplan/00-installer-config.yaml # This is the network config written by &#39;subiquity&#39; network: ethernets: enp1s0: dhcp4: true #addresses: #- 172.18.225.240/24 #gateway4: 172.18.225.254 nameservers: addresses: - 223.6.6.6 - 223.5.5.5 search: [] version: 2 
+cat /etc/netplan/00-installer-config.yaml # This is the network config written by 'subiquity' network: ethernets: enp1s0: dhcp4: true #addresses: #- 172.18.225.240/24 #gateway4: 172.18.225.254 nameservers: addresses: - 223.6.6.6 - 223.5.5.5 search: [] version: 2 
             </p>
             <p class="article-more-link">
                 <a href="http://fuyi.fun/2021/07/14/ubuntu%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/">
@@ -2634,7 +2634,7 @@ Gitlab修改域名： https://www.gaotengjiao.com/gitlab%E9%A1%B9%E7%9B%AE%E5%9C
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2023
+      &copy; 2024
       Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="https://github.com/ppoffice">PPOffice</a>.
     </div>
   </div>

@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <title>在stm32中引入jlink调试_JLINK RTT &middot; 小夫子的随笔</title>
-    <meta name="generator" content="Hugo 0.94.2" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Jixing Fu">
@@ -30,10 +30,9 @@
   #define myprintf(...) SEGGER_RTT_printf(0, __VA_ARGS__) 参考文档 【JLink RTT Client代替printf(IAR测试OK)】
 【segger RTT viewer串口打印调试日志】" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://fuyi.fun/2020/12/25/%E5%9C%A8stm32%E4%B8%AD%E5%BC%95%E5%85%A5jlink%E8%B0%83%E8%AF%95_jlink-rtt/" /><meta property="article:section" content="post" />
+<meta property="og:url" content="http://fuyi.fun/2020/12/25/%E5%9C%A8stm32%E4%B8%AD%E5%BC%95%E5%85%A5jlink%E8%B0%83%E8%AF%95_jlink-rtt/" />
 <meta property="article:published_time" content="2020-12-25T14:24:50+08:00" />
 <meta property="article:modified_time" content="2020-12-25T14:24:50+08:00" />
-
 
     
     <meta itemprop="name" content="在stm32中引入jlink调试_JLINK RTT">
@@ -44,9 +43,13 @@
   此时在工程中可以使用 SEGGER_RTT_printf(unsigned BufferIndex, const char * sFormat, ...);打印日志；
   通过宏定义把日志输出函数定义为想要的形式，如：
   #define myprintf(...) SEGGER_RTT_printf(0, __VA_ARGS__) 参考文档 【JLink RTT Client代替printf(IAR测试OK)】
-【segger RTT viewer串口打印调试日志】"><meta itemprop="datePublished" content="2020-12-25T14:24:50+08:00" />
-<meta itemprop="dateModified" content="2020-12-25T14:24:50+08:00" />
+【segger RTT viewer串口打印调试日志】">
+<meta itemprop="datePublished" content="2020-12-25T14:24:50&#43;08:00" />
+<meta itemprop="dateModified" content="2020-12-25T14:24:50&#43;08:00" />
 <meta itemprop="wordCount" content="32">
+
+
+
 <meta itemprop="keywords" content="JLINK,JLINK-RTT," />
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="在stm32中引入jlink调试_JLINK RTT"/>
@@ -336,7 +339,7 @@
 <ul>
 <li>在程序中引入RTT库</li>
 </ul>
-<pre tabindex="0"><code>git submodule add https://github.com/ankitmcgill/ARM_SEGGER_RTT
+<pre><code>git submodule add https://github.com/ankitmcgill/ARM_SEGGER_RTT
 </code></pre><ul>
 <li>
 <p>工程中增加SEGGER_RTT代码</p>
@@ -348,7 +351,7 @@
 <p>通过宏定义把日志输出函数定义为想要的形式，如：</p>
 </li>
 </ul>
-<pre tabindex="0"><code>#define myprintf(...)    SEGGER_RTT_printf(0, __VA_ARGS__)
+<pre><code>#define myprintf(...)    SEGGER_RTT_printf(0, __VA_ARGS__)
 </code></pre><h2 id="参考文档">参考文档</h2>
 <p><a href="https://www.cnblogs.com/lialong1st/p/7756653.html">【JLink RTT Client代替printf(IAR测试OK)】</a></p>
 <p><a href="https://my.oschina.net/u/4379075/blog/3969162">【segger RTT viewer串口打印调试日志】</a></p>
@@ -1438,7 +1441,7 @@
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2023
+      &copy; 2024
       Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="https://github.com/ppoffice">PPOffice</a>.
     </div>
   </div>

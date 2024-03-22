@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <title>小夫子的随笔</title>
-    <meta name="generator" content="Hugo 0.94.2" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Jixing Fu">
@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://fuyi.fun/" />
-
+<meta property="og:updated_time" content="2022-12-08T09:53:15+08:00" />
 
     
     <meta itemprop="name" content="小夫子的随笔">
@@ -309,7 +309,7 @@
   下载nrf52开发环境 docker pull fugreat/nrf52
   创建容器
   docker run --name nrf52-1 -v /Users/user_name/data:/data -itd fugreat/nrf52 bash  此步把 /Users/user_name/data目录映射到编译环境的/data中
- 编译  docker exec -it nrf52 bash -c &#34;cd /data/project_name &amp;&amp; make&#34; 启/停容器  docker start nrf52 docker stop nrf52 
+ 编译  docker exec -it nrf52 bash -c &quot;cd /data/project_name &amp;&amp; make&quot; 启/停容器  docker start nrf52 docker stop nrf52 
             </p>
             <p class="article-more-link">
                 <a href="http://fuyi.fun/2020/11/26/%E4%BD%BF%E7%94%A8doker%E6%90%AD%E5%BB%BAnrf52%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">
@@ -601,7 +601,7 @@ Installing from PyPI nRF Util is available as a package in the Python Package In
 但是在实际使用过程中，可能需要带参数或者make不同的目标。
 因为需要屏蔽掉默认的entrypoint。
 屏蔽方法是：
-# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &#34;cd /code &amp;&amp; make -j8 &amp;&amp; make flash&#34; [docker_imag】 
+# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &quot;cd /code &amp;&amp; make -j8 &amp;&amp; make flash&quot; [docker_imag】 
             </p>
             <p class="article-more-link">
                 <a href="http://fuyi.fun/2020/11/25/docker%E8%A6%86%E7%9B%96entrypoint/">
@@ -754,7 +754,7 @@ Installing from PyPI nRF Util is available as a package in the Python Package In
 安装 点此查看官方文档的详细安装步骤。
 摘抄如下，docker下安装： 1.下载docker-compose.yml
 wget https://docs.seafile.com/d/cb1d3f97106847abbf31/files/?p=/docker/docker-compose.yml 2.按照实际情况修改配置：
-version: &#39;2.0&#39; services: db: image: mariadb:10.1 container_name: seafile-mysql environment: - MYSQL_ROOT_PASSWORD=db_dev # Requested, set the root&#39;s password of MySQL service. - MYSQL_LOG_CONSOLE=true volumes: - /opt/seafile-mysql/db:/var/lib/mysql # Requested, specifies the path to MySQL data persistent store. networks: - seafile-net memcached: image: memcached:1.5.6 container_name: seafile-memcached entrypoint: memcached -m 256 networks: - seafile-net seafile: image: seafileltd/seafile-mc:latest container_name: seafile ports: - &#34;80:80&#34; # - &#34;443:443&#34; # If https is enabled, cancel the comment.
+version: '2.0' services: db: image: mariadb:10.1 container_name: seafile-mysql environment: - MYSQL_ROOT_PASSWORD=db_dev # Requested, set the root's password of MySQL service. - MYSQL_LOG_CONSOLE=true volumes: - /opt/seafile-mysql/db:/var/lib/mysql # Requested, specifies the path to MySQL data persistent store. networks: - seafile-net memcached: image: memcached:1.5.6 container_name: seafile-memcached entrypoint: memcached -m 256 networks: - seafile-net seafile: image: seafileltd/seafile-mc:latest container_name: seafile ports: - &quot;80:80&quot; # - &quot;443:443&quot; # If https is enabled, cancel the comment.
             </p>
             <p class="article-more-link">
                 <a href="http://fuyi.fun/2020/11/23/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%ABseafile/">
@@ -1192,7 +1192,7 @@ macOS支持不好；
 thread1 对象的内存空间，包括线程控制块 thread1 与栈空间 thread1_stack 都是编译时决定的，因为代码中都不存在初始值，都统一放在未初始化数据段中。
 thread2 运行中用到的空间都是动态分配的，包括线程控制块（thread2_ptr 指向的内容）和栈空间。
 静态对象会占用 RAM 空间，不依赖于内存堆管理器，内存分配时间确定。 动态对象则依赖于内存堆管理器，运行时申请 RAM 空间，当对象被删除后，占用的 RAM 空间被释放。 这两种方式各有利弊，可以根据实际环境需求选择具体使用方式。
-/* 线程 1 的对象和运行时用到的栈 */ static struct rt_thread thread1; static rt_uint8_t thread1_stack[512];  /* 线程 1 入口 */ void thread1_entry(void* parameter) {  int i;   while (1)  {  for (i = 0; i &lt; 10; i ++)  {  rt_kprintf(&#34;%d\n&#34;, i);   /* 延时 100ms */  rt_thread_mdelay(100);  }  } }  /* 线程 2 入口 */ void thread2_entry(void* parameter) {  int count = 0;  while (1)  {  rt_kprintf(&#34;Thread2 count:%d\n&#34;, ++count);   /* 延时 50ms */  rt_thread_mdelay(50);  } }  /* 线程例程初始化 */ int thread_sample_init() {  rt_thread_t thread2_ptr;  rt_err_t result;   /* 初始化线程 1 */  /* 线程的入口是 thread1_entry，参数是 RT_NULL * 线程栈是 thread1_stack * 优先级是 200，时间片是 10 个 OS Tick */  result = rt_thread_init(&amp;thread1,  &#34;thread1&#34;,  thread1_entry, RT_NULL,  &amp;thread1_stack[0], sizeof(thread1_stack),  200, 10);   /* 启动线程 */  if (result == RT_EOK) rt_thread_startup(&amp;thread1);   /* 创建线程 2 */  /* 线程的入口是 thread2_entry, 参数是 RT_NULL * 栈空间是 512，优先级是 250，时间片是 25 个 OS Tick */  thread2_ptr = rt_thread_create(&#34;thread2&#34;,  thread2_entry, RT_NULL,  512, 250, 25);   /* 启动线程 */  if (thread2_ptr !
+/* 线程 1 的对象和运行时用到的栈 */ static struct rt_thread thread1; static rt_uint8_t thread1_stack[512]; /* 线程 1 入口 */ void thread1_entry(void* parameter) { int i; while (1) { for (i = 0; i &lt; 10; i ++) { rt_kprintf(&#34;%d\n&#34;, i); /* 延时 100ms */ rt_thread_mdelay(100); } } } /* 线程 2 入口 */ void thread2_entry(void* parameter) { int count = 0; while (1) { rt_kprintf(&#34;Thread2 count:%d\n&#34;, ++count); /* 延时 50ms */ rt_thread_mdelay(50); } } /* 线程例程初始化 */ int thread_sample_init() { rt_thread_t thread2_ptr; rt_err_t result; /* 初始化线程 1 */ /* 线程的入口是 thread1_entry，参数是 RT_NULL * 线程栈是 thread1_stack * 优先级是 200，时间片是 10 个 OS Tick */ result = rt_thread_init(&amp;thread1, &#34;thread1&#34;, thread1_entry, RT_NULL, &amp;thread1_stack[0], sizeof(thread1_stack), 200, 10); /* 启动线程 */ if (result == RT_EOK) rt_thread_startup(&amp;thread1); /* 创建线程 2 */ /* 线程的入口是 thread2_entry, 参数是 RT_NULL * 栈空间是 512，优先级是 250，时间片是 25 个 OS Tick */ thread2_ptr = rt_thread_create(&#34;thread2&#34;, thread2_entry, RT_NULL, 512, 250, 25); /* 启动线程 */ if (thread2_ptr !
             </p>
             <p class="article-more-link">
                 <a href="http://fuyi.fun/2020/11/12/rt-thread_%E7%BA%BF%E7%A8%8B/">
@@ -1329,7 +1329,7 @@ thread2 运行中用到的空间都是动态分配的，包括线程控制块（
  RT-Thread 启动流程 RT-Thread 支持多种平台和多种编译器，而 rtthread_startup() 函数是 RT-Thread 规定的统一启动入口。 一般执行顺序是：
 系统先从启动文件开始运行， 然后进入 RT-Thread 的启动 rtthread_startup() ，
 最后进入用户入口 main()，如下图所示：  启动代码
-int rtthread_startup(void) {  rt_hw_interrupt_disable();   /* 板级初始化：需在该函数内部进行系统堆的初始化 */  rt_hw_board_init();   /* 打印 RT-Thread 版本信息 */  rt_show_version();   /* 定时器初始化 */  rt_system_timer_init();   /* 调度器初始化 */  rt_system_scheduler_init();  #ifdef RT_USING_SIGNALS  /* 信号初始化 */  rt_system_signal_init(); #endif   /* 由此创建一个用户 main 线程 */  rt_application_init();   /* 定时器线程初始化 */  rt_system_timer_thread_init();   /* 空闲线程初始化 */  rt_thread_idle_init();   /* 启动调度器 */  rt_system_scheduler_start();   /* 不会执行至此 */  return 0; } 大致可以分为四个部分：
+int rtthread_startup(void) { rt_hw_interrupt_disable(); /* 板级初始化：需在该函数内部进行系统堆的初始化 */ rt_hw_board_init(); /* 打印 RT-Thread 版本信息 */ rt_show_version(); /* 定时器初始化 */ rt_system_timer_init(); /* 调度器初始化 */ rt_system_scheduler_init(); #ifdef RT_USING_SIGNALS  /* 信号初始化 */ rt_system_signal_init(); #endif  /* 由此创建一个用户 main 线程 */ rt_application_init(); /* 定时器线程初始化 */ rt_system_timer_thread_init(); /* 空闲线程初始化 */ rt_thread_idle_init(); /* 启动调度器 */ rt_system_scheduler_start(); /* 不会执行至此 */ return 0; } 大致可以分为四个部分：
             </p>
             <p class="article-more-link">
                 <a href="http://fuyi.fun/2020/11/12/rt-thread_%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97/">
@@ -2725,7 +2725,7 @@ Vchx = Vrefint * (ADchx/ADrefint)
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2023
+      &copy; 2024
       Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="https://github.com/ppoffice">PPOffice</a>.
     </div>
   </div>

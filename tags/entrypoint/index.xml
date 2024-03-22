@@ -6,7 +6,11 @@
     <description>Recent content in entrypoint on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 25 Nov 2020 10:17:53 +0800</lastBuildDate><atom:link href="http://fuyi.fun/tags/entrypoint/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Nov 2020 10:17:53 +0800</lastBuildDate>
+    
+	<atom:link href="http://fuyi.fun/tags/entrypoint/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Docker覆盖entrypoint</title>
       <link>http://fuyi.fun/2020/11/25/docker%E8%A6%86%E7%9B%96entrypoint/</link>
@@ -17,7 +21,7 @@
 但是在实际使用过程中，可能需要带参数或者make不同的目标。
 因为需要屏蔽掉默认的entrypoint。
 屏蔽方法是：
-# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &amp;#34;cd /code &amp;amp;&amp;amp; make -j8 &amp;amp;&amp;amp; make flash&amp;#34; [docker_imag】 </description>
+# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &amp;quot;cd /code &amp;amp;&amp;amp; make -j8 &amp;amp;&amp;amp; make flash&amp;quot; [docker_imag】 </description>
     </item>
     
   </channel>

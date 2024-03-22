@@ -6,7 +6,11 @@
     <description>Recent content on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 08 Dec 2022 09:53:15 +0800</lastBuildDate><atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Dec 2022 09:53:15 +0800</lastBuildDate>
+    
+	<atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>禅道重启后白屏</title>
       <link>http://fuyi.fun/2022/12/08/%E7%A6%85%E9%81%93%E9%87%8D%E5%90%AF%E5%90%8E%E7%99%BD%E5%B1%8F/</link>
@@ -142,7 +146,7 @@ sudo systemctl restart docker</description>
 https://www.lidaren.com/archives/1656
 ————————————————————————
 @echo off ::检测时间间隔，单位：秒 set _interval=5 ::需要守护的进程名称 set _processName=ProcessName ::需要守护的进程启动命令 set _processCmd=C:\xxxx.exe ::需要守护的进程预估启动完毕所需时间，单位：秒 set _processTimeout=10 ::需要守护的进程所监听的端口 set _port=8080 ::进程用户名，一般是Administrator set _username=Administrator ————————————————————————
-@echo off :LOOP set /a isAlive=false ::通过进程名称检测 ::tasklist /FI &amp;#34;username eq %_username%&amp;#34; | find /C &amp;#34;%_processName%&amp;#34; &amp;gt; temp.txt ::set /p num= &amp;lt; temp.txt ::del /F temp.txt ::通过进程的端口是否正在被监听检测 netstat -an | find /C &amp;#34;0.0.0.0:%_port%&amp;#34; &amp;gt; temp.txt set /p num= &amp;lt; temp.txt del /F temp.txt if &amp;#34;%num%&amp;#34; == &amp;#34;0&amp;#34; ( start %_processCmd% | echo 启动 %_processName% 于 %time% choice /D y /t %_processTimeout% &amp;gt; nul ) if &amp;#34;%num%&amp;#34; NEQ &amp;#34;0&amp;#34; echo 已启动 ::ping -n %_interval% 127.</description>
+@echo off :LOOP set /a isAlive=false ::通过进程名称检测 ::tasklist /FI &amp;quot;username eq %_username%&amp;quot; | find /C &amp;quot;%_processName%&amp;quot; &amp;gt; temp.txt ::set /p num= &amp;lt; temp.txt ::del /F temp.txt ::通过进程的端口是否正在被监听检测 netstat -an | find /C &amp;quot;0.0.0.0:%_port%&amp;quot; &amp;gt; temp.txt set /p num= &amp;lt; temp.txt del /F temp.txt if &amp;quot;%num%&amp;quot; == &amp;quot;0&amp;quot; ( start %_processCmd% | echo 启动 %_processName% 于 %time% choice /D y /t %_processTimeout% &amp;gt; nul ) if &amp;quot;%num%&amp;quot; NEQ &amp;quot;0&amp;quot; echo 已启动 ::ping -n %_interval% 127.</description>
     </item>
     
     <item>
@@ -163,7 +167,7 @@ https://www.lidaren.com/archives/1656
       
       <guid>http://fuyi.fun/2021/07/14/ubuntu%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</guid>
       <description>参考：http://www.3gcomet.com/ubuntu20-04中使用netplan配置网络/
-cat /etc/netplan/00-installer-config.yaml # This is the network config written by &amp;#39;subiquity&amp;#39; network: ethernets: enp1s0: dhcp4: true #addresses: #- 172.18.225.240/24 #gateway4: 172.18.225.254 nameservers: addresses: - 223.6.6.6 - 223.5.5.5 search: [] version: 2 </description>
+cat /etc/netplan/00-installer-config.yaml # This is the network config written by &#39;subiquity&#39; network: ethernets: enp1s0: dhcp4: true #addresses: #- 172.18.225.240/24 #gateway4: 172.18.225.254 nameservers: addresses: - 223.6.6.6 - 223.5.5.5 search: [] version: 2 </description>
     </item>
     
     <item>
@@ -277,7 +281,7 @@ github bitbucket 太慢不考虑 2. 使用mailcow建立公司邮箱系统，用�
       <guid>http://fuyi.fun/2021/03/24/nrf52%E6%89%93%E5%8D%B0%E6%B5%AE%E7%82%B9%E6%95%B0%E6%8D%AE/</guid>
       <description>Nrf52 打印浮点数据：
 https://devzone.nordicsemi.com/f/nordic-q-a/18625/nrf_log_info-does-not-show-float-number
-NRF_LOG_INFO(&amp;#34;My float number&amp;#34; NRF_LOG_FLOAT_MARKER &amp;#34;\r\n&amp;#34;, NRF_LOG_FLOAT(f))) </description>
+NRF_LOG_INFO(&amp;quot;My float number&amp;quot; NRF_LOG_FLOAT_MARKER &amp;quot;\r\n&amp;quot;, NRF_LOG_FLOAT(f))) </description>
     </item>
     
     <item>
@@ -301,7 +305,7 @@ NRF_LOG_INFO(&amp;#34;My float number&amp;#34; NRF_LOG_FLOAT_MARKER &amp;#34;\r\
       
       <guid>http://fuyi.fun/2021/03/24/mysql%E5%BC%80%E5%90%AF%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/</guid>
       <description>Mysql 开放外网访问： 用mysql -uroot -p 登陆mysql，然后采用以下方法开启远程访问权限：
- mysql&amp;gt;use mysql; mysql&amp;gt;update user set host = &amp;#39;%&amp;#39; where user = &amp;#39;root&amp;#39;; mysql&amp;gt;FLUSH PRIVILEGES； </description>
+ mysql&amp;gt;use mysql; mysql&amp;gt;update user set host = &#39;%&#39; where user = &#39;root&#39;; mysql&amp;gt;FLUSH PRIVILEGES； </description>
     </item>
     
     <item>
@@ -312,7 +316,7 @@ NRF_LOG_INFO(&amp;#34;My float number&amp;#34; NRF_LOG_FLOAT_MARKER &amp;#34;\r\
       <guid>http://fuyi.fun/2021/03/24/node%E7%9A%84arraybuffer%E5%81%9A%E5%A4%A7%E5%B0%8F%E7%AB%AF%E8%BD%AC%E6%8D%A2/</guid>
       <description>Nodejs 的 ArrayBuffeer大小端序转换：
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getUint32
-// 创建 ArrayBuffer const buffer = new ArrayBuffer(4); // 赋初始值 var bytes = new Uint32Array(buffer) bytes[0] = 0x05; bytes[1] = 0x00; bytes[2] = 0x00; bytes[3] = 0x00; // buffer和Dataview const view = new DataView(buffer); // 按小端序取出数据 console.log(&amp;#34;小端序：&amp;#34;+view.getUint32(0, 1)); // 按大端序取出数据 console.log(&amp;#34;大端序：&amp;#34;+ view.getUint32(0, 0)); </description>
+// 创建 ArrayBuffer const buffer = new ArrayBuffer(4); // 赋初始值 var bytes = new Uint32Array(buffer) bytes[0] = 0x05; bytes[1] = 0x00; bytes[2] = 0x00; bytes[3] = 0x00; // buffer和Dataview const view = new DataView(buffer); // 按小端序取出数据 console.log(&amp;quot;小端序：&amp;quot;+view.getUint32(0, 1)); // 按大端序取出数据 console.log(&amp;quot;大端序：&amp;quot;+ view.getUint32(0, 0)); </description>
     </item>
     
     <item>
@@ -525,7 +529,7 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清�
   下载nrf52开发环境 docker pull fugreat/nrf52
   创建容器
   docker run --name nrf52-1 -v /Users/user_name/data:/data -itd fugreat/nrf52 bash  此步把 /Users/user_name/data目录映射到编译环境的/data中
- 编译  docker exec -it nrf52 bash -c &amp;#34;cd /data/project_name &amp;amp;&amp;amp; make&amp;#34; 启/停容器  docker start nrf52 docker stop nrf52 </description>
+ 编译  docker exec -it nrf52 bash -c &amp;quot;cd /data/project_name &amp;amp;&amp;amp; make&amp;quot; 启/停容器  docker start nrf52 docker stop nrf52 </description>
     </item>
     
     <item>
@@ -549,7 +553,7 @@ Installing from PyPI nRF Util is available as a package in the Python Package In
 但是在实际使用过程中，可能需要带参数或者make不同的目标。
 因为需要屏蔽掉默认的entrypoint。
 屏蔽方法是：
-# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &amp;#34;cd /code &amp;amp;&amp;amp; make -j8 &amp;amp;&amp;amp; make flash&amp;#34; [docker_imag】 </description>
+# 进入镜像的， 运行bash docker run -it --entrypoint /bin/bash [docker_image] # 在上面基础上运行自己想要的指令，如 docker run -it --entrypoint /bin/bash -c &amp;quot;cd /code &amp;amp;&amp;amp; make -j8 &amp;amp;&amp;amp; make flash&amp;quot; [docker_imag】 </description>
     </item>
     
     <item>
@@ -562,7 +566,7 @@ Installing from PyPI nRF Util is available as a package in the Python Package In
 安装 点此查看官方文档的详细安装步骤。
 摘抄如下，docker下安装： 1.下载docker-compose.yml
 wget https://docs.seafile.com/d/cb1d3f97106847abbf31/files/?p=/docker/docker-compose.yml 2.按照实际情况修改配置：
-version: &amp;#39;2.0&amp;#39; services: db: image: mariadb:10.1 container_name: seafile-mysql environment: - MYSQL_ROOT_PASSWORD=db_dev # Requested, set the root&amp;#39;s password of MySQL service. - MYSQL_LOG_CONSOLE=true volumes: - /opt/seafile-mysql/db:/var/lib/mysql # Requested, specifies the path to MySQL data persistent store. networks: - seafile-net memcached: image: memcached:1.5.6 container_name: seafile-memcached entrypoint: memcached -m 256 networks: - seafile-net seafile: image: seafileltd/seafile-mc:latest container_name: seafile ports: - &amp;#34;80:80&amp;#34; # - &amp;#34;443:443&amp;#34; # If https is enabled, cancel the comment.</description>
+version: &#39;2.0&#39; services: db: image: mariadb:10.1 container_name: seafile-mysql environment: - MYSQL_ROOT_PASSWORD=db_dev # Requested, set the root&#39;s password of MySQL service. - MYSQL_LOG_CONSOLE=true volumes: - /opt/seafile-mysql/db:/var/lib/mysql # Requested, specifies the path to MySQL data persistent store. networks: - seafile-net memcached: image: memcached:1.5.6 container_name: seafile-memcached entrypoint: memcached -m 256 networks: - seafile-net seafile: image: seafileltd/seafile-mc:latest container_name: seafile ports: - &amp;quot;80:80&amp;quot; # - &amp;quot;443:443&amp;quot; # If https is enabled, cancel the comment.</description>
     </item>
     
     <item>
@@ -601,7 +605,7 @@ macOS支持不好；</description>
 thread1 对象的内存空间，包括线程控制块 thread1 与栈空间 thread1_stack 都是编译时决定的，因为代码中都不存在初始值，都统一放在未初始化数据段中。
 thread2 运行中用到的空间都是动态分配的，包括线程控制块（thread2_ptr 指向的内容）和栈空间。
 静态对象会占用 RAM 空间，不依赖于内存堆管理器，内存分配时间确定。 动态对象则依赖于内存堆管理器，运行时申请 RAM 空间，当对象被删除后，占用的 RAM 空间被释放。 这两种方式各有利弊，可以根据实际环境需求选择具体使用方式。
-/* 线程 1 的对象和运行时用到的栈 */ static struct rt_thread thread1; static rt_uint8_t thread1_stack[512];  /* 线程 1 入口 */ void thread1_entry(void* parameter) {  int i;   while (1)  {  for (i = 0; i &amp;lt; 10; i ++)  {  rt_kprintf(&amp;#34;%d\n&amp;#34;, i);   /* 延时 100ms */  rt_thread_mdelay(100);  }  } }  /* 线程 2 入口 */ void thread2_entry(void* parameter) {  int count = 0;  while (1)  {  rt_kprintf(&amp;#34;Thread2 count:%d\n&amp;#34;, ++count);   /* 延时 50ms */  rt_thread_mdelay(50);  } }  /* 线程例程初始化 */ int thread_sample_init() {  rt_thread_t thread2_ptr;  rt_err_t result;   /* 初始化线程 1 */  /* 线程的入口是 thread1_entry，参数是 RT_NULL * 线程栈是 thread1_stack * 优先级是 200，时间片是 10 个 OS Tick */  result = rt_thread_init(&amp;amp;thread1,  &amp;#34;thread1&amp;#34;,  thread1_entry, RT_NULL,  &amp;amp;thread1_stack[0], sizeof(thread1_stack),  200, 10);   /* 启动线程 */  if (result == RT_EOK) rt_thread_startup(&amp;amp;thread1);   /* 创建线程 2 */  /* 线程的入口是 thread2_entry, 参数是 RT_NULL * 栈空间是 512，优先级是 250，时间片是 25 个 OS Tick */  thread2_ptr = rt_thread_create(&amp;#34;thread2&amp;#34;,  thread2_entry, RT_NULL,  512, 250, 25);   /* 启动线程 */  if (thread2_ptr !</description>
+/* 线程 1 的对象和运行时用到的栈 */ static struct rt_thread thread1; static rt_uint8_t thread1_stack[512]; /* 线程 1 入口 */ void thread1_entry(void* parameter) { int i; while (1) { for (i = 0; i &amp;lt; 10; i ++) { rt_kprintf(&amp;#34;%d\n&amp;#34;, i); /* 延时 100ms */ rt_thread_mdelay(100); } } } /* 线程 2 入口 */ void thread2_entry(void* parameter) { int count = 0; while (1) { rt_kprintf(&amp;#34;Thread2 count:%d\n&amp;#34;, ++count); /* 延时 50ms */ rt_thread_mdelay(50); } } /* 线程例程初始化 */ int thread_sample_init() { rt_thread_t thread2_ptr; rt_err_t result; /* 初始化线程 1 */ /* 线程的入口是 thread1_entry，参数是 RT_NULL * 线程栈是 thread1_stack * 优先级是 200，时间片是 10 个 OS Tick */ result = rt_thread_init(&amp;amp;thread1, &amp;#34;thread1&amp;#34;, thread1_entry, RT_NULL, &amp;amp;thread1_stack[0], sizeof(thread1_stack), 200, 10); /* 启动线程 */ if (result == RT_EOK) rt_thread_startup(&amp;amp;thread1); /* 创建线程 2 */ /* 线程的入口是 thread2_entry, 参数是 RT_NULL * 栈空间是 512，优先级是 250，时间片是 25 个 OS Tick */ thread2_ptr = rt_thread_create(&amp;#34;thread2&amp;#34;, thread2_entry, RT_NULL, 512, 250, 25); /* 启动线程 */ if (thread2_ptr !</description>
     </item>
     
     <item>
@@ -615,7 +619,7 @@ thread2 运行中用到的空间都是动态分配的，包括线程控制块（
  RT-Thread 启动流程 RT-Thread 支持多种平台和多种编译器，而 rtthread_startup() 函数是 RT-Thread 规定的统一启动入口。 一般执行顺序是：
 系统先从启动文件开始运行， 然后进入 RT-Thread 的启动 rtthread_startup() ，
 最后进入用户入口 main()，如下图所示：  启动代码
-int rtthread_startup(void) {  rt_hw_interrupt_disable();   /* 板级初始化：需在该函数内部进行系统堆的初始化 */  rt_hw_board_init();   /* 打印 RT-Thread 版本信息 */  rt_show_version();   /* 定时器初始化 */  rt_system_timer_init();   /* 调度器初始化 */  rt_system_scheduler_init();  #ifdef RT_USING_SIGNALS  /* 信号初始化 */  rt_system_signal_init(); #endif   /* 由此创建一个用户 main 线程 */  rt_application_init();   /* 定时器线程初始化 */  rt_system_timer_thread_init();   /* 空闲线程初始化 */  rt_thread_idle_init();   /* 启动调度器 */  rt_system_scheduler_start();   /* 不会执行至此 */  return 0; } 大致可以分为四个部分：</description>
+int rtthread_startup(void) { rt_hw_interrupt_disable(); /* 板级初始化：需在该函数内部进行系统堆的初始化 */ rt_hw_board_init(); /* 打印 RT-Thread 版本信息 */ rt_show_version(); /* 定时器初始化 */ rt_system_timer_init(); /* 调度器初始化 */ rt_system_scheduler_init(); #ifdef RT_USING_SIGNALS  /* 信号初始化 */ rt_system_signal_init(); #endif  /* 由此创建一个用户 main 线程 */ rt_application_init(); /* 定时器线程初始化 */ rt_system_timer_thread_init(); /* 空闲线程初始化 */ rt_thread_idle_init(); /* 启动调度器 */ rt_system_scheduler_start(); /* 不会执行至此 */ return 0; } 大致可以分为四个部分：</description>
     </item>
     
     <item>
@@ -834,7 +838,7 @@ docker pull amyhre/docuwiki
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://fuyi.fun/1/01/01/</guid>
-      <description>i&amp;mdash; title: &amp;ldquo;Docker加sudo&amp;rdquo; date: 2021-01-14T21:00:23+08:00 draft: false banner : &amp;quot;&amp;quot; categories : [&amp;ldquo;技术&amp;rdquo;] description : &amp;quot;&amp;quot; menu : &amp;quot;&amp;quot; tags : [&amp;ldquo;docker&amp;rdquo;, &amp;ldquo;sudo&amp;rdquo;] docker加sudo
+      <description>i&amp;mdash; title: &amp;ldquo;Docker加sudo&amp;rdquo; date: 2021-01-14T21:00:23+08:00 draft: false banner : &amp;quot;&amp;rdquo; categories : [&amp;ldquo;技术&amp;rdquo;] description : &amp;quot;&amp;rdquo; menu : &amp;quot;&amp;rdquo; tags : [&amp;ldquo;docker&amp;rdquo;, &amp;ldquo;sudo&amp;rdquo;] docker加sudo
 1.创建docker组：sudo groupadd docker
 2.将当前用户加入docker组：sudo gpasswd -a ${USER} docker
 3.重启服务：sudo service docker restart

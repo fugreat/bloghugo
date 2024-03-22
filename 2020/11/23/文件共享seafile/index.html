@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <title>文件共享seafile &middot; 小夫子的随笔</title>
-    <meta name="generator" content="Hugo 0.94.2" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Jixing Fu">
@@ -25,12 +25,11 @@
 安装 点此查看官方文档的详细安装步骤。
 摘抄如下，docker下安装： 1.下载docker-compose.yml
 wget https://docs.seafile.com/d/cb1d3f97106847abbf31/files/?p=/docker/docker-compose.yml 2.按照实际情况修改配置：
-version: &#39;2.0&#39; services: db: image: mariadb:10.1 container_name: seafile-mysql environment: - MYSQL_ROOT_PASSWORD=db_dev # Requested, set the root&#39;s password of MySQL service. - MYSQL_LOG_CONSOLE=true volumes: - /opt/seafile-mysql/db:/var/lib/mysql # Requested, specifies the path to MySQL data persistent store. networks: - seafile-net memcached: image: memcached:1.5.6 container_name: seafile-memcached entrypoint: memcached -m 256 networks: - seafile-net seafile: image: seafileltd/seafile-mc:latest container_name: seafile ports: - &#34;80:80&#34; # - &#34;443:443&#34; # If https is enabled, cancel the comment." />
+version: &#39;2.0&#39; services: db: image: mariadb:10.1 container_name: seafile-mysql environment: - MYSQL_ROOT_PASSWORD=db_dev # Requested, set the root&#39;s password of MySQL service. - MYSQL_LOG_CONSOLE=true volumes: - /opt/seafile-mysql/db:/var/lib/mysql # Requested, specifies the path to MySQL data persistent store. networks: - seafile-net memcached: image: memcached:1.5.6 container_name: seafile-memcached entrypoint: memcached -m 256 networks: - seafile-net seafile: image: seafileltd/seafile-mc:latest container_name: seafile ports: - &quot;80:80&quot; # - &quot;443:443&quot; # If https is enabled, cancel the comment." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://fuyi.fun/2020/11/23/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%ABseafile/" /><meta property="article:section" content="post" />
+<meta property="og:url" content="http://fuyi.fun/2020/11/23/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%ABseafile/" />
 <meta property="article:published_time" content="2020-11-23T15:13:35+08:00" />
 <meta property="article:modified_time" content="2020-11-23T15:13:35+08:00" />
-
 
     
     <meta itemprop="name" content="文件共享seafile">
@@ -38,9 +37,13 @@ version: &#39;2.0&#39; services: db: image: mariadb:10.1 container_name: seafile
 安装 点此查看官方文档的详细安装步骤。
 摘抄如下，docker下安装： 1.下载docker-compose.yml
 wget https://docs.seafile.com/d/cb1d3f97106847abbf31/files/?p=/docker/docker-compose.yml 2.按照实际情况修改配置：
-version: &#39;2.0&#39; services: db: image: mariadb:10.1 container_name: seafile-mysql environment: - MYSQL_ROOT_PASSWORD=db_dev # Requested, set the root&#39;s password of MySQL service. - MYSQL_LOG_CONSOLE=true volumes: - /opt/seafile-mysql/db:/var/lib/mysql # Requested, specifies the path to MySQL data persistent store. networks: - seafile-net memcached: image: memcached:1.5.6 container_name: seafile-memcached entrypoint: memcached -m 256 networks: - seafile-net seafile: image: seafileltd/seafile-mc:latest container_name: seafile ports: - &#34;80:80&#34; # - &#34;443:443&#34; # If https is enabled, cancel the comment."><meta itemprop="datePublished" content="2020-11-23T15:13:35+08:00" />
-<meta itemprop="dateModified" content="2020-11-23T15:13:35+08:00" />
+version: &#39;2.0&#39; services: db: image: mariadb:10.1 container_name: seafile-mysql environment: - MYSQL_ROOT_PASSWORD=db_dev # Requested, set the root&#39;s password of MySQL service. - MYSQL_LOG_CONSOLE=true volumes: - /opt/seafile-mysql/db:/var/lib/mysql # Requested, specifies the path to MySQL data persistent store. networks: - seafile-net memcached: image: memcached:1.5.6 container_name: seafile-memcached entrypoint: memcached -m 256 networks: - seafile-net seafile: image: seafileltd/seafile-mc:latest container_name: seafile ports: - &quot;80:80&quot; # - &quot;443:443&quot; # If https is enabled, cancel the comment.">
+<meta itemprop="datePublished" content="2020-11-23T15:13:35&#43;08:00" />
+<meta itemprop="dateModified" content="2020-11-23T15:13:35&#43;08:00" />
 <meta itemprop="wordCount" content="183">
+
+
+
 <meta itemprop="keywords" content="dropbox,sharefiles,seafile," />
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="文件共享seafile"/>
@@ -48,7 +51,7 @@ version: &#39;2.0&#39; services: db: image: mariadb:10.1 container_name: seafile
 安装 点此查看官方文档的详细安装步骤。
 摘抄如下，docker下安装： 1.下载docker-compose.yml
 wget https://docs.seafile.com/d/cb1d3f97106847abbf31/files/?p=/docker/docker-compose.yml 2.按照实际情况修改配置：
-version: &#39;2.0&#39; services: db: image: mariadb:10.1 container_name: seafile-mysql environment: - MYSQL_ROOT_PASSWORD=db_dev # Requested, set the root&#39;s password of MySQL service. - MYSQL_LOG_CONSOLE=true volumes: - /opt/seafile-mysql/db:/var/lib/mysql # Requested, specifies the path to MySQL data persistent store. networks: - seafile-net memcached: image: memcached:1.5.6 container_name: seafile-memcached entrypoint: memcached -m 256 networks: - seafile-net seafile: image: seafileltd/seafile-mc:latest container_name: seafile ports: - &#34;80:80&#34; # - &#34;443:443&#34; # If https is enabled, cancel the comment."/>
+version: &#39;2.0&#39; services: db: image: mariadb:10.1 container_name: seafile-mysql environment: - MYSQL_ROOT_PASSWORD=db_dev # Requested, set the root&#39;s password of MySQL service. - MYSQL_LOG_CONSOLE=true volumes: - /opt/seafile-mysql/db:/var/lib/mysql # Requested, specifies the path to MySQL data persistent store. networks: - seafile-net memcached: image: memcached:1.5.6 container_name: seafile-memcached entrypoint: memcached -m 256 networks: - seafile-net seafile: image: seafileltd/seafile-mc:latest container_name: seafile ports: - &quot;80:80&quot; # - &quot;443:443&quot; # If https is enabled, cancel the comment."/>
 
     
 
@@ -324,15 +327,15 @@ version: &#39;2.0&#39; services: db: image: mariadb:10.1 container_name: seafile
 <p><a href="https://cloud.seafile.com/published/seafile-manual-cn/docker/%E7%94%A8Docker%E9%83%A8%E7%BD%B2Seafile.md">点此查看官方文档的详细安装步骤。</a></p>
 <p>摘抄如下，docker下安装：
 1.下载docker-compose.yml</p>
-<pre tabindex="0"><code>wget https://docs.seafile.com/d/cb1d3f97106847abbf31/files/?p=/docker/docker-compose.yml
+<pre><code>wget https://docs.seafile.com/d/cb1d3f97106847abbf31/files/?p=/docker/docker-compose.yml
 </code></pre><p>2.按照实际情况修改配置：</p>
-<pre tabindex="0"><code>version: &#39;2.0&#39;
+<pre><code>version: '2.0'
 services:
   db:
     image: mariadb:10.1
     container_name: seafile-mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=db_dev  # Requested, set the root&#39;s password of MySQL service.
+      - MYSQL_ROOT_PASSWORD=db_dev  # Requested, set the root's password of MySQL service.
       - MYSQL_LOG_CONSOLE=true
     volumes:
       - /opt/seafile-mysql/db:/var/lib/mysql  # Requested, specifies the path to MySQL data persistent store.
@@ -350,16 +353,16 @@ services:
     image: seafileltd/seafile-mc:latest
     container_name: seafile
     ports:
-      - &#34;80:80&#34;
-#      - &#34;443:443&#34;  # If https is enabled, cancel the comment.
+      - &quot;80:80&quot;
+#      - &quot;443:443&quot;  # If https is enabled, cancel the comment.
     volumes:
       - /opt/seafile-data:/shared   # Requested, specifies the path to Seafile data persistent store.
     environment:
       - DB_HOST=db
-      - DB_ROOT_PASSWD=db_dev  # Requested, the value shuold be root&#39;s password of MySQL service.
+      - DB_ROOT_PASSWD=db_dev  # Requested, the value shuold be root's password of MySQL service.
 #      - TIME_ZONE=Asia/Shanghai # Optional, default is UTC. Should be uncomment and set to your local time zone.
-      - SEAFILE_ADMIN_EMAIL=me@example.com # Specifies Seafile admin user, default is &#39;me@example.com&#39;.
-      - SEAFILE_ADMIN_PASSWORD=asecret     # Specifies Seafile admin password, default is &#39;asecret&#39;.
+      - SEAFILE_ADMIN_EMAIL=me@example.com # Specifies Seafile admin user, default is 'me@example.com'.
+      - SEAFILE_ADMIN_PASSWORD=asecret     # Specifies Seafile admin password, default is 'asecret'.
       - SEAFILE_SERVER_LETSENCRYPT=false   # Whether use letsencrypt to generate cert.
       - SEAFILE_SERVER_HOSTNAME=seafile.example.com # Specifies your host name.
     depends_on:
@@ -1461,7 +1464,7 @@ networks:
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2023
+      &copy; 2024
       Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="https://github.com/ppoffice">PPOffice</a>.
     </div>
   </div>

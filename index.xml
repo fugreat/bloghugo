@@ -6,10 +6,24 @@
     <description>Recent content on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 08 Dec 2022 09:53:15 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 23 Mar 2024 15:11:39 +0800</lastBuildDate>
     
 	<atom:link href="http://fuyi.fun/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ubuntu启动后卡在initramfs</title>
+      <link>http://fuyi.fun/2024/03/23/ubuntu%E5%90%AF%E5%8A%A8%E5%90%8E%E5%8D%A1%E5%9C%A8initramfs/</link>
+      <pubDate>Sat, 23 Mar 2024 15:11:39 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2024/03/23/ubuntu%E5%90%AF%E5%8A%A8%E5%90%8E%E5%8D%A1%E5%9C%A8initramfs/</guid>
+      <description>initramfs ubuntu 启动后卡在 initramfs中：
+df -h blkid fsck /dev/sdb -y
+uname -r 4.15.0-147-generic
+经排查是: /dev/mapper/ubuntu&amp;ndash;vg-ubuntu&amp;ndash;lv 名字与安装时不一致， 导致找不到raid盘 重命名 ubuntu-vg解决：
+vgrename xxxx xxxx1 操作参考： https://www.cnblogs.com/xiaoqi-home/p/11235129.html
+解决Linux下挂载lvm 重名问题</description>
+    </item>
     
     <item>
       <title>禅道重启后白屏</title>
@@ -838,11 +852,31 @@ docker pull amyhre/docuwiki
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://fuyi.fun/1/01/01/</guid>
+      <description>AutoCAD开发社区 官方：https://forums.autodesk.com/t5/net/bd-p/152
+博客园</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://fuyi.fun/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fuyi.fun/1/01/01/</guid>
       <description>i&amp;mdash; title: &amp;ldquo;Docker加sudo&amp;rdquo; date: 2021-01-14T21:00:23+08:00 draft: false banner : &amp;quot;&amp;rdquo; categories : [&amp;ldquo;技术&amp;rdquo;] description : &amp;quot;&amp;rdquo; menu : &amp;quot;&amp;rdquo; tags : [&amp;ldquo;docker&amp;rdquo;, &amp;ldquo;sudo&amp;rdquo;] docker加sudo
 1.创建docker组：sudo groupadd docker
 2.将当前用户加入docker组：sudo gpasswd -a ${USER} docker
 3.重启服务：sudo service docker restart
 4.刷新docker成员：newgrp - docker</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://fuyi.fun/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fuyi.fun/1/01/01/</guid>
+      <description>matlab 颜色设置：
+https://ww2.mathworks.cn/help/matlab/ref/colormap.html</description>
     </item>
     
   </channel>

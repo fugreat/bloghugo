@@ -6,10 +6,28 @@
     <description>Recent content in Tags on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 08 Dec 2022 09:53:15 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 23 Mar 2024 15:11:39 +0800</lastBuildDate>
     
 	<atom:link href="http://fuyi.fun/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>initramfs</title>
+      <link>http://fuyi.fun/tags/initramfs/</link>
+      <pubDate>Sat, 23 Mar 2024 15:11:39 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/tags/initramfs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>http://fuyi.fun/tags/ubuntu/</link>
+      <pubDate>Sat, 23 Mar 2024 15:11:39 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/tags/ubuntu/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>禅道</title>
@@ -62,15 +80,6 @@
       <pubDate>Thu, 29 Apr 2021 09:26:32 +0800</pubDate>
       
       <guid>http://fuyi.fun/tags/nodejs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ubuntu</title>
-      <link>http://fuyi.fun/tags/ubuntu/</link>
-      <pubDate>Thu, 29 Apr 2021 09:26:32 +0800</pubDate>
-      
-      <guid>http://fuyi.fun/tags/ubuntu/</guid>
       <description></description>
     </item>
     

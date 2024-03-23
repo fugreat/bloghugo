@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>initramfs on 小夫子的随笔</title>
+    <link>http://fuyi.fun/tags/initramfs/</link>
+    <description>Recent content in initramfs on 小夫子的随笔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 23 Mar 2024 15:11:39 +0800</lastBuildDate>
+    
+	<atom:link href="http://fuyi.fun/tags/initramfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ubuntu启动后卡在initramfs</title>
+      <link>http://fuyi.fun/2024/03/23/ubuntu%E5%90%AF%E5%8A%A8%E5%90%8E%E5%8D%A1%E5%9C%A8initramfs/</link>
+      <pubDate>Sat, 23 Mar 2024 15:11:39 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/2024/03/23/ubuntu%E5%90%AF%E5%8A%A8%E5%90%8E%E5%8D%A1%E5%9C%A8initramfs/</guid>
+      <description>initramfs ubuntu 启动后卡在 initramfs中：
+df -h blkid fsck /dev/sdb -y
+uname -r 4.15.0-147-generic
+经排查是: /dev/mapper/ubuntu&amp;ndash;vg-ubuntu&amp;ndash;lv 名字与安装时不一致， 导致找不到raid盘 重命名 ubuntu-vg解决：
+vgrename xxxx xxxx1 操作参考： https://www.cnblogs.com/xiaoqi-home/p/11235129.html
+解决Linux下挂载lvm 重名问题</description>
+    </item>
+    
+  </channel>
+</rss>

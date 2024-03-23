@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://fuyi.fun/" />
-<meta property="og:updated_time" content="2022-12-08T09:53:15+08:00" />
+<meta property="og:updated_time" content="2024-03-23T15:11:39+08:00" />
 
     
     <meta itemprop="name" content="小夫子的随笔">
@@ -160,12 +160,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        65
+        68
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          63
+          64
         
         <span>
             标签
@@ -241,6 +241,153 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2021/02/23/ubuntu%E4%B8%8B%E9%83%A8%E7%BD%B2jar/">
+    <h1 class="article-title" itemprop="name">
+        Ubuntu下部署jar
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2021-02-23 11:36:00 &#43;0800 CST" itemprop="datePublished">2021-02-23</time>
+            &middot;
+            23
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/categories/ubuntu">Ubuntu</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/ubuntu">ubuntu</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/deploy-java">deploy java</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                ubuntu 下部署jar 1.安装jdk 8 https://vitux.com/how-to-install-java-on-ubuntu-20-04/
+sudo apt install openjdk-8-jdk openjdk-8-jre java -version cat &gt;&gt; /etc/environment &lt;&lt;EOL JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 JRE_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre EOL 2.运行jar https://blog.csdn.net/bencheng06/article/details/102491420
+3.docker下部署jar https://blog.csdn.net/a835269079/article/details/102519209
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2021/02/23/ubuntu%E4%B8%8B%E9%83%A8%E7%BD%B2jar/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2021/02/23/ubuntu%E4%B8%8B%E9%83%A8%E7%BD%B2jar/" data-id="2bc33b337ff9948f67d05ea86e99c65c" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1577,147 +1724,6 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清�
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2020/11/26/docker%E9%95%9C%E5%83%8F%E6%9E%84%E5%BB%BA%E5%92%8C%E5%8F%91%E5%B8%83/">
-    <h1 class="article-title" itemprop="name">
-        Docker镜像构建和发布
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2020-11-26 11:21:54 &#43;0800 CST" itemprop="datePublished">2020-11-26</time>
-            &middot;
-            16
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/categories/%E6%8A%80%E6%9C%AF">技术</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://fuyi.fun/tags/docker">docker</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                构建： docker build - &lt; Dockerfile 发布：  打tag  docker tag fa1dad7f37e4 fugreat/nrf52 push  docker push fugreat/nrf52 
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2020/11/26/docker%E9%95%9C%E5%83%8F%E6%9E%84%E5%BB%BA%E5%92%8C%E5%8F%91%E5%B8%83/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2020/11/26/docker%E9%95%9C%E5%83%8F%E6%9E%84%E5%BB%BA%E5%92%8C%E5%8F%91%E5%B8%83/" data-id="237118328626ef8ef773ac774fcdb55e" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1747,6 +1753,25 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清�
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2024/03/23/ubuntu%E5%90%AF%E5%8A%A8%E5%90%8E%E5%8D%A1%E5%9C%A8initramfs/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2024/03/23/ubuntu%E5%90%AF%E5%8A%A8%E5%90%8E%E5%8D%A1%E5%9C%A8initramfs/" class="title">Ubuntu启动后卡在initramfs</a></p>
+                    <p class="item-date">
+                        <time datetime="2024-03-23 15:11:39 &#43;0800 CST" itemprop="datePublished">2024-03-23</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1820,25 +1845,6 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清�
                     <p class="item-title"><a href="http://fuyi.fun/2022/12/01/%E9%98%B2%E7%AA%81%E7%BB%86%E5%88%992019%E5%AE%98%E6%96%B9%E4%B8%8B%E8%BD%BD/" class="title">防突细则2019官方下载</a></p>
                     <p class="item-date">
                         <time datetime="2022-12-01 09:55:32 &#43;0800 CST" itemprop="datePublished">2022-12-01</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2022/12/01/%E9%98%B2%E7%88%86%E7%94%B5%E5%99%A8%E7%9A%843c%E8%AE%A4%E8%AF%81%E8%A7%84%E5%AE%9A/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2022/12/01/%E9%98%B2%E7%88%86%E7%94%B5%E5%99%A8%E7%9A%843c%E8%AE%A4%E8%AF%81%E8%A7%84%E5%AE%9A/" class="title">防爆电器的3C认证规定</a></p>
-                    <p class="item-date">
-                        <time datetime="2022-12-01 09:53:14 &#43;0800 CST" itemprop="datePublished">2022-12-01</time>
                     </p>
                 </div>
             </li>
@@ -2115,6 +2121,14 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清�
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="http://fuyi.fun/tags/initramfs">
+                    initramfs
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="http://fuyi.fun/tags/install">
                     install
                 </a>
@@ -2318,7 +2332,7 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清�
                 <a class="category-list-link" href="http://fuyi.fun/tags/ubuntu">
                     ubuntu
                 </a>
-                <span class="category-list-count">3</span>
+                <span class="category-list-count">4</span>
             </li>
             
             <li class="category-list-item">
@@ -2557,6 +2571,9 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple PyQt5 国内源： 清�
         
         
         <a href="http://fuyi.fun/tags/hugo" style="font-size: 12px;">hugo</a>
+        
+        
+        <a href="http://fuyi.fun/tags/initramfs" style="font-size: 12px;">initramfs</a>
         
         
         <a href="http://fuyi.fun/tags/install" style="font-size: 12px;">install</a>

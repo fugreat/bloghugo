@@ -6,10 +6,37 @@
     <description>Recent content in Tags on 小夫子的随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 23 Mar 2024 15:11:39 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 11 Apr 2024 15:32:38 +0800</lastBuildDate>
     
 	<atom:link href="http://fuyi.fun/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AutoCAD</title>
+      <link>http://fuyi.fun/tags/autocad/</link>
+      <pubDate>Thu, 11 Apr 2024 15:32:38 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/tags/autocad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CAD</title>
+      <link>http://fuyi.fun/tags/cad/</link>
+      <pubDate>Thu, 11 Apr 2024 15:32:38 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/tags/cad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>三维</title>
+      <link>http://fuyi.fun/tags/%E4%B8%89%E7%BB%B4/</link>
+      <pubDate>Thu, 11 Apr 2024 15:32:38 +0800</pubDate>
+      
+      <guid>http://fuyi.fun/tags/%E4%B8%89%E7%BB%B4/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>initramfs</title>
@@ -386,15 +413,6 @@
       <pubDate>Mon, 23 Nov 2020 15:13:35 +0800</pubDate>
       
       <guid>http://fuyi.fun/tags/sharefiles/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cad</title>
-      <link>http://fuyi.fun/tags/cad/</link>
-      <pubDate>Mon, 16 Nov 2020 12:06:11 +0800</pubDate>
-      
-      <guid>http://fuyi.fun/tags/cad/</guid>
       <description></description>
     </item>
     

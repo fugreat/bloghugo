@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://fuyi.fun/" />
-<meta property="og:updated_time" content="2024-04-11T15:32:38+08:00" />
+<meta property="og:updated_time" content="2024-04-19T08:56:57+08:00" />
 
     
     <meta itemprop="name" content="小夫子的随笔">
@@ -160,12 +160,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        69
+        70
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          66
+          68
         
         <span>
             标签
@@ -241,6 +241,142 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://fuyi.fun/2024/04/19/wpf%E5%9F%BA%E7%A1%80/">
+    <h1 class="article-title" itemprop="name">
+        Wpf基础
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2024-04-19 08:56:57 &#43;0800 CST" itemprop="datePublished">2024-04-19</time>
+            &middot;
+            13
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/wpf">wpf</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://fuyi.fun/tags/c">c#</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                WPF 基础 颜色对象 BT1.Background = new SolidColorBrush(Colors.AliceBlue); BT1.Foreground = new SolidColorBrush(Color.FromRgb(red, green, blue)); 
+            </p>
+            <p class="article-more-link">
+                <a href="http://fuyi.fun/2024/04/19/wpf%E5%9F%BA%E7%A1%80/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://fuyi.fun/2024/04/19/wpf%E5%9F%BA%E7%A1%80/" data-id="15f9145e4530809f95f45b0e94124249" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1419,132 +1555,6 @@ sudo add-apt-repository ppa:ubuntu-toolchain-r/test sudo apt update sudo apt ins
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/">
-    <h1 class="article-title" itemprop="name">
-        Fedora从命令行启动
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2022-04-08 20:26:01 &#43;0800 CST" itemprop="datePublished">2022-04-08</time>
-            &middot;
-            31
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-        
-
-        
-            
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                Fedora 从命令行启动
-一、实现代码 删除目标链接并创建新的符号链接 （1）从命令行启动
-ln-sf /lib/systemd/system/multi-user.target /etc/systemd/system/default. target （2）从图形界面启动
-ln-sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target 二、代码解释 ln命令：是一个在文件之间建立链接的命令，默认情况是硬链接（hard link），我们要用的是符号链接（symboli link），它可以为在不同文件系统中文件创建链接。 Options：-s 创建符号链接 -f 删除已经存在的同名链接 oneof the Usages：ln [被链接目标] [链接文件或目录] Example：ln -s xx yy 为xx创建一个符号链接yy
-            </p>
-            <p class="article-more-link">
-                <a href="http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://fuyi.fun/2022/04/08/fedora%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8/" data-id="973dac0025cfc04f9daec338b4db1cc6" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1570,6 +1580,25 @@ ln-sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target �
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://fuyi.fun/2024/04/19/wpf%E5%9F%BA%E7%A1%80/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="http://fuyi.fun/2024/04/19/wpf%E5%9F%BA%E7%A1%80/" class="title">Wpf基础</a></p>
+                    <p class="item-date">
+                        <time datetime="2024-04-19 08:56:57 &#43;0800 CST" itemprop="datePublished">2024-04-19</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1643,25 +1672,6 @@ ln-sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target �
                     <p class="item-title"><a href="http://fuyi.fun/2022/12/01/ubuntu%E5%BC%80%E5%90%AFcrontab%E6%97%A5%E5%BF%97/" class="title">Ubuntu开启crontab日志</a></p>
                     <p class="item-date">
                         <time datetime="2022-12-01 10:19:26 &#43;0800 CST" itemprop="datePublished">2022-12-01</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://fuyi.fun/2022/12/01/seafile%E8%BF%81%E7%A7%BB/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://fuyi.fun/2022/12/01/seafile%E8%BF%81%E7%A7%BB/" class="title">Seafile迁移</a></p>
-                    <p class="item-date">
-                        <time datetime="2022-12-01 09:57:03 &#43;0800 CST" itemprop="datePublished">2022-12-01</time>
                     </p>
                 </div>
             </li>
@@ -1844,6 +1854,14 @@ ln-sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target �
                 
                 <a class="category-list-link" href="http://fuyi.fun/tags/ble">
                     ble
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://fuyi.fun/tags/c">
+                    c#
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -2194,6 +2212,14 @@ ln-sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target �
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="http://fuyi.fun/tags/wpf">
+                    wpf
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="http://fuyi.fun/tags/%E4%B8%89%E7%BB%B4">
                     三维
                 </a>
@@ -2373,6 +2399,9 @@ ln-sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target �
         <a href="http://fuyi.fun/tags/ble" style="font-size: 12px;">ble</a>
         
         
+        <a href="http://fuyi.fun/tags/c" style="font-size: 12px;">c#</a>
+        
+        
         <a href="http://fuyi.fun/tags/cad" style="font-size: 12px;">cad</a>
         
         
@@ -2500,6 +2529,9 @@ ln-sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target �
         
         
         <a href="http://fuyi.fun/tags/win10" style="font-size: 12px;">win10</a>
+        
+        
+        <a href="http://fuyi.fun/tags/wpf" style="font-size: 12px;">wpf</a>
         
         
         <a href="http://fuyi.fun/tags/%E4%B8%89%E7%BB%B4" style="font-size: 12px;">三维</a>
